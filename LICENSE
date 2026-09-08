@@ -1,0 +1,82 @@
+MIT License
+
+Copyright (c) 2026 AgentEdge Project
+Department of Electronics & Communication Engineering
+Dayananda Sagar College of Engineering, Bengaluru — 560078, India
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------------------------------------------------------------
+
+PATENT NOTICE
+
+The following components of this software implement algorithms and methods
+for which patent applications are being prepared:
+
+1. Resource-Adaptive Task Decomposition (RAD)
+   - The method of monitoring embedded device resource state (RAM/CPU) and
+     dynamically decomposing agent task steps at runtime to prevent execution
+     failure on resource-constrained hardware.
+   - Implemented in: core/resource_monitor.py, agent/executor.py
+
+2. Sensor Failure Recovery Protocol
+   - The formal classification of embedded sensor failures into a 4-type
+     taxonomy (TIMEOUT, BAD_DATA, DISCONNECT, BUS_ERROR) and the hierarchical
+     criticality-based recovery action selection method for embedded agentic
+     AI systems.
+   - Implemented in: agent/recovery.py
+
+3. AgentEdge-Bench Benchmark Suite
+   - The standardized 20-task benchmark methodology for evaluating agentic AI
+     systems on embedded hardware, including the task categories, scoring
+     metrics, and evaluation protocol.
+   - Implemented in: benchmark/runner.py
+
+Use of the above components in commercial products or in published research
+must include appropriate citation of the AgentEdge project and the authors.
+Licensing for commercial use of the patentable components may be obtained
+by contacting the authors.
+
+-------------------------------------------------------------------------------
+
+CITATION
+
+If you use AgentEdge or AgentEdge-Bench in your research, please cite:
+
+  AgentEdge: Agentic AI Planning on Resource-Constrained Embedded Systems
+  DSCE ECE Department, Bengaluru, 2026
+  GitHub: https://github.com/YOUR_USERNAME/agentedge
+
+-------------------------------------------------------------------------------
+
+THIRD-PARTY LICENSES
+
+This software uses the following third-party libraries:
+
+- google-genai       — Apache License 2.0
+- anthropic          — MIT License
+- psutil             — BSD License
+- rich               — MIT License
+- pydantic           — MIT License
+- httpx              — BSD License
+- fastapi            — MIT License
+- pytest             — MIT License
+
+Full license texts for these libraries can be found in their respective
+package distributions.

@@ -1,39 +1,48 @@
-# Python bytecode and caches
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-.coverage.*
-htmlcov/
+*.egg-info/
+dist/
+build/
+.eggs/
 
 # Virtual environments
-.venv/
 venv/
 env/
-ENV/
+.venv/
 
-# Packaging and build output
-build/
-dist/
-*.egg-info/
-pip-wheel-metadata/
+# AgentEdge runtime logs (generated at runtime — do not commit)
+logs/
+*.log
+*.jsonl
 
-# Local configuration and secrets
+# API Keys — NEVER commit these
 .env
-.env.*
-!.env.example
+.env.local
+*.key
+secrets.py
 
-# Generated application logs and benchmark output
-logs/*.log
-logs/*.jsonl
-logs/*_report.json
-logs/benchmark_results/
-
-# Local IDE and operating-system files
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# OS
 .DS_Store
 Thumbs.db
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Benchmark results (large, generated at runtime)
+logs/benchmark_results/
+
+# Model files (too large for git)
+*.gguf
+*.bin
+*.safetensors
+models/
