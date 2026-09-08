@@ -1,0 +1,12 @@
+{
+  "project_code": "AGENTEDGE",
+  "project_title": "AgentEdge - Embedded Agentic AI System",
+  "workflow_mode": "thorough",
+  "granularity": "detailed",
+  "parallelization": true,
+  "llm_primary": "both",
+  "phase1_llm": "gemini",
+  "phase2_llm": "ollama-tinyllama",
+  "research_completed": false,
+  "created_at": "2026-09-09"
+}
