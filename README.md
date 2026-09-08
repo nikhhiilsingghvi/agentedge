@@ -263,4 +263,4 @@ This is a research prototype developed as a final-year major project. The patent
 
 Copyright (c) 2026 AgentEdge Project — DSCE ECE Department, Bengaluru
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
