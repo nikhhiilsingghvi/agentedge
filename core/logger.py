@@ -1,13 +1,3 @@
-"""
-AgentEdge Logger
-================
-Structured, rotating file logger with rich console output.
-Every agent event is timestamped and stored for paper analysis.
-
-Patent-pending architecture: Resource-Adaptive Task Decomposition
-Copyright (c) 2026 AgentEdge Project, DSCE ECE Dept.
-"""
-
 import logging
 import os
 import json
@@ -19,7 +9,6 @@ from rich.console import Console
 from rich.logging import RichHandler
 from rich.theme import Theme
 
-# ─── RICH CONSOLE THEME ──────────────────────────────────────────────────────
 custom_theme = Theme({
     "info":     "cyan",
     "warning":  "yellow bold",
@@ -37,20 +26,14 @@ console = Console(theme=custom_theme)
 
 
 def get_logger(name: str, log_dir: str = "logs") -> logging.Logger:
-    """
-    Returns a configured logger with:
-    - Rich console handler (colored, readable)
-    - Rotating file handler (JSON-structured for analysis)
-    """
     os.makedirs(log_dir, exist_ok=True)
 
     logger = logging.getLogger(name)
     if logger.handlers:
-        return logger  # Already configured
+        return logger
 
     logger.setLevel(logging.DEBUG)
 
-    # ── Console handler (Rich) ────────────────────────────────────────────────
     console_handler = RichHandler(
         console=Console(theme=custom_theme),
         show_time=True,
@@ -61,11 +44,10 @@ def get_logger(name: str, log_dir: str = "logs") -> logging.Logger:
     console_handler.setLevel(logging.DEBUG)
     logger.addHandler(console_handler)
 
-    # ── File handler (Rotating, structured) ──────────────────────────────────
     log_file = os.path.join(log_dir, f"{name.replace('.', '_')}.log")
     file_handler = RotatingFileHandler(
         log_file,
-        maxBytes=10 * 1024 * 1024,  # 10 MB
+        maxBytes=10 * 1024 * 1024,
         backupCount=5,
         encoding="utf-8",
     )
@@ -77,14 +59,7 @@ def get_logger(name: str, log_dir: str = "logs") -> logging.Logger:
 
     return logger
 
-
 class AgentEventLogger:
-    """
-    Structured event logger for agent loop events.
-    All events written to JSON log for benchmark analysis.
-    This is the data source for paper's experimental results.
-    """
-
     def __init__(self, session_id: str, log_dir: str = "logs"):
         self.session_id = session_id
         self.log_dir = log_dir
@@ -103,7 +78,6 @@ class AgentEventLogger:
         ram_percent: Optional[float] = None,
         energy_mj: Optional[float] = None,
     ) -> None:
-        """Log a structured agent event with all measurement fields."""
         event = {
             "timestamp": datetime.utcnow().isoformat() + "Z",
             "session_id": self.session_id,
@@ -117,12 +91,10 @@ class AgentEventLogger:
         }
         self._events.append(event)
 
-        # Append to JSONL file
         with open(self.event_file, "a", encoding="utf-8") as f:
             f.write(json.dumps(event) + "\n")
 
     def get_session_summary(self) -> Dict[str, Any]:
-        """Returns summary statistics for this session — used in benchmark."""
         if not self._events:
             return {}
 

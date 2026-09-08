@@ -1,20 +1,3 @@
-"""
-AgentEdge Resource Monitor
-===========================
-NOVEL CONTRIBUTION #1: Resource-Adaptive Task Decomposition
-
-Monitors live RAM and CPU usage on the agent device.
-When resources exceed thresholds, triggers plan-step splitting.
-This is the core algorithm that differentiates AgentEdge from
-all existing cloud-based agentic frameworks.
-
-Patent-pending: The method of monitoring embedded device resource
-state and dynamically decomposing agent task steps at runtime
-to prevent execution failure.
-
-Copyright (c) 2026 AgentEdge Project, DSCE ECE Dept.
-"""
-
 import psutil
 import time
 from dataclasses import dataclass
@@ -34,21 +17,12 @@ logger = get_logger("ResourceMonitor")
 
 
 class ResourceState(Enum):
-    """
-    Three-level resource state machine.
-    Drives the adaptive decomposition decision.
-    """
-    NORMAL   = "NORMAL"    # Execute full plan step
-    WARN     = "WARN"      # Log warning, continue
-    CRITICAL = "CRITICAL"  # Split step before execution
-
+    NORMAL   = "NORMAL"   
+    WARN     = "WARN"      
+    CRITICAL = "CRITICAL" 
 
 @dataclass
 class ResourceSnapshot:
-    """
-    Complete resource snapshot at a point in time.
-    Stored with every agent event for paper analysis.
-    """
     timestamp: float
     ram_used_mb: float
     ram_total_mb: float
@@ -68,22 +42,7 @@ class ResourceSnapshot:
             "estimated_power_w": round(self.estimated_power_w, 3),
         }
 
-
 class ResourceMonitor:
-    """
-    Live resource monitor for the AgentEdge agent loop.
-
-    Core method: check_before_step()
-    Called before every plan step execution.
-    Returns ResourceState which drives adaptive decomposition.
-
-    Novel algorithm:
-        1. Sample RAM and CPU
-        2. Classify into NORMAL / WARN / CRITICAL
-        3. If CRITICAL → signal planner to split current step
-        4. Log snapshot for all paper measurements
-    """
-
     def __init__(self, simulation_mode: bool = True):
         self.simulation_mode = simulation_mode
         self._history: list[ResourceSnapshot] = []
@@ -92,26 +51,15 @@ class ResourceMonitor:
                     "SIMULATION" if simulation_mode else "HARDWARE")
 
     def set_inference_active(self, active: bool) -> None:
-        """Called by LLM wrapper to signal when inference is running."""
         self._inference_active = active
 
     def sample(self) -> ResourceSnapshot:
-        """
-        Take a complete resource snapshot.
-        Works identically in simulation and hardware mode
-        (psutil works on both laptop and RPi5).
-        """
         ram = psutil.virtual_memory()
         cpu = psutil.cpu_percent(interval=0.1)
-
-        # Estimate power draw based on CPU activity
-        # In hardware phase: replace with INA219 real measurement
         if self._inference_active:
             est_power = SIM_INFERENCE_POWER_WATTS * (cpu / 100.0) + SIM_IDLE_POWER_WATTS
         else:
             est_power = SIM_IDLE_POWER_WATTS + (cpu / 100.0) * 1.5
-
-        # Classify resource state
         if ram.percent >= RAM_CRITICAL_THRESHOLD_PERCENT or cpu >= CPU_WARN_THRESHOLD_PERCENT:
             state = ResourceState.CRITICAL
         elif ram.percent >= RAM_WARN_THRESHOLD_PERCENT:
@@ -132,21 +80,6 @@ class ResourceMonitor:
         return snapshot
 
     def check_before_step(self, step_description: str) -> Tuple[ResourceState, ResourceSnapshot]:
-        """
-        NOVEL CONTRIBUTION #1 — Core method.
-
-        Call this before executing any agent plan step.
-        Returns (state, snapshot) where:
-          - NORMAL   → proceed with full step
-          - WARN     → proceed but log warning
-          - CRITICAL → caller must split step into sub-steps
-
-        Args:
-            step_description: Human-readable step label for logging
-
-        Returns:
-            Tuple of (ResourceState, ResourceSnapshot)
-        """
         snap = self.sample()
 
         if snap.state == ResourceState.CRITICAL:
@@ -169,10 +102,6 @@ class ResourceMonitor:
         return snap.state, snap
 
     def get_statistics(self) -> dict:
-        """
-        Aggregate statistics over all samples.
-        Used for paper's experimental results section.
-        """
         if not self._history:
             return {}
 
