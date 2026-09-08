@@ -1,8 +1,8 @@
-# AgentEdge 🤖⚡
+# AgentEdge
 
 **Agentic AI Planning on Resource-Constrained Embedded Systems**
 
-> First benchmarked agentic AI system running entirely on embedded hardware, where a quantized small language model plans and executes real-world sensor tasks with failure recovery — no cloud required.
+> First benchmarked agentic AI system running entirely on embedded hardware, where a quantized small language model plans and executes real-world sensor tasks with failure recovery - no cloud required.
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
@@ -12,7 +12,7 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 AgentEdge is a **research-grade embedded agentic AI system** that runs a Small Language Model (SLM) on a Raspberry Pi 5 to autonomously monitor an industrial factory machine and respond to sensor faults — completely offline, with no cloud dependency.
 
@@ -20,15 +20,15 @@ The system implements **three novel research contributions**:
 
 | Contribution | Description |
 |---|---|
-| 🔴 **Novel #1** — Resource-Adaptive Task Decomposition (RAD) | Monitors live RAM/CPU before each plan step. Automatically splits steps into sub-tasks when memory is constrained |
-| 🔴 **Novel #2** — Sensor Failure Recovery Protocol | Formal 4-type failure taxonomy (TIMEOUT, BAD\_DATA, DISCONNECT, BUS\_ERROR) with criticality-based recovery action matrix |
-| 🔴 **Novel #3** — AgentEdge-Bench | First standardized 20-task benchmark suite for embedded agentic AI systems |
+| 🔴 **Novel #1** - Resource-Adaptive Task Decomposition (RAD) | Monitors live RAM/CPU before each plan step. Automatically splits steps into sub-tasks when memory is constrained |
+| 🔴 **Novel #2** - Sensor Failure Recovery Protocol | Formal 4-type failure taxonomy (TIMEOUT, BAD\_DATA, DISCONNECT, BUS\_ERROR) with criticality-based recovery action matrix |
+| 🔴 **Novel #3** - AgentEdge-Bench | First standardized 20-task benchmark suite for embedded agentic AI systems |
 
 **Target Publication:** IEEE Internet of Things Journal / IEEE IOTAIS 2026
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -58,10 +58,10 @@ The system implements **three novel research contributions**:
 
 ---
 
-## 🔬 Research Context
+## Research Context
 
 ### Problem Statement
-> *"Can a quantized Small Language Model running on a Raspberry Pi 5 reliably execute multi-step agentic tasks using real physical sensors — with graceful recovery from sensor failure — without any cloud connectivity?"*
+> *"Can a quantized Small Language Model running on a Raspberry Pi 5 reliably execute multi-step agentic tasks using real physical sensors - with graceful recovery from sensor failure - without any cloud connectivity?"*
 
 ### Research Gap
 All existing agentic AI frameworks (LangGraph, AutoGen, ReAct) are designed for cloud deployment with unlimited RAM and compute. No published paper has:
@@ -70,13 +70,13 @@ All existing agentic AI frameworks (LangGraph, AutoGen, ReAct) are designed for 
 - Created a standardized benchmark for embedded agentic AI
 
 ### Novel Contributions
-1. **Resource-Adaptive Task Decomposition** — First algorithm that monitors live device RAM/CPU and splits agent plan steps at runtime to prevent OOM failures
-2. **Embedded Agent Recovery Protocol** — Formal failure taxonomy + criticality-based action matrix (RETRY / SUBSTITUTE / SKIP / ABORT)
-3. **AgentEdge-Bench** — 20-task benchmark across 4 categories (Normal, Single Fault, Multi-Fault, Recovery) with ground-truth metrics
+1. **Resource-Adaptive Task Decomposition** - First algorithm that monitors live device RAM/CPU and splits agent plan steps at runtime to prevent OOM failures
+2. **Embedded Agent Recovery Protocol** - Formal failure taxonomy + criticality-based action matrix (RETRY / SUBSTITUTE / SKIP / ABORT)
+3. **AgentEdge-Bench** - 20-task benchmark across 4 categories (Normal, Single Fault, Multi-Fault, Recovery) with ground-truth metrics
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AgentEdge/
@@ -118,7 +118,7 @@ AgentEdge/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Python 3.10+
@@ -128,7 +128,7 @@ AgentEdge/
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/agentedge.git
+git clone https://github.com/nikhhiilsingghvi/agentedge.git
 cd agentedge
 
 # Install dependencies
@@ -159,7 +159,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 📊 Phase 1 Results (Simulation on Laptop)
+## Phase 1 Results (Simulation on Laptop)
 
 | Metric | Value |
 |---|---|
@@ -176,7 +176,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 🔧 Sensor Specifications
+## Sensor Specifications
 
 | Sensor | Component | Normal | Warning | Fault | Unit |
 |---|---|---|---|---|---|
@@ -188,7 +188,7 @@ python -m pytest tests/ -v
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 All settings in `config/settings.py`:
 
@@ -207,22 +207,22 @@ SIMULATION_MODE = True    # False for real RPi5 hardware
 
 ---
 
-## 🔄 Phase Roadmap
+## Phase Roadmap
 
-### Phase 1 — Simulation ✅ (Current)
+### Phase 1 - Simulation (Current)
 - All 5 sensors simulated with physics-based fault injection
 - LLM planning via Gemini API (free tier)
 - 34 unit tests passing
 - 20-task benchmark suite implemented
 
-### Phase 2 — Hardware Integration (Oct 2026)
+### Phase 2 - Hardware Integration (Oct 2026)
 - Replace `sensors/simulator.py` → `sensors/hardware_reader.py`
 - Replace `actuators/simulator.py` → `actuators/hardware_writer.py`
 - Switch `LLM_PROVIDER = "ollama"` + `ollama pull tinyllama`
 - Set `SIMULATION_MODE = False`
 - Everything else unchanged
 
-### Phase 3 — Research Paper (Nov 2026)
+### Phase 3 - Research Paper (Nov 2026)
 - Full benchmark results on RPi5
 - Latency / RAM / Energy characterization
 - Ablation study: TinyLlama vs Phi-3-Mini
@@ -230,7 +230,7 @@ SIMULATION_MODE = True    # False for real RPi5 hardware
 
 ---
 
-## 👥 Team
+## Team
 
 | Member | Role | Responsibilities |
 |---|---|---|
@@ -243,7 +243,7 @@ SIMULATION_MODE = True    # False for real RPi5 hardware
 
 ---
 
-## 📚 Key References
+## References
 
 1. Shen et al., *"Large Language Models Empowered Autonomous Edge AI"*, **IEEE Commun. Mag.**, 2024
 2. Yao et al., *"ReAct: Synergizing Reasoning and Acting in LLMs"*, **ICLR**, 2023
@@ -253,13 +253,13 @@ SIMULATION_MODE = True    # False for real RPi5 hardware
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This is a research prototype developed as a final-year major project. The patent-pending algorithms (Resource-Adaptive Task Decomposition and Sensor Failure Recovery Protocol) are novel contributions intended for IEEE publication.
 
 ---
 
-## 📄 License
+## License
 
 Copyright (c) 2026 AgentEdge Project — DSCE ECE Department, Bengaluru
 
