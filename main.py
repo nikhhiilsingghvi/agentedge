@@ -4,6 +4,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from core.logger import get_logger, console
 from agent.loop import AgentLoop
+# pyrefly: ignore [missing-import]
 from benchmark.runner import BenchmarkRunner
 
 logger = get_logger("Main")

@@ -12,10 +12,10 @@ from config.settings import (
 from core.logger import get_logger, AgentEventLogger
 from core.resource_monitor import ResourceMonitor, ResourceState
 from sensors.simulator import SensorSimulator, SensorReading, SensorStatus
-from actuators.simulator import ActuatorSimulator
+from actuators.simulator import ActuatorSimulator 
 from agent.planner import LLMPlanner, AgentPlan
 from agent.executor import Executor, ExecutionResult
-from agent.recovery import RecoveryProtocol
+from agent.recovery import RecoveryProtocol 
 
 logger = get_logger("AgentLoop", LOG_DIR)
 
