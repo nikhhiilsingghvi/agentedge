@@ -32,6 +32,7 @@ secrets.py
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # Pytest
 .pytest_cache/
@@ -46,3 +47,14 @@ logs/benchmark_results/
 *.bin
 *.safetensors
 models/
+
+# Docs — ignore all docs
+docs/
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Temporary / scratch files
+scratch/
+*.tmp
+
+result analysis tables/
