@@ -1,16 +1,3 @@
-"""
-AgentEdge Executor
-==================
-Executes agent plans step by step.
-Integrates Novel Contribution #1 (Resource-Adaptive Decomposition)
-at the step level — checks RAM/CPU before each step and splits
-if resources are constrained.
-
-Verifies execution outcomes and feeds results back to the agent loop.
-
-Copyright (c) 2026 AgentEdge Project, DSCE ECE Dept.
-"""
-
 import time
 from typing import List, Dict, Any, Optional
 from dataclasses import dataclass
@@ -22,17 +9,14 @@ from core.logger import get_logger
 
 logger = get_logger("Executor")
 
-
 class StepOutcome(Enum):
     SUCCESS  = "SUCCESS"
-    SPLIT    = "SPLIT"       # Step was split due to resource constraint
+    SPLIT    = "SPLIT"
     FAILED   = "FAILED"
     SKIPPED  = "SKIPPED"
 
-
 @dataclass
 class StepResult:
-    """Result of executing a single plan step."""
     step_id:       str
     outcome:       StepOutcome
     actuator_results: list
@@ -52,10 +36,8 @@ class StepResult:
             "timestamp":         self.timestamp,
         }
 
-
 @dataclass
 class ExecutionResult:
-    """Complete result of executing a full plan."""
     plan_id:       str
     total_steps:   int
     completed:     int

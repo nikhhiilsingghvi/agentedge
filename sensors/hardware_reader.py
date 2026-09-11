@@ -14,6 +14,10 @@ class HardwareSensorReader:
         pass
 
     def read_vibration(self) -> SensorReading:
+        # accel_x = self._read_word_2c(0x3B) / 16384.0
+        # accel_y = self._read_word_2c(0x3D) / 16384.0
+        # accel_z = self._read_word_2c(0x3F) / 16384.0
+        # val = (accel_x**2 + accel_y**2 + accel_z**2) ** 0.5
         try:
             val = 0.0
             status = (SensorStatus.FAULT if val >= 3.0
