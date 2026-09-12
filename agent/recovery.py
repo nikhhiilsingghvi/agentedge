@@ -148,7 +148,7 @@ class RecoveryProtocol:
             FailureType.UNKNOWN.value:    RecoveryAction.SUBSTITUTE,
         },
         "MEDIUM": {
-            FailureType.TIMEOUT.value:    RecoveryAction.SKIP,
+            FailureType.TIMEOUT.value:    RecoveryAction.RETRY,
             FailureType.BAD_DATA.value:   RecoveryAction.SKIP,
             FailureType.DISCONNECT.value: RecoveryAction.SKIP,
             FailureType.BUS_ERROR.value:  RecoveryAction.RETRY,
