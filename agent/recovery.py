@@ -1,31 +1,3 @@
-"""
-AgentEdge Recovery Protocol
-============================
-NOVEL CONTRIBUTION #2: Sensor Failure Recovery Protocol
-
-Formal specification of agent behavior when a sensor fails
-mid-task. This is the first published recovery protocol for
-embedded agentic AI systems.
-
-Recovery taxonomy:
-  Type 1 — TIMEOUT:      Sensor did not respond in time
-  Type 2 — BAD_DATA:     Sensor responded but data is invalid
-  Type 3 — DISCONNECT:   Sensor physically disconnected
-  Type 4 — BUS_ERROR:    I2C/SPI communication error
-
-Recovery actions (in priority order):
-  Action A — RETRY:      Retry read up to MAX_RECOVERY_ATTEMPTS
-  Action B — SUBSTITUTE: Use last known good value with decay
-  Action C — SKIP:       Skip sensor, log, continue with remaining
-  Action D — ABORT:      Abort current task, log incident, safe-state
-
-Patent-pending: The formal classification of embedded sensor
-failures and the hierarchical recovery action selection method
-for embedded agentic AI systems.
-
-Copyright (c) 2026 AgentEdge Project, DSCE ECE Dept.
-"""
-
 import time
 from dataclasses import dataclass, field
 from typing import Optional, Dict, Callable, Any
@@ -36,35 +8,26 @@ from core.logger import get_logger
 
 logger = get_logger("RecoveryProtocol")
 
-
-# ─── FAILURE TAXONOMY ─────────────────────────────────────────────────────────
-
 class FailureType(Enum):
-    TIMEOUT     = "TIMEOUT"      # No response within deadline
-    BAD_DATA    = "BAD_DATA"     # Response received but invalid
-    DISCONNECT  = "DISCONNECT"   # Physical disconnection detected
-    BUS_ERROR   = "BUS_ERROR"    # I2C/SPI bus level error
-    UNKNOWN     = "UNKNOWN"      # Unclassified failure
-
+    TIMEOUT     = "TIMEOUT"     
+    BAD_DATA    = "BAD_DATA"    
+    DISCONNECT  = "DISCONNECT"   
+    BUS_ERROR   = "BUS_ERROR"   
+    UNKNOWN     = "UNKNOWN"      
 
 class RecoveryAction(Enum):
-    RETRY       = "RETRY"        # Re-attempt sensor read
-    SUBSTITUTE  = "SUBSTITUTE"   # Use last known good value
-    SKIP        = "SKIP"         # Skip sensor, continue task
-    ABORT       = "ABORT"        # Abort task, enter safe state
-
+    RETRY       = "RETRY"       
+    SUBSTITUTE  = "SUBSTITUTE"  
+    SKIP        = "SKIP"        
+    ABORT       = "ABORT"       
 
 class RecoveryOutcome(Enum):
-    SUCCESS     = "SUCCESS"      # Recovery succeeded
-    PARTIAL     = "PARTIAL"      # Partial recovery — degraded mode
-    FAILED      = "FAILED"       # Recovery failed — task aborted
-
-
-# ─── DATA STRUCTURES ──────────────────────────────────────────────────────────
+    SUCCESS     = "SUCCESS"    
+    PARTIAL     = "PARTIAL"    
+    FAILED      = "FAILED"     
 
 @dataclass
 class FailureEvent:
-    """Structured record of a sensor failure event."""
     sensor_id:      str
     failure_type:   FailureType
     failure_reason: str
@@ -72,10 +35,8 @@ class FailureEvent:
     task_id:        Optional[str] = None
     step_id:        Optional[str] = None
 
-
 @dataclass
 class RecoveryRecord:
-    """Complete record of a recovery attempt — stored for paper analysis."""
     failure_event:      FailureEvent
     action_taken:       RecoveryAction
     attempts:           int
@@ -99,39 +60,15 @@ class RecoveryRecord:
             "timestamp":          self.timestamp,
         }
 
-
-# ─── RECOVERY PROTOCOL ENGINE ─────────────────────────────────────────────────
-
 class RecoveryProtocol:
-    """
-    NOVEL CONTRIBUTION #2 — Sensor Failure Recovery Protocol.
-
-    Implements a formal, hierarchical recovery process:
-
-    Step 1: Classify failure type from failure_reason string
-    Step 2: Select recovery action based on failure type + sensor criticality
-    Step 3: Execute recovery action with retry loop
-    Step 4: Evaluate outcome and decide: continue | degrade | abort
-    Step 5: Log complete RecoveryRecord for paper analysis
-
-    Sensor criticality levels:
-      CRITICAL: mpu6050, ina219  (safety-critical — abort if unrecoverable)
-      HIGH:     dht22            (important — substitute if unrecoverable)
-      MEDIUM:   mq135, hcsr04   (useful — skip if unrecoverable)
-
-    This hierarchy is the novel contribution — no published paper
-    has defined sensor criticality-based recovery for embedded agents.
-    """
-
     SENSOR_CRITICALITY: Dict[str, str] = {
-        "mpu6050": "CRITICAL",   # Vibration — bearing failure detection
-        "ina219":  "CRITICAL",   # Current — overcurrent = fire risk
-        "dht22":   "HIGH",       # Temperature — overheating detection
-        "hcsr04":  "MEDIUM",     # Distance — conveyor jam detection
-        "mq135":   "MEDIUM",     # Gas — fume detection
+        "mpu6050": "CRITICAL",   
+        "ina219":  "CRITICAL",  
+        "dht22":   "HIGH",       
+        "hcsr04":  "MEDIUM",     
+        "mq135":   "MEDIUM",     
     }
 
-    # Failure type → preferred recovery action mapping
     RECOVERY_MATRIX: Dict[str, Dict[str, RecoveryAction]] = {
         "CRITICAL": {
             FailureType.TIMEOUT.value:    RecoveryAction.RETRY,
@@ -165,18 +102,10 @@ class RecoveryProtocol:
         logger.info("[recovery] Recovery Protocol initialized")
 
     def update_last_known_good(self, sensor_id: str, value: float) -> None:
-        """
-        Called after every successful sensor read.
-        Maintains the substitute value pool for Type B recovery.
-        """
         self._last_known_good[sensor_id] = value
         self._last_known_timestamps[sensor_id] = time.time()
 
     def classify_failure(self, failure_reason: Optional[str]) -> FailureType:
-        """
-        Classify failure type from sensor failure_reason string.
-        Maps human-readable error messages to formal taxonomy.
-        """
         if not failure_reason:
             return FailureType.UNKNOWN
 
@@ -201,19 +130,6 @@ class RecoveryProtocol:
         task_id: Optional[str] = None,
         step_id: Optional[str] = None,
     ) -> RecoveryRecord:
-        """
-        NOVEL CONTRIBUTION #2 — Core recovery method.
-
-        Args:
-            sensor_id:      ID of the failed sensor
-            failure_reason: Error string from SensorReading.failure_reason
-            read_fn:        Callable that returns a fresh SensorReading
-            task_id:        Current task ID (for logging)
-            step_id:        Current step ID (for logging)
-
-        Returns:
-            RecoveryRecord — complete record of what happened
-        """
         t0 = time.time()
 
         # Step 1: Classify failure
@@ -293,7 +209,6 @@ class RecoveryProtocol:
         read_fn: Callable,
         criticality: str,
     ):
-        """Retry sensor read up to MAX_RECOVERY_ATTEMPTS times."""
         for attempt in range(1, MAX_RECOVERY_ATTEMPTS + 1):
             logger.info("[recovery] Retry attempt %d/%d for %s",
                         attempt, MAX_RECOVERY_ATTEMPTS, sensor_id)
@@ -309,13 +224,13 @@ class RecoveryProtocol:
                     f"Retry succeeded on attempt {attempt}",
                 )
 
-        # All retries failed — fall back based on criticality
+        # All retries failed - fall back based on criticality
         if criticality == "CRITICAL":
             return (
                 RecoveryOutcome.FAILED,
                 None,
                 MAX_RECOVERY_ATTEMPTS,
-                f"All {MAX_RECOVERY_ATTEMPTS} retries failed — ABORT required",
+                f"All {MAX_RECOVERY_ATTEMPTS} retries failed - ABORT required",
             )
         else:
             # Attempt substitute as fallback
@@ -323,7 +238,6 @@ class RecoveryProtocol:
             return outcome, val, MAX_RECOVERY_ATTEMPTS, notes
 
     def _execute_substitute(self, sensor_id: str):
-        """Use last known good value with staleness check."""
         if sensor_id in self._last_known_good:
             age_s = time.time() - self._last_known_timestamps.get(sensor_id, 0)
             val = self._last_known_good[sensor_id]
@@ -342,7 +256,6 @@ class RecoveryProtocol:
             return RecoveryOutcome.PARTIAL, None, notes
 
     def get_statistics(self) -> dict:
-        """Recovery statistics for paper's experimental results."""
         total = len(self._recovery_history)
         if total == 0:
             return {"total_failures": 0}
