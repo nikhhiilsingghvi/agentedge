@@ -343,7 +343,7 @@ class BenchmarkRunner:
         self._results: List[TaskResult] = []
         self.run_id = str(uuid.uuid4())[:6].upper()
         os.makedirs(BENCHMARK_RESULTS_DIR, exist_ok=True)
-        logger.info("[bench] AgentEdge-Bench v1.1 initialized | Run: %s", self.run_id)
+        logger.info("[bench] AgentEdge-Bench v1.2 initialized | Run: %s", self.run_id)
 
     def run_all(self) -> Dict[str, Any]:
         logger.info("[bench] 🏁 Starting AgentEdge-Bench | 20 tasks")
@@ -391,14 +391,15 @@ class BenchmarkRunner:
                 sensor_sim.simulate_sensor_failure(sid, failure_type=failure_type)
                 failures_injected.append(sid)
 
+        # Bug 3d: snapshot recovery count BEFORE task to enable task-local slicing
+        history_before = recovery.get_statistics().get("total_failures", 0)
+
         try:
             cycle = self.agent_loop.run_single_cycle()
 
             # ── Severity grading ──────────────────────────────────────────────
-            severity_correct = (
-                cycle.plan_severity == task_def["expected_severity"]
-                or task_def["expected_severity"] in cycle.plan_severity
-            )
+            # Bug 3f: exact equality only (substring 'NORMAL' in 'ABNORMAL' = True)
+            severity_correct = (cycle.plan_severity == task_def["expected_severity"])
 
             # ── Phase 1 Fix: Real action grading ─────────────────────────────
             # Collect executed actions from the cycle's last plan steps
@@ -408,17 +409,32 @@ class BenchmarkRunner:
                 executed_actions, expected_actions
             )
 
-            recovery_triggered = cycle.failures_detected > 0
-            recovery_success = (
-                recovery.get_statistics().get("success_rate_pct", 100) > 50
-                if recovery_triggered else None
-            )
+            # Bug 3d: task-local recovery events only (not cumulative session stats)
+            history_after = recovery.get_statistics().get("total_failures", 0)
+            task_local_failures = history_after - history_before
+            recovery_triggered = task_local_failures > 0
+            if recovery_triggered and hasattr(recovery, "_recovery_history"):
+                task_history = recovery._recovery_history[-task_local_failures:]
+                task_successes = sum(
+                    1 for r in task_history
+                    if r.get("outcome") in ("SUCCESS", "PARTIAL")
+                )
+                recovery_success = task_successes > 0
+            elif recovery_triggered:
+                recovery_success = (
+                    recovery.get_statistics().get("success_rate_pct", 100) > 50
+                )
+            else:
+                recovery_success = None
+
+            # Bug 3c: completed requires severity correct AND execution succeeded
+            task_completed = severity_correct and cycle.execution_success
 
             result = TaskResult(
                 task_id=task_def["task_id"],
                 category=task_def["category"],
                 task_name=task_def["name"],
-                completed=True,
+                completed=task_completed,       # Bug 3c fix
                 severity_correct=severity_correct,
                 actions_correct=actions_correct,
                 plan_latency_ms=cycle.phase_latencies.get("plan_ms", 0),
@@ -427,7 +443,11 @@ class BenchmarkRunner:
                 energy_mj=cycle.total_energy_mj,
                 recovery_triggered=recovery_triggered,
                 recovery_success=recovery_success,
-                notes="OK" if actions_correct else f"Missing: {missing_actions}",
+                notes="OK" if (task_completed and actions_correct) else (
+                    f"Sev: {'OK' if severity_correct else 'FAIL'} | "
+                    f"Exec: {'OK' if cycle.execution_success else 'FAIL'} | "
+                    f"Missing: {missing_actions}"
+                ),
                 timestamp=t0,
                 expected_actions=expected_actions,
                 executed_actions=executed_actions,
@@ -879,7 +899,7 @@ class BenchmarkRunner:
                 task_id=task_def["task_id"],
                 category=task_def["category"],
                 task_name=task_def["name"],
-                completed=True,
+                completed=task_completed,    # Bug 3c: real success criteria
                 severity_correct=severity_correct,
                 actions_correct=actions_correct,
                 plan_latency_ms=cycle.phase_latencies.get("plan_ms", 0),

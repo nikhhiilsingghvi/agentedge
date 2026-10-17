@@ -4,6 +4,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 from agent.planner import AgentPlan, PlanStep
+from agent.rad_engine import RADEngine, RADDecision
 from core.resource_monitor import ResourceMonitor, ResourceState
 from core.logger import get_logger
 
@@ -79,10 +80,12 @@ class Executor:
     def __init__(self, actuator_simulator, resource_monitor: ResourceMonitor):
         self._actuators = actuator_simulator
         self._resources = resource_monitor
-        self._split_count = 0          # CRITICAL-tier decompositions
-        self._warn_split_count = 0     # WARN-tier simplifications (new in v1.1)
+        self._split_count = 0          # CRITICAL-tier decompositions (legacy counter)
+        self._warn_split_count = 0     # WARN-tier simplifications (legacy counter)
         self._total_steps_executed = 0
-        logger.info("[executor] Executor initialized — RAD v1.1 (3-tier)")
+        self._deferred_count = 0       # Phase 3: steps deferred by RADEngine
+        self._rad = RADEngine()        # Phase 3: dedicated RAD engine
+        logger.info("[executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)")
 
     def execute_plan(self, plan: AgentPlan) -> ExecutionResult:
         """Execute all steps in a plan with resource-adaptive decomposition."""
@@ -144,33 +147,44 @@ class Executor:
         self._resources.set_inference_active(False)
         res_state, snap = self._resources.check_before_step(step.description)
 
-        # ── RAD Tier Routing ─────────────────────────────────────────────────
+        # ── RAD Tier Routing via RADEngine ────────────────────────────────────
+        decision = self._rad.decide(step, res_state, snap.ram_percent)
+        self._rad.record(decision)
+
         if not step.can_split:
             # Safety-critical step: always execute at full tier, no decomposition
             logger.debug("[executor] Step %s: can_split=False — safety lock, full exec",
                          step.step_id)
             return self._execute_full(step, snap, t0)
 
-        elif res_state == ResourceState.CRITICAL:
-            # Tier 3: CRITICAL — core command only, no payload
-            self._split_count += 1
-            logger.warning(
-                "[executor] 🔀 RAD CRITICAL-tier: step %s — RAM: %.1f%%",
-                step.step_id, snap.ram_percent
-            )
-            return self._execute_split_step(step, snap, t0)
+        elif decision == RADDecision.NORMAL_EXECUTION:
+            return self._execute_full(step, snap, t0)
 
-        elif res_state == ResourceState.WARN:
-            # Tier 2: WARN — simplified payload, preserves alert semantics
+        elif decision == RADDecision.SIMPLIFIED_PAYLOAD:
+            # Tier 2: WARN — use decompose() to get simplified SubStep
+            substeps = self._rad.decompose(step, decision)
             self._warn_split_count += 1
             logger.info(
                 "[executor] 🔁 RAD WARN-tier: step %s — RAM: %.1f%%",
                 step.step_id, snap.ram_percent
             )
-            return self._execute_simplified_step(step, snap, t0)
+            if substeps:
+                return self._execute_simplified_step(step, snap, t0,
+                                                     substeps[0].payload)
+            return self._execute_full(step, snap, t0)  # Fallback
+
+        elif decision == RADDecision.DEFERRED_EXECUTION:
+            # Tier 3 CRITICAL: defer step, do not silently drop or corrupt
+            self._split_count += 1
+            self._deferred_count += 1
+            logger.warning(
+                "[executor] ⏸️ RAD DEFERRED: step %s — RAM: %.1f%% (CRITICAL)",
+                step.step_id, snap.ram_percent
+            )
+            return self._execute_deferred_step(step, snap, t0)
 
         else:
-            # Tier 1: NORMAL — full execution
+            # Unknown decision — fallback to full
             return self._execute_full(step, snap, t0)
     def _execute_full(self, step: PlanStep, snap, t0: float) -> StepResult:
         """Tier 1: Full execution — complete payload, all fields."""
@@ -228,13 +242,18 @@ class Executor:
             timestamp=time.time(),
         )
 
-    def _execute_simplified_step(self, step: PlanStep, snap, t0: float) -> StepResult:
+    def _execute_simplified_step(
+        self, step: PlanStep, snap, t0: float,
+        simplified_payload: Optional[dict] = None,
+    ) -> StepResult:
         """
         Tier 2 RAD (WARN): Simplified payload execution.
-        Truncates long messages and drops optional verbose fields.
+        The simplified payload is produced by RADEngine.decompose() and
+        passed in directly. Falls back to _simplify_payload() if not provided.
         Preserves command semantics and required alert content.
         """
-        simplified_payload = self._simplify_payload(step.payload)
+        if simplified_payload is None:
+            simplified_payload = self._simplify_payload(step.payload)
         logger.info("[executor] 🔁 WARN-tier simplified payload for step %s", step.step_id)
         actuator_results = []
 
@@ -291,38 +310,29 @@ class Executor:
                 simplified[key] = val
         return simplified or None
 
-    def _execute_split_step(self, step: PlanStep, snap, t0: float) -> StepResult:
+    def _execute_deferred_step(self, step: PlanStep, snap, t0: float) -> StepResult:
         """
-        Tier 3 RAD (CRITICAL): Core-command-only execution.
-        Strips payload entirely — only the essential actuator command is sent.
-        This guarantees the most critical operation (e.g. relay:OFF) succeeds
-        even when RAM is critically exhausted.
+        Tier 3 RAD (CRITICAL + can_split=True): Deferred execution.
+
+        The step is NOT executed. It is recorded with SKIPPED outcome and a
+        detailed deferral note so it can be re-planned next cycle.
+
+        Design note: Prior implementation executed the step with payload=None
+        (labelled "CRITICAL-tier"). That approach silently changed command
+        semantics. DEFERRED is semantically correct: the step did not execute,
+        the agent is aware, and the outcome is surfaced to the caller.
         """
-        logger.info("[executor] 🔀 CRITICAL-tier core-only execution for step %s", step.step_id)
-
-        actuator_results = []
-
-        try:
-            result = self._actuators.execute(
-                actuator_id=step.target,
-                command=step.command,
-                payload=None,  # Core command only — payload entirely stripped
-            )
-            actuator_results.append(result)
-            outcome = StepOutcome.SPLIT
-            notes = f"[CRITICAL-tier] Core command only — RAM was {snap.ram_percent:.1f}% | {result.message}"
-            logger.warning("[executor] 🔀 CRITICAL-tier split: %s", notes)
-
-        except Exception as e:
-            outcome = StepOutcome.FAILED
-            notes = f"CRITICAL-tier execution failed: {e}"
-            logger.error("[executor] ❌ CRITICAL-tier step %s failed: %s", step.step_id, e)
+        notes = (
+            f"[DEFERRED] Step not executed — RAM {snap.ram_percent:.1f}% (CRITICAL). "
+            f"Re-plan required next cycle."
+        )
+        logger.warning("[executor] ⏸️ DEFERRED: %s", notes)
 
         latency_ms = (time.time() - t0) * 1000
         return StepResult(
-            step_id=f"{step.step_id}_SPLIT",
-            outcome=outcome,
-            actuator_results=actuator_results,
+            step_id=f"{step.step_id}_DEFERRED",
+            outcome=StepOutcome.SKIPPED,
+            actuator_results=[],
             resource_snapshot=snap.to_dict(),
             latency_ms=latency_ms,
             notes=notes,
@@ -332,19 +342,26 @@ class Executor:
     def get_statistics(self) -> dict:
         return {
             "total_steps_executed":  self._total_steps_executed,
-            "total_splits_critical": self._split_count,
             "total_splits_warn":     self._warn_split_count,
-            "total_rad_adaptations": self._split_count + self._warn_split_count,
-            "rad_triggered":         (self._split_count + self._warn_split_count) > 0,
+            "total_deferred":        self._deferred_count,
+            "total_rad_adaptations": self._warn_split_count + self._deferred_count,
+            "rad_triggered":         (self._warn_split_count + self._deferred_count) > 0,
             "split_rate_pct":        round(
-                (self._split_count + self._warn_split_count) /
+                (self._warn_split_count + self._deferred_count) /
                 max(self._total_steps_executed, 1) * 100, 1
             ),
         }
+
+    def get_rad_metrics(self) -> dict:
+        """Return RADEngine metrics (Phase 3) for session report."""
+        return self._rad.metrics.to_dict()
 
     def reset_stats(self) -> None:
         """Reset execution statistics for benchmark task isolation."""
         self._split_count = 0
         self._warn_split_count = 0
+        self._deferred_count = 0
         self._total_steps_executed = 0
+        self._rad.reset_metrics()
         logger.debug("[executor] Execution stats reset")
+

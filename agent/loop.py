@@ -16,6 +16,7 @@ from actuators.simulator import ActuatorSimulator
 from agent.planner import LLMPlanner, AgentPlan, PlanStep
 from agent.executor import Executor, ExecutionResult
 from agent.recovery import RecoveryProtocol
+from agent.verifier import Verifier, VerificationReport
 
 # Phase 2: Hardcoded safe-state plan used when ABORT is required
 # This bypasses the LLM entirely — guarantees relay OFF and alarm ON
@@ -40,20 +41,27 @@ class LoopPhase(Enum):
 
 @dataclass
 class CycleRecord:
-    cycle_id:          str
-    cycle_number:      int
-    phase_latencies:   Dict[str, float]  # phase → ms
-    total_latency_ms:  float
-    sensor_statuses:   Dict[str, str]
-    plan_severity:     str
-    plan_steps:        int
-    execution_success: bool
-    failures_detected: int
+    cycle_id:             str
+    cycle_number:         int
+    phase_latencies:      Dict[str, float]  # phase → ms
+    total_latency_ms:     float
+    sensor_statuses:      Dict[str, str]
+    plan_severity:        str
+    plan_steps:           int
+    execution_success:    bool
+    failures_detected:    int
     recoveries_attempted: int
-    peak_ram_percent:  float
-    avg_power_w:       float
-    total_energy_mj:   float
-    timestamp:         float
+    peak_ram_percent:     float
+    avg_power_w:          float
+    total_energy_mj:      float
+    timestamp:            float
+    # Phase 2: Closed-Loop Verification fields
+    verification_success:  bool  = True
+    verification_failures: list  = None
+
+    def __post_init__(self):
+        if self.verification_failures is None:
+            self.verification_failures = []
 
     def to_dict(self) -> dict:
         return self.__dict__.copy()
@@ -76,6 +84,7 @@ class AgentLoop:
         self.recovery      = RecoveryProtocol()
         self.planner       = LLMPlanner()
         self.executor      = Executor(self.actuator_sim, self.resource_mon)
+        self.verifier      = Verifier()   # Phase 2: Closed-Loop State Verification
         self.event_logger  = AgentEventLogger(self.session_id, LOG_DIR)
         self._last_plan: Optional[AgentPlan] = None   # Phase 1/Bench: track last plan for action grading
 
@@ -164,8 +173,12 @@ class AgentLoop:
         # PHASE 5: VERIFY
         self._current_phase = LoopPhase.VERIFY
         p4_start = time.time()
-        self._phase_verify(sensor_readings, plan)
+        verify_report: VerificationReport = self._phase_verify(plan, exec_result)
         phase_latencies["verify_ms"] = round((time.time() - p4_start) * 1000, 2)
+
+        logger.info("[agent] VERIFY complete | success=%s | checked=%d | failed=%d | %.0f ms [SIMULATION]",
+                    verify_report.overall_success, verify_report.total_steps_checked,
+                    verify_report.failed, phase_latencies["verify_ms"])
 
         #METRICS
         total_latency_ms = (time.time() - cycle_start) * 1000
@@ -186,6 +199,9 @@ class AgentLoop:
             avg_power_w=res_stats.get("estimated_avg_power_w", 0.0),
             total_energy_mj=round(total_latency_ms / 1000 * res_stats.get("estimated_avg_power_w", 5.0) * 1000, 2),
             timestamp=cycle_start,
+            # Phase 2: Closed-Loop Verification
+            verification_success=verify_report.overall_success,
+            verification_failures=verify_report.verification_failures,
         )
 
         self.event_logger.log_event(
@@ -279,18 +295,18 @@ class AgentLoop:
     def _phase_execute(self, plan: AgentPlan) -> ExecutionResult:
         return self.executor.execute_plan(plan)
 
-    def _phase_verify(self, pre_readings: Dict, plan: AgentPlan) -> None:
-        post_readings = self.sensor_sim.read_all()
+    def _phase_verify(self, plan: AgentPlan, exec_result: ExecutionResult) -> VerificationReport:
+        """
+        Phase 5: Closed-Loop State Verification (Novel Contribution #3).
 
-        for sid, pre in pre_readings.items():
-            post = post_readings.get(sid)
-            if pre.value and post and post.value:
-                delta = post.value - pre.value
-                if abs(delta) > 0.01:
-                    logger.info(
-                        "[agent] VERIFY %s: %.3f → %.3f (Δ%.3f)",
-                        sid, pre.value, post.value, delta,
-                    )
+        Compares the expected actuator state for each plan step against
+        the observed actuator state in the simulator.
+
+        NOTE: This verifies the software model only (ActuatorSimulator).
+        Physical hardware verification (GPIO, relay continuity) is out of scope
+        for the simulation mode used in AgentEdge-Bench.
+        """
+        return self.verifier.verify_plan(plan, exec_result, self.actuator_sim)
 
     @staticmethod
     def _sensor_method(sensor_id: str) -> str:
@@ -304,12 +320,13 @@ class AgentLoop:
 
     def _save_session_report(self) -> None:
         report = {
-            "session_id": self.session_id,
-            "total_cycles": self._cycle_count,
-            "planner_stats": self.planner.get_statistics(),
+            "session_id":     self.session_id,
+            "total_cycles":   self._cycle_count,
+            "planner_stats":  self.planner.get_statistics(),
             "executor_stats": self.executor.get_statistics(),
             "resource_stats": self.resource_mon.get_statistics(),
             "recovery_stats": self.recovery.get_statistics(),
+            "rad_metrics":    self.executor.get_rad_metrics(),   # Phase 3
             "event_summary":  self.event_logger.get_session_summary(),
             "cycle_records":  self._cycle_records,
         }
