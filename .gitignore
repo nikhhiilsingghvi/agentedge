@@ -1,60 +1,124 @@
-# Python
+# ──────────────────────────────────────────────────────────────────────────────
+# AgentEdge .gitignore
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Python ────────────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *$py.class
 *.egg-info/
+*.egg
 dist/
 build/
 .eggs/
+pip-wheel-metadata/
+*.whl
+*.pyd
 
-# Virtual environments
+# ── Virtual environments ──────────────────────────────────────────────────────
 venv/
 env/
 .venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
 
-# AgentEdge runtime logs (generated at runtime — do not commit)
+# ── API Keys & Secrets — NEVER commit ─────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.key
+secrets.py
+credentials.json
+token.json
+*.pem
+*.p12
+
+# ── AgentEdge runtime output (generated — do not commit) ─────────────────────
 logs/
 *.log
 *.jsonl
+benchmark_results/
 
-# API Keys — NEVER commit these
-.env
-.env.local
-*.key
-secrets.py
+# ── Model weight files (too large for git) ────────────────────────────────────
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.tflite
+models/
+weights/
 
-# IDE
+# ── Test & Coverage ───────────────────────────────────────────────────────────
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.coveragerc
+report.xml
+
+# ── Type checking ─────────────────────────────────────────────────────────────
+.mypy_cache/
+.dmypy.json
+.pytype/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── IDE & Editors ─────────────────────────────────────────────────────────────
 .vscode/
 .idea/
 *.swp
 *.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sublime-project
+*.sublime-workspace
+.ropeproject/
 
-# OS
+# ── OS ────────────────────────────────────────────────────────────────────────
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 desktop.ini
+$RECYCLE.BIN/
 
-# Pytest
-.pytest_cache/
-htmlcov/
-.coverage
+# ── AI tool configuration (IDE-specific, not project code) ────────────────────
+# Antigravity / Gemini IDE agent scaffolding
+.agents/
+.claude/
+.planning/
+skills-lock.json
 
-# Benchmark results (large, generated at runtime)
-logs/benchmark_results/
+# ── Documents & Presentations (binary, not code) ─────────────────────────────
+*.pptx
+*.ppt
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pdf
+ppt_extract.txt
 
-# Model files (too large for git)
-*.gguf
-*.bin
-*.safetensors
-models/
-
-# Docs — ignore all docs
-docs/
-# Jupyter notebooks checkpoints
-.ipynb_checkpoints/
-
-# Temporary / scratch files
+# ── Temporary / scratch ───────────────────────────────────────────────────────
 scratch/
 *.tmp
-
+*.bak
+*.orig
 result analysis tables/
+
+# ── Docs site (generated, not source) ────────────────────────────────────────
+docs/
+_site/
+site/
