@@ -212,6 +212,8 @@ class SensorSimulator:
         """
         Returns the failure_reason string if this sensor should fail, else None.
         Priority: injected failures > spontaneous random failures.
+        Forced readings (force_reading()) suppress spontaneous failures so that
+        benchmark / test scenarios always observe the value they requested.
         """
         if sensor_id in self._sensor_failures:
             failure_type = self._sensor_failures[sensor_id]
@@ -219,6 +221,10 @@ class SensorSimulator:
                 failure_type,
                 _DEFAULT_FAILURE_REASON.get(sensor_id, "sensor error"),
             )
+        # Don't inject spontaneous failures when a forced reading is active —
+        # tests and benchmark scenarios need deterministic sensor values.
+        if sensor_id in self._forced_readings:
+            return None
         if random.random() < SIM_SENSOR_FAILURE_PROB:
             logger.warning("[simulator] Spontaneous sensor failure: %s", sensor_id)
             return _DEFAULT_FAILURE_REASON.get(sensor_id, "spontaneous error")

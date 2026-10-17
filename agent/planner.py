@@ -4,6 +4,13 @@ import re
 import time
 import os
 from typing import Optional, Dict, Any, List
+
+# Load .env (GEMINI_API_KEY, etc.) before any client is initialised
+try:
+    from dotenv import load_dotenv as _load_dotenv
+    _load_dotenv(override=False)   # don't overwrite keys already set in shell
+except ImportError:
+    pass  # dotenv optional — fall back to os.environ
 from dataclasses import dataclass
 
 try:
