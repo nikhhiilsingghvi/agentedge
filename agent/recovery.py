@@ -1,12 +1,16 @@
 import time
 from dataclasses import dataclass, field
-from typing import Optional, Dict, Callable, Any
+from typing import Optional, Dict, Callable, Any, Tuple
 from enum import Enum
 
 from config.settings import MAX_RECOVERY_ATTEMPTS, RECOVERY_WAIT_SECONDS
 from core.logger import get_logger
 
 logger = get_logger("RecoveryProtocol")
+
+# Exponential back-off delays (ms) for retry attempts — replaces flat 1000ms wait
+# Total worst-case: 50 + 100 + 200 = 350ms vs old 3000ms
+_RETRY_DELAYS_S = [0.05, 0.10, 0.20]  # 50ms, 100ms, 200ms
 
 class FailureType(Enum):
     TIMEOUT     = "TIMEOUT"     
@@ -37,14 +41,15 @@ class FailureEvent:
 
 @dataclass
 class RecoveryRecord:
-    failure_event:      FailureEvent
-    action_taken:       RecoveryAction
-    attempts:           int
-    outcome:            RecoveryOutcome
-    recovered_value:    Optional[float]
+    failure_event:       FailureEvent
+    action_taken:        RecoveryAction
+    attempts:            int
+    outcome:             RecoveryOutcome
+    recovered_value:     Optional[float]
+    substitute_age_s:    Optional[float]   # Phase 2: age of substitute value
     recovery_latency_ms: float
-    notes:              str
-    timestamp:          float
+    notes:               str
+    timestamp:           float
 
     def to_dict(self) -> dict:
         return {
@@ -55,6 +60,7 @@ class RecoveryRecord:
             "attempts":           self.attempts,
             "outcome":            self.outcome.value,
             "recovered_value":    self.recovered_value,
+            "substitute_age_s":   round(self.substitute_age_s, 1) if self.substitute_age_s else None,
             "recovery_latency_ms": round(self.recovery_latency_ms, 2),
             "notes":              self.notes,
             "timestamp":          self.timestamp,
@@ -99,7 +105,21 @@ class RecoveryProtocol:
         self._recovery_history: list = []
         self._abort_count: int = 0
         self._recovery_count: int = 0
+        self._abort_required: bool = False   # Phase 2: propagate abort signal
         logger.info("[recovery] Recovery Protocol initialized")
+
+    def reset_cycle_history(self) -> None:
+        """Reset per-cycle history for benchmark task isolation."""
+        self._recovery_history.clear()
+        self._abort_count = 0
+        self._recovery_count = 0
+        self._abort_required = False
+        logger.debug("[recovery] Cycle history reset")
+
+    @property
+    def abort_required(self) -> bool:
+        """True if the last recovery determined an ABORT is required."""
+        return self._abort_required
 
     def update_last_known_good(self, sensor_id: str, value: float) -> None:
         self._last_known_good[sensor_id] = value
@@ -129,8 +149,9 @@ class RecoveryProtocol:
         read_fn: Callable,
         task_id: Optional[str] = None,
         step_id: Optional[str] = None,
-    ) -> RecoveryRecord:
+    ) -> "RecoveryRecord":
         t0 = time.time()
+        self._abort_required = False  # Reset per-call
 
         # Step 1: Classify failure
         failure_type = self.classify_failure(failure_reason)
@@ -156,6 +177,7 @@ class RecoveryProtocol:
 
         # Step 3: Execute recovery action
         recovered_value = None
+        substitute_age_s = None
         outcome = RecoveryOutcome.FAILED
         attempts = 0
         notes = ""
@@ -166,7 +188,7 @@ class RecoveryProtocol:
             )
 
         elif action == RecoveryAction.SUBSTITUTE:
-            outcome, recovered_value, notes = self._execute_substitute(sensor_id)
+            outcome, recovered_value, substitute_age_s, notes = self._execute_substitute(sensor_id)
 
         elif action == RecoveryAction.SKIP:
             outcome = RecoveryOutcome.PARTIAL
@@ -177,7 +199,8 @@ class RecoveryProtocol:
             outcome = RecoveryOutcome.FAILED
             notes = f"ABORT: Critical sensor {sensor_id} disconnected — entering safe state"
             self._abort_count += 1
-            logger.error("[recovery] 🚨 ABORT — %s", notes)
+            self._abort_required = True   # Phase 2: signal loop.py to halt normal planning
+            logger.error("[recovery] 🚨 ABORT required — %s", notes)
 
         # Step 4: Record
         recovery_latency_ms = (time.time() - t0) * 1000
@@ -187,6 +210,7 @@ class RecoveryProtocol:
             attempts=attempts,
             outcome=outcome,
             recovered_value=recovered_value,
+            substitute_age_s=substitute_age_s,
             recovery_latency_ms=recovery_latency_ms,
             notes=notes,
             timestamp=time.time(),
@@ -210,9 +234,11 @@ class RecoveryProtocol:
         criticality: str,
     ):
         for attempt in range(1, MAX_RECOVERY_ATTEMPTS + 1):
-            logger.info("[recovery] Retry attempt %d/%d for %s",
-                        attempt, MAX_RECOVERY_ATTEMPTS, sensor_id)
-            time.sleep(RECOVERY_WAIT_SECONDS)
+            # Phase 2: Exponential back-off — 50ms, 100ms, 200ms
+            delay_s = _RETRY_DELAYS_S[min(attempt - 1, len(_RETRY_DELAYS_S) - 1)]
+            logger.info("[recovery] Retry attempt %d/%d for %s (delay: %.0fms)",
+                        attempt, MAX_RECOVERY_ATTEMPTS, sensor_id, delay_s * 1000)
+            time.sleep(delay_s)
 
             reading = read_fn()
             if not reading.is_failed and reading.value is not None:
@@ -221,23 +247,28 @@ class RecoveryProtocol:
                     RecoveryOutcome.SUCCESS,
                     reading.value,
                     attempt,
-                    f"Retry succeeded on attempt {attempt}",
+                    f"Retry succeeded on attempt {attempt} after {delay_s*1000:.0f}ms",
                 )
 
-        # All retries failed - fall back based on criticality
+        # All retries failed — fall back based on criticality
         if criticality == "CRITICAL":
+            self._abort_required = True
             return (
                 RecoveryOutcome.FAILED,
                 None,
                 MAX_RECOVERY_ATTEMPTS,
-                f"All {MAX_RECOVERY_ATTEMPTS} retries failed - ABORT required",
+                f"All {MAX_RECOVERY_ATTEMPTS} retries failed — ABORT required",
             )
         else:
-            # Attempt substitute as fallback
-            outcome, val, notes = self._execute_substitute(sensor_id)
+            # Attempt substitute as fallback for non-critical sensors
+            outcome, val, age_s, notes = self._execute_substitute(sensor_id)
             return outcome, val, MAX_RECOVERY_ATTEMPTS, notes
 
-    def _execute_substitute(self, sensor_id: str):
+    def _execute_substitute(self, sensor_id: str) -> Tuple[RecoveryOutcome, Optional[float], Optional[float], str]:
+        """
+        Returns: (outcome, value, substitute_age_s, notes)
+        substitute_age_s is passed back so loop.py can tag the SensorReading.
+        """
         if sensor_id in self._last_known_good:
             age_s = time.time() - self._last_known_timestamps.get(sensor_id, 0)
             val = self._last_known_good[sensor_id]
@@ -246,14 +277,14 @@ class RecoveryProtocol:
                 notes = f"Substituted last known good value {val:.3f} (age: {age_s:.1f}s)"
                 logger.warning("[recovery] 🔄 Substitute: %s = %.3f (age %.1fs)",
                                sensor_id, val, age_s)
-                return RecoveryOutcome.SUCCESS, val, notes
+                return RecoveryOutcome.SUCCESS, val, age_s, notes
             else:
                 notes = f"Last known good too stale ({age_s:.0f}s) — skipping sensor"
                 logger.warning("[recovery] ⏭️  Substitute stale — skipping %s", sensor_id)
-                return RecoveryOutcome.PARTIAL, None, notes
+                return RecoveryOutcome.PARTIAL, None, None, notes
         else:
             notes = f"No last known good value for {sensor_id} — skipping"
-            return RecoveryOutcome.PARTIAL, None, notes
+            return RecoveryOutcome.PARTIAL, None, None, notes
 
     def get_statistics(self) -> dict:
         total = len(self._recovery_history)

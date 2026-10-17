@@ -126,6 +126,22 @@ class ActuatorSimulator:
                 break
         return results
 
+    def reset_state(self) -> None:
+        """
+        Reset all actuator states to default for benchmark task isolation.
+        Called between benchmark tasks to ensure clean state.
+        """
+        self._states = {
+            "relay":   ActuatorState.OFF,
+            "buzzer":  ActuatorState.OFF,
+            "led_red": ActuatorState.OFF,
+            "led_grn": ActuatorState.ON,
+            "led_yel": ActuatorState.OFF,
+            "ble":     ActuatorState.OFF,
+        }
+        self._alert_log.clear()
+        logger.debug("[actuator] State reset for task isolation")
+
     def get_all_states(self) -> dict:
         return {k: v.value for k, v in self._states.items()}
 

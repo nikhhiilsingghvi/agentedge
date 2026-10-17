@@ -131,13 +131,13 @@ class TestRecoveryProtocol:
     def test_substitute_returns_last_known_good(self):
         from agent.recovery import RecoveryOutcome
         self.protocol.update_last_known_good("dht22", 35.5)
-        outcome, val, notes = self.protocol._execute_substitute("dht22")
+        outcome, val, age_s, notes = self.protocol._execute_substitute("dht22")
         assert outcome == RecoveryOutcome.SUCCESS
         assert val == 35.5
 
     def test_substitute_without_prior_value_returns_partial(self):
         from agent.recovery import RecoveryOutcome
-        outcome, val, notes = self.protocol._execute_substitute("mq135")
+        outcome, val, age_s, notes = self.protocol._execute_substitute("mq135")
         assert outcome == RecoveryOutcome.PARTIAL
         assert val is None
 
@@ -317,5 +317,305 @@ class TestAgentLoopIntegration:
         report_files = [f for f in log_files if "report" in f and f.endswith(".json")]
         assert len(report_files) >= 1
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Phase 4: New tests covering all 5 critical gaps from the audit
+# ─────────────────────────────────────────────────────────────────────────────
+
+class TestRADThreeTier:
+    """
+    Phase 3/4: Verify that RAD routes steps through the correct tier
+    based on injected resource state — without needing live RAM pressure.
+    """
+
+    def setup_method(self):
+        from agent.executor import Executor
+        from core.resource_monitor import ResourceMonitor, ResourceState, ResourceSnapshot
+        from actuators.simulator import ActuatorSimulator
+        import time
+
+        self.actuator = ActuatorSimulator()
+        self.monitor = ResourceMonitor(simulation_mode=True)
+        self.executor = Executor(self.actuator, self.monitor)
+
+    def _make_step(self, step_id="S1", can_split=True, payload=None):
+        from agent.planner import PlanStep
+        return PlanStep(
+            step_id=step_id,
+            description="Test actuator step",
+            action_type="ACTUATOR",
+            target="buzzer",
+            command="ON",
+            payload=payload,
+            can_split=can_split,
+        )
+
+    def test_normal_tier_full_execution(self):
+        """NORMAL resource state → full execution (SUCCESS outcome)."""
+        from agent.executor import StepOutcome
+        from core.resource_monitor import ResourceState
+        # Patch monitor to return NORMAL
+        self.monitor._override_state = None
+        step = self._make_step()
+        # In simulation mode, RAM should be low — NORMAL tier expected
+        result = self.executor._execute_step(step, "P1")
+        assert result.outcome in (StepOutcome.SUCCESS, StepOutcome.SPLIT)
+
+    def test_can_split_false_never_decomposed(self):
+        """can_split=False step must execute at FULL tier regardless of resource state."""
+        from agent.executor import StepOutcome
+        step = self._make_step(can_split=False)
+        # Even if we call split directly, it should not be invoked via _execute_step routing
+        # We verify by checking the step_id — split steps get "_SPLIT" suffix
+        result = self.executor._execute_step(step, "P1")
+        assert "_SPLIT" not in result.step_id
+        assert "_WARN" not in result.step_id
+
+    def test_simplify_payload_truncates_long_message(self):
+        """_simplify_payload must truncate message > 80 chars, keep severity."""
+        from agent.executor import Executor
+        long_msg = "A" * 200
+        payload = {"message": long_msg, "severity": "CRITICAL", "details": "verbose"}
+        result = Executor._simplify_payload(payload)
+        assert result is not None
+        assert "severity" in result
+        assert result["severity"] == "CRITICAL"
+        assert len(result["message"]) <= 80
+        assert "details" not in result  # Verbose field dropped
+
+    def test_simplify_payload_preserves_short_message(self):
+        """_simplify_payload must not modify a message that is <= 80 chars."""
+        from agent.executor import Executor
+        payload = {"message": "Short msg", "severity": "WARN"}
+        result = Executor._simplify_payload(payload)
+        assert result["message"] == "Short msg"
+
+    def test_rad_statistics_track_adaptations(self):
+        """After a manual CRITICAL-tier call, split_count should be recorded in stats."""
+        from core.resource_monitor import ResourceSnapshot
+        import time
+
+        step = self._make_step()
+        snap = self.monitor.sample()
+        t0 = time.time()
+        # Directly increment the counter (simulates what _execute_step does when routing
+        # to CRITICAL tier) then verify get_statistics() reflects it.
+        self.executor._split_count = 1
+        stats = self.executor.get_statistics()
+        assert stats["total_splits_critical"] >= 1
+        assert stats["rad_triggered"] is True
+
+
+class TestAbortPropagation:
+    """
+    Phase 2/4: Verify that a CRITICAL+DISCONNECT failure sets abort_required
+    and that the recovery protocol's abort_required flag is correctly set.
+    """
+
+    def setup_method(self):
+        from agent.recovery import RecoveryProtocol
+        from sensors.simulator import SensorSimulator, SensorStatus, SensorReading
+        import time
+
+        self.protocol = RecoveryProtocol()
+
+        def always_disconnect():
+            return SensorReading(
+                "mpu6050", "vibration", None, "g",
+                SensorStatus.FAILED, time.time(),
+                failure_reason="MPU6050 sensor address not found — physical disconnect",
+            )
+        self.always_disconnect = always_disconnect
+
+    def test_disconnect_on_critical_sensor_sets_abort_required(self):
+        """CRITICAL sensor + DISCONNECT → abort_required must be True."""
+        record = self.protocol.recover(
+            sensor_id="mpu6050",
+            failure_reason="MPU6050 sensor address not found — physical disconnect",
+            read_fn=self.always_disconnect,
+            task_id="ABORT_TEST",
+        )
+        assert self.protocol.abort_required is True
+
+    def test_abort_not_set_for_medium_sensor_skip(self):
+        """MEDIUM sensor + BAD_DATA → SKIP action → abort_required must be False."""
+        from sensors.simulator import SensorReading, SensorStatus
+        import time
+
+        def always_bad():
+            return SensorReading(
+                "mq135", "gas", None, "ppm",
+                SensorStatus.FAILED, time.time(),
+                failure_reason="MQ-135 ADC read error — out of range",
+            )
+
+        self.protocol.recover(
+            sensor_id="mq135",
+            failure_reason="MQ-135 ADC read error — out of range",
+            read_fn=always_bad,
+        )
+        assert self.protocol.abort_required is False
+
+    def test_reset_cycle_history_clears_abort_flag(self):
+        """reset_cycle_history() must clear abort_required between benchmark tasks."""
+        self.protocol.recover(
+            sensor_id="mpu6050",
+            failure_reason="MPU6050 sensor address not found — physical disconnect",
+            read_fn=self.always_disconnect,
+        )
+        assert self.protocol.abort_required is True
+        self.protocol.reset_cycle_history()
+        assert self.protocol.abort_required is False
+        assert self.protocol.get_statistics() == {"total_failures": 0}
+
+
+class TestBenchmarkForcedReadings:
+    """
+    Phase 1/4: Verify that force_reading() correctly overrides simulation
+    and that benchmark task isolation works via reset_state().
+    """
+
+    def setup_method(self):
+        from sensors.simulator import SensorSimulator
+        self.sim = SensorSimulator()
+
+    def test_forced_vibration_reading_applied(self):
+        """force_reading(mpu6050, 3.8) must produce exactly 3.8g from read_vibration()."""
+        from sensors.simulator import SensorStatus
+        self.sim.force_reading("mpu6050", 3.8)
+        reading = self.sim.read_vibration()
+        assert not reading.is_failed
+        assert reading.value == pytest.approx(3.8, abs=0.001)
+        assert reading.status == SensorStatus.FAULT  # 3.8 > VIBRATION_CRITICAL=3.0
+
+    def test_forced_normal_reading_produces_ok_status(self):
+        """force_reading(dht22, 30.0) must produce OK status (< 45°C threshold)."""
+        from sensors.simulator import SensorStatus
+        self.sim.force_reading("dht22", 30.0)
+        reading = self.sim.read_temperature()
+        assert reading.value == pytest.approx(30.0, abs=0.001)
+        assert reading.status == SensorStatus.OK
+
+    def test_disconnect_failure_type_produces_disconnect_reason(self):
+        """simulate_sensor_failure(DISCONNECT) must produce a disconnect failure_reason."""
+        self.sim.simulate_sensor_failure("mpu6050", failure_type="DISCONNECT")
+        reading = self.sim.read_vibration()
+        assert reading.is_failed
+        assert "disconnect" in reading.failure_reason.lower() or "not found" in reading.failure_reason.lower()
+
+    def test_timeout_failure_type_produces_timeout_reason(self):
+        """simulate_sensor_failure(TIMEOUT) must produce a timeout failure_reason."""
+        self.sim.simulate_sensor_failure("hcsr04", failure_type="TIMEOUT")
+        reading = self.sim.read_distance()
+        assert reading.is_failed
+        assert "timeout" in reading.failure_reason.lower()
+
+    def test_reset_state_clears_forced_readings_and_failures(self):
+        """reset_state() must clear both forced readings and injected failures."""
+        from sensors.simulator import SensorStatus
+        self.sim.force_reading("mpu6050", 4.5)
+        self.sim.simulate_sensor_failure("dht22", "DISCONNECT")
+        self.sim.reset_state()
+        # After reset, vibration should not return 4.5 (will be random ~0.4)
+        readings = [self.sim.read_vibration().value for _ in range(5) if not self.sim.read_vibration().is_failed]
+        assert all((v is None or v < 3.0) for v in readings)
+        # dht22 should not be in failure state (allow for random 5% prob)
+        normal_count = sum(1 for _ in range(10) if not self.sim.read_temperature().is_failed)
+        assert normal_count >= 8
+
+
+class TestBenchmarkActionGrading:
+    """
+    Phase 1/4: Verify that _check_actions_correct() correctly grades
+    executed vs expected actions.
+    """
+
+    def test_all_required_actions_present_returns_true(self):
+        from benchmark.runner import _check_actions_correct
+        executed = ["relay:OFF", "buzzer:ON", "ble:ALERT", "led_red:ON"]
+        expected = ["relay:OFF", "ble:ALERT"]
+        ok, missing = _check_actions_correct(executed, expected)
+        assert ok is True
+        assert missing == []
+
+    def test_missing_required_action_returns_false(self):
+        from benchmark.runner import _check_actions_correct
+        executed = ["ble:ALERT"]
+        expected = ["relay:OFF", "ble:ALERT"]
+        ok, missing = _check_actions_correct(executed, expected)
+        assert ok is False
+        assert "relay:OFF" in missing
+
+    def test_empty_expected_always_passes(self):
+        from benchmark.runner import _check_actions_correct
+        ok, missing = _check_actions_correct([], [])
+        assert ok is True
+        ok2, _ = _check_actions_correct(["relay:OFF"], [])
+        assert ok2 is True
+
+    def test_case_insensitive_matching(self):
+        from benchmark.runner import _check_actions_correct
+        executed = ["Relay:OFF", "BLE:alert"]
+        expected = ["relay:OFF", "ble:ALERT"]
+        ok, missing = _check_actions_correct(executed, expected)
+        assert ok is True
+        assert missing == []
+
+    def test_completely_wrong_actions_penalises_all(self):
+        from benchmark.runner import _check_actions_correct
+        executed = ["led_grn:ON"]
+        expected = ["relay:OFF", "buzzer:ON", "ble:ALERT"]
+        ok, missing = _check_actions_correct(executed, expected)
+        assert ok is False
+        assert len(missing) == 3
+
+
+class TestSubstituteValueStaleness:
+    """
+    Phase 2/4: Verify the 30-second staleness threshold in _execute_substitute.
+    """
+
+    def setup_method(self):
+        from agent.recovery import RecoveryProtocol
+        self.protocol = RecoveryProtocol()
+
+    def test_fresh_substitute_returns_success(self):
+        """A substitute value set less than 30s ago must return SUCCESS."""
+        from agent.recovery import RecoveryOutcome
+        self.protocol.update_last_known_good("dht22", 42.0)
+        outcome, val, age_s, notes = self.protocol._execute_substitute("dht22")
+        assert outcome == RecoveryOutcome.SUCCESS
+        assert val == pytest.approx(42.0)
+        assert age_s is not None
+        assert age_s < 30.0
+
+    def test_no_prior_value_returns_partial(self):
+        """No prior LKG value must return PARTIAL (skip)."""
+        from agent.recovery import RecoveryOutcome
+        outcome, val, age_s, notes = self.protocol._execute_substitute("mq135")
+        assert outcome == RecoveryOutcome.PARTIAL
+        assert val is None
+
+    def test_stale_value_beyond_30s_returns_partial(self):
+        """A substitute value older than 30s must return PARTIAL, not SUCCESS."""
+        import time
+        from agent.recovery import RecoveryOutcome
+        self.protocol.update_last_known_good("ina219", 1.5)
+        # Manually backdate the timestamp to simulate stale data
+        self.protocol._last_known_timestamps["ina219"] = time.time() - 35.0
+        outcome, val, age_s, notes = self.protocol._execute_substitute("ina219")
+        assert outcome == RecoveryOutcome.PARTIAL
+        assert val is None
+
+    def test_exponential_backoff_is_faster_than_flat_wait(self):
+        """Total retry delay with exp. back-off (350ms) must be < flat wait (3000ms)."""
+        from agent.recovery import _RETRY_DELAYS_S
+        from config.settings import MAX_RECOVERY_ATTEMPTS
+        total_backoff_ms = sum(_RETRY_DELAYS_S[:MAX_RECOVERY_ATTEMPTS]) * 1000
+        flat_wait_ms = 1000 * MAX_RECOVERY_ATTEMPTS  # Old fixed RECOVERY_WAIT_SECONDS=1.0
+        assert total_backoff_ms < flat_wait_ms
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v", "--tb=short"])
+

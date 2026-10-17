@@ -12,10 +12,21 @@ from config.settings import (
 from core.logger import get_logger, AgentEventLogger
 from core.resource_monitor import ResourceMonitor, ResourceState
 from sensors.simulator import SensorSimulator, SensorReading, SensorStatus
-from actuators.simulator import ActuatorSimulator 
-from agent.planner import LLMPlanner, AgentPlan
+from actuators.simulator import ActuatorSimulator
+from agent.planner import LLMPlanner, AgentPlan, PlanStep
 from agent.executor import Executor, ExecutionResult
-from agent.recovery import RecoveryProtocol 
+from agent.recovery import RecoveryProtocol
+
+# Phase 2: Hardcoded safe-state plan used when ABORT is required
+# This bypasses the LLM entirely — guarantees relay OFF and alarm ON
+_SAFE_STATE_STEPS = [
+    PlanStep("SAFE_S1", "Emergency motor shutdown",  "ACTUATOR", "relay",   "OFF",   can_split=False),
+    PlanStep("SAFE_S2", "Sound audible alarm",        "ACTUATOR", "buzzer",  "ON",    can_split=False),
+    PlanStep("SAFE_S3", "Activate critical fault LED","ACTUATOR", "led_red", "ON",    can_split=False),
+    PlanStep("SAFE_S4", "BLE alert to operator",      "ALERT",    "ble",     "ALERT",
+             payload={"message": "CRITICAL SENSOR ABORT — manual inspection required",
+                      "severity": "CRITICAL"}, can_split=False),
+] 
 
 logger = get_logger("AgentLoop", LOG_DIR)
 
@@ -66,6 +77,7 @@ class AgentLoop:
         self.planner       = LLMPlanner()
         self.executor      = Executor(self.actuator_sim, self.resource_mon)
         self.event_logger  = AgentEventLogger(self.session_id, LOG_DIR)
+        self._last_plan: Optional[AgentPlan] = None   # Phase 1/Bench: track last plan for action grading
 
         os.makedirs(LOG_DIR, exist_ok=True)
         logger.info("[agent] All components initialized — ready to run")
@@ -118,16 +130,23 @@ class AgentLoop:
         # PHASE 2: RECOVER (pre-plan)
         self._current_phase = LoopPhase.RECOVER
         p_rec_start = time.time()
+        abort_required = False
         if failures:
-            sensor_readings = self._phase_recover(sensor_readings, failures, cycle_id)
+            sensor_readings, abort_required = self._phase_recover(sensor_readings, failures, cycle_id)
         phase_latencies["recover_ms"] = round((time.time() - p_rec_start) * 1000, 2)
 
         # PHASE 3: PLAN
         self._current_phase = LoopPhase.PLAN
         p2_start = time.time()
         self.resource_mon.set_inference_active(True)
-        plan = self._phase_plan(sensor_readings, cycle_id)
+        if abort_required:
+            # Phase 2: Skip LLM, use hardcoded safe-state plan
+            plan = self._make_safe_state_plan(cycle_id)
+            logger.error("[agent] 🚨 ABORT path — using hardcoded safe-state plan")
+        else:
+            plan = self._phase_plan(sensor_readings, cycle_id)
         self.resource_mon.set_inference_active(False)
+        self._last_plan = plan   # Store for benchmark action extraction
         phase_latencies["plan_ms"] = round((time.time() - p2_start) * 1000, 2)
 
         logger.info("[agent] PLAN complete | Severity: %s | Steps: %d | %.0f ms",
@@ -201,7 +220,13 @@ class AgentLoop:
         readings: Dict[str, SensorReading],
         failures: dict,
         cycle_id: str,
-    ) -> Dict[str, SensorReading]:
+    ) -> tuple:
+        """
+        Returns: (updated_readings, abort_required: bool)
+        Phase 2: propagates abort_required back to the cycle loop.
+        """
+        abort_required = False
+
         for sid, failed_reading in failures.items():
             logger.warning("[agent] 🔴 Sensor failure: %s — initiating recovery", sid)
 
@@ -213,19 +238,43 @@ class AgentLoop:
                 step_id="PERCEIVE",
             )
 
+            if self.recovery.abort_required:
+                abort_required = True
+
             if record.recovered_value is not None:
                 readings[sid].value = record.recovered_value
-                readings[sid].status = SensorStatus.OK
-                readings[sid].failure_reason = f"[RECOVERED] {record.notes}"
+                # Phase 2: Tag as SUBSTITUTE so LLM knows it is stale data
+                if record.substitute_age_s is not None:
+                    readings[sid].status = SensorStatus.SUBSTITUTE
+                    readings[sid].is_substitute = True
+                    readings[sid].substitute_age_s = record.substitute_age_s
+                    readings[sid].failure_reason = f"[SUBSTITUTE age={record.substitute_age_s:.1f}s] {record.notes}"
+                else:
+                    readings[sid].status = SensorStatus.OK
+                    readings[sid].failure_reason = f"[RECOVERED] {record.notes}"
                 logger.info("[agent] ✅ Sensor %s recovered: %.3f", sid, record.recovered_value)
             else:
                 logger.warning("[agent] ⚡ Sensor %s not recovered — proceeding without it", sid)
 
-        return readings
+        return readings, abort_required
 
     def _phase_plan(self, readings: Dict[str, SensorReading], cycle_id: str) -> AgentPlan:
         context = f"Cycle: {cycle_id} | Machine state: {self.sensor_sim.machine_state}"
         return self.planner.plan(readings, context=context)
+
+    def _make_safe_state_plan(self, cycle_id: str) -> AgentPlan:
+        """Phase 2: Hardcoded emergency plan used when ABORT is required."""
+        from agent.planner import AgentPlan
+        return AgentPlan(
+            plan_id=f"SAFE_{cycle_id}",
+            situation="Critical sensor abort — safe state activated",
+            severity="CRITICAL",
+            steps=list(_SAFE_STATE_STEPS),
+            reasoning="ABORT protocol: critical sensor disconnected, bypassing LLM for safety.",
+            latency_ms=0.0,
+            model_used="SAFE_STATE_HARDCODED",
+            token_count=0,
+        )
 
     def _phase_execute(self, plan: AgentPlan) -> ExecutionResult:
         return self.executor.execute_plan(plan)

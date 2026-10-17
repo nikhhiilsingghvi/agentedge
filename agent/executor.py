@@ -62,22 +62,27 @@ class ExecutionResult:
 
 class Executor:
     """
-    AgentEdge Plan Executor.
+    AgentEdge Plan Executor — Novel Contribution: Resource-Adaptive Decomposition (RAD)
 
     For each step in the plan:
-      1. Check resource state (Novel Contribution #1)
-      2. If CRITICAL → decompose step into sub-steps
-      3. Execute step via actuator simulator (or real GPIO in hardware phase)
-      4. Record result with latency and resource snapshot
-      5. Verify execution (read sensor to confirm effect)
+      1. Check resource state before execution
+      2. Route through 3-tier RAD policy:
+           NORMAL   → full execution with complete payload
+           WARN     → simplified payload (truncated, non-critical fields dropped)
+           CRITICAL → core command only (payload=None)
+      3. can_split=False steps ALWAYS execute at full tier regardless of resource state
+         (safety-critical commands like relay:OFF must never be degraded)
+      4. Execute step via actuator simulator
+      5. Record result with latency and resource snapshot
     """
 
     def __init__(self, actuator_simulator, resource_monitor: ResourceMonitor):
         self._actuators = actuator_simulator
         self._resources = resource_monitor
-        self._split_count = 0
+        self._split_count = 0          # CRITICAL-tier decompositions
+        self._warn_split_count = 0     # WARN-tier simplifications (new in v1.1)
         self._total_steps_executed = 0
-        logger.info("[executor] Executor initialized")
+        logger.info("[executor] Executor initialized — RAD v1.1 (3-tier)")
 
     def execute_plan(self, plan: AgentPlan) -> ExecutionResult:
         """Execute all steps in a plan with resource-adaptive decomposition."""
@@ -125,24 +130,50 @@ class Executor:
 
     def _execute_step(self, step: PlanStep, plan_id: str) -> StepResult:
         """
-        Execute a single step with resource check (Novel Contribution #1).
+        Execute a single step through the 3-tier RAD policy.
+
+        Tier routing:
+          can_split=False  → always FULL (safety-critical, never decomposed)
+          NORMAL           → FULL
+          WARN             → SIMPLIFIED PAYLOAD (truncate, keep semantics)
+          CRITICAL         → CORE ONLY (payload=None)
         """
         t0 = time.time()
 
-        # ── Resource check before step (Novel Contribution #1) ───────────────
+        # ── Resource check before step ───────────────────────────────────────
         self._resources.set_inference_active(False)
         res_state, snap = self._resources.check_before_step(step.description)
 
-        if res_state == ResourceState.CRITICAL and step.can_split:
-            # Decompose this step
+        # ── RAD Tier Routing ─────────────────────────────────────────────────
+        if not step.can_split:
+            # Safety-critical step: always execute at full tier, no decomposition
+            logger.debug("[executor] Step %s: can_split=False — safety lock, full exec",
+                         step.step_id)
+            return self._execute_full(step, snap, t0)
+
+        elif res_state == ResourceState.CRITICAL:
+            # Tier 3: CRITICAL — core command only, no payload
             self._split_count += 1
             logger.warning(
-                "[executor] 🔀 SPLITTING step %s due to resource pressure "
-                "(RAM: %.1f%%)", step.step_id, snap.ram_percent
+                "[executor] 🔀 RAD CRITICAL-tier: step %s — RAM: %.1f%%",
+                step.step_id, snap.ram_percent
             )
             return self._execute_split_step(step, snap, t0)
 
-        # ── Normal step execution ─────────────────────────────────────────────
+        elif res_state == ResourceState.WARN:
+            # Tier 2: WARN — simplified payload, preserves alert semantics
+            self._warn_split_count += 1
+            logger.info(
+                "[executor] 🔁 RAD WARN-tier: step %s — RAM: %.1f%%",
+                step.step_id, snap.ram_percent
+            )
+            return self._execute_simplified_step(step, snap, t0)
+
+        else:
+            # Tier 1: NORMAL — full execution
+            return self._execute_full(step, snap, t0)
+    def _execute_full(self, step: PlanStep, snap, t0: float) -> StepResult:
+        """Tier 1: Full execution — complete payload, all fields."""
         actuator_results = []
         notes = ""
 
@@ -197,32 +228,95 @@ class Executor:
             timestamp=time.time(),
         )
 
-    def _execute_split_step(self, step: PlanStep, snap, t0: float) -> StepResult:
+    def _execute_simplified_step(self, step: PlanStep, snap, t0: float) -> StepResult:
         """
-        Decompose a step into minimal sub-operations when RAM is critical.
-        This is the core of Novel Contribution #1.
-        Only the immediate actuator command is executed; verification
-        is deferred to the next agent cycle.
+        Tier 2 RAD (WARN): Simplified payload execution.
+        Truncates long messages and drops optional verbose fields.
+        Preserves command semantics and required alert content.
         """
-        logger.info("[executor] 🔀 Executing split version of step %s", step.step_id)
+        simplified_payload = self._simplify_payload(step.payload)
+        logger.info("[executor] 🔁 WARN-tier simplified payload for step %s", step.step_id)
         actuator_results = []
 
         try:
-            # Execute only the core command — skip payload extras
-            result = self._actuators.execute(
-                actuator_id=step.target,
-                command=step.command,
-                payload=None,  # Simplified payload for resource-constrained execution
-            )
-            actuator_results.append(result)
-            outcome = StepOutcome.SPLIT
-            notes = f"[SPLIT] Core command only — RAM was {snap.ram_percent:.1f}% | {result.message}"
-            logger.warning("[executor] 🔀 Split execution: %s", notes)
+            if step.action_type in ("ACTUATOR", "ALERT"):
+                target = "ble" if step.action_type == "ALERT" else step.target
+                command = "ALERT" if step.action_type == "ALERT" else step.command
+                result = self._actuators.execute(
+                    actuator_id=target,
+                    command=command,
+                    payload=simplified_payload,
+                )
+                actuator_results.append(result)
+                outcome = StepOutcome.SPLIT
+                notes = f"[WARN-tier] Simplified payload | RAM {snap.ram_percent:.1f}% | {result.message}"
+            else:
+                # LOG / VERIFY / WAIT always execute normally regardless of WARN state
+                return self._execute_full(step, snap, t0)
 
         except Exception as e:
             outcome = StepOutcome.FAILED
-            notes = f"Split execution failed: {e}"
-            logger.error("[executor] ❌ Split failed: %s", e)
+            notes = f"WARN-tier execution failed: {e}"
+            logger.error("[executor] ❌ WARN-tier step %s failed: %s", step.step_id, e)
+
+        latency_ms = (time.time() - t0) * 1000
+        return StepResult(
+            step_id=f"{step.step_id}_WARN",
+            outcome=outcome,
+            actuator_results=actuator_results,
+            resource_snapshot=snap.to_dict(),
+            latency_ms=latency_ms,
+            notes=notes,
+            timestamp=time.time(),
+        )
+
+    @staticmethod
+    def _simplify_payload(payload: Optional[dict]) -> Optional[dict]:
+        """
+        Reduce payload size for WARN-tier execution.
+        Preserves required semantic fields (severity, message core).
+        Truncates long message strings. Does NOT nullify the payload.
+        """
+        if not payload:
+            return payload
+        simplified = {}
+        for key, val in payload.items():
+            if key == "message" and isinstance(val, str) and len(val) > 80:
+                simplified[key] = val[:77] + "..."
+            elif key == "severity":
+                simplified[key] = val        # Always preserve severity
+            elif key in ("timestamp", "details", "stack_trace", "raw_data", "metadata"):
+                pass                         # Drop optional/verbose fields
+            else:
+                simplified[key] = val
+        return simplified or None
+
+    def _execute_split_step(self, step: PlanStep, snap, t0: float) -> StepResult:
+        """
+        Tier 3 RAD (CRITICAL): Core-command-only execution.
+        Strips payload entirely — only the essential actuator command is sent.
+        This guarantees the most critical operation (e.g. relay:OFF) succeeds
+        even when RAM is critically exhausted.
+        """
+        logger.info("[executor] 🔀 CRITICAL-tier core-only execution for step %s", step.step_id)
+
+        actuator_results = []
+
+        try:
+            result = self._actuators.execute(
+                actuator_id=step.target,
+                command=step.command,
+                payload=None,  # Core command only — payload entirely stripped
+            )
+            actuator_results.append(result)
+            outcome = StepOutcome.SPLIT
+            notes = f"[CRITICAL-tier] Core command only — RAM was {snap.ram_percent:.1f}% | {result.message}"
+            logger.warning("[executor] 🔀 CRITICAL-tier split: %s", notes)
+
+        except Exception as e:
+            outcome = StepOutcome.FAILED
+            notes = f"CRITICAL-tier execution failed: {e}"
+            logger.error("[executor] ❌ CRITICAL-tier step %s failed: %s", step.step_id, e)
 
         latency_ms = (time.time() - t0) * 1000
         return StepResult(
@@ -237,9 +331,20 @@ class Executor:
 
     def get_statistics(self) -> dict:
         return {
-            "total_steps_executed": self._total_steps_executed,
-            "total_splits":         self._split_count,
-            "split_rate_pct":       round(
-                self._split_count / max(self._total_steps_executed, 1) * 100, 1
+            "total_steps_executed":  self._total_steps_executed,
+            "total_splits_critical": self._split_count,
+            "total_splits_warn":     self._warn_split_count,
+            "total_rad_adaptations": self._split_count + self._warn_split_count,
+            "rad_triggered":         (self._split_count + self._warn_split_count) > 0,
+            "split_rate_pct":        round(
+                (self._split_count + self._warn_split_count) /
+                max(self._total_steps_executed, 1) * 100, 1
             ),
         }
+
+    def reset_stats(self) -> None:
+        """Reset execution statistics for benchmark task isolation."""
+        self._split_count = 0
+        self._warn_split_count = 0
+        self._total_steps_executed = 0
+        logger.debug("[executor] Execution stats reset")
