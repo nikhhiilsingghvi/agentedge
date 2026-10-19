@@ -1,0 +1,38 @@
+# ── AgentEdge requirements.txt ─────────────────────────────────────────────
+# Install inside a virtualenv:
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#
+# On Raspberry Pi OS (externally-managed Python):
+#   sudo apt install python3-venv python3-dev -y
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+# ---------------------------------------------------------------------------
+
+# ── Core runtime ────────────────────────────────────────────────────────────
+psutil>=5.9
+rich>=13.0
+python-dotenv>=1.0
+httpx>=0.25
+
+# ── LLM provider (Gemini) ───────────────────────────────────────────────────
+google-genai>=0.8
+
+# ── LLM provider (Anthropic / Claude — optional) ───────────────────────────
+anthropic>=0.20
+
+# ── Testing ─────────────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-asyncio>=0.23
+
+# ── Raspberry Pi hardware (install ONLY on Pi, not on dev machines) ─────────
+# Uncomment these lines on the Pi after enabling I2C and GPIO:
+#
+# smbus2>=0.4          # I2C bus access for MPU6050 — pure Python, works on Pi OS
+# RPi.GPIO>=0.7        # GPIO control for LEDs and buzzer
+#
+# System packages required first (run as root, NOT with pip):
+#   sudo apt install python3-smbus i2c-tools -y
+#   sudo apt install python3-rpi.gpio -y   # or install via pip in venv
+#   sudo raspi-config  -> Interface Options -> I2C -> Enable

@@ -1,3 +1,4 @@
+import signal
 import time
 import json
 import os
@@ -7,7 +8,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 from config.settings import (
-    AGENT_LOOP_INTERVAL, SIMULATION_MODE, LOG_DIR,
+    AGENT_LOOP_INTERVAL, SIMULATION_MODE, AGENT_MODE, LOG_DIR,
 )
 from core.logger import get_logger, AgentEventLogger
 from core.resource_monitor import ResourceMonitor, ResourceState
@@ -72,14 +73,27 @@ class AgentLoop:
         self._cycle_count = 0
         self._cycle_records: list = []
         self._current_phase = LoopPhase.IDLE
+        self._stop_requested = False
 
         logger.info("=" * 60)
-        logger.info("  AgentEdge v1.0.0 — Session %s", self.session_id)
-        logger.info("  Mode: %s", "SIMULATION" if SIMULATION_MODE else "HARDWARE")
+        logger.info("  AgentEdge v1.1.0 — Session %s", self.session_id)
+        logger.info("  Mode: %s", AGENT_MODE.upper())
         logger.info("=" * 60)
 
-        self.sensor_sim    = SensorSimulator()
-        self.actuator_sim  = ActuatorSimulator(sensor_simulator=self.sensor_sim)
+        if AGENT_MODE == "hybrid":
+            # Hybrid: real MPU6050 + real GPIO; other sensors simulated
+            from sensors.hardware_reader import HybridSensorReader
+            from actuators.hardware_writer import HardwareActuatorWriter
+            self.sensor_sim   = HybridSensorReader()
+            self.actuator_sim = HardwareActuatorWriter(sensor_simulator=self.sensor_sim)
+            logger.info("[agent] HYBRID mode — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]")
+            logger.info("[agent] GPIO actuators: led_red/led_grn/led_yel/buzzer: [HW] | relay: [N/A]")
+        else:
+            # Simulation (default) — safe to run anywhere
+            self.sensor_sim   = SensorSimulator()
+            self.actuator_sim = ActuatorSimulator(sensor_simulator=self.sensor_sim)
+            logger.info("[agent] SIMULATION mode — all sensors and actuators are software-only")
+
         self.resource_mon  = ResourceMonitor(simulation_mode=SIMULATION_MODE)
         self.recovery      = RecoveryProtocol()
         self.planner       = LLMPlanner()
@@ -91,17 +105,27 @@ class AgentLoop:
         os.makedirs(LOG_DIR, exist_ok=True)
         logger.info("[agent] All components initialized — ready to run")
 
+        # Graceful shutdown on SIGINT / SIGTERM
+        signal.signal(signal.SIGINT,  self._handle_signal)
+        signal.signal(signal.SIGTERM, self._handle_signal)
+
+    def _handle_signal(self, signum, frame) -> None:  # noqa: ANN001
+        logger.info("[agent] Signal %d received — requesting graceful shutdown", signum)
+        self._stop_requested = True
+
     def run(self, max_cycles: Optional[int] = None) -> None:
         logger.info("[agent] 🚀 Starting agent loop | max_cycles=%s", max_cycles)
         try:
-            while True:
+            while not self._stop_requested:
                 if max_cycles and self._cycle_count >= max_cycles:
                     logger.info("[agent] Reached max_cycles=%d — stopping", max_cycles)
                     break
 
                 cycle_record = self._run_cycle()
                 self._cycle_records.append(cycle_record.to_dict())
-            
+
+                if self._stop_requested:
+                    break
                 if max_cycles is None or self._cycle_count < max_cycles:
                     logger.debug("[agent] Sleeping %.1fs until next cycle", AGENT_LOOP_INTERVAL)
                     time.sleep(AGENT_LOOP_INTERVAL)
@@ -109,7 +133,21 @@ class AgentLoop:
         except KeyboardInterrupt:
             logger.info("[agent] 🛑 Agent loop stopped by user")
         finally:
-            self._save_session_report()
+            self._shutdown()
+
+    def _shutdown(self) -> None:
+        """Release hardware resources and save session report."""
+        if AGENT_MODE == "hybrid":
+            try:
+                self.sensor_sim.cleanup()
+            except AttributeError:
+                pass
+            try:
+                self.actuator_sim.cleanup()
+            except AttributeError:
+                pass
+            logger.info("[agent] Hardware resources released")
+        self._save_session_report()
 
     def run_single_cycle(self) -> CycleRecord:
         return self._run_cycle()
