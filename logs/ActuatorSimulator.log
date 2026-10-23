@@ -1,0 +1,564 @@
+2026-09-07 00:18:59,228 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-07 00:19:09,347 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:19:09,518 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:19:22,619 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:19:22,792 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:19:34,440 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:19:34,612 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:27:03,470 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-07 00:27:11,351 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:27:11,524 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:27:21,505 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:27:21,680 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:27:32,505 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:27:32,676 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:27:32,848 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:30:42,426 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-07 00:30:49,694 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:30:49,869 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:31:02,540 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:31:02,711 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:31:02,883 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:31:13,090 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:31:13,262 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:31:13,434 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:31:27,304 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:31:27,478 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:31:41,044 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-07 00:31:41,047 | ActuatorSimulator | INFO | [actuator] 🔄 Motor shutdown — sensor simulator recovery triggered
+2026-09-07 00:31:41,218 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-07 00:31:41,389 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:31:53,867 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-07 00:32:03,762 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:32:03,935 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:32:14,449 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:32:14,622 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:32:29,148 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-07 00:32:29,151 | ActuatorSimulator | INFO | [actuator] 🔄 Motor shutdown — sensor simulator recovery triggered
+2026-09-07 00:32:29,318 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-07 00:32:29,489 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:32:39,344 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:32:39,515 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:36:08,430 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-07 00:36:15,520 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:36:15,689 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:36:28,807 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-07 00:36:28,977 | ActuatorSimulator | INFO | [actuator] ⭕ LED_GRN → OFF
+2026-09-07 00:36:29,149 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] WARNING [C0002_0734C7D9]: MQ-135 gas sensor FAILED (ADC read error - out of range). Gas/fume levels unmonitored. Inspect sensor immediately. All other sensors nominal.
+2026-09-07 00:36:39,487 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:36:39,660 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:36:53,855 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-07 00:36:54,027 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:36:54,198 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] WARNING [C0004_0734C7D9] Machine DEGRADING: Temp=49.17C, Current=1.6A, Gas=297.7ppm all in WARNING range. Inspect machine immediately.
+2026-09-07 00:37:06,811 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-07 00:37:06,813 | ActuatorSimulator | INFO | [actuator] 🔄 Motor shutdown — sensor simulator recovery triggered
+2026-09-07 00:37:06,982 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-07 00:37:07,156 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-07 00:37:07,326 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] CRITICAL FAULT [C0005_0734C7D9]: Motor SHUTDOWN. Vibration=3.56g(FAULT), Current=2.61A(FAULT), Jam detected=8.66cm(FAULT), Gas=433.8ppm(FAULT). Immediate inspection required.
+2026-09-07 00:37:17,874 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:37:18,046 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:37:18,218 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:37:29,978 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:37:30,149 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:37:40,156 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:37:40,329 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-07 00:37:50,702 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-07 00:37:50,872 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-07 00:38:04,305 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-07 00:38:04,476 | ActuatorSimulator | INFO | [actuator] ⭕ LED_GRN → OFF
+2026-09-07 00:38:04,647 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] WARNING [C0010_0734C7D9] Machine DEGRADING: Temp=45.23C (WARN), Current=1.52A (WARN), Gas=279ppm (WARN). Inspect immediately.
+2026-09-08 10:51:19,017 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,082 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-08 10:51:19,087 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,144 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-08 10:51:19,207 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-08 10:51:19,210 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,269 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-09-08 10:51:19,272 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,276 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,346 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:19,409 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-08 10:51:19,471 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-09-08 10:51:19,474 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:19,534 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:19,537 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:22,871 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:23,313 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:23,407 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:47,855 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:47,920 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-08 10:51:47,924 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:47,983 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-08 10:51:48,045 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-08 10:51:48,048 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:48,107 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-09-08 10:51:48,111 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:48,114 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:48,185 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:48,247 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-08 10:51:48,309 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-09-08 10:51:48,312 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:48,373 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:48,376 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:49,235 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:49,558 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:49,731 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] BLE alert
+2026-09-08 10:51:49,769 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:50,997 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:51,166 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] BLE alert
+2026-09-08 10:51:51,367 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:51,538 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] BLE alert
+2026-09-08 10:51:51,566 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 10:51:51,769 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 10:51:51,939 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] BLE alert
+2026-09-08 11:07:48,783 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 11:07:49,363 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 11:07:49,534 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:07:52,966 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 11:07:53,135 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:07:57,356 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-08 11:07:57,533 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:29:09,878 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 11:30:39,131 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 11:31:47,494 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 11:35:57,886 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-08 11:36:00,056 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-08 11:36:00,231 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARNING] WARNING: DHT22 temperature sensor failure detected. Maintenance required.
+2026-09-08 11:36:05,486 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-08 11:36:05,657 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-08 11:36:05,827 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-08 11:36:10,401 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-08 11:36:10,571 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 09:55:20,693 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:20,796 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-11 09:55:20,800 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:20,858 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-11 09:55:20,921 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-11 09:55:20,924 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:20,984 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-09-11 09:55:20,987 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:20,990 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:21,060 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-11 09:55:21,123 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-11 09:55:21,185 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-09-11 09:55:21,189 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:21,248 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-11 09:55:21,251 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:24,642 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:25,201 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:55:25,256 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,322 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,376 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-11 09:57:27,380 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,440 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-09-11 09:57:27,502 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-11 09:57:27,505 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,564 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-09-11 09:57:27,567 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,571 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,627 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-11 09:57:27,689 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-11 09:57:27,752 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-09-11 09:57:27,755 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:27,814 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-11 09:57:27,818 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:29,602 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:32,982 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 09:57:33,154 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 09:57:33,326 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 09:57:33,348 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:39,995 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 09:57:40,167 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 09:57:40,340 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 09:57:44,056 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 09:57:44,227 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 09:57:44,397 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 09:57:44,418 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 09:57:46,752 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-11 09:57:46,927 | ActuatorSimulator | INFO | [actuator] ⭕ LED_GRN → OFF
+2026-09-11 10:13:24,851 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 10:13:44,435 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-09-11 10:13:47,384 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:13:47,556 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:13:47,730 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:13:53,021 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:13:53,194 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:13:53,364 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:13:58,751 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:13:58,924 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:13:59,096 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:14:03,987 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:14:04,159 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:14:04,332 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:14:09,250 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:14:09,424 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:14:16,849 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-09-11 10:14:16,854 | ActuatorSimulator | INFO | [actuator] 🔄 Motor shutdown — sensor simulator recovery triggered
+2026-09-11 10:14:17,036 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-09-11 10:14:17,208 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-09-11 10:14:22,138 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:14:22,309 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:14:22,480 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:14:27,636 | ActuatorSimulator | INFO | [actuator] ⚡ LED_YEL → ON
+2026-09-11 10:14:27,806 | ActuatorSimulator | INFO | [actuator] ⭕ LED_GRN → OFF
+2026-09-11 10:14:33,005 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:14:33,175 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:14:33,348 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-09-11 10:14:39,065 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-09-11 10:14:39,236 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-09-11 10:14:39,407 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 13:10:37,527 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:37,595 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:10:37,607 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:37,674 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:10:37,739 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 13:10:37,746 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:37,816 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 13:10:37,823 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:37,830 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:37,889 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:10:37,949 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 13:10:38,012 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 13:10:38,019 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:38,088 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:10:38,091 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:41,403 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:42,255 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:10:42,347 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,235 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,290 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:22:22,294 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,352 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:22:22,416 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 13:22:22,420 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,476 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 13:22:22,481 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,485 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,539 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:22:22,602 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 13:22:22,665 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 13:22:22,671 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:22,727 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:22:22,731 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:25,101 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:25,495 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:25,671 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:25,759 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:25,974 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:22:25,979 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:26,163 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:22:26,170 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:26,177 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:26,186 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:22:26,361 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:23:06,390 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,455 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:23:06,460 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,531 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 13:23:06,595 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 13:23:06,601 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,656 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 13:23:06,661 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,665 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,735 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:23:06,794 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 13:23:06,855 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 13:23:06,860 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:06,917 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:23:06,922 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:09,078 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:09,834 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,040 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,141 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,336 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:23:10,341 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,519 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 13:23:10,526 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,536 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 13:23:10,547 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:18:12,038 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:51,918 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:51,980 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:19:51,983 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:52,042 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:19:52,105 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:19:52,110 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:52,167 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 14:19:52,171 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:52,175 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:52,245 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:19:52,305 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 14:19:52,367 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 14:19:52,371 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:52,427 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:19:52,431 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:54,154 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:54,778 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:54,862 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:54,936 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,117 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:19:55,122 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,303 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:19:55,308 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,317 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,325 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,618 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,688 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:19:55,784 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,841 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:19:55,865 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,901 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:55,963 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:19:55,993 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:56,056 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:19:56,086 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:19:56,150 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:26:55,054 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,125 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:26:55,129 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,187 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:26:55,248 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:26:55,251 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,311 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 14:26:55,314 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,317 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,372 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:26:55,434 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 14:26:55,495 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 14:26:55,499 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:55,555 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:26:55,559 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:57,199 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:57,852 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:57,932 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,002 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,185 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:26:58,191 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,371 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:26:58,376 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,384 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,393 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,506 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,572 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:26:58,578 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,650 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 14:26:58,657 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,668 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,727 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 14:26:58,733 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,804 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 14:26:58,809 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 14:26:58,866 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:51:54,148 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,201 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:51:54,205 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,262 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:51:54,325 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:51:54,328 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,385 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 15:51:54,388 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,393 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,448 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:51:54,510 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 15:51:54,571 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 15:51:54,576 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:54,632 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:51:54,636 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:56,896 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:57,684 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:57,850 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:57,937 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,121 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:51:58,127 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,305 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:51:58,310 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,318 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,328 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,486 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,553 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:51:58,558 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,614 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:51:58,620 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,628 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,691 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:51:58,697 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,752 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:51:58,758 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:51:58,815 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:54:44,189 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,242 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:54:44,246 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,303 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:54:44,366 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:54:44,369 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,426 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 15:54:44,431 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,434 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,503 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:54:44,564 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 15:54:44,626 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 15:54:44,630 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:44,687 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:54:44,691 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,452 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,635 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:54:46,640 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,822 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:54:46,827 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,835 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,844 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:46,961 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,034 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:54:47,040 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,111 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:54:47,117 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,126 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,187 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:54:47,192 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,266 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:54:47,274 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:54:47,342 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:59:31,027 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,088 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:59:31,093 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,150 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:59:31,212 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:59:31,216 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,274 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 15:59:31,277 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,281 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,336 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:31,396 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 15:59:31,459 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 15:59:31,463 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:31,519 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:31,522 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:33,318 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:33,701 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:59:33,704 | ActuatorSimulator | INFO | [actuator] 🔄 Motor shutdown — sensor simulator recovery triggered
+2026-10-17 15:59:33,870 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:34,039 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 15:59:34,207 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] CRITICAL SENSOR ABORT — manual inspection required
+2026-10-17 15:59:34,235 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:39,279 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 15:59:39,449 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 15:59:39,618 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 15:59:42,744 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 15:59:42,914 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 15:59:43,084 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 15:59:43,111 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:43,993 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:44,164 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] Agent planner error — manual inspection required
+2026-10-17 15:59:44,195 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:44,376 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:44,379 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:44,575 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:44,580 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:44,590 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:44,599 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,436 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,509 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:59:45,514 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,584 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 15:59:45,591 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,605 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,676 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 15:59:45,682 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,738 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 15:59:45,744 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 15:59:45,816 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 16:00:22,034 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,106 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 16:00:22,110 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,165 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 16:00:22,226 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 16:00:22,233 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,288 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-17 16:00:22,292 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,297 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,365 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 16:00:22,428 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-17 16:00:22,488 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-17 16:00:22,492 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:22,550 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 16:00:22,555 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:24,592 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:00:56,653 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 16:00:56,824 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 16:00:56,993 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 16:00:57,021 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:00,717 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 16:01:00,887 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 16:01:03,906 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 16:01:04,092 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 16:01:04,261 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 16:01:04,289 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,036 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-17 16:01:14,209 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-17 16:01:14,377 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-17 16:01:14,401 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,579 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 16:01:14,583 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,763 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 16:01:14,770 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,780 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,789 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,929 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:14,991 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 16:01:14,996 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:15,066 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-17 16:01:15,072 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:15,082 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:15,144 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-17 16:01:15,151 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:15,219 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-17 16:01:15,224 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-17 16:01:15,296 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-19 11:58:34,642 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:34,712 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-19 11:58:34,717 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:34,775 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-19 11:58:34,838 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-19 11:58:34,842 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:34,901 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [WARN] Test alert
+2026-10-19 11:58:34,906 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:34,910 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:34,979 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-19 11:58:35,042 | ActuatorSimulator | INFO | [actuator] ⚡ LED_RED → ON
+2026-10-19 11:58:35,105 | ActuatorSimulator | WARNING | [actuator] 📡 BLE ALERT: [CRITICAL] test
+2026-10-19 11:58:35,109 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:35,167 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-19 11:58:35,171 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:38,079 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:40,511 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-19 11:58:40,685 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-19 11:58:40,857 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-19 11:58:40,884 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:42,499 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-19 11:58:42,686 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-19 11:58:42,860 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-19 11:58:44,796 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-19 11:58:44,980 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-19 11:58:45,151 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-19 11:58:45,176 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:47,759 | ActuatorSimulator | INFO | [actuator] ⚡ LED_GRN → ON
+2026-10-19 11:58:47,927 | ActuatorSimulator | INFO | [actuator] ⭕ LED_YEL → OFF
+2026-10-19 11:58:48,100 | ActuatorSimulator | INFO | [actuator] ⭕ LED_RED → OFF
+2026-10-19 11:58:48,130 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,303 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-19 11:58:48,307 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,490 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-19 11:58:48,496 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,506 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,517 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,654 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,722 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-19 11:58:48,728 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,801 | ActuatorSimulator | INFO | [actuator] ⚡ RELAY → ON
+2026-10-19 11:58:48,807 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,820 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,895 | ActuatorSimulator | INFO | [actuator] ⚡ BUZZER → ON
+2026-10-19 11:58:48,902 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:48,974 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF
+2026-10-19 11:58:48,980 | ActuatorSimulator | INFO | [actuator] ActuatorSimulator initialized — all actuators ready
+2026-10-19 11:58:49,052 | ActuatorSimulator | INFO | [actuator] ⭕ RELAY → OFF

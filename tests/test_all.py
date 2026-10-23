@@ -947,3 +947,46 @@ class TestRADEngine:
             "simplification_rate_pct", "deferral_rate_pct",
         }
         assert required.issubset(d.keys())
+
+
+# ---------------------------------------------------------------------------
+# Opt-in physical hardware check (not a simulator/mock test)
+# ---------------------------------------------------------------------------
+class TestPhysicalSensorDisconnect:
+    """Verify the MPU/I2C sensor is physically absent when explicitly requested.
+
+    Run this test ONLY after powering down the Pi and safely disconnecting the
+    sensor's VCC or SDA/SCL wires, then powering the Pi back on. This test is
+    opt-in so ordinary software tests remain runnable without hardware.
+
+    It verifies physical I2C absence; it does not, by itself, prove the full
+    agent recovery loop reacts correctly to that absence.
+    """
+
+    def test_mpu_i2c_device_is_absent_when_disconnect_test_requested(self):
+        if os.environ.get("AGENTEDGE_EXPECT_SENSOR_DISCONNECTED") != "1":
+            pytest.skip(
+                "Set AGENTEDGE_EXPECT_SENSOR_DISCONNECTED=1 only while the "
+                "MPU/I2C sensor is physically disconnected."
+            )
+
+        if not os.path.exists("/dev/i2c-1"):
+            pytest.fail("I2C bus /dev/i2c-1 is unavailable; cannot verify sensor absence")
+
+        try:
+            from smbus2 import SMBus
+        except ImportError:
+            pytest.fail("smbus2 is required for the physical disconnect check")
+
+        # Address 0x68 is the configured sensor address. A missing device should
+        # cause the I2C transaction to raise an OSError/IOError.
+        with SMBus(1) as bus:
+            try:
+                bus.read_byte_data(0x68, 0x75)  # WHO_AM_I register
+            except OSError:
+                return  # Expected: no response from the physically disconnected device.
+
+        pytest.fail(
+            "Sensor at I2C address 0x68 still responds. Disconnect the sensor "
+            "and rerun this opt-in test."
+        )

@@ -1,0 +1,654 @@
+2026-09-07 00:18:59,255 | LLMPlanner | INFO | [planner] Backend: Anthropic (claude-sonnet-4-6) — simulation mode
+2026-09-07 00:18:59,282 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788720539 ...
+2026-09-07 00:18:59,283 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4195 g [OK]
+  DHT22: 27.7 Celsius [OK]
+  INA219: 0.8036 Amps [OK]
+  HCSR04: 35.38 cm [OK]
+  MQ135: 113.0 ppm [OK]
+2026-09-07 00:19:09,169 | LLMPlanner | ERROR | [planner] JSON parse error: Unterminated string starting at: line 43 column 7 (char 1671)
+Raw: ```json
+{
+  "situation": "All sensor readings are within normal operating parameters; machine is running nominally.",
+  "severity": "NORMAL",
+  "reasoning": "All five sensors report values well below 
+2026-09-07 00:19:09,172 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1788720539 | Severity: CRITICAL | Steps: 2 | Latency: 9885 ms | Tokens: 1255
+2026-09-07 00:19:09,174 | LLMPlanner | INFO | [planner] Situation: Planner output could not be parsed — safe state activated
+2026-09-07 00:19:12,569 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788720552 ...
+2026-09-07 00:19:12,572 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.1774 g [OK]
+  DHT22: 27.99 Celsius [OK]
+  INA219: 0.7754 Amps [OK]
+  HCSR04: 32.85 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-07 00:19:22,410 | LLMPlanner | ERROR | [planner] JSON parse error: Unterminated string starting at: line 32 column 22 (char 1790)
+Raw: ```json
+{
+  "situation": "All physical sensors are within normal operating ranges, but the MQ-135 gas sensor has failed with an ADC read error, requiring operator notification and logging.",
+  "severi
+2026-09-07 00:19:22,435 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1788720552 | Severity: CRITICAL | Steps: 2 | Latency: 9835 ms | Tokens: 1264
+2026-09-07 00:19:22,436 | LLMPlanner | INFO | [planner] Situation: Planner output could not be parsed — safe state activated
+2026-09-07 00:19:25,865 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788720565 ...
+2026-09-07 00:19:25,868 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4754 g [OK]
+  DHT22: 28.23 Celsius [OK]
+  INA219: 0.7136 Amps [OK]
+  HCSR04: 30.78 cm [OK]
+  MQ135: 105.4 ppm [OK]
+2026-09-07 00:19:34,263 | LLMPlanner | ERROR | [planner] JSON parse error: Expecting property name enclosed in double quotes: line 43 column 24 (char 1644)
+Raw: {
+  "situation": "All five sensors are within normal operating ranges; machine is running nominally.",
+  "severity": "NORMAL",
+  "reasoning": "Vibration at 0.4754g, temperature at 28.23C, motor curren
+2026-09-07 00:19:34,267 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1788720565 | Severity: CRITICAL | Steps: 2 | Latency: 8391 ms | Tokens: 1255
+2026-09-07 00:19:34,268 | LLMPlanner | INFO | [planner] Situation: Planner output could not be parsed — safe state activated
+2026-09-07 00:27:03,490 | LLMPlanner | INFO | [planner] Backend: Anthropic (claude-sonnet-4-6) — simulation mode
+2026-09-07 00:27:03,502 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788721023 ...
+2026-09-07 00:27:03,504 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.361 g [OK]
+  DHT22: 27.98 Celsius [OK]
+  INA219: 0.8275 Amps [OK]
+  HCSR04: 32.34 cm [OK]
+  MQ135: 107.3 ppm [OK]
+2026-09-07 00:27:11,175 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1788721023 | Severity: NORMAL | Steps: 3 | Latency: 7669 ms | Tokens: 1094
+2026-09-07 00:27:11,177 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; machine is running healthy.
+2026-09-07 00:27:14,662 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788721034 ...
+2026-09-07 00:27:14,663 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5265 g [OK]
+  DHT22: 27.93 Celsius [OK]
+  INA219: 0.8107 Amps [OK]
+  HCSR04: 23.03 cm [OK]
+  MQ135: 99.1 ppm [OK]
+2026-09-07 00:27:21,336 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1788721034 | Severity: NORMAL | Steps: 3 | Latency: 6669 ms | Tokens: 1100
+2026-09-07 00:27:21,337 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges and the machine is functioning correctly.
+2026-09-07 00:27:24,845 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788721044 ...
+2026-09-07 00:27:24,846 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.6142 g [OK]
+  DHT22: 27.53 Celsius [OK]
+  INA219: 0.8504 Amps [OK]
+  HCSR04: 24.95 cm [OK]
+  MQ135: 124.2 ppm [OK]
+2026-09-07 00:27:32,326 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1788721044 | Severity: NORMAL | Steps: 4 | Latency: 7478 ms | Tokens: 1179
+2026-09-07 00:27:32,327 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges and the machine is running nominally.
+2026-09-07 00:30:42,439 | LLMPlanner | INFO | [planner] Backend: Anthropic (claude-sonnet-4-6) — simulation mode
+2026-09-07 00:30:42,450 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788721242 ...
+2026-09-07 00:30:42,452 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3868 g [OK]
+  DHT22: 27.29 Celsius [OK]
+  INA219: 0.7985 Amps [OK]
+  HCSR04: 25.93 cm [OK]
+  MQ135: 87.0 ppm [OK]
+2026-09-07 00:30:49,515 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1788721242 | Severity: NORMAL | Steps: 3 | Latency: 7061 ms | Tokens: 1099
+2026-09-07 00:30:49,516 | LLMPlanner | INFO | [planner] Situation: All five sensors report normal readings with no faults or warnings detected.
+2026-09-07 00:30:53,024 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788721253 ...
+2026-09-07 00:30:53,025 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5513 g [OK]
+  DHT22: 28.48 Celsius [OK]
+  INA219: 0.8647 Amps [OK]
+  HCSR04: 27.19 cm [OK]
+  MQ135: 125.5 ppm [OK]
+2026-09-07 00:31:02,372 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1788721253 | Severity: NORMAL | Steps: 4 | Latency: 9345 ms | Tokens: 1165
+2026-09-07 00:31:02,374 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; machine is running nominally.
+2026-09-07 00:31:06,013 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788721266 ...
+2026-09-07 00:31:06,014 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3972 g [OK]
+  DHT22: 27.5 Celsius [OK]
+  INA219: 0.7462 Amps [OK]
+  HCSR04: 33.72 cm [OK]
+  MQ135: 106.0 ppm [OK]
+2026-09-07 00:31:12,908 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1788721266 | Severity: NORMAL | Steps: 4 | Latency: 6892 ms | Tokens: 1156
+2026-09-07 00:31:12,910 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges; machine is running correctly.
+2026-09-07 00:31:16,576 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0004_1788721276 ...
+2026-09-07 00:31:16,578 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.575 g [OK]
+  DHT22: 26.8 Celsius [OK]
+  INA219: 0.8033 Amps [OK]
+  HCSR04: 24.59 cm [OK]
+  MQ135: 133.5 ppm [OK]
+2026-09-07 00:31:27,128 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0004_1788721276 | Severity: NORMAL | Steps: 4 | Latency: 10548 ms | Tokens: 1281
+2026-09-07 00:31:27,130 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal ranges, but machine state is flagged as DEGRADING, warranting close monitoring.
+2026-09-07 00:31:30,777 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0005_1788721290 ...
+2026-09-07 00:31:30,778 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 4.0587 g [FAULT]
+  DHT22: 66.06 Celsius [FAULT]
+  INA219: 2.6531 Amps [FAULT]
+  HCSR04: 6.54 cm [FAULT]
+  MQ135: 471.3 ppm [FAULT]
+2026-09-07 00:31:40,869 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0005_1788721290 | Severity: FAULT | Steps: 4 | Latency: 10088 ms | Tokens: 1279
+2026-09-07 00:31:40,871 | LLMPlanner | INFO | [planner] Situation: All five sensors reporting FAULT conditions simultaneously: extreme vibration (4.06g), overtemperature (66.06C), overcurrent (2.65A), object jam (6.54cm), and hazardous gas levels (471.3ppm).
+2026-09-07 00:31:44,592 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0006_1788721304 ...
+2026-09-07 00:31:44,593 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4292 g [OK]
+  DHT22: 28.16 Celsius [OK]
+  INA219: 0.8954 Amps [OK]
+  HCSR04: 22.04 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-07 00:31:53,697 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0006_1788721304 | Severity: WARNING | Steps: 3 | Latency: 9102 ms | Tokens: 1174
+2026-09-07 00:31:53,699 | LLMPlanner | INFO | [planner] Situation: All physical sensors are within normal parameters, but the MQ135 gas sensor has failed with an ADC read error requiring attention.
+2026-09-07 00:31:57,174 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0007_1788721317 ...
+2026-09-07 00:31:57,175 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.488 g [OK]
+  DHT22: 27.62 Celsius [OK]
+  INA219: 0.7613 Amps [OK]
+  HCSR04: 24.4 cm [OK]
+  MQ135: 116.3 ppm [OK]
+2026-09-07 00:32:03,591 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0007_1788721317 | Severity: NORMAL | Steps: 3 | Latency: 6415 ms | Tokens: 1092
+2026-09-07 00:32:03,592 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges; machine is running nominally.
+2026-09-07 00:32:07,077 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0008_1788721327 ...
+2026-09-07 00:32:07,078 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4322 g [OK]
+  DHT22: 27.98 Celsius [OK]
+  INA219: 0.8089 Amps [OK]
+  HCSR04: 28.65 cm [OK]
+  MQ135: 114.8 ppm [OK]
+2026-09-07 00:32:14,280 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0008_1788721327 | Severity: NORMAL | Steps: 3 | Latency: 7200 ms | Tokens: 1106
+2026-09-07 00:32:14,282 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; machine is running healthy.
+2026-09-07 00:32:17,765 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0009_1788721337 ...
+2026-09-07 00:32:17,766 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 3.6007 g [FAULT]
+  DHT22: 64.37 Celsius [FAULT]
+  INA219: 2.5292 Amps [FAULT]
+  HCSR04: 5.2 cm [FAULT]
+  MQ135: 432.6 ppm [FAULT]
+2026-09-07 00:32:28,977 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0009_1788721337 | Severity: FAULT | Steps: 4 | Latency: 11209 ms | Tokens: 1255
+2026-09-07 00:32:28,978 | LLMPlanner | INFO | [planner] Situation: All five sensors report FAULT conditions simultaneously: extreme vibration (3.6g), overtemperature (64.37C), overcurrent (2.5A), object jam (5.2cm), and hazardous gas levels (432.6ppm).
+2026-09-07 00:32:32,691 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0010_1788721352 ...
+2026-09-07 00:32:32,692 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3779 g [OK]
+  DHT22: 27.54 Celsius [OK]
+  INA219: 0.7596 Amps [OK]
+  HCSR04: 29.3 cm [OK]
+  MQ135: 121.4 ppm [OK]
+2026-09-07 00:32:39,169 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0010_1788721352 | Severity: NORMAL | Steps: 3 | Latency: 6476 ms | Tokens: 1095
+2026-09-07 00:32:39,171 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters with no faults or warnings detected.
+2026-09-07 00:36:08,442 | LLMPlanner | INFO | [planner] Backend: Anthropic (claude-sonnet-4-6) — simulation mode
+2026-09-07 00:36:08,454 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788721568 ...
+2026-09-07 00:36:08,455 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3138 g [OK]
+  DHT22: 28.14 Celsius [OK]
+  INA219: 0.7953 Amps [OK]
+  HCSR04: 30.55 cm [OK]
+  MQ135: 116.0 ppm [OK]
+2026-09-07 00:36:15,343 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1788721568 | Severity: NORMAL | Steps: 3 | Latency: 6886 ms | Tokens: 1092
+2026-09-07 00:36:15,345 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges and the machine is running nominally.
+2026-09-07 00:36:18,839 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788721578 ...
+2026-09-07 00:36:18,840 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3569 g [OK]
+  DHT22: 28.59 Celsius [OK]
+  INA219: 0.8633 Amps [OK]
+  HCSR04: 29.26 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-07 00:36:28,625 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1788721578 | Severity: WARNING | Steps: 4 | Latency: 9783 ms | Tokens: 1287
+2026-09-07 00:36:28,626 | LLMPlanner | INFO | [planner] Situation: All operational sensors are within normal limits, but the MQ-135 gas sensor has failed with an ADC read error.
+2026-09-07 00:36:32,293 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788721592 ...
+2026-09-07 00:36:32,293 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.404 g [OK]
+  DHT22: 28.46 Celsius [OK]
+  INA219: 0.8973 Amps [OK]
+  HCSR04: 35.28 cm [OK]
+  MQ135: 111.5 ppm [OK]
+2026-09-07 00:36:39,317 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1788721592 | Severity: NORMAL | Steps: 3 | Latency: 7021 ms | Tokens: 1090
+2026-09-07 00:36:39,319 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges; machine is running nominally.
+2026-09-07 00:36:42,798 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0004_1788721602 ...
+2026-09-07 00:36:42,799 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 1.1809 g [OK]
+  DHT22: 49.17 Celsius [OK]
+  INA219: 1.6 Amps [OK]
+  HCSR04: 23.83 cm [OK]
+  MQ135: 297.7 ppm [OK]
+2026-09-07 00:36:53,671 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0004_1788721602 | Severity: WARNING | Steps: 4 | Latency: 10871 ms | Tokens: 1291
+2026-09-07 00:36:53,673 | LLMPlanner | INFO | [planner] Situation: Multiple sensors in warning range with machine state DEGRADING: temperature at 49.17C, current at 1.6A, and gas fumes at 297.7ppm all exceed normal thresholds.
+2026-09-07 00:36:57,349 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0005_1788721617 ...
+2026-09-07 00:36:57,350 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 3.5641 g [FAULT]
+  DHT22: 49.17 Celsius [OK]
+  INA219: 2.6069 Amps [FAULT]
+  HCSR04: 8.66 cm [FAULT]
+  MQ135: 433.8 ppm [FAULT]
+2026-09-07 00:37:06,638 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0005_1788721617 | Severity: FAULT | Steps: 4 | Latency: 9286 ms | Tokens: 1248
+2026-09-07 00:37:06,640 | LLMPlanner | INFO | [planner] Situation: Multiple simultaneous FAULT conditions detected: critical vibration at 3.56g, overcurrent at 2.61A, object jam at 8.66cm, and hazardous gas levels at 433.8ppm.
+2026-09-07 00:37:10,357 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0006_1788721630 ...
+2026-09-07 00:37:10,358 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3134 g [OK]
+  DHT22: 28.33 Celsius [OK]
+  INA219: 0.758 Amps [OK]
+  HCSR04: 36.27 cm [OK]
+  MQ135: 108.6 ppm [OK]
+2026-09-07 00:37:17,700 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0006_1788721630 | Severity: NORMAL | Steps: 4 | Latency: 7340 ms | Tokens: 1184
+2026-09-07 00:37:17,702 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; machine is running healthy.
+2026-09-07 00:37:21,353 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0007_1788721641 ...
+2026-09-07 00:37:21,354 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3771 g [OK]
+  DHT22: 28.23 Celsius [OK]
+  INA219: 0.8756 Amps [OK]
+  HCSR04: 23.1 cm [OK]
+  MQ135: 121.1 ppm [OK]
+2026-09-07 00:37:29,804 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0007_1788721641 | Severity: NORMAL | Steps: 3 | Latency: 8449 ms | Tokens: 1112
+2026-09-07 00:37:29,807 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; no faults or warnings detected.
+2026-09-07 00:37:33,292 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0008_1788721653 ...
+2026-09-07 00:37:33,293 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.2815 g [OK]
+  DHT22: 27.43 Celsius [OK]
+  INA219: 0.8204 Amps [OK]
+  HCSR04: 22.88 cm [OK]
+  MQ135: 121.1 ppm [OK]
+2026-09-07 00:37:39,985 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0008_1788721653 | Severity: NORMAL | Steps: 3 | Latency: 6691 ms | Tokens: 1091
+2026-09-07 00:37:39,987 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters; machine is running correctly.
+2026-09-07 00:37:43,474 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0009_1788721663 ...
+2026-09-07 00:37:43,475 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4385 g [OK]
+  DHT22: 28.32 Celsius [OK]
+  INA219: 0.704 Amps [OK]
+  HCSR04: 31.3 cm [OK]
+  MQ135: 130.3 ppm [OK]
+2026-09-07 00:37:50,525 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0009_1788721663 | Severity: NORMAL | Steps: 3 | Latency: 7049 ms | Tokens: 1107
+2026-09-07 00:37:50,527 | LLMPlanner | INFO | [planner] Situation: All sensors are within normal operating ranges; machine is running healthily.
+2026-09-07 00:37:54,017 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0010_1788721674 ...
+2026-09-07 00:37:54,018 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5843 g [OK]
+  DHT22: 45.23 Celsius [OK]
+  INA219: 1.5171 Amps [OK]
+  HCSR04: 23.91 cm [OK]
+  MQ135: 279.0 ppm [OK]
+2026-09-07 00:38:04,137 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0010_1788721674 | Severity: WARNING | Steps: 4 | Latency: 10118 ms | Tokens: 1272
+2026-09-07 00:38:04,139 | LLMPlanner | INFO | [planner] Situation: Multiple sensors at warning thresholds with machine in DEGRADING state, elevated gas levels and temperature require operator attention.
+2026-09-08 10:51:22,838 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-09-08 10:51:49,215 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-09-08 10:51:49,239 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-2.5-flash) — simulation mode
+2026-09-08 10:51:49,315 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788844909 ...
+2026-09-08 10:51:49,374 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5288 g [OK]
+  DHT22: 28.03 Celsius [OK]
+  INA219: 0.8512 Amps [OK]
+  HCSR04: 26.84 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-08 10:51:49,377 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: GEMINI_API_KEY is not set. Set it before running the agent.
+2026-09-08 10:51:49,773 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-2.5-flash) — simulation mode
+2026-09-08 10:51:50,811 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788844910 ...
+2026-09-08 10:51:50,813 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5025 g [OK]
+  DHT22: 28.24 Celsius [OK]
+  INA219: 0.8072 Amps [OK]
+  HCSR04: 34.98 cm [OK]
+  MQ135: 124.8 ppm [OK]
+2026-09-08 10:51:50,817 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: GEMINI_API_KEY is not set. Set it before running the agent.
+2026-09-08 10:51:51,189 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788844911 ...
+2026-09-08 10:51:51,190 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5667 g [OK]
+  DHT22: 27.72 Celsius [OK]
+  INA219: 0.9331 Amps [OK]
+  HCSR04: 23.7 cm [OK]
+  MQ135: 125.3 ppm [OK]
+2026-09-08 10:51:51,192 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: GEMINI_API_KEY is not set. Set it before running the agent.
+2026-09-08 10:51:51,571 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-2.5-flash) — simulation mode
+2026-09-08 10:51:51,584 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788844911 ...
+2026-09-08 10:51:51,586 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3464 g [OK]
+  DHT22: 27.78 Celsius [OK]
+  INA219: 0.756 Amps [OK]
+  HCSR04: 34.57 cm [OK]
+  MQ135: 117.5 ppm [OK]
+2026-09-08 10:51:51,588 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: GEMINI_API_KEY is not set. Set it before running the agent.
+2026-09-08 11:07:48,790 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-2.0-flash) — simulation mode
+2026-09-08 11:07:48,815 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788845868 ...
+2026-09-08 11:07:48,819 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3859 g [OK]
+  DHT22: 27.47 Celsius [OK]
+  INA219: 0.8412 Amps [OK]
+  HCSR04: 33.31 cm [OK]
+  MQ135: 118.0 ppm [OK]
+2026-09-08 11:07:49,177 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: 404 This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.
+2026-09-08 11:07:52,602 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788845872 ...
+2026-09-08 11:07:52,604 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3412 g [OK]
+  DHT22: 27.47 Celsius [OK]
+  INA219: 0.8468 Amps [OK]
+  HCSR04: 25.45 cm [OK]
+  MQ135: 137.4 ppm [OK]
+2026-09-08 11:07:52,787 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: 404 This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.
+2026-09-08 11:07:56,209 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788845876 ...
+2026-09-08 11:07:56,212 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4098 g [OK]
+  DHT22: 26.85 Celsius [OK]
+  INA219: 0.8217 Amps [OK]
+  HCSR04: SENSOR FAILED (HC-SR04 timeout — no echo pulse received)
+  MQ135: 114.0 ppm [OK]
+2026-09-08 11:07:57,171 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: 404 This model models/gemini-2.0-flash is no longer available. Please update your code to use models/gemini-3.6-flash for the latest features and improvements. We recommend you to use the Interactions API.
+2026-09-08 11:35:58,154 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-09-08 11:35:58,238 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1788847558 ...
+2026-09-08 11:35:58,244 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.433 g [OK]
+  DHT22: SENSOR FAILED (DHT22 checksum error — bad data received)
+  INA219: 0.7695 Amps [OK]
+  HCSR04: 26.34 cm [OK]
+  MQ135: 136.9 ppm [OK]
+2026-09-08 11:35:59,871 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1788847558 | Severity: WARNING | Steps: 2 | Latency: 1622 ms | Tokens: 937
+2026-09-08 11:35:59,875 | LLMPlanner | INFO | [planner] Situation: Machine operating normally with a sensor communication error on the DHT22 temperature probe.
+2026-09-08 11:36:03,278 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1788847563 ...
+2026-09-08 11:36:03,281 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4546 g [OK]
+  DHT22: 28.66 Celsius [OK]
+  INA219: 0.8084 Amps [OK]
+  HCSR04: 23.09 cm [OK]
+  MQ135: 115.9 ppm [OK]
+2026-09-08 11:36:05,303 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1788847563 | Severity: NORMAL | Steps: 3 | Latency: 2017 ms | Tokens: 973
+2026-09-08 11:36:05,306 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-08 11:36:08,888 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1788847568 ...
+2026-09-08 11:36:08,892 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.509 g [OK]
+  DHT22: 27.27 Celsius [OK]
+  INA219: 0.8676 Amps [OK]
+  HCSR04: 36.8 cm [OK]
+  MQ135: 115.2 ppm [OK]
+2026-09-08 11:36:10,216 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1788847568 | Severity: NORMAL | Steps: 2 | Latency: 1320 ms | Tokens: 894
+2026-09-08 11:36:10,220 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 09:55:24,622 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-09-11 09:57:29,586 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-09-11 09:57:29,709 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-09-11 09:57:29,719 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1789100849 ...
+2026-09-11 09:57:29,721 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3426 g [OK]
+  DHT22: 28.44 Celsius [OK]
+  INA219: 0.7661 Amps [OK]
+  HCSR04: 24.12 cm [OK]
+  MQ135: 127.3 ppm [OK]
+2026-09-11 09:57:32,809 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1789100849 | Severity: NORMAL | Steps: 3 | Latency: 3088 ms | Tokens: 958
+2026-09-11 09:57:32,810 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 09:57:33,371 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-09-11 09:57:33,382 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1789100853 ...
+2026-09-11 09:57:33,384 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5 g [OK]
+  DHT22: 28.23 Celsius [OK]
+  INA219: 0.7898 Amps [OK]
+  HCSR04: 31.89 cm [OK]
+  MQ135: 130.9 ppm [OK]
+2026-09-11 09:57:39,824 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1789100853 | Severity: NORMAL | Steps: 3 | Latency: 6439 ms | Tokens: 957
+2026-09-11 09:57:39,826 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 09:57:40,358 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1789100860 ...
+2026-09-11 09:57:40,359 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.393 g [OK]
+  DHT22: 28.08 Celsius [OK]
+  INA219: 0.8301 Amps [OK]
+  HCSR04: 24.58 cm [OK]
+  MQ135: 109.4 ppm [OK]
+2026-09-11 09:57:43,873 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1789100860 | Severity: NORMAL | Steps: 3 | Latency: 3512 ms | Tokens: 959
+2026-09-11 09:57:43,875 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 09:57:44,448 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-09-11 09:57:44,466 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1789100864 ...
+2026-09-11 09:57:44,467 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.408 g [OK]
+  DHT22: 28.22 Celsius [OK]
+  INA219: 0.7216 Amps [OK]
+  HCSR04: 32.45 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-11 09:57:46,398 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1789100864 | Severity: WARNING | Steps: 3 | Latency: 1929 ms | Tokens: 1000
+2026-09-11 09:57:46,400 | LLMPlanner | INFO | [planner] Situation: Machine operating within normal parameters, but MQ-135 gas sensor has reported a hardware failure.
+2026-09-11 10:13:44,594 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-09-11 10:13:44,609 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1789101824 ...
+2026-09-11 10:13:44,610 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5854 g [OK]
+  DHT22: 27.89 Celsius [OK]
+  INA219: 0.8451 Amps [OK]
+  HCSR04: 30.29 cm [OK]
+  MQ135: 112.3 ppm [OK]
+2026-09-11 10:13:47,206 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1789101824 | Severity: NORMAL | Steps: 3 | Latency: 2595 ms | Tokens: 957
+2026-09-11 10:13:47,210 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:13:50,753 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1789101830 ...
+2026-09-11 10:13:50,755 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3962 g [OK]
+  DHT22: 28.22 Celsius [OK]
+  INA219: 0.8106 Amps [OK]
+  HCSR04: 31.47 cm [OK]
+  MQ135: 117.3 ppm [OK]
+2026-09-11 10:13:52,851 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1789101830 | Severity: NORMAL | Steps: 3 | Latency: 2094 ms | Tokens: 971
+2026-09-11 10:13:52,853 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:13:56,396 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0003_1789101836 ...
+2026-09-11 10:13:56,397 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4338 g [OK]
+  DHT22: 28.16 Celsius [OK]
+  INA219: 0.8181 Amps [OK]
+  HCSR04: 30.58 cm [OK]
+  MQ135: 157.5 ppm [OK]
+2026-09-11 10:13:58,573 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0003_1789101836 | Severity: NORMAL | Steps: 3 | Latency: 2174 ms | Tokens: 971
+2026-09-11 10:13:58,575 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:14:02,118 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0004_1789101842 ...
+2026-09-11 10:14:02,119 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.362 g [OK]
+  DHT22: 27.99 Celsius [OK]
+  INA219: 0.7867 Amps [OK]
+  HCSR04: 27.73 cm [OK]
+  MQ135: 127.5 ppm [OK]
+2026-09-11 10:14:03,811 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0004_1789101842 | Severity: NORMAL | Steps: 3 | Latency: 1691 ms | Tokens: 957
+2026-09-11 10:14:03,813 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:14:07,355 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0005_1789101847 ...
+2026-09-11 10:14:07,356 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5967 g [OK]
+  DHT22: 28.42 Celsius [OK]
+  INA219: 0.753 Amps [OK]
+  HCSR04: 24.01 cm [OK]
+  MQ135: 116.4 ppm [OK]
+2026-09-11 10:14:09,069 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0005_1789101847 | Severity: NORMAL | Steps: 2 | Latency: 1711 ms | Tokens: 913
+2026-09-11 10:14:09,071 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters despite the machine state being marked as degrading.
+2026-09-11 10:14:13,463 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0006_1789101853 ...
+2026-09-11 10:14:13,465 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 3.4213 g [OK]
+  DHT22: 61.55 Celsius [FAULT]
+  INA219: 2.1981 Amps [FAULT]
+  HCSR04: 22.54 cm [OK]
+  MQ135: 431.2 ppm [FAULT]
+2026-09-11 10:14:16,662 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0006_1789101853 | Severity: FAULT | Steps: 4 | Latency: 3196 ms | Tokens: 1065
+2026-09-11 10:14:16,666 | LLMPlanner | INFO | [planner] Situation: Multiple critical system faults detected including vibration, temperature, current, and gas levels.
+2026-09-11 10:14:20,420 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0007_1789101860 ...
+2026-09-11 10:14:20,422 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4014 g [OK]
+  DHT22: 28.68 Celsius [OK]
+  INA219: 0.8136 Amps [OK]
+  HCSR04: 29.82 cm [OK]
+  MQ135: 101.4 ppm [OK]
+2026-09-11 10:14:21,955 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0007_1789101860 | Severity: NORMAL | Steps: 3 | Latency: 1529 ms | Tokens: 963
+2026-09-11 10:14:21,959 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:14:25,536 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0008_1789101865 ...
+2026-09-11 10:14:25,538 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.416 g [OK]
+  DHT22: 28.62 Celsius [OK]
+  INA219: 0.7502 Amps [OK]
+  HCSR04: 36.33 cm [OK]
+  MQ135: SENSOR FAILED (MQ-135 ADC read error — out of range)
+2026-09-11 10:14:27,283 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0008_1789101865 | Severity: WARNING | Steps: 3 | Latency: 1741 ms | Tokens: 1005
+2026-09-11 10:14:27,286 | LLMPlanner | INFO | [planner] Situation: Machine operating within normal parameters, but gas sensor MQ135 has reported a hardware failure.
+2026-09-11 10:14:30,852 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0009_1789101870 ...
+2026-09-11 10:14:30,854 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.504 g [OK]
+  DHT22: 28.06 Celsius [OK]
+  INA219: 0.8276 Amps [OK]
+  HCSR04: 36.82 cm [OK]
+  MQ135: 104.8 ppm [OK]
+2026-09-11 10:14:32,817 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0009_1789101870 | Severity: NORMAL | Steps: 3 | Latency: 1960 ms | Tokens: 958
+2026-09-11 10:14:32,820 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-09-11 10:14:36,395 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0010_1789101876 ...
+2026-09-11 10:14:36,396 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5116 g [OK]
+  DHT22: 28.01 Celsius [OK]
+  INA219: 0.7736 Amps [OK]
+  HCSR04: 34.71 cm [OK]
+  MQ135: 118.7 ppm [OK]
+2026-09-11 10:14:38,886 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0010_1789101876 | Severity: NORMAL | Steps: 3 | Latency: 2488 ms | Tokens: 961
+2026-09-11 10:14:38,888 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 13:10:41,358 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 13:22:25,018 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 13:23:09,050 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 14:19:54,117 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 14:26:57,166 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 15:51:56,857 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 15:54:46,440 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 15:59:33,290 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 15:59:33,499 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 15:59:34,274 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 15:59:34,289 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792232974 ...
+2026-10-17 15:59:34,290 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3842 g [OK]
+  DHT22: 28.08 Celsius [OK]
+  INA219: 0.8047 Amps [OK]
+  HCSR04: 37.6 cm [OK]
+  MQ135: 138.0 ppm [OK]
+2026-10-17 15:59:39,106 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792232974 | Severity: NORMAL | Steps: 3 | Latency: 4815 ms | Tokens: 958
+2026-10-17 15:59:39,108 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 15:59:39,634 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1792232979 ...
+2026-10-17 15:59:39,635 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5109 g [OK]
+  DHT22: 27.6 Celsius [OK]
+  INA219: 0.881 Amps [OK]
+  HCSR04: 33.58 cm [OK]
+  MQ135: 128.4 ppm [OK]
+2026-10-17 15:59:42,571 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1792232979 | Severity: NORMAL | Steps: 3 | Latency: 2932 ms | Tokens: 957
+2026-10-17 15:59:42,572 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 15:59:43,154 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 15:59:43,168 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792232983 ...
+2026-10-17 15:59:43,171 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4601 g [OK]
+  DHT22: 27.64 Celsius [OK]
+  INA219: 0.7766 Amps [OK]
+  HCSR04: 37.66 cm [OK]
+  MQ135: 95.9 ppm [OK]
+2026-10-17 15:59:43,796 | LLMPlanner | ERROR | [planner] ❌ Plan generation failed: 503 UNAVAILABLE. {'error': {'code': 503, 'message': 'This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later.', 'status': 'UNAVAILABLE'}}
+2026-10-17 16:00:24,560 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-17 16:00:24,736 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 16:00:24,755 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792233024 ...
+2026-10-17 16:00:24,756 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4459 g [OK]
+  DHT22: 26.41 Celsius [OK]
+  INA219: 0.823 Amps [OK]
+  HCSR04: 25.64 cm [OK]
+  MQ135: 112.8 ppm [OK]
+2026-10-17 16:00:56,477 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792233024 | Severity: NORMAL | Steps: 3 | Latency: 31717 ms | Tokens: 960
+2026-10-17 16:00:56,480 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 16:00:57,061 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 16:00:57,076 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792233057 ...
+2026-10-17 16:00:57,078 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.4334 g [OK]
+  DHT22: 27.29 Celsius [OK]
+  INA219: 0.7001 Amps [OK]
+  HCSR04: 34.8 cm [OK]
+  MQ135: 122.7 ppm [OK]
+2026-10-17 16:01:00,533 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792233057 | Severity: NORMAL | Steps: 2 | Latency: 3452 ms | Tokens: 893
+2026-10-17 16:01:00,535 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 16:01:00,906 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1792233060 ...
+2026-10-17 16:01:00,908 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3027 g [OK]
+  DHT22: 28.78 Celsius [OK]
+  INA219: 0.7869 Amps [OK]
+  HCSR04: 30.12 cm [OK]
+  MQ135: 125.2 ppm [OK]
+2026-10-17 16:01:03,723 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1792233060 | Severity: NORMAL | Steps: 3 | Latency: 2813 ms | Tokens: 969
+2026-10-17 16:01:03,726 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-17 16:01:04,331 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-17 16:01:04,347 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792233064 ...
+2026-10-17 16:01:04,350 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.3863 g [OK]
+  DHT22: 27.98 Celsius [OK]
+  INA219: 0.7996 Amps [OK]
+  HCSR04: 26.32 cm [OK]
+  MQ135: 121.5 ppm [OK]
+2026-10-17 16:01:13,861 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792233064 | Severity: NORMAL | Steps: 3 | Latency: 9508 ms | Tokens: 961
+2026-10-17 16:01:13,863 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-19 11:58:38,027 | LLMPlanner | ERROR | [planner] All parse strategies failed. Raw (first 300 chars): this is not json at all
+2026-10-19 11:58:38,287 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-19 11:58:38,306 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792391318 ...
+2026-10-19 11:58:38,309 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.449 g [OK]
+  DHT22: 28.35 Celsius [OK]
+  INA219: 0.7684 Amps [OK]
+  HCSR04: 32.93 cm [OK]
+  MQ135: 128.6 ppm [OK]
+2026-10-19 11:58:40,331 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792391318 | Severity: NORMAL | Steps: 3 | Latency: 2020 ms | Tokens: 960
+2026-10-19 11:58:40,333 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-19 11:58:40,921 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-19 11:58:40,942 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792391320 ...
+2026-10-19 11:58:40,943 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5062 g [OK]
+  DHT22: 27.12 Celsius [OK]
+  INA219: 0.858 Amps [OK]
+  HCSR04: 32.17 cm [OK]
+  MQ135: 102.6 ppm [OK]
+2026-10-19 11:58:42,326 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792391320 | Severity: NORMAL | Steps: 3 | Latency: 1380 ms | Tokens: 961
+2026-10-19 11:58:42,328 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-19 11:58:42,879 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0002_1792391322 ...
+2026-10-19 11:58:42,882 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.561 g [OK]
+  DHT22: 27.69 Celsius [OK]
+  INA219: 0.8442 Amps [OK]
+  HCSR04: 28.1 cm [OK]
+  MQ135: 133.4 ppm [OK]
+2026-10-19 11:58:44,624 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0002_1792391322 | Severity: NORMAL | Steps: 3 | Latency: 1739 ms | Tokens: 957
+2026-10-19 11:58:44,626 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.
+2026-10-19 11:58:45,224 | LLMPlanner | INFO | [planner] Backend: Gemini (gemini-3.1-flash-lite) — simulation mode
+2026-10-19 11:58:45,243 | LLMPlanner | INFO | [planner] 🧠 Generating plan PLAN_0001_1792391325 ...
+2026-10-19 11:58:45,245 | LLMPlanner | DEBUG | [planner] Perception:
+CURRENT SENSOR READINGS:
+  MPU6050: 0.5691 g [OK]
+  DHT22: 27.94 Celsius [OK]
+  INA219: 0.8299 Amps [OK]
+  HCSR04: 31.44 cm [OK]
+  MQ135: 151.2 ppm [OK]
+2026-10-19 11:58:47,577 | LLMPlanner | INFO | [planner] ✅ Plan ready: PLAN_0001_1792391325 | Severity: NORMAL | Steps: 3 | Latency: 2330 ms | Tokens: 971
+2026-10-19 11:58:47,580 | LLMPlanner | INFO | [planner] Situation: All sensor readings are within normal operating parameters.

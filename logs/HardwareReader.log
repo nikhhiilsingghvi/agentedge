@@ -1,0 +1,39 @@
+2026-10-19 11:58:49,147 | HardwareReader | INFO | [hw-mpu6050] Gravity bias calibrated: bx=0.0000 by=0.0000 bz=1.0000 g
+2026-10-19 11:58:49,160 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,163 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.4751 g
+2026-10-19 11:58:49,166 | HardwareReader | DEBUG | [hybrid-reader] [SIM] temperature=27.90°C
+2026-10-19 11:58:49,168 | HardwareReader | DEBUG | [hybrid-reader] [SIM] current=0.7613 A
+2026-10-19 11:58:49,170 | HardwareReader | DEBUG | [hybrid-reader] [SIM] distance=25.2 cm
+2026-10-19 11:58:49,174 | HardwareReader | DEBUG | [hybrid-reader] [SIM] gas=133.8 ppm
+2026-10-19 11:58:49,183 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,186 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.3746 g
+2026-10-19 11:58:49,188 | HardwareReader | DEBUG | [hybrid-reader] [SIM] temperature=27.97°C
+2026-10-19 11:58:49,190 | HardwareReader | DEBUG | [hybrid-reader] [SIM] current=0.9281 A
+2026-10-19 11:58:49,191 | HardwareReader | DEBUG | [hybrid-reader] [SIM] distance=23.8 cm
+2026-10-19 11:58:49,192 | HardwareReader | DEBUG | [hybrid-reader] [SIM] gas=116.9 ppm
+2026-10-19 11:58:49,202 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,215 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,219 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.5514 g
+2026-10-19 11:58:49,230 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,242 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,248 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.3094 g
+2026-10-19 11:58:49,257 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,260 | HardwareReader | DEBUG | [hybrid-reader] [SIM] temperature=28.25°C
+2026-10-19 11:58:49,261 | HardwareReader | DEBUG | [hybrid-reader] [SIM] current=0.7985 A
+2026-10-19 11:58:49,263 | HardwareReader | DEBUG | [hybrid-reader] [SIM] distance=34.8 cm
+2026-10-19 11:58:49,266 | HardwareReader | DEBUG | [hybrid-reader] [SIM] gas=97.6 ppm
+2026-10-19 11:58:49,275 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,287 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,297 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,307 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,310 | HardwareReader | INFO | [hybrid-reader] I2C bus released
+2026-10-19 11:58:49,518 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,520 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.4798 g
+2026-10-19 11:58:49,522 | HardwareReader | DEBUG | [hybrid-reader] [SIM] temperature=28.04°C
+2026-10-19 11:58:49,523 | HardwareReader | DEBUG | [hybrid-reader] [SIM] current=0.8015 A
+2026-10-19 11:58:49,524 | HardwareReader | DEBUG | [hybrid-reader] [SIM] distance=37.4 cm
+2026-10-19 11:58:49,527 | HardwareReader | DEBUG | [hybrid-reader] [SIM] gas=133.8 ppm
+2026-10-19 11:58:49,528 | HardwareReader | INFO | [hybrid-reader] I2C bus released
+2026-10-19 11:58:49,536 | HardwareReader | INFO | [hybrid-reader] Started — MPU6050: [HW] | DHT22/INA219/HC-SR04/MQ-135: [SIM]
+2026-10-19 11:58:49,538 | HardwareReader | DEBUG | [hybrid-reader] [SIM] vibration=0.5273 g
+2026-10-19 11:58:49,540 | HardwareReader | INFO | [hybrid-reader] I2C bus released

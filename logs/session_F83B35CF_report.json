@@ -1,0 +1,55 @@
+{
+  "session_id": "F83B35CF",
+  "total_cycles": 1,
+  "planner_stats": {
+    "total_plans_generated": 1,
+    "avg_latency_ms": 1928.79,
+    "total_tokens_used": 1000,
+    "avg_tokens_per_plan": 1000.0,
+    "backend": "gemini",
+    "model": "gemini-3.1-flash-lite"
+  },
+  "executor_stats": {
+    "total_steps_executed": 3,
+    "total_splits": 0,
+    "split_rate_pct": 0.0
+  },
+  "resource_stats": {
+    "total_samples": 3,
+    "ram_avg_percent": 76.7,
+    "ram_peak_percent": 76.7,
+    "cpu_avg_percent": 12.37,
+    "cpu_peak_percent": 14.0,
+    "critical_events": 0,
+    "warn_events": 3,
+    "estimated_avg_power_w": 4.686,
+    "estimated_total_energy_mj": 1405.65
+  },
+  "recovery_stats": {
+    "total_failures": 1,
+    "recovery_successes": 0,
+    "aborts": 0,
+    "success_rate_pct": 0.0,
+    "avg_latency_ms": 3.02,
+    "by_failure_type": {
+      "BAD_DATA": 1
+    },
+    "by_action": {
+      "SKIP": 1
+    },
+    "by_outcome": {
+      "PARTIAL": 1
+    }
+  },
+  "event_summary": {
+    "session_id": "F83B35CF",
+    "total_events": 1,
+    "avg_latency_ms": 2483.5,
+    "max_latency_ms": 2483.5,
+    "avg_ram_percent": 76.7,
+    "peak_ram_percent": 76.7,
+    "total_energy_mj": 11637.67,
+    "event_log_file": "logs\\session_F83B35CF_20260911_095744.jsonl"
+  },
+  "cycle_records": []
+}

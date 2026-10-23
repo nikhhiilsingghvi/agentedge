@@ -1,0 +1,685 @@
+2026-09-07 00:18:59,225 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-07 00:18:59,226 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-09-07 00:19:12,552 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-07 00:19:34,620 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:27:03,467 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-07 00:27:03,468 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-09-07 00:27:21,797 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-07 00:27:32,964 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:30:42,424 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-07 00:30:42,425 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-09-07 00:31:13,550 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-07 00:31:16,574 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:31:27,763 | SensorSimulator | ERROR | [simulator] 🚨 Machine entered FAULT state
+2026-09-07 00:31:41,046 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~26 seconds
+2026-09-07 00:31:44,583 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-07 00:32:04,051 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-09-07 00:32:14,736 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:32:17,763 | SensorSimulator | ERROR | [simulator] 🚨 Machine entered FAULT state
+2026-09-07 00:32:29,149 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~55 seconds
+2026-09-07 00:36:08,428 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-07 00:36:08,428 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-09-07 00:36:15,806 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-09-07 00:36:15,808 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-09-07 00:36:18,831 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-07 00:36:29,266 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-07 00:36:39,776 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:36:54,315 | SensorSimulator | ERROR | [simulator] 🚨 Machine entered FAULT state
+2026-09-07 00:36:57,340 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-07 00:37:06,812 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~43 seconds
+2026-09-07 00:37:07,333 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-09-07 00:37:18,334 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-07 00:37:50,989 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-07 00:38:04,764 | SensorSimulator | ERROR | [simulator] 🚨 Machine entered FAULT state
+2026-09-08 10:51:15,838 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,841 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~16 seconds
+2026-09-08 10:51:15,844 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-09-08 10:51:15,847 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,848 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-09-08 10:51:15,852 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,861 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~20 seconds
+2026-09-08 10:51:15,865 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,867 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-09-08 10:51:15,869 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-08 10:51:15,873 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,875 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-09-08 10:51:15,878 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-09-08 10:51:15,880 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-09-08 10:51:15,883 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,884 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-09-08 10:51:15,887 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,890 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-09-08 10:51:15,893 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~40 seconds
+2026-09-08 10:51:15,939 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:15,941 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-09-08 10:51:15,943 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-08 10:51:22,869 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:22,869 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~31 seconds
+2026-09-08 10:51:23,311 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:23,312 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-09-08 10:51:23,405 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:23,406 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~41 seconds
+2026-09-08 10:51:44,696 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,708 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-09-08 10:51:44,713 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,714 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-09-08 10:51:44,717 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-08 10:51:44,719 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,721 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-09-08 10:51:44,724 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,726 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-09-08 10:51:44,728 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-08 10:51:44,731 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,732 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-09-08 10:51:44,734 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-09-08 10:51:44,735 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-09-08 10:51:44,737 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-08 10:51:44,739 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,740 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-09-08 10:51:44,744 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,746 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-09-08 10:51:44,748 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~45 seconds
+2026-09-08 10:51:44,788 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:44,789 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-09-08 10:51:44,791 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-08 10:51:49,233 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:49,234 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-09-08 10:51:49,303 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-08 10:51:49,765 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:49,766 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-09-08 10:51:49,787 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-09-08 10:51:51,547 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-08 10:51:51,564 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 10:51:51,565 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-09-08 11:07:48,778 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 11:07:48,780 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~27 seconds
+2026-09-08 11:07:52,583 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-08 11:07:56,179 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-08 11:07:57,597 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-08 11:29:09,872 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 11:29:09,875 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-09-08 11:30:39,122 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 11:30:39,128 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-09-08 11:31:47,488 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 11:31:47,491 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-09-08 11:35:57,879 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 11:35:57,882 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~45 seconds
+2026-09-08 11:35:58,192 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-08 12:24:00,294 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:00,304 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-09-08 12:24:00,306 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-09-08 12:24:13,063 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,070 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-09-08 12:24:13,075 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,077 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-09-08 12:24:13,083 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,084 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-09-08 12:24:13,087 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,089 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-09-08 12:24:13,091 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-08 12:24:13,094 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,095 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~45 seconds
+2026-09-08 12:24:13,097 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-09-08 12:24:13,098 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-09-08 12:24:13,102 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,104 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-09-08 12:24:13,108 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,110 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~31 seconds
+2026-09-08 12:24:13,112 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~54 seconds
+2026-09-08 12:24:13,126 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-08 12:24:13,128 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~40 seconds
+2026-09-08 12:24:13,130 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-11 09:55:17,561 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,562 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-09-11 09:55:17,565 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,566 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-09-11 09:55:17,568 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-09-11 09:55:17,570 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,571 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~15 seconds
+2026-09-11 09:55:17,574 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,575 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~20 seconds
+2026-09-11 09:55:17,578 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-11 09:55:17,580 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,581 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-09-11 09:55:17,583 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-09-11 09:55:17,584 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-09-11 09:55:17,586 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,588 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-09-11 09:55:17,591 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,593 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-09-11 09:55:17,594 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~32 seconds
+2026-09-11 09:55:17,636 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:17,638 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-09-11 09:55:17,639 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-11 09:55:24,640 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:24,641 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~44 seconds
+2026-09-11 09:55:25,199 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:25,200 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-09-11 09:55:25,253 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:55:25,254 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~20 seconds
+2026-09-11 09:57:24,187 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,188 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-09-11 09:57:24,191 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,192 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-09-11 09:57:24,194 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-09-11 09:57:24,197 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,198 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-09-11 09:57:24,202 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,203 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-09-11 09:57:24,205 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-11 09:57:24,208 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,209 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-09-11 09:57:24,211 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-09-11 09:57:24,212 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-09-11 09:57:24,215 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,217 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-09-11 09:57:24,219 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,220 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-09-11 09:57:24,222 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~33 seconds
+2026-09-11 09:57:24,258 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:24,260 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-09-11 09:57:24,261 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-09-11 09:57:29,600 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:29,601 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-09-11 09:57:33,346 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:33,346 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-09-11 09:57:44,402 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-09-11 09:57:44,416 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 09:57:44,416 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~27 seconds
+2026-09-11 09:57:44,457 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-11 10:13:24,849 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 10:13:24,850 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-09-11 10:13:44,432 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-09-11 10:13:44,434 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~20 seconds
+2026-09-11 10:14:07,353 | SensorSimulator | WARNING | [simulator] 🔧 Machine entering DEGRADING state
+2026-09-11 10:14:12,445 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-09-11 10:14:13,460 | SensorSimulator | ERROR | [simulator] 🚨 Machine entered FAULT state
+2026-09-11 10:14:16,852 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~43 seconds
+2026-09-11 10:14:25,516 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-09-11 10:14:33,356 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 13:10:34,189 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,192 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 13:10:34,198 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,200 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-17 13:10:34,205 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,209 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-10-17 13:10:34,214 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,217 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 13:10:34,220 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-10-17 13:10:34,225 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,228 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 13:10:34,231 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22
+2026-10-17 13:10:34,235 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 13:10:34,238 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 13:10:34,243 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,246 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 13:10:34,251 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,252 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-17 13:10:34,256 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~54 seconds
+2026-10-17 13:10:34,402 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:34,405 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-17 13:10:34,408 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050
+2026-10-17 13:10:41,398 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:41,400 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:10:42,251 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:42,253 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 13:10:42,344 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:10:42,345 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-17 13:22:21,231 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,233 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 13:22:21,239 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,241 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 13:22:21,244 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-10-17 13:22:21,247 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,249 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:22:21,254 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,256 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:22:21,259 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 13:22:21,262 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,264 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~41 seconds
+2026-10-17 13:22:21,267 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 13:22:21,269 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 13:22:21,273 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,276 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 13:22:21,279 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,282 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~41 seconds
+2026-10-17 13:22:21,284 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~32 seconds
+2026-10-17 13:22:21,752 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:21,753 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 13:22:21,755 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 13:22:25,098 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:25,099 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 13:22:25,491 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:25,494 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 13:22:25,667 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:25,669 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-17 13:22:26,465 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:26,467 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-10-17 13:22:26,471 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 13:22:26,475 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:26,477 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 13:22:26,480 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 13:22:26,484 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:26,523 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:22:26,526 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 13:22:26,530 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:26,533 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~16 seconds
+2026-10-17 13:22:26,537 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 13:22:26,541 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:22:26,544 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 13:22:26,547 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 13:22:26,548 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 13:22:26,551 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 13:22:26,552 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 13:23:05,762 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,763 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:23:05,768 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,770 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~15 seconds
+2026-10-17 13:23:05,774 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,776 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 13:23:05,781 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,784 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-17 13:23:05,786 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 13:23:05,790 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,792 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 13:23:05,796 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 13:23:05,797 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 13:23:05,839 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,840 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 13:23:05,844 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,847 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 13:23:05,849 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~39 seconds
+2026-10-17 13:23:05,906 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:05,908 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 13:23:05,910 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 13:23:09,074 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:09,076 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 13:23:09,831 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:09,833 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-10-17 13:23:10,037 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,038 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 13:23:10,702 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,704 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-10-17 13:23:10,706 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 13:23:10,710 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,712 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-17 13:23:10,715 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 13:23:10,720 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,722 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 13:23:10,725 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 13:23:10,728 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,731 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 13:23:10,732 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 13:23:10,737 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 13:23:10,739 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-17 13:23:10,742 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 13:23:10,744 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 13:23:10,746 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 14:15:42,860 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:15:42,864 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 14:15:42,865 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 14:19:51,404 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,406 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 14:19:51,410 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,412 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~44 seconds
+2026-10-17 14:19:51,414 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 14:19:51,417 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,420 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~40 seconds
+2026-10-17 14:19:51,422 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 14:19:51,425 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,428 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 14:19:51,431 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 14:19:51,434 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,436 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 14:19:51,438 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 14:19:51,440 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 14:19:51,444 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,445 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~40 seconds
+2026-10-17 14:19:51,448 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,450 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-10-17 14:19:51,452 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~41 seconds
+2026-10-17 14:19:51,498 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:51,499 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 14:19:51,500 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 14:19:54,151 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:54,152 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 14:19:54,776 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:54,777 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 14:19:54,860 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:54,861 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 14:19:55,494 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:55,495 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 14:19:55,497 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 14:19:55,501 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:55,503 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-10-17 14:19:55,506 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 14:19:55,507 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 14:19:55,529 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:55,531 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-17 14:19:55,532 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 14:19:55,536 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:55,538 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 14:19:55,539 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 14:19:55,542 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:19:55,544 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-17 14:19:55,547 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 14:19:55,548 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 14:19:55,549 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 14:19:55,551 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-10-17 14:19:55,553 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 14:22:10,863 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:22:10,870 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-10-17 14:22:10,872 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 14:26:54,547 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,548 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 14:26:54,550 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mq135
+2026-10-17 14:26:54,554 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,556 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-17 14:26:54,561 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,563 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 14:26:54,567 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,569 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 14:26:54,571 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 14:26:54,575 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,576 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-10-17 14:26:54,579 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 14:26:54,582 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 14:26:54,584 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,586 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 14:26:54,590 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,592 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-10-17 14:26:54,595 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~44 seconds
+2026-10-17 14:26:54,634 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:54,636 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 14:26:54,638 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 14:26:57,195 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:57,197 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 14:26:57,850 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:57,851 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-10-17 14:26:57,930 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:57,931 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 14:26:58,432 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:58,433 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 14:26:58,435 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 14:26:58,438 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:58,439 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 14:26:58,441 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 14:26:58,444 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:58,446 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 14:26:58,447 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 14:26:58,449 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:58,452 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-17 14:26:58,454 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 14:26:58,457 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 14:26:58,458 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 14:26:58,460 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 14:26:58,461 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 14:26:58,462 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 15:51:53,621 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,623 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-17 15:51:53,626 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,628 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 15:51:53,633 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,635 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-17 15:51:53,641 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,645 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 15:51:53,647 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:51:53,651 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,653 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-10-17 15:51:53,656 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 15:51:53,658 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 15:51:53,663 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,664 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-17 15:51:53,669 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,671 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-10-17 15:51:53,673 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~50 seconds
+2026-10-17 15:51:53,721 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:53,722 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-17 15:51:53,724 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:51:56,892 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:56,894 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 15:51:57,681 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:57,683 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~26 seconds
+2026-10-17 15:51:57,847 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:57,848 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-17 15:51:58,376 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:58,377 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-10-17 15:51:58,380 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 15:51:58,381 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: mpu6050
+2026-10-17 15:51:58,402 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:58,404 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 15:51:58,407 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 15:51:58,411 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:58,412 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-17 15:51:58,415 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 15:51:58,418 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:58,421 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-10-17 15:51:58,423 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 15:51:58,428 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:51:58,429 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 15:51:58,431 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 15:51:58,432 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 15:51:58,433 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 15:53:49,779 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:53:49,785 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 15:53:49,787 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 15:54:24,225 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:24,232 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 15:54:24,235 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 15:54:43,668 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,670 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-10-17 15:54:43,673 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,675 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~27 seconds
+2026-10-17 15:54:43,679 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,680 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds
+2026-10-17 15:54:43,684 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,685 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 15:54:43,688 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:54:43,691 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,692 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-17 15:54:43,694 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 15:54:43,695 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 15:54:43,697 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 15:54:43,700 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,701 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-17 15:54:43,705 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,711 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 15:54:43,713 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~37 seconds
+2026-10-17 15:54:43,759 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:43,761 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 15:54:43,762 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:54:46,881 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:46,883 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-17 15:54:46,884 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 15:54:46,888 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:46,890 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-10-17 15:54:46,891 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 15:54:46,895 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:46,896 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-10-17 15:54:46,899 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 15:54:46,903 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:46,905 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~34 seconds
+2026-10-17 15:54:46,908 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 15:54:46,910 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:54:46,911 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~16 seconds
+2026-10-17 15:54:46,914 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 15:54:46,916 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 15:54:46,917 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 15:54:46,918 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 15:59:30,516 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,518 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-17 15:59:30,523 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,525 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 15:59:30,528 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,530 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 15:59:30,534 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,536 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-10-17 15:59:30,539 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:59:30,542 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,544 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-17 15:59:30,546 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 15:59:30,547 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 15:59:30,551 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,552 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-10-17 15:59:30,556 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,557 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-10-17 15:59:30,558 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~26 seconds
+2026-10-17 15:59:30,609 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:30,612 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-17 15:59:30,613 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 15:59:33,315 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:33,316 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~31 seconds
+2026-10-17 15:59:33,512 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-10-17 15:59:33,703 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~49 seconds
+2026-10-17 15:59:34,232 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:34,234 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 15:59:43,108 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:43,109 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-17 15:59:44,644 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:44,647 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~36 seconds
+2026-10-17 15:59:44,649 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 15:59:44,653 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:44,655 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-17 15:59:44,657 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 15:59:44,659 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 15:59:45,358 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:45,360 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-17 15:59:45,363 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 15:59:45,366 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:45,368 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 15:59:45,370 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 15:59:45,374 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 15:59:45,376 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~15 seconds
+2026-10-17 15:59:45,378 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 15:59:45,379 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 15:59:45,381 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-17 15:59:45,383 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 15:59:45,385 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-17 16:00:21,510 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,511 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 16:00:21,515 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,517 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 16:00:21,520 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: ina219
+2026-10-17 16:00:21,524 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,526 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 16:00:21,530 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,532 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 16:00:21,534 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 16:00:21,538 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,540 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~42 seconds
+2026-10-17 16:00:21,543 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-17 16:00:21,544 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-17 16:00:21,548 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,550 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~38 seconds
+2026-10-17 16:00:21,553 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,555 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~29 seconds
+2026-10-17 16:00:21,557 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~59 seconds
+2026-10-17 16:00:21,601 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:21,603 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 16:00:21,605 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-17 16:00:24,588 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:24,591 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-10-17 16:00:57,019 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:00:57,020 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~44 seconds
+2026-10-17 16:01:04,285 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:04,287 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-17 16:01:14,835 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:14,836 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-17 16:01:14,838 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-17 16:01:14,842 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:14,844 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 16:01:14,846 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-17 16:01:14,849 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:14,851 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-17 16:01:14,853 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-17 16:01:14,858 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:14,860 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-17 16:01:14,862 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-17 16:01:14,866 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-17 16:01:14,868 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~30 seconds
+2026-10-17 16:01:14,871 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-17 16:01:14,872 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-17 16:01:14,874 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-19 11:58:34,104 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,107 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-19 11:58:34,112 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,114 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-19 11:58:34,120 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,122 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~43 seconds
+2026-10-19 11:58:34,125 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: hcsr04
+2026-10-19 11:58:34,128 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,131 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-19 11:58:34,133 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-19 11:58:34,137 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,139 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~20 seconds
+2026-10-19 11:58:34,142 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: TIMEOUT
+2026-10-19 11:58:34,144 | SensorSimulator | INFO | [simulator] Sensor restored: dht22
+2026-10-19 11:58:34,146 | SensorSimulator | WARNING | [simulator] Spontaneous sensor failure: dht22
+2026-10-19 11:58:34,149 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,152 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~25 seconds
+2026-10-19 11:58:34,155 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,157 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~15 seconds
+2026-10-19 11:58:34,159 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~34 seconds
+2026-10-19 11:58:34,205 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:34,207 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-19 11:58:34,209 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-19 11:58:38,075 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:38,077 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~28 seconds
+2026-10-19 11:58:40,880 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:40,882 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-19 11:58:45,172 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:45,174 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~35 seconds
+2026-10-19 11:58:48,565 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:48,567 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~23 seconds
+2026-10-19 11:58:48,569 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.8000
+2026-10-19 11:58:48,572 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:48,574 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-19 11:58:48,576 | SensorSimulator | DEBUG | [simulator] Forced reading: dht22 = 30.0000
+2026-10-19 11:58:48,580 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:48,582 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-19 11:58:48,585 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: DISCONNECT
+2026-10-19 11:58:48,589 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:48,590 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~33 seconds
+2026-10-19 11:58:48,592 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: hcsr04 | Type: TIMEOUT
+2026-10-19 11:58:48,596 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:48,597 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-19 11:58:48,600 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 4.5000
+2026-10-19 11:58:48,601 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: dht22 | Type: DISCONNECT
+2026-10-19 11:58:48,603 | SensorSimulator | DEBUG | [simulator] Sensor simulator state fully reset
+2026-10-19 11:58:49,155 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,158 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~24 seconds
+2026-10-19 11:58:49,179 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,182 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~27 seconds
+2026-10-19 11:58:49,198 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,200 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~17 seconds
+2026-10-19 11:58:49,205 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 2.5000
+2026-10-19 11:58:49,206 | SensorSimulator | DEBUG | [simulator] Forced readings cleared
+2026-10-19 11:58:49,211 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,213 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~32 seconds
+2026-10-19 11:58:49,217 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 5.0000
+2026-10-19 11:58:49,218 | SensorSimulator | DEBUG | [simulator] Forced readings cleared
+2026-10-19 11:58:49,225 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,227 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~21 seconds
+2026-10-19 11:58:49,232 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-19 11:58:49,234 | SensorSimulator | INFO | [simulator] Sensor restored: mpu6050
+2026-10-19 11:58:49,239 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,240 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~39 seconds
+2026-10-19 11:58:49,245 | SensorSimulator | WARNING | [simulator] Sensor FAILURE injected: mpu6050 | Type: TIMEOUT
+2026-10-19 11:58:49,246 | SensorSimulator | INFO | [simulator] Sensor restored: mpu6050
+2026-10-19 11:58:49,254 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,255 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~41 seconds
+2026-10-19 11:58:49,271 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,273 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~37 seconds
+2026-10-19 11:58:49,277 | SensorSimulator | DEBUG | [simulator] Forced reading: mpu6050 = 3.0100
+2026-10-19 11:58:49,278 | SensorSimulator | DEBUG | [simulator] Forced readings cleared
+2026-10-19 11:58:49,283 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,285 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~22 seconds
+2026-10-19 11:58:49,289 | SensorSimulator | INFO | [simulator] ✅ Machine recovered — next fault in ~49 seconds
+2026-10-19 11:58:49,294 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,296 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~44 seconds
+2026-10-19 11:58:49,303 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,305 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~27 seconds
+2026-10-19 11:58:49,513 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,515 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~19 seconds
+2026-10-19 11:58:49,532 | SensorSimulator | INFO | [simulator] Sensor simulator started — machine state: NORMAL
+2026-10-19 11:58:49,535 | SensorSimulator | INFO | [simulator] Fault injection scheduled in ~18 seconds

@@ -1,0 +1,527 @@
+2026-09-07 00:18:59,257 | Executor | INFO | [executor] Executor initialized
+2026-09-07 00:19:09,177 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788720539 | 2 steps | Severity: CRITICAL
+2026-09-07 00:19:09,348 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-07 00:19:09,520 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:19:09,522 | Executor | INFO | [executor] Plan PLAN_0001_1788720539 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 345 ms
+2026-09-07 00:19:22,439 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788720552 | 2 steps | Severity: CRITICAL
+2026-09-07 00:19:22,622 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-07 00:19:22,794 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:19:22,796 | Executor | INFO | [executor] Plan PLAN_0002_1788720552 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 357 ms
+2026-09-07 00:19:34,272 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788720565 | 2 steps | Severity: CRITICAL
+2026-09-07 00:19:34,442 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-07 00:19:34,615 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-07 00:19:34,617 | Executor | INFO | [executor] Plan PLAN_0003_1788720565 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 345 ms
+2026-09-07 00:27:03,492 | Executor | INFO | [executor] Executor initialized
+2026-09-07 00:27:11,179 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788721023 | 3 steps | Severity: NORMAL
+2026-09-07 00:27:11,353 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:27:11,525 | Executor | INFO | [executor] ✅ Step S2: led_red deactivated
+2026-09-07 00:27:11,635 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping
+2026-09-07 00:27:11,636 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping
+2026-09-07 00:27:11,638 | Executor | INFO | [executor] Plan PLAN_0001_1788721023 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 459 ms
+2026-09-07 00:27:21,340 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788721034 | 3 steps | Severity: NORMAL
+2026-09-07 00:27:21,506 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:27:21,681 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:27:21,793 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for traceability
+2026-09-07 00:27:21,794 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for traceability
+2026-09-07 00:27:21,795 | Executor | INFO | [executor] Plan PLAN_0002_1788721034 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 454 ms
+2026-09-07 00:27:32,330 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788721044 | 4 steps | Severity: NORMAL
+2026-09-07 00:27:32,506 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:27:32,677 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:27:32,849 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-07 00:27:32,960 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for cycle C0003_A43BB179
+2026-09-07 00:27:32,961 | Executor | INFO | [executor] ✅ Step S4: Logged: Log normal cycle status for cycle C0003_A43BB179
+2026-09-07 00:27:32,962 | Executor | INFO | [executor] Plan PLAN_0003_1788721044 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 632 ms
+2026-09-07 00:30:42,441 | Executor | INFO | [executor] Executor initialized
+2026-09-07 00:30:49,519 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788721242 | 3 steps | Severity: NORMAL
+2026-09-07 00:30:49,696 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:30:49,871 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:30:49,997 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for cycle C0001_AF050663
+2026-09-07 00:30:49,998 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for cycle C0001_AF050663
+2026-09-07 00:30:49,999 | Executor | INFO | [executor] Plan PLAN_0001_1788721242 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 480 ms
+2026-09-07 00:31:02,376 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788721253 | 4 steps | Severity: NORMAL
+2026-09-07 00:31:02,541 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:31:02,713 | Executor | INFO | [executor] ✅ Step S2: led_red deactivated
+2026-09-07 00:31:02,884 | Executor | INFO | [executor] ✅ Step S3: led_yel deactivated
+2026-09-07 00:31:02,995 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for cycle C0002_AF050663
+2026-09-07 00:31:02,996 | Executor | INFO | [executor] ✅ Step S4: Logged: Log normal cycle status for cycle C0002_AF050663
+2026-09-07 00:31:02,997 | Executor | INFO | [executor] Plan PLAN_0002_1788721253 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 622 ms
+2026-09-07 00:31:12,912 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788721266 | 4 steps | Severity: NORMAL
+2026-09-07 00:31:13,091 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:31:13,264 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:31:13,436 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-07 00:31:13,546 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for cycle C0003_AF050663
+2026-09-07 00:31:13,547 | Executor | INFO | [executor] ✅ Step S4: Logged: Log normal cycle status for cycle C0003_AF050663
+2026-09-07 00:31:13,548 | Executor | INFO | [executor] Plan PLAN_0003_1788721266 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 636 ms
+2026-09-07 00:31:27,132 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0004_1788721276 | 4 steps | Severity: NORMAL
+2026-09-07 00:31:27,306 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:31:27,479 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:31:27,647 | Executor | ERROR | [executor] ❌ Step S3 failed: 'str' object has no attribute 'get'
+2026-09-07 00:31:27,758 | Executor | INFO | [executor] 📝 LOG: Log current sensor snapshot and machine degrading state for trend analysis and maintenance records.
+2026-09-07 00:31:27,760 | Executor | INFO | [executor] ✅ Step S4: Logged: Log current sensor snapshot and machine degrading state for trend analysis and maintenance records.
+2026-09-07 00:31:27,761 | Executor | INFO | [executor] Plan PLAN_0004_1788721276 complete | ✅ 3/4 | ❌ 1 | Split: 0 | 629 ms
+2026-09-07 00:31:40,873 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0005_1788721290 | 4 steps | Severity: FAULT
+2026-09-07 00:31:41,048 | Executor | INFO | [executor] ✅ Step S1: relay deactivated
+2026-09-07 00:31:41,220 | Executor | INFO | [executor] ✅ Step S2: led_red activated
+2026-09-07 00:31:41,390 | Executor | INFO | [executor] ✅ Step S3: buzzer activated
+2026-09-07 00:31:41,560 | Executor | ERROR | [executor] ❌ Step S4 failed: 'str' object has no attribute 'get'
+2026-09-07 00:31:41,562 | Executor | ERROR | [executor] Aborting plan — FAULT severity + step failure
+2026-09-07 00:31:41,563 | Executor | INFO | [executor] Plan PLAN_0005_1788721290 complete | ✅ 3/4 | ❌ 1 | Split: 0 | 690 ms
+2026-09-07 00:31:53,701 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0006_1788721304 | 3 steps | Severity: WARNING
+2026-09-07 00:31:53,868 | Executor | INFO | [executor] ✅ Step S1: led_yel activated
+2026-09-07 00:31:54,039 | Executor | ERROR | [executor] ❌ Step S2 failed: 'str' object has no attribute 'get'
+2026-09-07 00:31:54,150 | Executor | INFO | [executor] 📝 LOG: Log sensor failure event for maintenance tracking and diagnostics
+2026-09-07 00:31:54,151 | Executor | INFO | [executor] ✅ Step S3: Logged: Log sensor failure event for maintenance tracking and diagnostics
+2026-09-07 00:31:54,152 | Executor | INFO | [executor] Plan PLAN_0006_1788721304 complete | ✅ 2/3 | ❌ 1 | Split: 0 | 451 ms
+2026-09-07 00:32:03,595 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0007_1788721317 | 3 steps | Severity: NORMAL
+2026-09-07 00:32:03,764 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:32:03,937 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:32:04,045 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping
+2026-09-07 00:32:04,046 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping
+2026-09-07 00:32:04,048 | Executor | INFO | [executor] Plan PLAN_0007_1788721317 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 453 ms
+2026-09-07 00:32:14,284 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0008_1788721327 | 3 steps | Severity: NORMAL
+2026-09-07 00:32:14,450 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:32:14,623 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:32:14,731 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for traceability
+2026-09-07 00:32:14,732 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for traceability
+2026-09-07 00:32:14,733 | Executor | INFO | [executor] Plan PLAN_0008_1788721327 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 450 ms
+2026-09-07 00:32:28,981 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0009_1788721337 | 4 steps | Severity: FAULT
+2026-09-07 00:32:29,151 | Executor | INFO | [executor] ✅ Step S1: relay deactivated
+2026-09-07 00:32:29,319 | Executor | INFO | [executor] ✅ Step S2: led_red activated
+2026-09-07 00:32:29,490 | Executor | INFO | [executor] ✅ Step S3: buzzer activated
+2026-09-07 00:32:29,660 | Executor | ERROR | [executor] ❌ Step S4 failed: 'str' object has no attribute 'get'
+2026-09-07 00:32:29,661 | Executor | ERROR | [executor] Aborting plan — FAULT severity + step failure
+2026-09-07 00:32:29,662 | Executor | INFO | [executor] Plan PLAN_0009_1788721337 complete | ✅ 3/4 | ❌ 1 | Split: 0 | 681 ms
+2026-09-07 00:32:39,173 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0010_1788721352 | 3 steps | Severity: NORMAL
+2026-09-07 00:32:39,345 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:32:39,516 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:32:39,625 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping
+2026-09-07 00:32:39,627 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping
+2026-09-07 00:32:39,628 | Executor | INFO | [executor] Plan PLAN_0010_1788721352 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 455 ms
+2026-09-07 00:36:08,444 | Executor | INFO | [executor] Executor initialized
+2026-09-07 00:36:15,348 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788721568 | 3 steps | Severity: NORMAL
+2026-09-07 00:36:15,521 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:36:15,690 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:36:15,799 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping.
+2026-09-07 00:36:15,800 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping.
+2026-09-07 00:36:15,803 | Executor | INFO | [executor] Plan PLAN_0001_1788721568 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 455 ms
+2026-09-07 00:36:28,628 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788721578 | 4 steps | Severity: WARNING
+2026-09-07 00:36:28,808 | Executor | INFO | [executor] ✅ Step S1: led_yel activated
+2026-09-07 00:36:28,978 | Executor | INFO | [executor] ✅ Step S2: led_grn deactivated
+2026-09-07 00:36:29,151 | Executor | INFO | [executor] ✅ Step S3: BLE alert sent: [WARNING] WARNING [C0002_0734C7D9]: MQ-135 gas sensor FAILED (ADC read error - out of range). Gas/fume levels unmonitored. Inspect sensor immediately. All other sensors nominal.
+2026-09-07 00:36:29,261 | Executor | INFO | [executor] 📝 LOG: Log sensor failure event for maintenance records and diagnostics
+2026-09-07 00:36:29,262 | Executor | INFO | [executor] ✅ Step S4: Logged: Log sensor failure event for maintenance records and diagnostics
+2026-09-07 00:36:29,263 | Executor | INFO | [executor] Plan PLAN_0002_1788721578 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 636 ms
+2026-09-07 00:36:39,321 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788721592 | 3 steps | Severity: NORMAL
+2026-09-07 00:36:39,488 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:36:39,662 | Executor | INFO | [executor] ✅ Step S2: led_red deactivated
+2026-09-07 00:36:39,771 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping
+2026-09-07 00:36:39,772 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping
+2026-09-07 00:36:39,773 | Executor | INFO | [executor] Plan PLAN_0003_1788721592 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 452 ms
+2026-09-07 00:36:53,675 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0004_1788721602 | 4 steps | Severity: WARNING
+2026-09-07 00:36:53,856 | Executor | INFO | [executor] ✅ Step S1: led_yel activated
+2026-09-07 00:36:54,028 | Executor | INFO | [executor] ✅ Step S2: buzzer activated
+2026-09-07 00:36:54,200 | Executor | INFO | [executor] ✅ Step S3: BLE alert sent: [WARNING] WARNING [C0004_0734C7D9] Machine DEGRADING: Temp=49.17C, Current=1.6A, Gas=297.7ppm all in WARNING range. Inspect machine immediately.
+2026-09-07 00:36:54,310 | Executor | INFO | [executor] 📝 LOG: Log warning event for cycle traceability and trend monitoring
+2026-09-07 00:36:54,311 | Executor | INFO | [executor] ✅ Step S4: Logged: Log warning event for cycle traceability and trend monitoring
+2026-09-07 00:36:54,313 | Executor | INFO | [executor] Plan PLAN_0004_1788721602 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 637 ms
+2026-09-07 00:37:06,643 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0005_1788721617 | 4 steps | Severity: FAULT
+2026-09-07 00:37:06,814 | Executor | INFO | [executor] ✅ Step S1: relay deactivated
+2026-09-07 00:37:06,984 | Executor | INFO | [executor] ✅ Step S2: led_red activated
+2026-09-07 00:37:07,157 | Executor | INFO | [executor] ✅ Step S3: buzzer activated
+2026-09-07 00:37:07,329 | Executor | INFO | [executor] ✅ Step S4: BLE alert sent: [WARNING] CRITICAL FAULT [C0005_0734C7D9]: Motor SHUTDOWN. Vibration=3.56g(FAULT), Current=2.61A(FAULT), Jam detected=8.66cm(FAULT), Gas=433.8ppm(FAULT). Immediate inspection required.
+2026-09-07 00:37:07,331 | Executor | INFO | [executor] Plan PLAN_0005_1788721617 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 688 ms
+2026-09-07 00:37:17,704 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0006_1788721630 | 4 steps | Severity: NORMAL
+2026-09-07 00:37:17,875 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:37:18,048 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:37:18,219 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-07 00:37:18,329 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for cycle C0006_0734C7D9
+2026-09-07 00:37:18,330 | Executor | INFO | [executor] ✅ Step S4: Logged: Log normal cycle status for cycle C0006_0734C7D9
+2026-09-07 00:37:18,331 | Executor | INFO | [executor] Plan PLAN_0006_1788721630 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 627 ms
+2026-09-07 00:37:29,808 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0007_1788721641 | 3 steps | Severity: NORMAL
+2026-09-07 00:37:29,979 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:37:30,150 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:37:30,261 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for traceability
+2026-09-07 00:37:30,262 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for traceability
+2026-09-07 00:37:30,263 | Executor | INFO | [executor] Plan PLAN_0007_1788721641 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 454 ms
+2026-09-07 00:37:39,989 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0008_1788721653 | 3 steps | Severity: NORMAL
+2026-09-07 00:37:40,157 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:37:40,330 | Executor | INFO | [executor] ✅ Step S2: led_red deactivated
+2026-09-07 00:37:40,441 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record keeping
+2026-09-07 00:37:40,442 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record keeping
+2026-09-07 00:37:40,443 | Executor | INFO | [executor] Plan PLAN_0008_1788721653 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 454 ms
+2026-09-07 00:37:50,529 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0009_1788721663 | 3 steps | Severity: NORMAL
+2026-09-07 00:37:50,703 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-07 00:37:50,873 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-07 00:37:50,984 | Executor | INFO | [executor] 📝 LOG: Log normal cycle status for record-keeping
+2026-09-07 00:37:50,985 | Executor | INFO | [executor] ✅ Step S3: Logged: Log normal cycle status for record-keeping
+2026-09-07 00:37:50,986 | Executor | INFO | [executor] Plan PLAN_0009_1788721663 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 457 ms
+2026-09-07 00:38:04,141 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0010_1788721674 | 4 steps | Severity: WARNING
+2026-09-07 00:38:04,306 | Executor | INFO | [executor] ✅ Step S1: led_yel activated
+2026-09-07 00:38:04,478 | Executor | INFO | [executor] ✅ Step S2: led_grn deactivated
+2026-09-07 00:38:04,649 | Executor | INFO | [executor] ✅ Step S3: BLE alert sent: [WARNING] WARNING [C0010_0734C7D9] Machine DEGRADING: Temp=45.23C (WARN), Current=1.52A (WARN), Gas=279ppm (WARN). Inspect immediately.
+2026-09-07 00:38:04,759 | Executor | INFO | [executor] 📝 LOG: Log degraded state snapshot for trend analysis and maintenance record
+2026-09-07 00:38:04,760 | Executor | INFO | [executor] ✅ Step S4: Logged: Log degraded state snapshot for trend analysis and maintenance record
+2026-09-07 00:38:04,762 | Executor | INFO | [executor] Plan PLAN_0010_1788721674 complete | ✅ 4/4 | ❌ 0 | Split: 0 | 620 ms
+2026-09-08 10:51:49,241 | Executor | INFO | [executor] Executor initialized
+2026-09-08 10:51:49,380 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788844909 | 2 steps | Severity: CRITICAL
+2026-09-08 10:51:49,499 | Executor | WARNING | [executor] 🔀 SPLITTING step S1 due to resource pressure (RAM: 89.5%)
+2026-09-08 10:51:49,501 | Executor | INFO | [executor] 🔀 Executing split version of step S1
+2026-09-08 10:51:49,560 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.5% | buzzer activated
+2026-09-08 10:51:49,670 | Executor | WARNING | [executor] 🔀 SPLITTING step S2 due to resource pressure (RAM: 89.5%)
+2026-09-08 10:51:49,671 | Executor | INFO | [executor] 🔀 Executing split version of step S2
+2026-09-08 10:51:49,732 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.5% | BLE alert sent: [WARNING] BLE alert
+2026-09-08 10:51:49,734 | Executor | INFO | [executor] Plan PLAN_0001_1788844909 complete | ✅ 2/2 | ❌ 0 | Split: 2 | 354 ms
+2026-09-08 10:51:49,775 | Executor | INFO | [executor] Executor initialized
+2026-09-08 10:51:50,821 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788844910 | 2 steps | Severity: CRITICAL
+2026-09-08 10:51:50,936 | Executor | WARNING | [executor] 🔀 SPLITTING step S1 due to resource pressure (RAM: 89.4%)
+2026-09-08 10:51:50,937 | Executor | INFO | [executor] 🔀 Executing split version of step S1
+2026-09-08 10:51:50,999 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.4% | buzzer activated
+2026-09-08 10:51:51,105 | Executor | WARNING | [executor] 🔀 SPLITTING step S2 due to resource pressure (RAM: 89.5%)
+2026-09-08 10:51:51,107 | Executor | INFO | [executor] 🔀 Executing split version of step S2
+2026-09-08 10:51:51,166 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.5% | BLE alert sent: [WARNING] BLE alert
+2026-09-08 10:51:51,169 | Executor | INFO | [executor] Plan PLAN_0001_1788844910 complete | ✅ 2/2 | ❌ 0 | Split: 2 | 348 ms
+2026-09-08 10:51:51,196 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788844911 | 2 steps | Severity: CRITICAL
+2026-09-08 10:51:51,306 | Executor | WARNING | [executor] 🔀 SPLITTING step S1 due to resource pressure (RAM: 89.5%)
+2026-09-08 10:51:51,310 | Executor | INFO | [executor] 🔀 Executing split version of step S1
+2026-09-08 10:51:51,369 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.5% | buzzer activated
+2026-09-08 10:51:51,479 | Executor | WARNING | [executor] 🔀 SPLITTING step S2 due to resource pressure (RAM: 89.6%)
+2026-09-08 10:51:51,481 | Executor | INFO | [executor] 🔀 Executing split version of step S2
+2026-09-08 10:51:51,541 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.6% | BLE alert sent: [WARNING] BLE alert
+2026-09-08 10:51:51,544 | Executor | INFO | [executor] Plan PLAN_0002_1788844911 complete | ✅ 2/2 | ❌ 0 | Split: 4 | 348 ms
+2026-09-08 10:51:51,572 | Executor | INFO | [executor] Executor initialized
+2026-09-08 10:51:51,594 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788844911 | 2 steps | Severity: CRITICAL
+2026-09-08 10:51:51,711 | Executor | WARNING | [executor] 🔀 SPLITTING step S1 due to resource pressure (RAM: 89.6%)
+2026-09-08 10:51:51,712 | Executor | INFO | [executor] 🔀 Executing split version of step S1
+2026-09-08 10:51:51,770 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.6% | buzzer activated
+2026-09-08 10:51:51,880 | Executor | WARNING | [executor] 🔀 SPLITTING step S2 due to resource pressure (RAM: 89.6%)
+2026-09-08 10:51:51,882 | Executor | INFO | [executor] 🔀 Executing split version of step S2
+2026-09-08 10:51:51,940 | Executor | WARNING | [executor] 🔀 Split execution: [SPLIT] Core command only — RAM was 89.6% | BLE alert sent: [WARNING] BLE alert
+2026-09-08 10:51:51,943 | Executor | INFO | [executor] Plan PLAN_0001_1788844911 complete | ✅ 2/2 | ❌ 0 | Split: 2 | 349 ms
+2026-09-08 11:07:48,793 | Executor | INFO | [executor] Executor initialized
+2026-09-08 11:07:49,183 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788845868 | 2 steps | Severity: CRITICAL
+2026-09-08 11:07:49,366 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-08 11:07:49,537 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:07:49,539 | Executor | INFO | [executor] Plan PLAN_0001_1788845868 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 356 ms
+2026-09-08 11:07:52,793 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788845872 | 2 steps | Severity: CRITICAL
+2026-09-08 11:07:52,968 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-08 11:07:53,137 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:07:53,140 | Executor | INFO | [executor] Plan PLAN_0002_1788845872 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 348 ms
+2026-09-08 11:07:57,175 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788845876 | 2 steps | Severity: CRITICAL
+2026-09-08 11:07:57,358 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-09-08 11:07:57,582 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [CRITICAL] Agent planner error — manual inspection required
+2026-09-08 11:07:57,592 | Executor | INFO | [executor] Plan PLAN_0003_1788845876 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 417 ms
+2026-09-08 11:35:58,171 | Executor | INFO | [executor] Executor initialized
+2026-09-08 11:35:59,880 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1788847558 | 2 steps | Severity: WARNING
+2026-09-08 11:36:00,059 | Executor | INFO | [executor] ✅ Step S1: led_yel activated
+2026-09-08 11:36:00,234 | Executor | INFO | [executor] ✅ Step S2: BLE alert sent: [WARNING] WARNING: DHT22 temperature sensor failure detected. Maintenance required.
+2026-09-08 11:36:00,237 | Executor | INFO | [executor] Plan PLAN_0001_1788847558 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 357 ms
+2026-09-08 11:36:05,311 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1788847563 | 3 steps | Severity: NORMAL
+2026-09-08 11:36:05,488 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-08 11:36:05,660 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-08 11:36:05,830 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-08 11:36:05,833 | Executor | INFO | [executor] Plan PLAN_0002_1788847563 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 521 ms
+2026-09-08 11:36:10,225 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1788847568 | 2 steps | Severity: NORMAL
+2026-09-08 11:36:10,403 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-08 11:36:10,574 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-08 11:36:10,576 | Executor | INFO | [executor] Plan PLAN_0003_1788847568 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 351 ms
+2026-09-11 09:57:29,711 | Executor | INFO | [executor] Executor initialized
+2026-09-11 09:57:32,812 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1789100849 | 3 steps | Severity: NORMAL
+2026-09-11 09:57:32,984 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 09:57:33,156 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 09:57:33,326 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 09:57:33,328 | Executor | INFO | [executor] Plan PLAN_0001_1789100849 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 515 ms
+2026-09-11 09:57:33,373 | Executor | INFO | [executor] Executor initialized
+2026-09-11 09:57:39,828 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1789100853 | 3 steps | Severity: NORMAL
+2026-09-11 09:57:39,996 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 09:57:40,169 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 09:57:40,342 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 09:57:40,343 | Executor | INFO | [executor] Plan PLAN_0001_1789100853 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 515 ms
+2026-09-11 09:57:43,876 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1789100860 | 3 steps | Severity: NORMAL
+2026-09-11 09:57:44,058 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 09:57:44,228 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 09:57:44,399 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 09:57:44,400 | Executor | INFO | [executor] Plan PLAN_0002_1789100860 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 523 ms
+2026-09-11 09:57:44,449 | Executor | INFO | [executor] Executor initialized
+2026-09-11 09:57:46,402 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1789100864 | 3 steps | Severity: WARNING
+2026-09-11 09:57:46,581 | Executor | ERROR | [executor] ❌ Step S1 failed: 'str' object has no attribute 'get'
+2026-09-11 09:57:46,754 | Executor | INFO | [executor] ✅ Step S2: led_yel activated
+2026-09-11 09:57:46,929 | Executor | INFO | [executor] ✅ Step S3: led_grn deactivated
+2026-09-11 09:57:46,930 | Executor | INFO | [executor] Plan PLAN_0001_1789100864 complete | ✅ 2/3 | ❌ 1 | Split: 0 | 528 ms
+2026-09-11 10:13:44,596 | Executor | INFO | [executor] Executor initialized
+2026-09-11 10:13:47,212 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1789101824 | 3 steps | Severity: NORMAL
+2026-09-11 10:13:47,386 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:13:47,557 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:13:47,732 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:13:47,732 | Executor | INFO | [executor] Plan PLAN_0001_1789101824 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 519 ms
+2026-09-11 10:13:52,855 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1789101830 | 3 steps | Severity: NORMAL
+2026-09-11 10:13:53,023 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:13:53,195 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:13:53,367 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:13:53,368 | Executor | INFO | [executor] Plan PLAN_0002_1789101830 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 514 ms
+2026-09-11 10:13:58,577 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0003_1789101836 | 3 steps | Severity: NORMAL
+2026-09-11 10:13:58,752 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:13:58,926 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:13:59,098 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:13:59,099 | Executor | INFO | [executor] Plan PLAN_0003_1789101836 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 522 ms
+2026-09-11 10:14:03,816 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0004_1789101842 | 3 steps | Severity: NORMAL
+2026-09-11 10:14:03,989 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:14:04,161 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:14:04,334 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:14:04,335 | Executor | INFO | [executor] Plan PLAN_0004_1789101842 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 519 ms
+2026-09-11 10:14:09,073 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0005_1789101847 | 2 steps | Severity: NORMAL
+2026-09-11 10:14:09,252 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:14:09,425 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:14:09,426 | Executor | INFO | [executor] Plan PLAN_0005_1789101847 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 353 ms
+2026-09-11 10:14:16,672 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0006_1789101853 | 4 steps | Severity: FAULT
+2026-09-11 10:14:16,856 | Executor | INFO | [executor] ✅ Step S1: relay deactivated
+2026-09-11 10:14:17,039 | Executor | INFO | [executor] ✅ Step S2: led_red activated
+2026-09-11 10:14:17,210 | Executor | INFO | [executor] ✅ Step S3: buzzer activated
+2026-09-11 10:14:17,380 | Executor | ERROR | [executor] ❌ Step S4 failed: 'str' object has no attribute 'get'
+2026-09-11 10:14:17,382 | Executor | ERROR | [executor] Aborting plan — FAULT severity + step failure
+2026-09-11 10:14:17,384 | Executor | INFO | [executor] Plan PLAN_0006_1789101853 complete | ✅ 3/4 | ❌ 1 | Split: 0 | 712 ms
+2026-09-11 10:14:21,964 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0007_1789101860 | 3 steps | Severity: NORMAL
+2026-09-11 10:14:22,139 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:14:22,311 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:14:22,482 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:14:22,484 | Executor | INFO | [executor] Plan PLAN_0007_1789101860 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 521 ms
+2026-09-11 10:14:27,290 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0008_1789101865 | 3 steps | Severity: WARNING
+2026-09-11 10:14:27,464 | Executor | ERROR | [executor] ❌ Step S1 failed: 'str' object has no attribute 'get'
+2026-09-11 10:14:27,638 | Executor | INFO | [executor] ✅ Step S2: led_yel activated
+2026-09-11 10:14:27,809 | Executor | INFO | [executor] ✅ Step S3: led_grn deactivated
+2026-09-11 10:14:27,811 | Executor | INFO | [executor] Plan PLAN_0008_1789101865 complete | ✅ 2/3 | ❌ 1 | Split: 0 | 520 ms
+2026-09-11 10:14:32,825 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0009_1789101870 | 3 steps | Severity: NORMAL
+2026-09-11 10:14:33,008 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:14:33,178 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:14:33,350 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:14:33,352 | Executor | INFO | [executor] Plan PLAN_0009_1789101870 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 528 ms
+2026-09-11 10:14:38,890 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0010_1789101876 | 3 steps | Severity: NORMAL
+2026-09-11 10:14:39,066 | Executor | INFO | [executor] ✅ Step S1: led_grn activated
+2026-09-11 10:14:39,238 | Executor | INFO | [executor] ✅ Step S2: led_yel deactivated
+2026-09-11 10:14:39,409 | Executor | INFO | [executor] ✅ Step S3: led_red deactivated
+2026-09-11 10:14:39,410 | Executor | INFO | [executor] Plan PLAN_0010_1789101876 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 520 ms
+2026-10-17 13:22:25,762 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:22:25,913 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.4%
+2026-10-17 13:22:25,915 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 13:22:25,983 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:22:26,107 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 13:22:26,165 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 13:22:26,173 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:22:26,182 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:22:26,190 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:22:26,299 | Executor | INFO | [executor] 🔀 CRITICAL-tier core-only execution for step S1
+2026-10-17 13:22:26,365 | Executor | WARNING | [executor] 🔀 CRITICAL-tier split: [CRITICAL-tier] Core command only — RAM was 73.4% | buzzer activated
+2026-10-17 13:23:10,146 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:23:10,264 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.4%
+2026-10-17 13:23:10,267 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 13:23:10,344 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:23:10,458 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 13:23:10,521 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 13:23:10,531 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:23:10,541 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 13:23:10,552 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier)
+2026-10-17 14:18:12,041 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:54,941 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,118 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 14:19:55,126 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,243 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 14:19:55,305 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 14:19:55,313 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,322 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,331 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,622 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,788 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,870 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,911 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:55,998 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:19:56,091 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,007 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,187 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 14:26:58,195 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,313 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 14:26:58,373 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 14:26:58,382 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,389 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,397 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,511 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,583 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,662 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,673 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,737 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 14:26:58,813 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:57,943 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,122 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 15:51:58,131 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,247 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 15:51:58,307 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 15:51:58,315 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,324 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,335 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,491 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,562 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,624 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,634 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,701 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:51:58,761 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,457 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,577 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 70.0%
+2026-10-17 15:54:46,579 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 15:54:46,645 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,765 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 15:54:46,824 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 15:54:46,831 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,841 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,848 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:46,966 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:47,045 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:47,120 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:47,130 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:47,196 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:54:47,280 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:33,503 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:33,526 | Executor | INFO | [executor] ▶️  Executing plan SAFE_C0001_44742E0B | 4 steps | Severity: CRITICAL
+2026-10-17 15:59:33,642 | Executor | DEBUG | [executor] Step SAFE_S1: can_split=False — safety lock, full exec
+2026-10-17 15:59:33,705 | Executor | INFO | [executor] ✅ Step SAFE_S1: relay deactivated
+2026-10-17 15:59:33,811 | Executor | DEBUG | [executor] Step SAFE_S2: can_split=False — safety lock, full exec
+2026-10-17 15:59:33,870 | Executor | INFO | [executor] ✅ Step SAFE_S2: buzzer activated
+2026-10-17 15:59:33,982 | Executor | DEBUG | [executor] Step SAFE_S3: can_split=False — safety lock, full exec
+2026-10-17 15:59:34,040 | Executor | INFO | [executor] ✅ Step SAFE_S3: led_red activated
+2026-10-17 15:59:34,150 | Executor | DEBUG | [executor] Step SAFE_S4: can_split=False — safety lock, full exec
+2026-10-17 15:59:34,210 | Executor | INFO | [executor] ✅ Step SAFE_S4: BLE alert sent: [CRITICAL] CRITICAL SENSOR ABORT — manual inspection required
+2026-10-17 15:59:34,210 | Executor | INFO | [executor] Plan SAFE_C0001_44742E0B complete | ✅ 4/4 | ❌ 0 | Split: 0 | 684 ms
+2026-10-17 15:59:34,277 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:39,112 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792232974 | 3 steps | Severity: NORMAL
+2026-10-17 15:59:39,220 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 74.2%
+2026-10-17 15:59:39,221 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 15:59:39,391 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 74.2%
+2026-10-17 15:59:39,392 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 15:59:39,562 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 74.2%
+2026-10-17 15:59:39,563 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-17 15:59:39,619 | Executor | INFO | [executor] Plan PLAN_0001_1792232974 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 507 ms
+2026-10-17 15:59:42,574 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1792232979 | 3 steps | Severity: NORMAL
+2026-10-17 15:59:42,685 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 74.4%
+2026-10-17 15:59:42,686 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 15:59:42,855 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 74.4%
+2026-10-17 15:59:42,857 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 15:59:43,025 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 74.4%
+2026-10-17 15:59:43,026 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-17 15:59:43,086 | Executor | INFO | [executor] Plan PLAN_0002_1792232979 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 511 ms
+2026-10-17 15:59:43,156 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:43,801 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792232983 | 2 steps | Severity: CRITICAL
+2026-10-17 15:59:43,922 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 74.4%
+2026-10-17 15:59:43,924 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 15:59:44,106 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 74.5%
+2026-10-17 15:59:44,108 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 15:59:44,166 | Executor | INFO | [executor] Plan PLAN_0001_1792232983 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 366 ms
+2026-10-17 15:59:44,201 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:44,320 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 74.6%
+2026-10-17 15:59:44,321 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 15:59:44,385 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:44,504 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 15:59:44,577 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 15:59:44,586 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:44,596 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:44,604 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,441 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,519 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,596 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,612 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,687 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 15:59:45,749 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:00:24,741 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:00:56,483 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792233024 | 3 steps | Severity: NORMAL
+2026-10-17 16:00:56,595 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 75.5%
+2026-10-17 16:00:56,597 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 16:00:56,766 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 75.6%
+2026-10-17 16:00:56,768 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 16:00:56,936 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 75.6%
+2026-10-17 16:00:56,937 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-17 16:00:56,995 | Executor | INFO | [executor] Plan PLAN_0001_1792233024 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 512 ms
+2026-10-17 16:00:57,065 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:00,539 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792233057 | 2 steps | Severity: NORMAL
+2026-10-17 16:01:00,658 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 75.6%
+2026-10-17 16:01:00,660 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 16:01:00,831 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 75.7%
+2026-10-17 16:01:00,833 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 16:01:00,890 | Executor | INFO | [executor] Plan PLAN_0001_1792233057 complete | ✅ 2/2 | ❌ 0 | Split: 0 | 351 ms
+2026-10-17 16:01:03,730 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1792233060 | 3 steps | Severity: NORMAL
+2026-10-17 16:01:03,849 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 75.8%
+2026-10-17 16:01:03,851 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 16:01:04,018 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 75.8%
+2026-10-17 16:01:04,020 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 16:01:04,206 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 75.6%
+2026-10-17 16:01:04,209 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-17 16:01:04,262 | Executor | INFO | [executor] Plan PLAN_0002_1792233060 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 532 ms
+2026-10-17 16:01:04,334 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:13,865 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792233064 | 3 steps | Severity: NORMAL
+2026-10-17 16:01:13,979 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 75.7%
+2026-10-17 16:01:13,980 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 16:01:14,151 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 75.7%
+2026-10-17 16:01:14,153 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-17 16:01:14,321 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 75.7%
+2026-10-17 16:01:14,322 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-17 16:01:14,378 | Executor | INFO | [executor] Plan PLAN_0001_1792233064 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 513 ms
+2026-10-17 16:01:14,405 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:14,521 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 75.7%
+2026-10-17 16:01:14,522 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-17 16:01:14,587 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:14,707 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-17 16:01:14,766 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-17 16:01:14,776 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:14,784 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:14,795 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:14,934 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:15,000 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:15,077 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:15,087 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:15,156 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-17 16:01:15,229 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:38,293 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:40,337 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792391318 | 3 steps | Severity: NORMAL
+2026-10-19 11:58:40,453 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 72.9%
+2026-10-19 11:58:40,455 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-19 11:58:40,625 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 72.9%
+2026-10-19 11:58:40,627 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-19 11:58:40,796 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 72.9%
+2026-10-19 11:58:40,798 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-19 11:58:40,859 | Executor | INFO | [executor] Plan PLAN_0001_1792391318 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 523 ms
+2026-10-19 11:58:40,924 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:42,332 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792391320 | 3 steps | Severity: NORMAL
+2026-10-19 11:58:42,441 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.0%
+2026-10-19 11:58:42,443 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-19 11:58:42,617 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 73.0%
+2026-10-19 11:58:42,620 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-19 11:58:42,803 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 73.1%
+2026-10-19 11:58:42,806 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-19 11:58:42,862 | Executor | INFO | [executor] Plan PLAN_0001_1792391320 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 530 ms
+2026-10-19 11:58:44,629 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0002_1792391322 | 3 steps | Severity: NORMAL
+2026-10-19 11:58:44,739 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.0%
+2026-10-19 11:58:44,741 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-19 11:58:44,907 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 73.0%
+2026-10-19 11:58:44,909 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-19 11:58:45,093 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 73.0%
+2026-10-19 11:58:45,095 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-19 11:58:45,153 | Executor | INFO | [executor] Plan PLAN_0002_1792391322 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 524 ms
+2026-10-19 11:58:45,228 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:47,582 | Executor | INFO | [executor] ▶️  Executing plan PLAN_0001_1792391325 | 3 steps | Severity: NORMAL
+2026-10-19 11:58:47,701 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.2%
+2026-10-19 11:58:47,703 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-19 11:58:47,871 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S2 — RAM: 73.2%
+2026-10-19 11:58:47,873 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S2
+2026-10-19 11:58:48,042 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S3 — RAM: 73.2%
+2026-10-19 11:58:48,044 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S3
+2026-10-19 11:58:48,104 | Executor | INFO | [executor] Plan PLAN_0001_1792391325 complete | ✅ 3/3 | ❌ 0 | Split: 0 | 522 ms
+2026-10-19 11:58:48,136 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,245 | Executor | INFO | [executor] 🔁 RAD WARN-tier: step S1 — RAM: 73.1%
+2026-10-19 11:58:48,247 | Executor | INFO | [executor] 🔁 WARN-tier simplified payload for step S1
+2026-10-19 11:58:48,314 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,431 | Executor | DEBUG | [executor] Step S1: can_split=False — safety lock, full exec
+2026-10-19 11:58:48,492 | Executor | INFO | [executor] ✅ Step S1: buzzer activated
+2026-10-19 11:58:48,503 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,513 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,522 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,659 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,733 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,813 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,826 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,907 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)
+2026-10-19 11:58:48,986 | Executor | INFO | [executor] Executor initialized — RAD v1.1 (3-tier + RADEngine)

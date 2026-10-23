@@ -1,0 +1,42 @@
+{
+  "session_id": "847AD4F1",
+  "total_cycles": 1,
+  "planner_stats": {
+    "total_plans_generated": 1,
+    "avg_latency_ms": 0.0,
+    "total_tokens_used": 0,
+    "avg_tokens_per_plan": 0.0,
+    "backend": "gemini",
+    "model": "gemini-2.5-flash"
+  },
+  "executor_stats": {
+    "total_steps_executed": 2,
+    "total_splits": 2,
+    "split_rate_pct": 100.0
+  },
+  "resource_stats": {
+    "total_samples": 2,
+    "ram_avg_percent": 89.6,
+    "ram_peak_percent": 89.6,
+    "cpu_avg_percent": 28.8,
+    "cpu_peak_percent": 40.8,
+    "critical_events": 2,
+    "warn_events": 0,
+    "estimated_avg_power_w": 4.932,
+    "estimated_total_energy_mj": 986.4
+  },
+  "recovery_stats": {
+    "total_failures": 0
+  },
+  "event_summary": {
+    "session_id": "847AD4F1",
+    "total_events": 1,
+    "avg_latency_ms": 377.79,
+    "max_latency_ms": 377.79,
+    "avg_ram_percent": 89.6,
+    "peak_ram_percent": 89.6,
+    "total_energy_mj": 1863.25,
+    "event_log_file": "logs\\session_847AD4F1_20260908_105151.jsonl"
+  },
+  "cycle_records": []
+}

@@ -1,0 +1,681 @@
+2026-09-07 00:18:59,231 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-07 00:19:12,558 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-07 00:19:12,560 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-07 00:19:12,563 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-07 00:19:12,565 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 7.0 ms
+2026-09-07 00:27:03,471 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-07 00:30:42,428 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-07 00:31:44,586 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-07 00:31:44,587 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-07 00:31:44,588 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-07 00:31:44,590 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.3 ms
+2026-09-07 00:36:08,433 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-07 00:36:18,834 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-07 00:36:18,835 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-07 00:36:18,836 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-07 00:36:18,837 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.0 ms
+2026-09-07 00:36:57,344 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-07 00:36:57,345 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-07 00:36:57,345 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 49.170 (age 14.5s)
+2026-09-07 00:36:57,346 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 2.7 ms
+2026-09-08 10:51:15,904 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,908 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,912 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,916 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,919 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,924 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,928 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,931 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-09-08 10:51:15,934 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,938 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:15,945 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-08 10:51:15,946 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-08 10:51:15,948 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-08 10:51:16,955 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-09-08 10:51:17,968 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-09-08 10:51:18,975 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3030.1 ms
+2026-09-08 10:51:18,979 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:18,981 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-08 10:51:18,982 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-08 10:51:18,983 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-08 10:51:18,985 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.5 ms
+2026-09-08 10:51:18,988 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:18,991 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-08 10:51:18,994 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-08 10:51:18,995 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-09-08 10:51:18,997 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.7 ms
+2026-09-08 10:51:22,874 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:23,316 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:23,410 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,755 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,758 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,761 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,766 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,770 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,773 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,776 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,778 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-09-08 10:51:44,782 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,786 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:44,792 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-08 10:51:44,794 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-08 10:51:44,796 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-08 10:51:45,811 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-09-08 10:51:46,820 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-09-08 10:51:47,828 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3035.8 ms
+2026-09-08 10:51:47,831 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:47,834 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-08 10:51:47,835 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-08 10:51:47,836 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-08 10:51:47,838 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.0 ms
+2026-09-08 10:51:47,841 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:47,844 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-08 10:51:47,846 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-08 10:51:47,848 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-09-08 10:51:47,849 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.0 ms
+2026-09-08 10:51:49,238 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:49,308 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-08 10:51:49,309 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-08 10:51:49,311 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-08 10:51:49,312 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.5 ms
+2026-09-08 10:51:49,772 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 10:51:49,793 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-08 10:51:49,796 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-08 10:51:49,797 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-08 10:51:50,808 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 1014.2 ms
+2026-09-08 10:51:51,570 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:07:48,787 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:07:52,590 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-08 11:07:52,593 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-08 11:07:52,595 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 27.470 (age 3.8s)
+2026-09-08 11:07:52,597 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 6.6 ms
+2026-09-08 11:07:56,193 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: hcsr04 | Type: TIMEOUT | Criticality: MEDIUM
+2026-09-08 11:07:56,196 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-08 11:07:56,199 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor hcsr04 — continuing
+2026-09-08 11:07:56,202 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 9.0 ms
+2026-09-08 11:29:09,885 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:30:39,135 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:31:47,500 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:35:57,891 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 11:35:58,199 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-08 11:35:58,201 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-08 11:35:58,204 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.0 ms
+2026-09-08 12:24:13,123 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 12:24:13,132 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-08 12:24:13,135 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-08 12:24:13,136 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-08 12:24:14,152 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-09-08 12:24:15,165 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-09-08 12:24:16,176 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3043.2 ms
+2026-09-08 12:24:16,184 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-08 12:24:16,187 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-08 12:24:16,188 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-08 12:24:16,189 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-08 12:24:16,191 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.6 ms
+2026-09-11 09:55:17,603 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,608 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,611 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,615 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,619 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,622 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,625 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,626 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-09-11 09:55:17,632 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,635 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:17,640 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-11 09:55:17,641 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-11 09:55:17,642 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-11 09:55:18,645 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-09-11 09:55:19,658 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-09-11 09:55:20,671 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3031.0 ms
+2026-09-11 09:55:20,675 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:20,677 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-11 09:55:20,678 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-11 09:55:20,678 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-11 09:55:20,680 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.0 ms
+2026-09-11 09:55:20,682 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:20,684 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-11 09:55:20,685 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-11 09:55:20,686 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-09-11 09:55:20,687 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 3.0 ms
+2026-09-11 09:55:24,644 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:25,203 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:55:25,258 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,230 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,234 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,237 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,240 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,243 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,246 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,249 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,251 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-09-11 09:57:24,254 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,256 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:24,262 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-11 09:57:24,263 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-11 09:57:24,264 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-11 09:57:25,273 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-09-11 09:57:26,287 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-09-11 09:57:27,300 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3038.2 ms
+2026-09-11 09:57:27,304 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:27,305 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-11 09:57:27,306 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-11 09:57:27,308 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-11 09:57:27,309 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.5 ms
+2026-09-11 09:57:27,311 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:27,312 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-09-11 09:57:27,314 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-09-11 09:57:27,315 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-09-11 09:57:27,316 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 4.1 ms
+2026-09-11 09:57:29,604 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:33,349 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:44,420 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 09:57:44,460 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-11 09:57:44,461 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-11 09:57:44,463 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-11 09:57:44,464 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.0 ms
+2026-09-11 10:13:24,853 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 10:13:44,438 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-09-11 10:14:12,448 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-09-11 10:14:12,450 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-09-11 10:14:12,451 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-09-11 10:14:13,461 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 1013.6 ms
+2026-09-11 10:14:25,523 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-09-11 10:14:25,526 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-09-11 10:14:25,529 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-09-11 10:14:25,531 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 8.3 ms
+2026-10-17 13:10:34,276 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,281 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,285 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,290 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,295 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,340 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,346 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,349 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 13:10:34,393 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,399 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:34,410 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 13:10:34,412 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 13:10:34,414 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050
+2026-10-17 13:10:35,428 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050
+2026-10-17 13:10:36,460 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050
+2026-10-17 13:10:37,471 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3061.1 ms
+2026-10-17 13:10:37,476 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:37,481 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 13:10:37,484 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 13:10:37,487 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 13:10:37,490 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 9.7 ms
+2026-10-17 13:10:37,496 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:37,500 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 13:10:37,503 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 13:10:37,506 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 13:10:37,508 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 8.4 ms
+2026-10-17 13:10:41,407 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:42,259 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:10:42,351 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,343 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,348 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,351 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,356 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,361 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,365 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,370 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,372 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 13:22:21,730 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,749 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:21,756 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 13:22:21,758 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 13:22:21,760 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 13:22:21,824 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 13:22:21,934 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 13:22:22,151 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 395.3 ms
+2026-10-17 13:22:22,196 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:22,199 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 13:22:22,201 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 13:22:22,204 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 13:22:22,205 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 6.0 ms
+2026-10-17 13:22:22,209 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:22,211 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 13:22:22,213 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 13:22:22,215 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 13:22:22,217 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 6.1 ms
+2026-10-17 13:22:25,105 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:25,498 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:25,673 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,385 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,388 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 13:22:26,390 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 13:22:26,392 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 13:22:26,432 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 45.1 ms
+2026-10-17 13:22:26,437 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,441 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 13:22:26,443 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 13:22:26,445 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 13:22:26,447 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 6.1 ms
+2026-10-17 13:22:26,451 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,453 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 13:22:26,455 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 13:22:26,457 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 13:22:26,459 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 6.0 ms
+2026-10-17 13:22:26,462 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 13:22:26,596 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,600 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 13:22:26,605 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,610 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:22:26,613 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 13:22:26,617 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,861 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,866 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,870 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,874 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,879 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,885 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,889 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,893 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 13:23:05,898 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,903 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:05,911 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 13:23:05,914 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 13:23:05,916 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 13:23:05,983 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 13:23:06,094 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 13:23:06,306 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 394.7 ms
+2026-10-17 13:23:06,352 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:06,356 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 13:23:06,360 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 13:23:06,363 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 13:23:06,365 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 9.5 ms
+2026-10-17 13:23:06,370 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:06,374 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 13:23:06,377 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 13:23:06,379 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 13:23:06,381 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 6.9 ms
+2026-10-17 13:23:09,081 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:09,839 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,045 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,661 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,664 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 13:23:10,667 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 13:23:10,668 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 13:23:10,672 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 7.9 ms
+2026-10-17 13:23:10,676 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,680 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 13:23:10,681 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 13:23:10,683 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 13:23:10,684 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.8 ms
+2026-10-17 13:23:10,688 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,691 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 13:23:10,693 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 13:23:10,695 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 13:23:10,697 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.9 ms
+2026-10-17 13:23:10,698 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 13:23:10,772 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,776 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 13:23:10,780 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,783 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 13:23:10,786 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 13:23:10,790 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:15:26,873 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:15:42,854 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:15:42,867 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 14:15:42,869 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 14:15:42,871 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 14:15:42,873 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.9 ms
+2026-10-17 14:19:51,462 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,466 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,470 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,474 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,477 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,482 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,486 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,488 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 14:19:51,491 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,495 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,503 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 14:19:51,504 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 14:19:51,505 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 14:19:51,560 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 14:19:51,670 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 14:19:51,886 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 383.5 ms
+2026-10-17 14:19:51,892 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,894 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 14:19:51,895 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 14:19:51,897 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 14:19:51,899 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.9 ms
+2026-10-17 14:19:51,901 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:51,904 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 14:19:51,905 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 14:19:51,907 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 14:19:51,909 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 4.8 ms
+2026-10-17 14:19:54,156 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:54,781 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:54,865 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,462 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,464 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 14:19:55,466 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 14:19:55,467 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 14:19:55,468 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.6 ms
+2026-10-17 14:19:55,472 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,474 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 14:19:55,475 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 14:19:55,477 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 14:19:55,478 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.2 ms
+2026-10-17 14:19:55,481 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,484 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 14:19:55,485 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 14:19:55,487 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 14:19:55,489 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.4 ms
+2026-10-17 14:19:55,491 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 14:19:55,588 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,591 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 14:19:55,595 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,598 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:19:55,600 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 14:19:55,604 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,605 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,608 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,611 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,614 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,618 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,620 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,623 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,625 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 14:26:54,629 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,632 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:54,639 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 14:26:54,640 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 14:26:54,642 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 14:26:54,706 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 14:26:54,815 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 14:26:55,018 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 379.5 ms
+2026-10-17 14:26:55,027 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:55,029 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 14:26:55,031 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 14:26:55,032 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 14:26:55,033 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.3 ms
+2026-10-17 14:26:55,037 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:55,039 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 14:26:55,042 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 14:26:55,043 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 14:26:55,045 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.3 ms
+2026-10-17 14:26:57,202 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:57,855 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:57,935 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,401 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,403 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 14:26:58,405 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 14:26:58,406 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 14:26:58,407 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.3 ms
+2026-10-17 14:26:58,411 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,413 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 14:26:58,415 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 14:26:58,416 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 14:26:58,419 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.1 ms
+2026-10-17 14:26:58,422 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,424 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 14:26:58,425 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 14:26:58,426 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 14:26:58,428 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 3.7 ms
+2026-10-17 14:26:58,429 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 14:26:58,479 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,481 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 14:26:58,484 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,487 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 14:26:58,488 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 14:26:58,492 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,683 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,688 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,692 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,696 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,701 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,705 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,708 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,710 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 15:51:53,714 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,718 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:53,726 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 15:51:53,728 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 15:51:53,730 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 15:51:53,785 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 15:51:53,891 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 15:51:54,107 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 381.2 ms
+2026-10-17 15:51:54,117 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:54,119 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:51:54,121 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:51:54,122 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:51:54,124 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.1 ms
+2026-10-17 15:51:54,128 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:54,131 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 15:51:54,134 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 15:51:54,136 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 15:51:54,138 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 6.9 ms
+2026-10-17 15:51:56,900 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:57,689 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:57,853 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,340 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,344 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:51:58,346 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:51:58,348 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:51:58,350 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 7.0 ms
+2026-10-17 15:51:58,353 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,356 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:51:58,358 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:51:58,359 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:51:58,360 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 3.2 ms
+2026-10-17 15:51:58,364 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,366 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:51:58,368 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:51:58,368 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:51:58,371 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.5 ms
+2026-10-17 15:51:58,372 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 15:51:58,453 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,455 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 15:51:58,458 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,462 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:51:58,464 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 15:51:58,467 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,724 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,728 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,732 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,735 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,739 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,742 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,746 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,748 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 15:54:43,752 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,757 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:43,764 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 15:54:43,766 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 15:54:43,767 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 15:54:43,828 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 15:54:43,936 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 15:54:44,151 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 386.2 ms
+2026-10-17 15:54:44,160 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:44,162 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:54:44,164 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:54:44,165 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:54:44,167 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.6 ms
+2026-10-17 15:54:44,170 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:44,173 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 15:54:44,176 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 15:54:44,178 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 15:54:44,179 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.9 ms
+2026-10-17 15:54:46,851 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,853 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:54:46,855 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:54:46,856 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:54:46,857 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.2 ms
+2026-10-17 15:54:46,860 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,862 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:54:46,864 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:54:46,865 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:54:46,867 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.3 ms
+2026-10-17 15:54:46,870 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,872 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:54:46,874 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:54:46,876 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:54:46,878 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.0 ms
+2026-10-17 15:54:46,879 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 15:54:46,933 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,936 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 15:54:46,938 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,941 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:54:46,943 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 15:54:46,946 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,568 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,573 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,578 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,582 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,586 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,589 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,594 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,597 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 15:59:30,600 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,605 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:30,616 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 15:59:30,617 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 15:59:30,620 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 15:59:30,675 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 15:59:30,781 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 15:59:30,997 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 381.2 ms
+2026-10-17 15:59:31,002 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:31,004 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:59:31,006 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:59:31,007 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:59:31,008 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 4.3 ms
+2026-10-17 15:59:31,012 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:31,014 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 15:59:31,015 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 15:59:31,017 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 15:59:31,018 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 4.3 ms
+2026-10-17 15:59:33,320 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:33,516 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: ina219 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:59:33,518 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:59:33,519 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor ina219 disconnected — entering safe state
+2026-10-17 15:59:33,520 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.1 ms
+2026-10-17 15:59:34,238 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:43,115 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:44,607 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:44,610 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:59:44,612 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:59:44,614 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:59:44,616 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 6.5 ms
+2026-10-17 15:59:44,620 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:44,622 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 15:59:44,624 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 15:59:44,626 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 15:59:44,628 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.9 ms
+2026-10-17 15:59:44,631 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:44,634 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 15:59:44,636 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 15:59:44,637 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 15:59:44,639 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.5 ms
+2026-10-17 15:59:44,641 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 15:59:45,404 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:45,406 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 15:59:45,410 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:45,413 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 15:59:45,416 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 15:59:45,419 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,566 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,570 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,573 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,577 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,581 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,585 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,589 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,591 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-17 16:00:21,596 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,599 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:21,606 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-17 16:00:21,608 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-17 16:00:21,609 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-17 16:00:21,671 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-17 16:00:21,780 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-17 16:00:21,998 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 391.8 ms
+2026-10-17 16:00:22,003 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:22,006 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 16:00:22,009 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 16:00:22,011 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 16:00:22,014 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 7.5 ms
+2026-10-17 16:00:22,018 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:22,020 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-17 16:00:22,021 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-17 16:00:22,023 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-17 16:00:22,025 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.4 ms
+2026-10-17 16:00:24,594 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:00:57,024 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:04,293 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,799 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,801 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 16:01:14,803 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 16:01:14,804 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 16:01:14,806 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 4.9 ms
+2026-10-17 16:01:14,810 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,812 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-17 16:01:14,814 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-17 16:01:14,816 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-17 16:01:14,818 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.3 ms
+2026-10-17 16:01:14,821 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,824 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-17 16:01:14,826 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-17 16:01:14,828 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-17 16:01:14,830 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 6.1 ms
+2026-10-17 16:01:14,831 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-17 16:01:14,894 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,897 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-17 16:01:14,901 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,905 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-17 16:01:14,908 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-17 16:01:14,911 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,170 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,174 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,179 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,183 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,187 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,191 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,195 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,197 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 35.500 (age 0.0s)
+2026-10-19 11:58:34,200 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,204 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,211 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: TIMEOUT | Criticality: CRITICAL
+2026-10-19 11:58:34,213 | RecoveryProtocol | INFO | [recovery] Selected action: RETRY
+2026-10-19 11:58:34,214 | RecoveryProtocol | INFO | [recovery] Retry attempt 1/3 for mpu6050 (delay: 50ms)
+2026-10-19 11:58:34,273 | RecoveryProtocol | INFO | [recovery] Retry attempt 2/3 for mpu6050 (delay: 100ms)
+2026-10-19 11:58:34,384 | RecoveryProtocol | INFO | [recovery] Retry attempt 3/3 for mpu6050 (delay: 200ms)
+2026-10-19 11:58:34,603 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 392.6 ms
+2026-10-19 11:58:34,608 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,610 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-19 11:58:34,612 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-19 11:58:34,615 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-19 11:58:34,617 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 7.3 ms
+2026-10-19 11:58:34,622 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:34,625 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: dht22 | Type: BAD_DATA | Criticality: HIGH
+2026-10-19 11:58:34,627 | RecoveryProtocol | INFO | [recovery] Selected action: SUBSTITUTE
+2026-10-19 11:58:34,628 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 30.000 (age 0.0s)
+2026-10-19 11:58:34,631 | RecoveryProtocol | INFO | [recovery] ✅ Recovery SUCCESS — 5.9 ms
+2026-10-19 11:58:38,085 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:40,889 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:45,181 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,527 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,530 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-19 11:58:48,532 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-19 11:58:48,534 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-19 11:58:48,536 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 6.5 ms
+2026-10-19 11:58:48,540 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,542 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mq135 | Type: BAD_DATA | Criticality: MEDIUM
+2026-10-19 11:58:48,544 | RecoveryProtocol | INFO | [recovery] Selected action: SKIP
+2026-10-19 11:58:48,546 | RecoveryProtocol | WARNING | [recovery] ⏭️  Skipping sensor mq135 — continuing
+2026-10-19 11:58:48,547 | RecoveryProtocol | WARNING | [recovery] ⚡ Recovery PARTIAL — 5.1 ms
+2026-10-19 11:58:48,551 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,554 | RecoveryProtocol | WARNING | [recovery] 🔴 Sensor failure: mpu6050 | Type: DISCONNECT | Criticality: CRITICAL
+2026-10-19 11:58:48,556 | RecoveryProtocol | INFO | [recovery] Selected action: ABORT
+2026-10-19 11:58:48,557 | RecoveryProtocol | ERROR | [recovery] 🚨 ABORT required — ABORT: Critical sensor mpu6050 disconnected — entering safe state
+2026-10-19 11:58:48,559 | RecoveryProtocol | ERROR | [recovery] ❌ Recovery FAILED — 5.3 ms
+2026-10-19 11:58:48,561 | RecoveryProtocol | DEBUG | [recovery] Cycle history reset
+2026-10-19 11:58:48,623 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,625 | RecoveryProtocol | WARNING | [recovery] 🔄 Substitute: dht22 = 42.000 (age 0.0s)
+2026-10-19 11:58:48,628 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,632 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized
+2026-10-19 11:58:48,634 | RecoveryProtocol | WARNING | [recovery] ⏭️  Substitute stale — skipping ina219
+2026-10-19 11:58:48,636 | RecoveryProtocol | INFO | [recovery] Recovery Protocol initialized

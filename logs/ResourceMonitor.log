@@ -1,0 +1,396 @@
+2026-09-07 00:18:59,230 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-07 00:19:09,286 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.3% CPU: 14.3%
+2026-09-07 00:19:09,455 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.3% CPU: 15.3%
+2026-09-07 00:19:22,556 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 45.3% CPU: 14.7%
+2026-09-07 00:19:22,730 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 45.3% CPU: 20.7%
+2026-09-07 00:19:34,378 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 45.3% CPU: 25.4%
+2026-09-07 00:19:34,550 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 45.3% CPU: 17.6%
+2026-09-07 00:27:03,470 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-07 00:27:11,287 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 47.1% CPU: 42.6%
+2026-09-07 00:27:11,461 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 47.1% CPU: 40.2%
+2026-09-07 00:27:11,633 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 47.0% CPU: 30.0%
+2026-09-07 00:27:21,442 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.8% CPU: 13.4%
+2026-09-07 00:27:21,617 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.8% CPU: 11.3%
+2026-09-07 00:27:21,791 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.8% CPU: 12.5%
+2026-09-07 00:27:32,443 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.9% CPU: 12.2%
+2026-09-07 00:27:32,614 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.9% CPU: 13.7%
+2026-09-07 00:27:32,786 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.9% CPU: 14.4%
+2026-09-07 00:27:32,958 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 46.9% CPU: 14.2%
+2026-09-07 00:30:42,427 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-07 00:30:49,632 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 65.1% CPU: 14.7%
+2026-09-07 00:30:49,805 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 65.0% CPU: 8.0%
+2026-09-07 00:30:49,995 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 65.0% CPU: 6.1%
+2026-09-07 00:31:02,478 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.7% CPU: 7.3%
+2026-09-07 00:31:02,649 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 9.9%
+2026-09-07 00:31:02,820 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 6.9%
+2026-09-07 00:31:02,993 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 6.8%
+2026-09-07 00:31:13,027 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 6.3%
+2026-09-07 00:31:13,200 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 20.3%
+2026-09-07 00:31:13,371 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.7% CPU: 5.1%
+2026-09-07 00:31:13,544 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.9% CPU: 8.0%
+2026-09-07 00:31:27,245 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.4% CPU: 11.0%
+2026-09-07 00:31:27,414 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.4% CPU: 9.9%
+2026-09-07 00:31:27,586 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.4% CPU: 6.9%
+2026-09-07 00:31:27,757 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.4% CPU: 7.4%
+2026-09-07 00:31:40,981 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 6.4%
+2026-09-07 00:31:41,155 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 6.7%
+2026-09-07 00:31:41,328 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 8.8%
+2026-09-07 00:31:41,499 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 10.4%
+2026-09-07 00:31:53,805 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 10.5%
+2026-09-07 00:31:53,977 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 9.8%
+2026-09-07 00:31:54,148 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 8.9%
+2026-09-07 00:32:03,700 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.4% CPU: 6.9%
+2026-09-07 00:32:03,873 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 7.1%
+2026-09-07 00:32:04,044 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.3% CPU: 6.4%
+2026-09-07 00:32:14,388 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 14.3%
+2026-09-07 00:32:14,560 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.9% CPU: 19.8%
+2026-09-07 00:32:14,729 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 22.1%
+2026-09-07 00:32:29,087 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 8.6%
+2026-09-07 00:32:29,257 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 11.2%
+2026-09-07 00:32:29,426 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 6.1%
+2026-09-07 00:32:29,599 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 8.0%
+2026-09-07 00:32:39,282 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 16.5%
+2026-09-07 00:32:39,453 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 13.0%
+2026-09-07 00:32:39,624 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 64.8% CPU: 12.8%
+2026-09-07 00:36:08,432 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-07 00:36:15,459 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.6% CPU: 9.8%
+2026-09-07 00:36:15,627 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.6% CPU: 8.2%
+2026-09-07 00:36:15,797 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.6% CPU: 12.6%
+2026-09-07 00:36:28,744 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 6.7%
+2026-09-07 00:36:28,916 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 6.5%
+2026-09-07 00:36:29,089 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 6.2%
+2026-09-07 00:36:29,259 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 9.3%
+2026-09-07 00:36:39,423 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 10.8%
+2026-09-07 00:36:39,596 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 10.6%
+2026-09-07 00:36:39,770 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.4% CPU: 12.9%
+2026-09-07 00:36:53,792 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 5.6%
+2026-09-07 00:36:53,965 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 5.7%
+2026-09-07 00:36:54,136 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 10.4%
+2026-09-07 00:36:54,308 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 12.5%
+2026-09-07 00:37:06,749 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 7.3%
+2026-09-07 00:37:06,920 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 14.5%
+2026-09-07 00:37:07,093 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 9.1%
+2026-09-07 00:37:07,264 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.2% CPU: 5.8%
+2026-09-07 00:37:17,812 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 8.0%
+2026-09-07 00:37:17,983 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 10.2%
+2026-09-07 00:37:18,155 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.2% CPU: 25.0%
+2026-09-07 00:37:18,328 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 11.5%
+2026-09-07 00:37:29,915 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 11.5%
+2026-09-07 00:37:30,087 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 9.5%
+2026-09-07 00:37:30,259 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 7.6%
+2026-09-07 00:37:40,094 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 19.0%
+2026-09-07 00:37:40,267 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 8.5%
+2026-09-07 00:37:40,439 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 12.0%
+2026-09-07 00:37:50,639 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.5% CPU: 9.8%
+2026-09-07 00:37:50,811 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.5% CPU: 15.2%
+2026-09-07 00:37:50,982 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.5% CPU: 7.5%
+2026-09-07 00:38:04,242 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 7.6%
+2026-09-07 00:38:04,414 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 7.0%
+2026-09-07 00:38:04,585 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 5.6%
+2026-09-07 00:38:04,757 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 62.1% CPU: 6.1%
+2026-09-08 10:51:15,356 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:15,474 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:15,593 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 92.7% CPU: 18.6% — SPLITTING step: 'test step'
+2026-09-08 10:51:15,597 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:22,873 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:23,315 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:23,409 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:44,208 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:44,366 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:44,472 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.3% CPU: 21.2% — SPLITTING step: 'test step'
+2026-09-08 10:51:44,475 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:49,236 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:49,497 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.5% CPU: 11.7% — SPLITTING step: 'Sound alarm'
+2026-09-08 10:51:49,667 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.5% CPU: 14.2% — SPLITTING step: 'BLE alert'
+2026-09-08 10:51:49,770 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:50,934 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.4% CPU: 27.7% — SPLITTING step: 'Sound alarm'
+2026-09-08 10:51:51,103 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.5% CPU: 14.3% — SPLITTING step: 'BLE alert'
+2026-09-08 10:51:51,304 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.5% CPU: 23.5% — SPLITTING step: 'Sound alarm'
+2026-09-08 10:51:51,477 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.6% CPU: 59.1% — SPLITTING step: 'BLE alert'
+2026-09-08 10:51:51,568 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 10:51:51,709 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.6% CPU: 16.8% — SPLITTING step: 'Sound alarm'
+2026-09-08 10:51:51,879 | ResourceMonitor | WARNING | [resource] ⚠️  CRITICAL — RAM: 89.6% CPU: 40.8% — SPLITTING step: 'BLE alert'
+2026-09-08 11:07:48,785 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 11:07:49,301 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.2% CPU: 16.4% — step: 'Sound alarm'
+2026-09-08 11:07:49,472 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.2% CPU: 20.4% — step: 'BLE alert'
+2026-09-08 11:07:52,905 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.4% CPU: 53.1% — step: 'Sound alarm'
+2026-09-08 11:07:53,075 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.4% CPU: 30.1% — step: 'BLE alert'
+2026-09-08 11:07:57,294 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.3% CPU: 22.5% — step: 'Sound alarm'
+2026-09-08 11:07:57,466 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.3% CPU: 11.6% — step: 'BLE alert'
+2026-09-08 11:29:09,881 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 11:30:39,133 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 11:31:47,497 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 11:35:57,887 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-08 11:35:59,994 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.0% CPU: 21.4% — step: 'Set status indicators to warning mode due to sensor failure.'
+2026-09-08 11:36:00,168 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.0% CPU: 21.4% — step: 'Notify operator of DHT22 sensor failure via BLE.'
+2026-09-08 11:36:05,424 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.2% CPU: 7.0% — step: 'Maintain normal operation status indicator.'
+2026-09-08 11:36:05,595 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.2% CPU: 27.0% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-08 11:36:05,766 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.2% CPU: 46.8% — step: 'Ensure critical fault indicator is disabled.'
+2026-09-08 11:36:10,338 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.1% CPU: 38.1% — step: 'Maintain normal operation status indicator.'
+2026-09-08 11:36:10,509 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 83.1% CPU: 20.2% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 09:55:17,115 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:55:17,231 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:55:17,336 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.3% CPU: 8.0% — step: 'test step'
+2026-09-11 09:55:17,339 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:55:24,643 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:55:25,202 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:55:25,257 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:23,739 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:23,856 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:23,963 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.5% CPU: 15.2% — step: 'test step'
+2026-09-11 09:57:23,967 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:29,603 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:32,921 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.8% CPU: 15.4% — step: 'Maintain normal status indicator'
+2026-09-11 09:57:33,093 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 18.6% — step: 'Ensure warning indicators are disabled'
+2026-09-11 09:57:33,264 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 18.4% — step: 'Ensure critical fault indicators are disabled'
+2026-09-11 09:57:33,349 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:39,933 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 8.8% — step: 'Maintain normal operation status indicator.'
+2026-09-11 09:57:40,104 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 13.6% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 09:57:40,277 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 13.3% — step: 'Ensure critical fault indicator is disabled.'
+2026-09-11 09:57:43,993 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 8.5% — step: 'Maintain normal operation status indicator.'
+2026-09-11 09:57:44,165 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 15.7% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 09:57:44,335 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 11.4% — step: 'Ensure critical fault indicator is disabled.'
+2026-09-11 09:57:44,419 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 09:57:46,518 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 11.7% — step: 'Notify operator of gas sensor hardware failure via BLE.'
+2026-09-11 09:57:46,690 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 11.4% — step: 'Set status LEDs to warning state.'
+2026-09-11 09:57:46,864 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 76.7% CPU: 14.0% — step: 'Disable green status LED.'
+2026-09-11 10:13:24,852 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 10:13:44,436 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-09-11 10:13:47,322 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 13.3% — step: 'Maintain normal status indicator'
+2026-09-11 10:13:47,494 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 18.6% — step: 'Ensure warning and fault indicators are disabled'
+2026-09-11 10:13:47,667 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 15.3% — step: 'Ensure critical fault indicator is disabled'
+2026-09-11 10:13:52,959 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.4% CPU: 38.4% — step: 'Maintain normal operation status indicator.'
+2026-09-11 10:13:53,131 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.4% CPU: 15.7% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 10:13:53,303 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.4% CPU: 23.9% — step: 'Ensure critical fault indicator is disabled.'
+2026-09-11 10:13:58,690 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 14.0% — step: 'Maintain normal operation status indicator.'
+2026-09-11 10:13:58,860 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 8.7% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 10:13:59,034 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.0% CPU: 15.0% — step: 'Ensure critical fault indicator is disabled.'
+2026-09-11 10:14:03,925 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.0% CPU: 13.2% — step: 'Maintain normal status indicator'
+2026-09-11 10:14:04,096 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.0% CPU: 11.6% — step: 'Ensure warning indicators are disabled'
+2026-09-11 10:14:04,269 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.0% CPU: 10.0% — step: 'Ensure critical fault indicators are disabled'
+2026-09-11 10:14:09,189 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.6% CPU: 36.1% — step: 'Maintain normal operation status indicator'
+2026-09-11 10:14:09,361 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.6% CPU: 14.0% — step: 'Ensure warning indicators are disabled'
+2026-09-11 10:14:16,786 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.8% CPU: 36.9% — step: 'Emergency shutdown of motor power'
+2026-09-11 10:14:16,974 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.8% CPU: 42.1% — step: 'Activate critical fault indicators'
+2026-09-11 10:14:17,145 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.8% CPU: 22.7% — step: 'Sound audible alarm'
+2026-09-11 10:14:17,316 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.8% CPU: 23.7% — step: 'Send emergency BLE alert to operator'
+2026-09-11 10:14:22,076 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.4% CPU: 23.9% — step: 'Maintain normal status indicator'
+2026-09-11 10:14:22,247 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 34.5% — step: 'Ensure warning indicators are disabled'
+2026-09-11 10:14:22,419 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.4% CPU: 19.6% — step: 'Ensure critical fault indicators are disabled'
+2026-09-11 10:14:27,401 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.2% CPU: 24.8% — step: 'Notify operator of gas sensor hardware failure via BLE.'
+2026-09-11 10:14:27,574 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.2% CPU: 12.5% — step: 'Set status indicators to warning mode.'
+2026-09-11 10:14:27,744 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.2% CPU: 15.7% — step: 'Disable normal status indicator.'
+2026-09-11 10:14:32,942 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.2% CPU: 62.1% — step: 'Maintain normal operation status indicator'
+2026-09-11 10:14:33,114 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 28.0% — step: 'Ensure warning indicators are disabled'
+2026-09-11 10:14:33,284 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.3% CPU: 24.5% — step: 'Ensure critical fault indicators are disabled'
+2026-09-11 10:14:39,003 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.1% CPU: 17.8% — step: 'Maintain normal operation status indicator.'
+2026-09-11 10:14:39,174 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.1% CPU: 16.7% — step: 'Ensure warning and fault indicators are disabled.'
+2026-09-11 10:14:39,345 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.1% CPU: 13.3% — step: 'Ensure critical fault indicator is disabled.'
+2026-10-17 13:10:33,624 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:10:33,792 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:10:33,907 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 71.9% CPU: 28.6% — step: 'test step'
+2026-10-17 13:10:33,912 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:10:41,405 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:10:42,257 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:10:42,349 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:20,701 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:20,823 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:20,958 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.1% CPU: 36.4% — step: 'test step'
+2026-10-17 13:22:20,963 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:25,103 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:25,496 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:25,672 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:25,761 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:25,911 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.4% CPU: 14.0% — step: 'Test actuator step'
+2026-10-17 13:22:25,980 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:26,100 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.4% CPU: 15.6% — step: 'Test actuator step'
+2026-10-17 13:22:26,171 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:26,180 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:22:26,188 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:05,312 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:05,429 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:05,534 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.1% CPU: 15.0% — step: 'test step'
+2026-10-17 13:23:05,539 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:09,079 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:09,835 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,042 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,143 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,262 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.4% CPU: 15.5% — step: 'Test actuator step'
+2026-10-17 13:23:10,343 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,456 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.4% CPU: 10.2% — step: 'Test actuator step'
+2026-10-17 13:23:10,528 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,539 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 13:23:10,550 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:18:12,031 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:50,950 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:51,071 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:51,175 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 66.7% CPU: 35.7%
+2026-10-17 14:19:51,179 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:54,155 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:54,780 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:54,864 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:54,938 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,054 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 66.9% CPU: 14.9%
+2026-10-17 14:19:55,123 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,239 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 66.9% CPU: 12.5%
+2026-10-17 14:19:55,310 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,318 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,328 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,620 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,786 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,867 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,905 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:55,995 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:19:56,088 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:54,087 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:54,203 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:54,308 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 65.9% CPU: 20.8%
+2026-10-17 14:26:54,314 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:57,201 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:57,854 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:57,934 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,005 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,124 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 66.2% CPU: 16.2%
+2026-10-17 14:26:58,193 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,310 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 66.2% CPU: 14.2%
+2026-10-17 14:26:58,379 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,386 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,394 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,507 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,581 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,659 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,670 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,734 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 14:26:58,811 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:53,160 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:53,277 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:53,384 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 68.2% CPU: 23.7%
+2026-10-17 15:51:53,388 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:56,899 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:57,687 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:57,852 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:57,940 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,060 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 68.4% CPU: 12.8%
+2026-10-17 15:51:58,128 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,244 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 68.4% CPU: 14.7%
+2026-10-17 15:51:58,312 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,321 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,331 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,487 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,560 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,622 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,631 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,698 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:51:58,758 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:43,222 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:43,338 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:43,445 | ResourceMonitor | DEBUG | [resource] ✅ NORMAL — RAM: 69.9% CPU: 15.4%
+2026-10-17 15:54:43,448 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,454 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,573 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.0% CPU: 15.7% — step: 'Test actuator step'
+2026-10-17 15:54:46,642 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,760 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 70.0% CPU: 22.2% — step: 'Test actuator step'
+2026-10-17 15:54:46,829 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,837 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,845 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:46,964 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:47,042 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:47,118 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:47,128 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:47,194 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:54:47,277 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:30,074 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:30,185 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:30,292 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.8% CPU: 13.4% — step: 'test step'
+2026-10-17 15:59:30,297 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:33,320 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:33,639 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 32.8% — step: 'Emergency motor shutdown'
+2026-10-17 15:59:33,808 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 22.1% — step: 'Sound audible alarm'
+2026-10-17 15:59:33,976 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 10.2% — step: 'Activate critical fault LED'
+2026-10-17 15:59:34,147 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 17.5% — step: 'BLE alert to operator'
+2026-10-17 15:59:34,236 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:39,217 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 11.5% — step: 'Maintain normal status indicator'
+2026-10-17 15:59:39,386 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 13.4% — step: 'Ensure warning indicators are disabled'
+2026-10-17 15:59:39,557 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.2% CPU: 25.0% — step: 'Ensure critical fault indicators are disabled'
+2026-10-17 15:59:42,681 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.4% CPU: 23.6% — step: 'Maintain normal status indicator'
+2026-10-17 15:59:42,852 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.4% CPU: 15.9% — step: 'Ensure warning indicators are disabled'
+2026-10-17 15:59:43,022 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.4% CPU: 25.0% — step: 'Ensure critical fault indicators are disabled'
+2026-10-17 15:59:43,113 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:43,917 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.4% CPU: 33.0% — step: 'Sound alarm'
+2026-10-17 15:59:44,102 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.5% CPU: 57.1% — step: 'BLE alert'
+2026-10-17 15:59:44,197 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:44,316 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.6% CPU: 54.4% — step: 'Test actuator step'
+2026-10-17 15:59:44,381 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:44,500 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 74.6% CPU: 46.5% — step: 'Test actuator step'
+2026-10-17 15:59:44,583 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:44,592 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:44,601 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,438 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,517 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,593 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,608 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,684 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 15:59:45,745 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:00:21,024 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:00:21,149 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:00:21,255 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.3% CPU: 30.2% — step: 'test step'
+2026-10-17 16:00:21,262 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:00:24,593 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:00:56,592 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.5% CPU: 24.0% — step: 'Maintain normal operation status indicator'
+2026-10-17 16:00:56,762 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.6% CPU: 42.3% — step: 'Ensure warning and fault indicators are disabled'
+2026-10-17 16:00:56,932 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.6% CPU: 36.0% — step: 'Ensure critical fault indicator is disabled'
+2026-10-17 16:00:57,023 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:00,655 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.6% CPU: 13.6% — step: 'Maintain normal status indicator'
+2026-10-17 16:01:00,826 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 21.5% — step: 'Ensure warning indicators are disabled'
+2026-10-17 16:01:03,845 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.8% CPU: 28.4% — step: 'Maintain normal status indicator'
+2026-10-17 16:01:04,014 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.8% CPU: 26.4% — step: 'Ensure warning indicators are disabled'
+2026-10-17 16:01:04,200 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.6% CPU: 20.9% — step: 'Ensure critical fault indicators are disabled'
+2026-10-17 16:01:04,291 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:13,975 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 11.7% — step: 'Maintain normal status indicator'
+2026-10-17 16:01:14,147 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 11.4% — step: 'Ensure warning and fault indicators are disabled'
+2026-10-17 16:01:14,316 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 29.6% — step: 'Ensure critical fault indicator is disabled'
+2026-10-17 16:01:14,403 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,518 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 26.9% — step: 'Test actuator step'
+2026-10-17 16:01:14,585 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,702 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 75.7% CPU: 26.5% — step: 'Test actuator step'
+2026-10-17 16:01:14,772 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,782 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,792 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,931 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:14,997 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:15,074 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:15,084 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:15,153 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-17 16:01:15,225 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:33,634 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:33,763 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:33,868 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 72.9% CPU: 28.3% — step: 'test step'
+2026-10-19 11:58:33,871 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:38,083 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:40,448 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 72.9% CPU: 31.0% — step: 'Maintain normal status indicator'
+2026-10-19 11:58:40,621 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 72.9% CPU: 23.6% — step: 'Ensure warning and fault indicators are off'
+2026-10-19 11:58:40,793 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 72.9% CPU: 21.7% — step: 'Ensure critical fault indicator is off'
+2026-10-19 11:58:40,887 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:42,437 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.0% CPU: 69.8% — step: 'Maintain normal operation status indicator.'
+2026-10-19 11:58:42,611 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.0% CPU: 55.9% — step: 'Ensure warning and fault indicators are disabled.'
+2026-10-19 11:58:42,797 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.1% CPU: 61.4% — step: 'Ensure critical fault indicator is disabled.'
+2026-10-19 11:58:44,734 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.0% CPU: 31.8% — step: 'Maintain normal status indicator'
+2026-10-19 11:58:44,903 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.0% CPU: 30.3% — step: 'Ensure warning indicators are disabled'
+2026-10-19 11:58:45,089 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.0% CPU: 31.4% — step: 'Ensure critical fault indicators are disabled'
+2026-10-19 11:58:45,180 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:47,696 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.2% CPU: 32.4% — step: 'Maintain normal operation status indicator.'
+2026-10-19 11:58:47,866 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.2% CPU: 36.4% — step: 'Ensure warning indicators are disabled.'
+2026-10-19 11:58:48,037 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.2% CPU: 32.5% — step: 'Ensure critical fault indicators are disabled.'
+2026-10-19 11:58:48,132 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,240 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.1% CPU: 35.1% — step: 'Test actuator step'
+2026-10-19 11:58:48,310 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,426 | ResourceMonitor | WARNING | [resource] ⚡ WARN — RAM: 73.1% CPU: 38.6% — step: 'Test actuator step'
+2026-10-19 11:58:48,498 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,509 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,519 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,656 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,730 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,809 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,822 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,903 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION
+2026-10-19 11:58:48,981 | ResourceMonitor | INFO | [resource] ResourceMonitor initialized — mode: SIMULATION

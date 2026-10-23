@@ -1,0 +1,2965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgentEdge — Related Work Analysis (IEEE 2026 Submission)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #030a14;
+            --surface: #0d1b2a;
+            --elevated: #0f2035;
+            --border: rgba(255, 255, 255, 0.07);
+            --text: #e2e8f0;
+            --muted: rgba(148, 163, 184, 0.6);
+            --dim: rgba(100, 116, 139, 0.5);
+            --blue: #38bdf8;
+            --green: #34d399;
+            --purple: #c084fc;
+            --amber: #fbbf24;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --indigo: #818cf8;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'IBM Plex Sans', system-ui, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            font-size: 17px;
+            overflow-x: hidden;
+            word-break: break-word;
+            overflow-wrap: break-word;
+            min-height: 100vh;
+        }
+
+        /* ── Scrollbar ── */
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a5f;
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2d5a8e;
+        }
+
+        /* ── Keyframes ── */
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+            }
+
+            50% {
+                box-shadow: 0 0 0 7px rgba(52, 211, 153, 0);
+            }
+        }
+
+        @keyframes fade-in-up {
+            from {
+                opacity: 0;
+                transform: translateY(28px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -300% center;
+            }
+
+            100% {
+                background-position: 300% center;
+            }
+        }
+
+        @keyframes count-in {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bar-grow {
+            from {
+                width: 0;
+            }
+        }
+
+        @keyframes tab-in {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float-in {
+            from {
+                opacity: 0;
+                transform: translateX(-16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* ── Scroll reveal ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.65s cubic-bezier(.16, 1, .3, 1), transform 0.65s cubic-bezier(.16, 1, .3, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .d1 {
+            transition-delay: 0.06s;
+        }
+
+        .d2 {
+            transition-delay: 0.12s;
+        }
+
+        .d3 {
+            transition-delay: 0.18s;
+        }
+
+        .d4 {
+            transition-delay: 0.24s;
+        }
+
+        .d5 {
+            transition-delay: 0.30s;
+        }
+
+        .d6 {
+            transition-delay: 0.36s;
+        }
+
+        .d7 {
+            transition-delay: 0.42s;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ── Scroll progress ── */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 2px;
+            z-index: 100;
+            background: linear-gradient(90deg, var(--blue), var(--indigo), var(--green));
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* ── Navbar ── */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(3, 10, 20, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 16px 24px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--green);
+            flex-shrink: 0;
+            animation: pulse-dot 2.5s infinite;
+        }
+
+        .brand-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #f8fafc;
+            letter-spacing: -0.02em;
+        }
+
+        .version-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            color: var(--blue);
+            letter-spacing: 0.05em;
+        }
+
+        .brand-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.6);
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(148, 163, 184, 0.5);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--blue);
+        }
+
+        .ieee-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: rgba(100, 116, 139, 0.5);
+        }
+
+        @media (max-width: 900px) {
+            nav {
+                display: none;
+            }
+
+            .ieee-badge {
+                display: none;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .brand-sub {
+                display: none;
+            }
+        }
+
+        /* ── Main ── */
+        main {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 112px 24px 64px;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        /* ── Breadcrumb ── */
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .bc-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.09);
+            color: rgba(148, 163, 184, 0.7);
+        }
+
+        .bc-sep {
+            color: rgba(100, 116, 139, 0.3);
+            font-size: 18px;
+        }
+
+        .bc-track {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.5);
+        }
+
+        /* ── Hero ── */
+        .hero {
+            padding-bottom: 48px;
+            margin-bottom: 48px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero h1 {
+            font-size: clamp(40px, 6vw, 64px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            margin-bottom: 24px;
+        }
+
+        .gradient-white {
+            background: linear-gradient(135deg, #f8fafc 30%, #38bdf8 70%, #818cf8 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        .gradient-muted {
+            background: linear-gradient(135deg, #94a3b8 0%, #475569 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-sub {
+            font-size: 20px;
+            color: #64748b;
+            max-width: 680px;
+            line-height: 1.7;
+        }
+
+        .hero-sub span {
+            color: var(--blue);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+        }
+
+        /* ── Section label ── */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+
+        .section-label span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 600;
+            color: rgba(56, 189, 248, 0.65);
+            white-space: nowrap;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), transparent);
+        }
+
+        /* ── Metrics grid ── */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 1100px) {
+            .metrics-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 420px) {
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .metric-card {
+            padding: 16px;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            cursor: default;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .metric-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: clamp(22px, 2.5vw, 30px);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            transition: filter 0.2s;
+        }
+
+        .metric-card:hover .metric-value {
+            filter: brightness(1.25);
+        }
+
+        .metric-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: rgba(148, 163, 184, 0.55);
+            margin-top: 6px;
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        .metric-line {
+            height: 2px;
+            border-radius: 1px;
+            margin-top: 10px;
+            opacity: 0.4;
+            transition: opacity 0.3s;
+        }
+
+        .metric-card:hover .metric-line {
+            opacity: 0.8;
+        }
+
+        /* ── Data cards ── */
+        .data-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .data-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .data-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            overflow: hidden;
+        }
+
+        .data-card.full {
+            grid-column: 1 / -1;
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 2px;
+        }
+
+        .card-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(100, 116, 139, 0.65);
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: rgba(148, 163, 184, 0.35);
+            text-align: left;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        td {
+            font-size: 17px;
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            color: rgba(226, 232, 240, 0.75);
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+
+        td.label {
+            font-family: 'JetBrains Mono', monospace;
+            color: rgba(148, 163, 184, 0.5);
+            padding-right: 16px;
+        }
+
+        td.bold {
+            font-weight: 600;
+        }
+
+        .check-icon {
+            color: var(--green);
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 700;
+        }
+
+        /* ── Latency chart ── */
+        .latency-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+        }
+
+        .latency-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .latency-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            animation: bar-grow 1.4s cubic-bezier(.16, 1, .3, 1) forwards;
+            animation-play-state: paused;
+        }
+
+        .bar-fill.play {
+            animation-play-state: running;
+        }
+
+        .latency-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            min-width: 64px;
+            max-width: 100px;
+            text-align: right;
+            color: rgba(148, 163, 184, 0.55);
+            white-space: nowrap;
+        }
+
+        .latency-pct {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.45);
+            margin-left: 3px;
+        }
+
+        .key-finding {
+            margin-top: 20px;
+            padding: 12px 14px;
+            border-radius: 8px;
+            font-size: 18px;
+            background: rgba(56, 189, 248, 0.06);
+            border: 1px solid rgba(56, 189, 248, 0.15);
+        }
+
+        .key-finding strong {
+            color: var(--blue);
+        }
+
+        .key-finding span {
+            color: #64748b;
+        }
+
+        /* ── Exec log ── */
+        .exec-table td {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+        }
+
+        .exec-fault {
+            background: rgba(251, 113, 133, 0.05);
+        }
+
+        .exec-warn {
+            background: rgba(251, 191, 36, 0.04);
+        }
+
+        .overflow-x {
+            overflow-x: auto;
+        }
+
+        /* ── Paper cards ── */
+        .paper-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .paper-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .paper-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s cubic-bezier(.16, 1, .3, 1), box-shadow 0.25s;
+        }
+
+        .paper-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .paper-body {
+            padding: 22px 22px 0;
+            flex: 1;
+        }
+
+        .paper-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .paper-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(148, 163, 184, 0.4);
+            font-weight: 700;
+        }
+
+        .paper-venue {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            letter-spacing: 0.08em;
+        }
+
+        .paper-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e2e8f0;
+            line-height: 1.45;
+            margin-bottom: 4px;
+        }
+
+        .paper-authors {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(148, 163, 184, 0.4);
+            margin-bottom: 16px;
+        }
+
+        /* Tabs */
+        .tab-bar {
+            display: flex;
+            gap: 4px;
+            padding: 4px;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.3);
+            margin-bottom: 16px;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            border: none;
+            background: transparent;
+            border-radius: 6px;
+            cursor: pointer;
+            color: rgba(148, 163, 184, 0.45);
+            transition: all 0.2s;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            font-weight: 600;
+        }
+
+        /* Learned bullets */
+        .learned-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-height: 148px;
+        }
+
+        .learned-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .bullet {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .learned-item span {
+            font-size: 18px;
+            color: #94a3b8;
+            line-height: 1.55;
+        }
+
+        /* Differ table */
+        .differ-wrap {
+            min-height: 148px;
+            overflow-x: auto;
+        }
+
+        .differ-table th,
+        .differ-table td {
+            font-size: 14px;
+        }
+
+        .differ-table th {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+        }
+
+        .differ-table td.dim {
+            font-family: 'JetBrains Mono', monospace;
+            color: rgba(148, 163, 184, 0.4);
+            padding-right: 10px;
+        }
+
+        /* Quote */
+        .paper-quote {
+            padding: 12px 22px 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 14px;
+            font-style: italic;
+            color: rgba(148, 163, 184, 0.4);
+            line-height: 1.6;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .tab-panel {
+            animation: tab-in 0.18s ease;
+        }
+
+        /* ── Gap matrix ── */
+        .gap-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+
+        .gap-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gap-header h2 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 700;
+            color: #e2e8f0;
+        }
+
+        .gap-header span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.55);
+        }
+
+        .gap-table th {
+            padding: 11px 24px 11px 24px;
+        }
+
+        .gap-table td {
+            padding: 13px 24px;
+            vertical-align: top;
+        }
+
+        .gap-table tr:hover td {
+            background: rgba(255, 255, 255, 0.015);
+        }
+
+        .gap-paper {
+            font-size: 16px;
+            font-weight: 600;
+            color: #e2e8f0;
+            display: block;
+        }
+
+        .gap-sub {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.55);
+        }
+
+        .gap-text {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            padding: 2px 7px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            font-weight: 600;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            letter-spacing: 0.05em;
+        }
+
+        .badge-note {
+            font-size: 14px;
+            color: #475569;
+            margin-top: 4px;
+        }
+
+        /* ── Novel contributions ── */
+        .novelty-header {
+            margin-bottom: 28px;
+        }
+
+        .novelty-header h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #f1f5f9;
+            margin-bottom: 4px;
+        }
+
+        .novelty-header p {
+            font-size: 17px;
+            color: #475569;
+        }
+
+        .novelty-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 900px) {
+            .novelty-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .novelty-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .novelty-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .novelty-body {
+            padding: 22px;
+            flex: 1;
+        }
+
+        .novelty-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .novelty-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .novelty-text {
+            font-size: 18px;
+            color: #64748b;
+            line-height: 1.7;
+        }
+
+        .novelty-footer {
+            padding: 12px 22px 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .fills-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(100, 116, 139, 0.4);
+            margin-bottom: 8px;
+        }
+
+        .fills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .fill-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(148, 163, 184, 0.55);
+        }
+
+        /* ── Quote block ── */
+        .quote-block {
+            border-radius: 12px;
+            padding: 32px;
+            background: rgba(56, 189, 248, 0.04);
+            border: 1px solid rgba(56, 189, 248, 0.18);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 64px;
+        }
+
+        .quote-accent {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            border-radius: 12px 0 0 12px;
+            background: linear-gradient(180deg, #38bdf8, #818cf8, #34d399);
+        }
+
+        .quote-block blockquote {
+            font-size: 18px;
+            font-weight: 500;
+            color: #cbd5e1;
+            line-height: 1.7;
+            padding-left: 16px;
+        }
+
+        .quote-meta {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(56, 189, 248, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding-left: 16px;
+        }
+
+        .quote-meta span {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: #475569;
+        }
+
+        .quote-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            font-weight: 600;
+            padding: 4px 10px;
+            border-radius: 5px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--blue);
+        }
+
+        /* ── Execution Flow Section ── */
+        .flow-section {
+            margin-bottom: 80px;
+        }
+
+        .flow-stage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .flow-stage {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flow-stage::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+        }
+
+        .flow-stage-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .flow-phase-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.05);
+            color: rgba(148,163,184,0.6);
+            letter-spacing: 0.08em;
+        }
+
+        .flow-phase-name {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .flow-phase-time {
+            margin-left: auto;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(148,163,184,0.4);
+        }
+
+        .flow-desc {
+            font-size: 17px;
+            color: rgba(148,163,184,0.75);
+            line-height: 1.65;
+            margin-bottom: 14px;
+        }
+
+        .flow-items {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .flow-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 16px;
+            color: rgba(226,232,240,0.7);
+            line-height: 1.5;
+        }
+
+        .flow-item-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: currentColor;
+            margin-top: 5px;
+            flex-shrink: 0;
+        }
+
+        .flow-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            background: rgba(0,0,0,0.35);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 12px 14px;
+            margin-top: 14px;
+            color: rgba(148,163,184,0.6);
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .flow-code .hl-green  { color: #34d399; }
+        .flow-code .hl-blue   { color: #38bdf8; }
+        .flow-code .hl-amber  { color: #fbbf24; }
+        .flow-code .hl-rose   { color: #fb7185; }
+        .flow-code .hl-purple { color: #c084fc; }
+        .flow-code .hl-cyan   { color: #22d3ee; }
+        .flow-code .hl-dim    { color: rgba(100,116,139,0.5); }
+
+        .flow-timeline {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px 32px;
+            margin-bottom: 24px;
+        }
+
+        .flow-timeline-title {
+            font-size: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(148,163,184,0.45);
+            margin-bottom: 22px;
+        }
+
+        .timeline-bar-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .timeline-row {
+            display: grid;
+            grid-template-columns: minmax(80px, 100px) 1fr minmax(70px, 90px);
+            align-items: center;
+            gap: 12px;
+        }
+
+        .timeline-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            font-weight: 600;
+            text-align: right;
+            letter-spacing: 0.08em;
+        }
+
+        .timeline-track {
+            background: rgba(255,255,255,0.04);
+            border-radius: 3px;
+            height: 8px;
+            overflow: hidden;
+        }
+
+        .timeline-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .timeline-val {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(148,163,184,0.45);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .flow-note {
+            background: rgba(56,189,248,0.06);
+            border: 1px solid rgba(56,189,248,0.18);
+            border-radius: 8px;
+            padding: 14px 18px;
+            font-size: 16px;
+            color: rgba(148,163,184,0.75);
+            line-height: 1.65;
+        }
+
+        .flow-note strong {
+            color: #38bdf8;
+        }
+
+        /* ── Footer ── */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 40px 24px;
+            text-align: center;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .footer-brand {
+            font-size: 17px;
+            font-weight: 600;
+            color: #cbd5e1;
+            margin-bottom: 6px;
+        }
+
+        .footer-line {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: rgba(100, 116, 139, 0.55);
+            margin-bottom: 3px;
+        }
+
+        .footer-doi {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: rgba(100, 116, 139, 0.4);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--blue);
+        }
+
+        .footer-copy {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 17px;
+            color: rgba(100, 116, 139, 0.25);
+        }
+
+        /* ═══════════════════════════════════════
+           MASTER RESPONSIVE BLOCK
+           Ensures no overflow at any screen width
+        ════════════════════════════════════════ */
+
+        /* Tablet — 900px */
+        @media (max-width: 900px) {
+            main {
+                padding: 90px 20px 48px;
+            }
+            .data-grid,
+            .paper-grid {
+                grid-template-columns: 1fr;
+            }
+            .novelty-grid {
+                grid-template-columns: 1fr;
+            }
+            .flow-stage-grid {
+                grid-template-columns: 1fr;
+            }
+            .data-card.full {
+                grid-column: 1;
+            }
+        }
+
+        /* Small tablet / large phone — 720px */
+        @media (max-width: 720px) {
+            body {
+                font-size: 15px;
+            }
+            .hero h1 {
+                font-size: clamp(28px, 8vw, 48px);
+            }
+            .hero-sub {
+                font-size: 16px;
+            }
+            .card-title {
+                font-size: 15px;
+            }
+            td, th {
+                font-size: 14px;
+            }
+            .latency-row {
+                flex-wrap: wrap;
+            }
+            .timeline-row {
+                grid-template-columns: 75px 1fr;
+            }
+            .timeline-val {
+                display: none;
+            }
+            .flow-timeline {
+                padding: 20px 16px;
+            }
+        }
+
+        /* Phone — 600px */
+        @media (max-width: 600px) {
+            main {
+                padding: 80px 16px 40px;
+            }
+            .breadcrumb {
+                display: none;
+            }
+            .hero {
+                padding-bottom: 28px;
+                margin-bottom: 28px;
+            }
+            .hero h1 {
+                font-size: clamp(26px, 9vw, 42px);
+            }
+            .hero-sub {
+                font-size: 15px;
+            }
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+            .metric-card {
+                padding: 12px;
+            }
+            .data-card,
+            .paper-card,
+            .novelty-card,
+            .flow-stage,
+            .flow-timeline,
+            .gap-card {
+                border-radius: 8px;
+            }
+            .data-card {
+                padding: 16px;
+            }
+            .paper-body {
+                padding: 16px 16px 0;
+            }
+            .novelty-body {
+                padding: 16px;
+            }
+            .gap-table th,
+            .gap-table td {
+                padding: 10px 12px;
+            }
+            .flow-stage {
+                padding: 18px 16px;
+            }
+            .flow-items {
+                gap: 10px;
+            }
+            .flow-code {
+                font-size: 13px;
+                padding: 10px 12px;
+            }
+            .quote-block {
+                padding: 20px 16px;
+            }
+            .section-label {
+                margin-bottom: 18px;
+            }
+        }
+
+        /* Compact phone — 420px */
+        @media (max-width: 420px) {
+            body {
+                font-size: 14px;
+            }
+            .metrics-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .metric-value {
+                font-size: clamp(18px, 5vw, 24px);
+            }
+            .paper-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+            .flow-stage-header {
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .flow-phase-time {
+                margin-left: 0;
+            }
+            .latency-row {
+                gap: 6px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Scroll progress -->
+    <div id="progress-bar"></div>
+
+    <!-- ── Navbar ── -->
+    <header>
+        <div class="container inner">
+            <div class="brand">
+                <span class="status-dot"></span>
+                <span class="brand-name">AgentEdge</span>
+                <span class="version-tag">v1.4-rc</span>
+                <span class="brand-sub">/ Related Work Analysis</span>
+            </div>
+            <nav>
+                <a href="#overview" class="active">Overview</a>
+                <a href="#metrics">Metrics</a>
+                <a href="#empirical">Empirical</a>
+                <a href="#execution-flow">Execution Flow</a>
+                <a href="#literature">Literature</a>
+                <a href="#gap-matrix">Gap Matrix</a>
+                <a href="#novelty">Novelty</a>
+            </nav>
+            <span class="ieee-badge">IEEE 2026 · DSCE ECE</span>
+        </div>
+    </header>
+
+    <!-- ── Main ── -->
+    <main>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <span class="bc-tag">Session A2ED2A27</span>
+            <span class="bc-sep">/</span>
+            <span class="bc-tag">Gemini Flash</span>
+            <span class="bc-sep">/</span>
+            <span class="bc-tag">DSCE Bengaluru</span>
+            <span class="bc-sep">/</span>
+            <span class="bc-track">Track: Embedded Edge AI &amp; Multi-Agent Robotics</span>
+        </div>
+
+        <!-- Hero -->
+        <section class="hero" id="overview">
+            <h1>
+                <span class="gradient-white">What We Learned.</span><br>
+                <span class="gradient-muted">Where We Go Further.</span>
+            </h1>
+            <p class="hero-sub">
+                A structured analysis of <span>6 foundational papers</span> — what each contributed to AgentEdge, and
+                the precise gaps our three novel contributions fill for resource-constrained physical edge intelligence.
+            </p>
+        </section>
+
+        <!-- ── Metrics ── -->
+        <section id="metrics" style="margin-bottom:80px;">
+            <div class="section-label"><span>Live Benchmark Telemetry · Phase 1 Simulation</span></div>
+            <div class="metrics-grid">
+                <div class="metric-card reveal d1"
+                    style="background:rgba(56,189,248,0.07);border-color:rgba(56,189,248,0.22);">
+                    <div class="metric-value" style="color:#38bdf8;" data-target="2117" data-suffix="ms" data-dec="0">—
+                    </div>
+                    <div class="metric-label">Avg Plan Latency</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#38bdf8,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d2"
+                    style="background:rgba(52,211,153,0.07);border-color:rgba(52,211,153,0.22);">
+                    <div class="metric-value" style="color:#34d399;" data-target="0" data-suffix="" data-dec="0">—</div>
+                    <div class="metric-label">Parse Errors</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#34d399,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d3"
+                    style="background:rgba(192,132,252,0.07);border-color:rgba(192,132,252,0.22);">
+                    <div class="metric-value" style="color:#c084fc;" data-target="972" data-suffix="" data-dec="0">—
+                    </div>
+                    <div class="metric-label">Avg Tokens</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#c084fc,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d4"
+                    style="background:rgba(251,191,36,0.07);border-color:rgba(251,191,36,0.22);">
+                    <div class="metric-value" style="color:#fbbf24;" data-target="71.6" data-suffix="%" data-dec="1">—
+                    </div>
+                    <div class="metric-label">Peak RAM</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#fbbf24,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d5"
+                    style="background:rgba(34,211,238,0.07);border-color:rgba(34,211,238,0.22);">
+                    <div class="metric-value" style="color:#22d3ee;" data-target="4.83" data-suffix="W" data-dec="2">—
+                    </div>
+                    <div class="metric-label">Avg Power</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#22d3ee,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d6"
+                    style="background:rgba(251,113,133,0.07);border-color:rgba(251,113,133,0.22);">
+                    <div class="metric-value" style="color:#fb7185;" data-target="50" data-suffix="%" data-dec="0">—
+                    </div>
+                    <div class="metric-label">Recovery Rate</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#fb7185,transparent);"></div>
+                </div>
+                <div class="metric-card reveal d7"
+                    style="background:rgba(129,140,248,0.07);border-color:rgba(129,140,248,0.22);">
+                    <div class="metric-value" style="color:#818cf8;" data-target="10" data-suffix="" data-dec="0">—
+                    </div>
+                    <div class="metric-label">Verified Cycles</div>
+                    <div class="metric-line" style="background:linear-gradient(90deg,#818cf8,transparent);"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Empirical ── -->
+        <section id="empirical">
+            <div class="section-label"><span>Empirical Benchmarks &amp; Execution Results</span></div>
+            <div class="data-grid">
+
+                <!-- Core metrics -->
+                <div class="data-card reveal d1">
+                    <div class="card-title">Core Performance Metrics</div>
+                    <div class="card-sub">AgentEdge Phase 1 — Simulation Results</div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="label">LLM Backend</td>
+                                <td class="bold">Gemini 3.1 Flash Lite</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Total Cycles Run</td>
+                                <td class="bold">10</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Avg Plan Latency</td>
+                                <td class="bold" style="color:#38bdf8">2117 ms</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Avg Tokens per Plan</td>
+                                <td class="bold" style="color:#c084fc">972</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Total Steps Executed</td>
+                                <td class="bold">30 / 30</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Task Completion Rate</td>
+                                <td class="bold">80% full, 100% partial</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Peak RAM</td>
+                                <td class="bold" style="color:#fbbf24">71.6%</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Avg Power</td>
+                                <td class="bold" style="color:#22d3ee">4.83 W</td>
+                            </tr>
+                            <tr>
+                                <td class="label">RAD Activations (Splits)</td>
+                                <td class="bold" style="color:#34d399">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Latency chart -->
+                <div class="data-card reveal d2" id="latency-card">
+                    <div class="card-title">Phase Latency Breakdown</div>
+                    <div class="card-sub">Where Time is Spent — Per Cycle</div>
+                    <div class="latency-rows">
+                        <div class="latency-row">
+                            <span class="latency-name" style="color:rgba(148,163,184,0.5)">PERCEIVE</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"
+                                    style="width:0.4%;background:linear-gradient(90deg,#34d399,#34d39988);"></div>
+                            </div>
+                            <span class="latency-val">&lt;1ms<span class="latency-pct">0%</span></span>
+                        </div>
+                        <div class="latency-row">
+                            <span class="latency-name" style="color:rgba(148,163,184,0.5)">RECOVER</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"
+                                    style="width:4%;background:linear-gradient(90deg,#fbbf24,#fbbf2488);"></div>
+                            </div>
+                            <span class="latency-val">~103ms<span class="latency-pct">4%</span></span>
+                        </div>
+                        <div class="latency-row">
+                            <span class="latency-name" style="color:#38bdf8;font-weight:700">PLAN (LLM)</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"
+                                    style="width:82%;background:linear-gradient(90deg,#38bdf8,#38bdf888);box-shadow:0 0 8px rgba(56,189,248,0.5);">
+                                </div>
+                            </div>
+                            <span class="latency-val" style="color:#38bdf8;font-weight:700">2117ms<span
+                                    class="latency-pct" style="color:#38bdf888">82%</span></span>
+                        </div>
+                        <div class="latency-row">
+                            <span class="latency-name" style="color:rgba(148,163,184,0.5)">EXECUTE</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"
+                                    style="width:20%;background:linear-gradient(90deg,#c084fc,#c084fc88);"></div>
+                            </div>
+                            <span class="latency-val">~525ms<span class="latency-pct">20%</span></span>
+                        </div>
+                        <div class="latency-row">
+                            <span class="latency-name" style="color:rgba(148,163,184,0.5)">VERIFY</span>
+                            <div class="bar-track">
+                                <div class="bar-fill"
+                                    style="width:1%;background:linear-gradient(90deg,#22d3ee,#22d3ee88);"></div>
+                            </div>
+                            <span class="latency-val">&lt;15ms<span class="latency-pct">1%</span></span>
+                        </div>
+                    </div>
+                    <div class="key-finding"><strong>Key finding: </strong><span>LLM planning dominates 82% of total
+                            cycle time. All other phases complete in under 600ms combined.</span></div>
+                </div>
+
+                <!-- RAD -->
+                <div class="data-card reveal d1">
+                    <div class="card-title">Resource-Adaptive Task Decomposition (RAD)</div>
+                    <div class="card-sub">Algorithm Results</div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="label">RAM Average</td>
+                                <td class="bold" style="color:#fbbf24">71.2%</td>
+                            </tr>
+                            <tr>
+                                <td class="label">RAM Peak</td>
+                                <td class="bold" style="color:#fbbf24">71.6%</td>
+                            </tr>
+                            <tr>
+                                <td class="label">CPU Average</td>
+                                <td class="bold">22.2%</td>
+                            </tr>
+                            <tr>
+                                <td class="label">CPU Peak</td>
+                                <td class="bold">62.1%</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Critical RAM Events</td>
+                                <td class="bold" style="color:#34d399">0</td>
+                            </tr>
+                            <tr>
+                                <td class="label">RAD Splits Triggered</td>
+                                <td class="bold" style="color:#34d399">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Test suite -->
+                <div class="data-card reveal d2">
+                    <div class="card-title">AgentEdge Test Suite</div>
+                    <div class="card-sub">34/34 Passing</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Test Class</th>
+                                <th style="text-align:center">Tests</th>
+                                <th style="text-align:right">Result</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">TestResourceMonitor</td>
+                                <td style="text-align:center">3</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">TestSensorSimulator</td>
+                                <td style="text-align:center">7</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">TestRecoveryProtocol</td>
+                                <td style="text-align:center">10</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">TestActuatorSimulator</td>
+                                <td style="text-align:center">7</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">TestPlanParser</td>
+                                <td style="text-align:center">3</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td class="label">TestAgentLoopIntegration</td>
+                                <td style="text-align:center">3</td>
+                                <td style="text-align:right"><span class="check-icon">✓ All Pass</span></td>
+                            </tr>
+                            <tr style="border-top:1px solid rgba(255,255,255,0.1)">
+                                <td class="bold" style="color:#e2e8f0">TOTAL</td>
+                                <td style="text-align:center;font-weight:700;color:#e2e8f0">34</td>
+                                <td style="text-align:right"><span class="check-icon" style="font-size:16px">✓
+                                        34/34</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Recovery protocol -->
+                <div class="data-card full reveal">
+                    <div class="card-title">Sensor Failure Recovery Protocol</div>
+                    <div class="card-sub">Demonstrated Resiliency</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Field</th>
+                                <th>Failure 1</th>
+                                <th>Failure 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="label">Sensor</td>
+                                <td>MQ135</td>
+                                <td>Unknown</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Failure Type</td>
+                                <td style="color:#fb7185;font-weight:700">TIMEOUT</td>
+                                <td style="color:#fbbf24;font-weight:700">BAD_DATA</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Criticality</td>
+                                <td>MEDIUM</td>
+                                <td>MEDIUM</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Action Taken</td>
+                                <td class="bold">RETRY</td>
+                                <td class="bold">SKIP</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Outcome</td>
+                                <td style="color:#34d399;font-weight:700">SUCCESS ✓</td>
+                                <td style="color:#fbbf24;font-weight:700">PARTIAL ⚠</td>
+                            </tr>
+                            <tr>
+                                <td class="label">Recovery Latency</td>
+                                <td>15 ms</td>
+                                <td>1006 ms</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Execution log -->
+                <div class="data-card full reveal">
+                    <div class="card-title">10-Cycle Execution Log</div>
+                    <div class="card-sub">Cycle-by-Cycle Summary</div>
+                    <div class="overflow-x">
+                        <table class="exec-table" style="min-width:560px">
+                            <thead>
+                                <tr>
+                                    <th>Cycle</th>
+                                    <th>Machine State</th>
+                                    <th>Severity</th>
+                                    <th style="text-align:center">Steps</th>
+                                    <th style="text-align:center">Success</th>
+                                    <th>Event</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">1</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Clean operation</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">2</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Clean operation</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">3</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Clean operation</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">4</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Clean operation</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">5</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">2/2</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Clean operation</td>
+                                </tr>
+                                <tr class="exec-fault">
+                                    <td style="color:#fb7185;font-weight:700">6</td>
+                                    <td style="color:#fb7185;font-weight:700">FAULT</td>
+                                    <td style="color:#fb7185;font-weight:700">FAULT</td>
+                                    <td style="text-align:center">4/4</td>
+                                    <td style="text-align:center;color:#fb7185">⚡</td>
+                                    <td style="color:#fb7185;font-weight:700">3 sensors FAULT</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">7</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Post-recovery</td>
+                                </tr>
+                                <tr class="exec-warn">
+                                    <td style="color:#fbbf24;font-weight:700">8</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:#fbbf24;font-weight:700">WARNING</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#fbbf24">⚡</td>
+                                    <td style="color:#fbbf24;font-weight:700">MQ135 failure</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">9</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Stable</td>
+                                </tr>
+                                <tr>
+                                    <td style="color:rgba(226,232,240,0.5);font-weight:700">10</td>
+                                    <td style="color:#34d399">NORMAL</td>
+                                    <td style="color:rgba(148,163,184,0.5)">NORMAL</td>
+                                    <td style="text-align:center">3/3</td>
+                                    <td style="text-align:center;color:#34d399">✓</td>
+                                    <td style="color:rgba(148,163,184,0.45)">Stable</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── Execution Flow ── -->
+        <section id="execution-flow" class="flow-section">
+            <div class="section-label"><span>Execution Flow &amp; System Architecture · Cycle Lifecycle</span></div>
+
+            <!-- Architecture Flowchart -->
+            <div style="width: 100%; overflow-x: auto; margin-bottom: 48px; background: rgba(0,0,0,0.3); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 12px; padding: 24px;">
+                <pre style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: #94a3b8; line-height: 1.4; margin: 0 auto; width: max-content;">
+                    <span style="color: #38bdf8;">python main.py demo</span>
+                             │
+                             ▼
+                           main()
+                             │
+                             ▼
+                         run_demo()
+                             │
+                             ▼
+                         <span style="color: #c084fc;">AgentLoop()</span>
+                             │
+          ┌──────────────────┼───────────────────┐
+          │                  │                   │
+          ▼                  ▼                   ▼
+    <span style="color: #34d399;">SensorSimulator</span>    <span style="color: #fb7185;">ActuatorSimulator</span>   <span style="color: #fbbf24;">ResourceMonitor</span>
+          │                  │                   │
+          └──────────┬───────┴───────────────────┘
+                     │
+                     ▼
+              <span style="color: #22d3ee;">RecoveryProtocol</span>
+                     │
+                     ▼
+                 <span style="color: #818cf8;">LLMPlanner</span>
+                     │
+                     ▼
+                  <span style="color: #38bdf8;">Executor</span>
+                     │
+                     ▼
+                  Logger
+                     │
+                     ▼
+              <span style="color: #e2e8f0; font-weight: bold;">run(max_cycles=3)</span>
+                     │
+              ┌──────┴──────┐
+              │             │
+              ▼             │
+           <span style="color: #fbbf24;">CYCLE 1</span>          │
+              │             │
+              ▼             │
+          ┌─────────┐       │
+          │ <span style="color: #34d399;">PERCEIVE</span>│       │
+          └────┬────┘       │
+               ▼            │
+        failures detected?  │
+           /       \        │
+         NO         YES     │
+         │           │      │
+         │           ▼      │
+         │        <span style="color: #fbbf24;">RECOVER</span>   │
+         │           │      │
+         └─────┬─────┘      │
+               ▼            │
+             <span style="color: #c084fc;">PLAN</span>           │
+               │            │
+               ▼            │
+           LLM reasoning    │
+               │            │
+               ▼            │
+            <span style="color: #fb7185;">EXECUTE</span>         │
+               │            │
+               ▼            │
+            <span style="color: #38bdf8;">VERIFY</span>          │
+               │            │
+               ▼            │
+          CycleRecord       │
+               │            │
+               └────────────┤
+                            ▼
+                         <span style="color: #fbbf24;">CYCLE 2</span>
+                            │
+                            ▼
+                         <span style="color: #fbbf24;">CYCLE 3</span>
+                            │
+                            ▼
+                    <span style="color: #818cf8;">Session Report</span>
+                            │
+                            ▼
+                         Summary</pre>
+            </div>
+
+            <!-- Timeline bar -->
+            <div class="flow-timeline reveal">
+                <div class="flow-timeline-title">Phase Time Distribution — Per Cycle (~2800ms avg)</div>
+                <div class="timeline-bar-wrap">
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:rgba(148,163,184,0.4)">STARTUP</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:0%;background:#475569;"></div></div>
+                        <span class="timeline-val">once</span>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:#34d399">PERCEIVE</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:0.4%;background:linear-gradient(90deg,#34d399,#34d39966);"></div></div>
+                        <span class="timeline-val">&lt;1 ms · 0%</span>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:#fbbf24">RECOVER</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:4%;background:linear-gradient(90deg,#fbbf24,#fbbf2466);"></div></div>
+                        <span class="timeline-val">~103 ms · 4%</span>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:#38bdf8;font-weight:700">PLAN (LLM)</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:82%;background:linear-gradient(90deg,#38bdf8,#38bdf866);box-shadow:0 0 6px rgba(56,189,248,0.4);"></div></div>
+                        <span class="timeline-val" style="color:#38bdf8;font-weight:700">2117 ms · 82%</span>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:#c084fc">EXECUTE</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:20%;background:linear-gradient(90deg,#c084fc,#c084fc66);"></div></div>
+                        <span class="timeline-val">~525 ms · 20%</span>
+                    </div>
+                    <div class="timeline-row">
+                        <span class="timeline-label" style="color:#22d3ee">VERIFY</span>
+                        <div class="timeline-track"><div class="timeline-fill" style="width:1%;background:linear-gradient(90deg,#22d3ee,#22d3ee66);"></div></div>
+                        <span class="timeline-val">&lt;15 ms · 1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flow-stage-grid">
+
+                <!-- Stage 0: Startup -->
+                <div class="flow-stage reveal d1" style="border-color:rgba(71,85,105,0.4)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#475569;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">STAGE 0</span>
+                        <span class="flow-phase-name" style="color:#94a3b8">Startup &amp; Init</span>
+                        <span class="flow-phase-time">once</span>
+                    </div>
+                    <p class="flow-desc">All components are instantiated once before the loop begins. No API calls or sensor reads occur here.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span><strong>SensorSimulator</strong> — 5 virtual sensors: mpu6050, dht22, ina219, hcsr04, mq135</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span><strong>ActuatorSimulator</strong> — 6 actuators: relay, buzzer, led_red, led_grn, led_yel, ble</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span><strong>ResourceMonitor</strong> — wraps <code>psutil</code>; reads real host RAM/CPU each step</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#c084fc"></span><span><strong>RecoveryProtocol</strong> — loads failure taxonomy &amp; sensor criticality matrix</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#38bdf8"></span><span><strong>LLMPlanner</strong> — connects to Gemini / Anthropic / Ollama based on config</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#22d3ee"></span><span><strong>Executor</strong> — holds refs to actuator sim &amp; resource monitor</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>AgentEventLogger</strong> — opens session log file in <code>logs/</code></span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># main.py → run_demo()</span>
+loop = AgentLoop()       <span class="hl-dim"># one-time init</span>
+loop.run(max_cycles=3)   <span class="hl-dim"># 3 cycles</span></div>
+                </div>
+
+                <!-- Phase 1: PERCEIVE -->
+                <div class="flow-stage reveal d2" style="border-color:rgba(52,211,153,0.25)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#34d399;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">PHASE 1</span>
+                        <span class="flow-phase-name" style="color:#34d399">Perceive</span>
+                        <span class="flow-phase-time">&lt;1 ms</span>
+                    </div>
+                    <p class="flow-desc">All 5 sensors are read simultaneously. Successful readings are cached as "last known good" for use in future recovery.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>Calls <code>sensor_sim.read_all()</code> — triggers all 5 read methods</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>Each sensor internally evolves machine state: <strong>NORMAL → DEGRADING → FAULT</strong> (time-based)</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fb7185"></span><span>~5% random chance per sensor of returning a <strong>FAILED</strong> reading (<code>SIM_SENSOR_FAILURE_PROB</code>)</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>Every non-failed value stored via <code>recovery.update_last_known_good()</code></span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># Returns Dict[sensor_id, SensorReading]</span>
+readings = sensor_sim.<span class="hl-green">read_all</span>()
+<span class="hl-dim"># keys: mpu6050, dht22, ina219, hcsr04, mq135</span>
+failures = {sid: r <span class="hl-blue">for</span> sid, r <span class="hl-blue">in</span> readings.items()
+            <span class="hl-blue">if</span> r.is_failed}</div>
+                </div>
+
+                <!-- Phase 2: RECOVER -->
+                <div class="flow-stage reveal d1" style="border-color:rgba(251,191,36,0.25)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#fbbf24;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">PHASE 2</span>
+                        <span class="flow-phase-name" style="color:#fbbf24">Recover</span>
+                        <span class="flow-phase-time">~103 ms if triggered</span>
+                    </div>
+                    <p class="flow-desc">Skipped entirely if no failures detected. Otherwise, the hierarchical recovery matrix selects an action per failed sensor based on criticality level.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span><code>classify_failure(reason)</code> → maps error string to <strong>TIMEOUT / BAD_DATA / DISCONNECT / BUS_ERROR</strong></span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fb7185"></span><span><strong>CRITICAL</strong> sensors (mpu6050, ina219) → RETRY up to 3×; abort if all fail</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span><strong>HIGH</strong> sensor (dht22) → RETRY; fallback to SUBSTITUTE last known good value</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span><strong>MEDIUM</strong> sensors (hcsr04, mq135) → SKIP; task continues without them</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>Recovered value is patched back in-place: <code>readings[sid].value = recovered_value</code></span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># Novel Contribution #2</span>
+record = recovery.<span class="hl-amber">recover</span>(
+    sensor_id=<span class="hl-green">"mpu6050"</span>,
+    failure_reason=reading.failure_reason,
+    read_fn=<span class="hl-blue">lambda</span>: sensor_sim.read_vibration()
+)
+<span class="hl-dim"># → RecoveryRecord(outcome, recovered_value)</span></div>
+                </div>
+
+                <!-- Phase 3: PLAN -->
+                <div class="flow-stage reveal d2" style="border-color:rgba(56,189,248,0.3)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#38bdf8;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">PHASE 3</span>
+                        <span class="flow-phase-name" style="color:#38bdf8">Plan (LLM)</span>
+                        <span class="flow-phase-time">~2117 ms · 82% of cycle</span>
+                    </div>
+                    <p class="flow-desc">The SLM receives structured sensor data and produces a JSON action plan. This is the only network-bound operation in the cycle. In hardware mode, TinyLlama / Phi-3-Mini runs fully offline on-device.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#38bdf8"></span><span><code>format_perception(readings)</code> builds human-readable sensor string sent to the LLM</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#38bdf8"></span><span>System prompt defines: thresholds, actuator commands, exact JSON output format</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#38bdf8"></span><span>LLM returns <code>{ situation, severity, reasoning, steps: [...] }</code></span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span>If JSON parse fails → <strong>safe default plan</strong> activated: buzzer ON + BLE ALERT CRITICAL</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span><code>severity</code> must be exactly one of: <strong>NORMAL / WARNING / CRITICAL / FAULT</strong></span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>Produces 1–4 <code>PlanStep</code> objects per cycle (action_type, target, command, payload)</span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># Planner formats sensor data as text</span>
+<span class="hl-green">"MPU6050: 0.42 g [OK]"</span>
+<span class="hl-green">"DHT22:   28.5 Celsius [OK]"</span>
+<span class="hl-dim"># → LLM call (Gemini Flash / Anthropic / Ollama)</span>
+<span class="hl-dim"># → parse_plan() → AgentPlan object</span>
+plan.severity = <span class="hl-amber">"FAULT"</span>  <span class="hl-dim"># e.g.</span>
+plan.steps    = [S1, S2, S3, S4]</div>
+                </div>
+
+                <!-- Phase 4: EXECUTE -->
+                <div class="flow-stage reveal d1" style="border-color:rgba(192,132,252,0.25)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#c084fc;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">PHASE 4</span>
+                        <span class="flow-phase-name" style="color:#c084fc">Execute (RAD)</span>
+                        <span class="flow-phase-time">~525 ms</span>
+                    </div>
+                    <p class="flow-desc">Each plan step is executed one by one. Before every step, the system checks live RAM/CPU. If resources are critical, Novel Contribution #1 (RAD) activates to decompose the step rather than discard it.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#c084fc"></span><span>Per-step: <code>resource_monitor.check_before_step()</code> samples real psutil RAM/CPU</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#c084fc"></span><span><strong>NORMAL</strong> state → execute step as-is with full payload</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span><strong>WARN</strong> state → prefer lightweight execution where semantically safe</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fb7185"></span><span><strong>CRITICAL</strong> + decomposable → split into sequential SubStep objects (RAD)</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fb7185"></span><span><strong>CRITICAL</strong> + non-decomposable safety step → DEFERRED (never silently mutated)</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#34d399"></span><span>relay→OFF automatically calls <code>sensor_sim.inject_recovery()</code>, resetting machine state</span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># action_type dispatch</span>
+<span class="hl-blue">if</span> step.action_type == <span class="hl-green">"ACTUATOR"</span>:
+    actuator_sim.<span class="hl-purple">execute</span>(step.target, step.command)
+<span class="hl-blue">elif</span> step.action_type == <span class="hl-green">"ALERT"</span>:
+    actuator_sim.<span class="hl-purple">execute</span>(<span class="hl-green">"ble"</span>, <span class="hl-green">"ALERT"</span>, payload)
+<span class="hl-dim"># LOG / VERIFY / WAIT handled locally</span></div>
+                </div>
+
+                <!-- Phase 5: VERIFY -->
+                <div class="flow-stage reveal d2" style="border-color:rgba(34,211,238,0.25)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#22d3ee;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">PHASE 5</span>
+                        <span class="flow-phase-name" style="color:#22d3ee">Verify</span>
+                        <span class="flow-phase-time">&lt;15 ms</span>
+                    </div>
+                    <p class="flow-desc">Confirms that actuator commands were actually applied. Checks each step's expected post-execution state against the actuator simulator's internal state dictionary — not just sensor delta logging.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#22d3ee"></span><span>Per step: <code>actuator_sim.get_state(target)</code> compared to expected command outcome</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#22d3ee"></span><span>Returns structured <code>VerificationResult(step_id, expected, observed, success)</code></span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#22d3ee"></span><span>BLE verified via <code>actuator_sim.alert_log</code> — checks that alert was actually recorded</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fbbf24"></span><span>Sensor delta used as <em>secondary evidence</em> — not primary proof of actuator success</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#fb7185"></span><span>Failed verification propagates to <code>CycleRecord.verification_success = False</code></span></div>
+                    </div>
+                    <div class="flow-code"><span class="hl-dim"># For each executed step:</span>
+expected = <span class="hl-green">"OFF"</span>  <span class="hl-dim"># relay OFF command</span>
+observed = actuator_sim.<span class="hl-cyan">get_state</span>(<span class="hl-green">"relay"</span>)
+success  = observed == expected
+<span class="hl-dim"># → VerificationResult stored in CycleRecord</span></div>
+                </div>
+
+                <!-- Stage: Session Report -->
+                <div class="flow-stage full reveal" style="border-color:rgba(129,140,248,0.25)">
+                    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:#818cf8;"></div>
+                    <div class="flow-stage-header">
+                        <span class="flow-phase-num">POST-LOOP</span>
+                        <span class="flow-phase-name" style="color:#818cf8">Session Report</span>
+                        <span class="flow-phase-time">after all cycles</span>
+                    </div>
+                    <p class="flow-desc">After all cycles complete (or on Ctrl+C), a structured JSON session report is written to <code>logs/</code> and a rich summary table is printed to the terminal.</p>
+                    <div class="flow-items">
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>planner_stats</strong> — avg_latency_ms, avg_tokens_per_plan, backend, model</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>executor_stats</strong> — total_splits, split_rate_pct, RAD metrics (decomposed, deferred, substeps generated)</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>resource_stats</strong> — ram_avg_percent, cpu_peak_percent, estimated_avg_power_w, total_energy_mj</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>recovery_stats</strong> — total_failures, success_rate_pct, by_failure_type, avg_latency_ms</span></div>
+                        <div class="flow-item"><span class="flow-item-dot" style="color:#818cf8"></span><span><strong>cycle_records</strong> — full CycleRecord per cycle including verification_success, peak_ram_percent, energy_mj</span></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flow-note reveal">
+                <strong>Key architectural insight:</strong> The LLM planning phase accounts for 82% of total cycle time (~2117ms of ~2800ms avg).
+                All sensor reads, resource checks, actuator dispatch, and verification complete in under 650ms combined.
+                In hardware mode with on-device TinyLlama / Phi-3-Mini via <code>llama.cpp</code>, the PLAN phase is the primary
+                latency bottleneck to characterise — which is precisely what AgentEdge-Bench Task Category A measures.
+            </div>
+
+        </section>
+
+        <!-- ── Paper Cards ── -->
+        <section id="literature">
+            <div class="section-label"><span>Paper-by-Paper Analysis · 6 References</span></div>
+            <div class="paper-grid">
+
+                <!-- P1: AutoGen -->
+                <article class="paper-card reveal d1" style="border-left:3px solid #38bdf8">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">01 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(56,189,248,0.08);border-color:rgba(56,189,248,0.3);color:#38bdf8">ICLR
+                                2024</span>
+                        </div>
+                        <h2 class="paper-title">AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation
+                        </h2>
+                        <p class="paper-authors">Wu et al. · Microsoft Research / Penn State</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p1','learned',this,'#38bdf8')"
+                                style="background:rgba(56,189,248,0.1);color:#38bdf8;border-bottom:2px solid #38bdf8">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p1','differ',this,'#38bdf8')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p1-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#38bdf8"></span><span>Conversation-driven multi-agent
+                                    orchestration paradigm.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#38bdf8"></span><span>Strict role separation between planner,
+                                    executor, and critic.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#38bdf8"></span><span>5-phase loop blueprint for autonomous agent
+                                    execution.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#38bdf8"></span><span>Modular architecture for pluggable agent
+                                    personas.</span></div>
+                        </div>
+                        <div id="p1-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#38bdf8">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Environment</td>
+                                        <td>Cloud server / Cluster</td>
+                                        <td>Offline Raspberry Pi 5 (8GB)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Sensors</td>
+                                        <td>None (pure digital APIs)</td>
+                                        <td>5 industrial sensors (DHT22, MQ-2, etc.)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Resource mgmt</td>
+                                        <td>None (unbounded compute)</td>
+                                        <td style="color:#34d399;font-weight:600">RAD (Novel #1: Step splitting)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Failure</td>
+                                        <td>Not addressed</td>
+                                        <td style="color:#34d399;font-weight:600">4-type taxonomy &amp; matrix (Novel
+                                            #2)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"AutoGen taught us how to structure agent conversations — AgentEdge applies
+                        it on constrained hardware with real sensor tool-use."</div>
+                </article>
+
+                <!-- P2: ReAct -->
+                <article class="paper-card reveal d2" style="border-left:3px solid #34d399">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">02 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(52,211,153,0.08);border-color:rgba(52,211,153,0.3);color:#34d399">ICLR
+                                2023</span>
+                        </div>
+                        <h2 class="paper-title">ReAct: Synergizing Reasoning and Acting in Language Models</h2>
+                        <p class="paper-authors">Yao et al. · Princeton / Google Research</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p2','learned',this,'#34d399')"
+                                style="background:rgba(52,211,153,0.1);color:#34d399;border-bottom:2px solid #34d399">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p2','differ',this,'#34d399')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p2-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#34d399"></span><span>Interleaved Thought → Action → Observation
+                                    execution trace.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#34d399"></span><span>Explicit reasoning traces significantly
+                                    reduce action hallucination.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#34d399"></span><span>Grounding external tool execution directly
+                                    into prompt context.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#34d399"></span><span>Foundational control loop design for
+                                    interactive autonomy.</span></div>
+                        </div>
+                        <div id="p2-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#34d399">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Action space</td>
+                                        <td>Web search / text Wikipedia</td>
+                                        <td>Physical GPIO relays, buzzer, LEDs</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Observation</td>
+                                        <td>Web APIs &amp; static text buffers</td>
+                                        <td>Real-time analog/digital sensor readings</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Constraints</td>
+                                        <td>Cloud LLMs (PaLM 540B / GPT-4)</td>
+                                        <td>On-device SLM (Gemini Flash)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Benchmarks</td>
+                                        <td>HotpotQA &amp; ALFWorld</td>
+                                        <td style="color:#34d399;font-weight:600">AgentEdge-Bench (Novel #3: 20 tasks)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"ReAct gave us the Thought-Action-Observation loop — applied to physical
+                        control with real sensor grounding."</div>
+                </article>
+
+                <!-- P3: Rüb & Gerhards -->
+                <article class="paper-card reveal d1" style="border-left:3px solid #c084fc">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">03 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(192,132,252,0.08);border-color:rgba(192,132,252,0.3);color:#c084fc">arXiv
+                                2025</span>
+                        </div>
+                        <h2 class="paper-title">A Taxonomy &amp; Architecture of Agentic AI on Embedded Edge</h2>
+                        <p class="paper-authors">Rüb &amp; Gerhards · arXiv:2606.02862</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p3','learned',this,'#c084fc')"
+                                style="background:rgba(192,132,252,0.1);color:#c084fc;border-bottom:2px solid #c084fc">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p3','differ',this,'#c084fc')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p3-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#c084fc"></span><span>Tiered edge-agent taxonomy from
+                                    microcontrollers to edge gateways.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#c084fc"></span><span>Explicit separation of governance, safety,
+                                    and operational layers.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#c084fc"></span><span>Formal latency/energy trade-off
+                                    characterization for edge models.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#c084fc"></span><span>Architectural blueprint for embedded
+                                    autonomous agents.</span></div>
+                        </div>
+                        <div id="p3-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#c084fc">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Type</td>
+                                        <td>Conceptual survey only</td>
+                                        <td>Fully implemented physical system</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Evaluation</td>
+                                        <td>Qualitative / no empirical bench</td>
+                                        <td>10-cycle stress test + 20-task benchmark</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Recovery</td>
+                                        <td>Failure modes identified unhandled</td>
+                                        <td style="color:#34d399;font-weight:600">Formal 4-type recovery taxonomy (Novel
+                                            #2)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Resource</td>
+                                        <td>Static trade-off discussion</td>
+                                        <td style="color:#c084fc;font-weight:600">Live runtime RAD adaptation (Novel #1)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"They describe what an embedded agent should look like — AgentEdge builds
+                        it, runs it, and measures it."</div>
+                </article>
+
+                <!-- P4: ATLASv2 -->
+                <article class="paper-card reveal d2" style="border-left:3px solid #fbbf24">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">04 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(251,191,36,0.08);border-color:rgba(251,191,36,0.3);color:#fbbf24">AAAI
+                                2025</span>
+                        </div>
+                        <h2 class="paper-title">ATLASv2: Autonomous Tiny-Language-Agent System for Edge Robotics</h2>
+                        <p class="paper-authors">Walczak et al. · AAAI Edge AI Track</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p4','learned',this,'#fbbf24')"
+                                style="background:rgba(251,191,36,0.1);color:#fbbf24;border-bottom:2px solid #fbbf24">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p4','differ',this,'#fbbf24')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p4-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fbbf24"></span><span>TinyLLaMA 1.1B quantized 4-bit runs stably
+                                    on Jetson Nano.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fbbf24"></span><span>Direct NL-to-action token emission using
+                                    small language models.</span></div>
+                            <div class="learned-item"><span class="bullet" style="background:#fbbf24"></span><span>Dual
+                                    pipeline combining lightweight YOLOv5n with SLM planner.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fbbf24"></span><span>Strict 5W operational power target
+                                    feasibility on edge.</span></div>
+                        </div>
+                        <div id="p4-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#fbbf24">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Domain</td>
+                                        <td>Mobile robot indoor obstacle nav</td>
+                                        <td>Industrial fault management &amp; safety</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Sensors</td>
+                                        <td>Monocular camera + YOLOv5n</td>
+                                        <td>5 heterogeneous environmental sensors</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Failure</td>
+                                        <td>Not addressed (timeout crash)</td>
+                                        <td style="color:#34d399;font-weight:600">4-type recovery protocol (Novel #2)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Resource</td>
+                                        <td>Static quantized allocation</td>
+                                        <td style="color:#c084fc;font-weight:600">Dynamic step-splitting (Novel #1)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"ATLASv2 proves SLMs work on edge — AgentEdge adds sensor failure recovery
+                        + resource adaptation."</div>
+                </article>
+
+                <!-- P5: Belcak -->
+                <article class="paper-card reveal d1" style="border-left:3px solid #22d3ee">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">05 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(34,211,238,0.08);border-color:rgba(34,211,238,0.3);color:#22d3ee">arXiv
+                                2025</span>
+                        </div>
+                        <h2 class="paper-title">Small Language Models are Practical Embedded Agents</h2>
+                        <p class="paper-authors">Belcak et al. · NVIDIA Research</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p5','learned',this,'#22d3ee')"
+                                style="background:rgba(34,211,238,0.1);color:#22d3ee;border-bottom:2px solid #22d3ee">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p5','differ',this,'#22d3ee')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p5-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet" style="background:#22d3ee"></span><span>SLMs
+                                    (3B–10B) achieve superior throughput/watt for narrow agentic tasks.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#22d3ee"></span><span>Heterogeneous compute distribution across
+                                    CPU/NPU cores.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#22d3ee"></span><span>Systematic prompt-distillation strategy from
+                                    frontier LLMs to SLMs.</span></div>
+                            <div class="learned-item"><span class="bullet" style="background:#22d3ee"></span><span>Clear
+                                    quantification of latency and thermal throttle limits.</span></div>
+                        </div>
+                        <div id="p5-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#22d3ee">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Type</td>
+                                        <td>Position paper &amp; theoretical bounds</td>
+                                        <td>Empirical live deployment</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Evidence</td>
+                                        <td>Synthetic latency simulations</td>
+                                        <td>2117ms latency, 4.83W measured</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Sensors</td>
+                                        <td>Hardware interactions abstracted</td>
+                                        <td>5 live sensors with degradation</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Benchmark</td>
+                                        <td>No standardized evaluation</td>
+                                        <td style="color:#22d3ee;font-weight:600">AgentEdge-Bench (Novel #3)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"Belcak argue theoretically SLMs are ideal — AgentEdge proves it
+                        empirically with real hardware data."</div>
+                </article>
+
+                <!-- P6: Qin -->
+                <article class="paper-card reveal d2" style="border-left:3px solid #fb7185">
+                    <div class="paper-body">
+                        <div class="paper-meta">
+                            <span class="paper-num">06 / 06</span>
+                            <span class="paper-venue"
+                                style="background:rgba(251,113,133,0.08);border-color:rgba(251,113,133,0.3);color:#fb7185">ACM
+                                TODAES 2024</span>
+                        </div>
+                        <h2 class="paper-title">On-Device Language Models: A Comprehensive Survey &amp; Compression
+                            Guide</h2>
+                        <p class="paper-authors">Qin et al. · ACM TODAES Editor's Pick</p>
+                        <div class="tab-bar">
+                            <button class="tab-btn active" onclick="switchTab('p6','learned',this,'#fb7185')"
+                                style="background:rgba(251,113,133,0.1);color:#fb7185;border-bottom:2px solid #fb7185">What
+                                We Learned</button>
+                            <button class="tab-btn" onclick="switchTab('p6','differ',this,'#fb7185')">How We
+                                Differ</button>
+                        </div>
+                        <div id="p6-learned" class="learned-list tab-panel">
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fb7185"></span><span>Quantized models often outperform full
+                                    models under tight memory budgets.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fb7185"></span><span>Longer fine-tuning does not yield better
+                                    edge inference stability.</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fb7185"></span><span>Multi-objective compression trade-off matrix
+                                    (perplexity vs TTFT).</span></div>
+                            <div class="learned-item"><span class="bullet"
+                                    style="background:#fb7185"></span><span>Real-time sensor state prompting as
+                                    specialized domain RAG.</span></div>
+                        </div>
+                        <div id="p6-differ" class="differ-wrap hidden tab-panel">
+                            <table class="differ-table">
+                                <thead>
+                                    <tr>
+                                        <th>Dimension</th>
+                                        <th>Prior Work</th>
+                                        <th style="color:#fb7185">AgentEdge</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="dim">Type</td>
+                                        <td>Offline model compression guide</td>
+                                        <td>Live closed-loop autonomous system</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Sensors</td>
+                                        <td>Standard NLP datasets</td>
+                                        <td>5 physical sensors with failure matrix</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Feedback</td>
+                                        <td>Static offline benchmark</td>
+                                        <td>Sense → Plan → Act → Verify loop</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="dim">Resource</td>
+                                        <td>Static pruning &amp; static quant</td>
+                                        <td style="color:#c084fc;font-weight:600">Runtime RAD Decomposition (Novel #1)
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="paper-quote">"Qin et al. tell you how to deploy — AgentEdge is the complete running
+                        system with live adaptation."</div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ── Gap Matrix ── -->
+        <section id="gap-matrix">
+            <div class="section-label"><span>Comprehensive Literature Gap Matrix</span></div>
+            <div class="gap-card reveal">
+                <div class="gap-header">
+                    <h2>Comprehensive Literature Gap Matrix</h2>
+                    <span>6 Foundational Comparisons</span>
+                </div>
+                <div class="overflow-x">
+                    <table class="gap-table" style="min-width:700px">
+                        <thead>
+                            <tr style="background:rgba(0,0,0,0.25)">
+                                <th style="width:22%">Paper Reference</th>
+                                <th style="width:42%">Identified Literature Gap</th>
+                                <th style="width:36%">AgentEdge Solution &amp; Novelty</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="gap-paper">AutoGen</span><span class="gap-sub">Wu et al. · ICLR
+                                        2024</span></td>
+                                <td class="gap-text">Operates purely in boundless cloud infrastructure with virtual
+                                    agents. Does not consider strict memory saturation or physical GPIO sensor
+                                    peripherals.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.3);color:#c084fc">Novel
+                                        #1: RAD</span>
+                                    <span class="badge"
+                                        style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.25);color:#34d399">Novel
+                                        #2: Recovery</span>
+                                    <div class="badge-note">Runtime RAM step-splitting + hardware GPIO grounding.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="gap-paper">ReAct</span><span class="gap-sub">Yao et al. · ICLR
+                                        2023</span></td>
+                                <td class="gap-text">Reasoning/acting loops evaluated exclusively on text and Web APIs.
+                                    Assumes observations are noiseless without hardware timeout handling.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.25);color:#34d399">Novel
+                                        #2: Recovery</span>
+                                    <span class="badge"
+                                        style="background:rgba(56,189,248,0.1);border-color:rgba(56,189,248,0.25);color:#38bdf8">Novel
+                                        #3: Benchmark</span>
+                                    <div class="badge-note">Grounded in 5 physical sensors with 50% fault recovery.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="gap-paper">Edge Agent Taxonomy</span><span class="gap-sub">Rüb &amp;
+                                        Gerhards · arXiv 2025</span></td>
+                                <td class="gap-text">Comprehensive theoretical taxonomy and architectural layering, but
+                                    entirely devoid of experimental realization or quantified cycle-run metrics.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(56,189,248,0.1);border-color:rgba(56,189,248,0.25);color:#38bdf8">Novel
+                                        #3: Benchmark</span>
+                                    <div class="badge-note">Full physical deployment on RPi5 across 20 empirical tasks.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="gap-paper">ATLASv2</span><span class="gap-sub">Walczak et al. · AAAI
+                                        2025</span></td>
+                                <td class="gap-text">Static quantized allocation for mobile robots. Camera sensor
+                                    degradation leads to abrupt agent stalls without dynamic decomposition or sensor
+                                    fallback.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.3);color:#c084fc">Novel
+                                        #1: RAD</span>
+                                    <span class="badge"
+                                        style="background:rgba(52,211,153,0.1);border-color:rgba(52,211,153,0.25);color:#34d399">Novel
+                                        #2: Recovery</span>
+                                    <div class="badge-note">Dynamic atomic plan splitting + multi-sensor fallback.</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="gap-paper">SLMs as Embedded Agents</span><span class="gap-sub">Belcak
+                                        et al. · NVIDIA 2025</span></td>
+                                <td class="gap-text">Position and bounds analysis. Relies heavily on synthetic token
+                                    throughput modeling without real physical peripheral bus loads.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(56,189,248,0.1);border-color:rgba(56,189,248,0.25);color:#38bdf8">Novel
+                                        #3: Benchmark</span>
+                                    <div class="badge-note">Empirical hardware telemetry: 4.83W, 2117ms plan latency.
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><span class="gap-paper">On-Device LLM Survey</span><span class="gap-sub">Qin et al.
+                                        · ACM TODAES 2024</span></td>
+                                <td class="gap-text">Focuses strictly on static pruning and weight quantization metrics.
+                                    Omits closed-loop runtime feedback and autonomous error mitigation.</td>
+                                <td>
+                                    <span class="badge"
+                                        style="background:rgba(192,132,252,0.12);border-color:rgba(192,132,252,0.3);color:#c084fc">Novel
+                                        #1: RAD</span>
+                                    <div class="badge-note">Runtime dynamic step-splitting under live memory strain.
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Novel Contributions ── -->
+        <section id="novelty">
+            <div class="novelty-header reveal">
+                <h2>Our Three Novel Contributions</h2>
+                <p>Bridging the critical gap between cloud-scale agent theory and physical edge execution.</p>
+            </div>
+            <div class="novelty-grid">
+                <div class="novelty-card reveal d1" style="border-top:3px solid #c084fc">
+                    <div class="novelty-body">
+                        <div class="novelty-num" style="color:#c084fc">Novel Contribution 1</div>
+                        <h3 class="novelty-title">#1 Resource-Adaptive Task Decomposition (RAD)</h3>
+                        <p class="novelty-text">Continuous telemetry monitor tracking RAM (71.6% peak threshold) and CPU
+                            throttle. Dynamically decomposes monolithic multi-step plans into atomic single-action
+                            execution steps when resource starvation is detected. No existing edge literature implements
+                            runtime dynamic decomposition.</p>
+                    </div>
+                    <div class="novelty-footer">
+                        <div class="fills-label">Fills gap in:</div>
+                        <div class="fills-tags">
+                            <span class="fill-tag">AutoGen</span><span class="fill-tag">Rüb &amp; Gerhards</span><span
+                                class="fill-tag">ATLASv2</span><span class="fill-tag">Qin et al.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="novelty-card reveal d2" style="border-top:3px solid #34d399">
+                    <div class="novelty-body">
+                        <div class="novelty-num" style="color:#34d399">Novel Contribution 2</div>
+                        <h3 class="novelty-title">#2 Sensor Failure Recovery Protocol</h3>
+                        <p class="novelty-text">Formal fault taxonomy classifying hardware faults into TIMEOUT,
+                            BAD_DATA, DISCONNECT, and BUS_ERROR. Coupled with a deterministic RETRY / SKIP / ABORT
+                            decision matrix and peripheral reset routines, achieving a verified 50% automated recovery
+                            rate on embedded hardware.</p>
+                    </div>
+                    <div class="novelty-footer">
+                        <div class="fills-label">Fills gap in:</div>
+                        <div class="fills-tags">
+                            <span class="fill-tag">ReAct</span><span class="fill-tag">Rüb &amp; Gerhards</span><span
+                                class="fill-tag">ATLASv2</span><span class="fill-tag">Belcak et al.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="novelty-card reveal d3" style="border-top:3px solid #38bdf8">
+                    <div class="novelty-body">
+                        <div class="novelty-num" style="color:#38bdf8">Novel Contribution 3</div>
+                        <h3 class="novelty-title">#3 AgentEdge-Bench: 20-Task Benchmark</h3>
+                        <p class="novelty-text">The first standardized benchmark purpose-built for embedded agentic AI.
+                            20 real hardware scenarios spanning 4 task categories (Nominal Monitoring, Thermal
+                            Threshold, Gas Leak Alert, Sensor Degradation) evaluating planning latency, token
+                            efficiency, and recovery success.</p>
+                    </div>
+                    <div class="novelty-footer">
+                        <div class="fills-label">Fills gap in:</div>
+                        <div class="fills-tags">
+                            <span class="fill-tag">ReAct</span><span class="fill-tag">Belcak et al.</span><span
+                                class="fill-tag">Rüb &amp; Gerhards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Quote ── -->
+        <div class="quote-block reveal">
+            <div class="quote-accent"></div>
+            <blockquote>
+                "None of the above works address the combination of: (a) real sensor tool-use, (b) runtime resource
+                adaptation via RAD, (c) formal sensor failure recovery with a 4-type taxonomy, and (d) a standardized
+                embedded agentic benchmark — which is exactly the gap AgentEdge fills."
+            </blockquote>
+            <div class="quote-meta">
+                <span>— Department of ECE, Dayananda Sagar College of Engineering (DSCE)</span>
+                <span class="quote-tag">IEEE 2026 Submission Track</span>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer>
+        <div class="footer-brand">AgentEdge · Agentic AI on Resource-Constrained Embedded Systems</div>
+        <div class="footer-line">Department of Electronics &amp; Communication Engineering (ECE), DSCE Bengaluru · IEEE
+            2026 Submission Track</div>
+        <div class="footer-doi">Computational Edge Intelligence &amp; Multi-Agent Systems Lab · DOI:
+            10.1109/DSCE.2026.AGENTEDGE</div>
+        <div class="footer-links">
+            <a href="#overview">Overview</a>
+            <a href="#metrics">Metrics</a>
+            <a href="#empirical">Empirical</a>
+            <a href="#literature">Literature</a>
+            <a href="#gap-matrix">Gap Matrix</a>
+            <a href="#novelty">Novelty</a>
+        </div>
+        <div class="footer-copy">© 2026 Department of Electronics &amp; Communication Engineering (ECE), Dayananda Sagar
+            College of Engineering (DSCE). IEEE Submission Track preprint.</div>
+    </footer>
+
+    <script>
+        // ── Scroll progress ──────────────────────────────────────────────────────
+        const bar = document.getElementById('progress-bar');
+        window.addEventListener('scroll', () => {
+            const d = document.documentElement;
+            bar.style.width = (d.scrollTop / (d.scrollHeight - d.clientHeight) * 100) + '%';
+        }, { passive: true });
+
+        // ── Active nav ───────────────────────────────────────────────────────────
+        const sections = ['overview', 'metrics', 'empirical', 'literature', 'gap-matrix', 'novelty'];
+        const navLinks = document.querySelectorAll('nav a');
+        window.addEventListener('scroll', () => {
+            let cur = 'overview';
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el && el.getBoundingClientRect().top <= 80) cur = id;
+            });
+            navLinks.forEach(a => {
+                a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+            });
+        }, { passive: true });
+
+        // ── Scroll reveal ────────────────────────────────────────────────────────
+        const revealObs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.07 });
+        document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+        // ── Counter animations ───────────────────────────────────────────────────
+        function animateCounter(el) {
+            const target = parseFloat(el.dataset.target);
+            const suffix = el.dataset.suffix || '';
+            const dec = parseInt(el.dataset.dec) || 0;
+            const dur = 1600;
+            const start = performance.now();
+            const tick = now => {
+                const p = Math.min((now - start) / dur, 1);
+                const ease = 1 - Math.pow(1 - p, 4);
+                const v = target * ease;
+                el.textContent = (dec > 0 ? v.toFixed(dec) : Math.round(v)) + suffix;
+                el.style.animation = 'count-in 0.3s ease';
+                if (p < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+        }
+        const counterObs = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    animateCounter(e.target);
+                    counterObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+        // ── Latency bar animations ───────────────────────────────────────────────
+        const barObs = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.bar-fill').forEach(b => b.classList.add('play'));
+                barObs.unobserve(entry.target);
+            }
+        }, { threshold: 0.3 });
+        const latCard = document.getElementById('latency-card');
+        if (latCard) barObs.observe(latCard);
+
+        // ── Tab switching ────────────────────────────────────────────────────────
+        function switchTab(pid, type, btn, color) {
+            const learned = document.getElementById(pid + '-learned');
+            const differ = document.getElementById(pid + '-differ');
+            const card = btn.closest('.paper-card');
+            card.querySelectorAll('.tab-btn').forEach(b => {
+                b.classList.remove('active');
+                b.style.background = 'transparent';
+                b.style.color = 'rgba(148,163,184,0.45)';
+                b.style.borderBottom = '2px solid transparent';
+            });
+            btn.classList.add('active');
+            btn.style.background = color + '18';
+            btn.style.color = color;
+            btn.style.borderBottom = '2px solid ' + color;
+            if (type === 'learned') {
+                learned.classList.remove('hidden');
+                differ.classList.add('hidden');
+            } else {
+                differ.classList.remove('hidden');
+                learned.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>

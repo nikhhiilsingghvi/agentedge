@@ -1,0 +1,140 @@
+{
+  "session_id": "9DC16497",
+  "total_cycles": 3,
+  "planner_stats": {
+    "total_plans_generated": 3,
+    "avg_latency_ms": 9369.98,
+    "total_tokens_used": 3774,
+    "avg_tokens_per_plan": 1258.0,
+    "backend": "anthropic",
+    "model": "claude-sonnet-4-6"
+  },
+  "executor_stats": {
+    "total_steps_executed": 6,
+    "total_splits": 0,
+    "split_rate_pct": 0.0
+  },
+  "resource_stats": {
+    "total_samples": 6,
+    "ram_avg_percent": 45.63,
+    "ram_peak_percent": 46.3,
+    "cpu_avg_percent": 18.0,
+    "cpu_peak_percent": 25.4,
+    "critical_events": 0,
+    "warn_events": 0,
+    "estimated_avg_power_w": 4.77,
+    "estimated_total_energy_mj": 2862.0
+  },
+  "recovery_stats": {
+    "total_failures": 1,
+    "recovery_successes": 0,
+    "aborts": 0,
+    "success_rate_pct": 0.0,
+    "avg_latency_ms": 6.97,
+    "by_failure_type": {
+      "BAD_DATA": 1
+    },
+    "by_action": {
+      "SKIP": 1
+    },
+    "by_outcome": {
+      "PARTIAL": 1
+    }
+  },
+  "event_summary": {
+    "session_id": "9DC16497",
+    "total_events": 3,
+    "avg_latency_ms": 9767.28,
+    "max_latency_ms": 10264.92,
+    "avg_ram_percent": 46.3,
+    "peak_ram_percent": 46.3,
+    "total_energy_mj": 139010.39,
+    "event_log_file": "logs\\session_9DC16497_20260907_001859.jsonl"
+  },
+  "cycle_records": [
+    {
+      "cycle_id": "C0001_9DC16497",
+      "cycle_number": 1,
+      "phase_latencies": {
+        "perceive_ms": 1.0,
+        "recover_ms": 0.0,
+        "plan_ms": 9893.53,
+        "execute_ms": 346.69,
+        "verify_ms": 8.73
+      },
+      "total_latency_ms": 10261.6,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "OK"
+      },
+      "plan_severity": "CRITICAL",
+      "plan_steps": 2,
+      "execution_success": true,
+      "failures_detected": 0,
+      "recoveries_attempted": 0,
+      "peak_ram_percent": 46.3,
+      "avg_power_w": 4.722,
+      "total_energy_mj": 48455.28,
+      "timestamp": 1788720539.2725954
+    },
+    {
+      "cycle_id": "C0002_9DC16497",
+      "cycle_number": 2,
+      "phase_latencies": {
+        "perceive_ms": 2.14,
+        "recover_ms": 13.25,
+        "plan_ms": 9868.82,
+        "execute_ms": 358.97,
+        "verify_ms": 8.76
+      },
+      "total_latency_ms": 10264.92,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "FAILED"
+      },
+      "plan_severity": "CRITICAL",
+      "plan_steps": 2,
+      "execution_success": true,
+      "failures_detected": 1,
+      "recoveries_attempted": 1,
+      "peak_ram_percent": 46.3,
+      "avg_power_w": 4.744,
+      "total_energy_mj": 48696.8,
+      "timestamp": 1788720552.5441294
+    },
+    {
+      "cycle_id": "C0003_9DC16497",
+      "cycle_number": 3,
+      "phase_latencies": {
+        "perceive_ms": 0.0,
+        "recover_ms": 0.0,
+        "plan_ms": 8405.53,
+        "execute_ms": 346.86,
+        "verify_ms": 12.49
+      },
+      "total_latency_ms": 8775.33,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "OK"
+      },
+      "plan_severity": "CRITICAL",
+      "plan_steps": 2,
+      "execution_success": true,
+      "failures_detected": 0,
+      "recoveries_attempted": 0,
+      "peak_ram_percent": 46.3,
+      "avg_power_w": 4.77,
+      "total_energy_mj": 41858.31,
+      "timestamp": 1788720565.857908
+    }
+  ]
+}

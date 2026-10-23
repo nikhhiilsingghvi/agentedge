@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentEdge — Related Work Analysis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#030712;--bg2:#0d1117;--card:rgba(255,255,255,0.03);--cardh:rgba(255,255,255,0.06);--bdr:rgba(255,255,255,0.08);--bdrh:rgba(255,255,255,0.18);--t1:#f0f6fc;--t2:#8b949e;--tm:#484f58;--blue:#58a6ff;--purple:#bc8cff;--green:#3fb950;--orange:#ffa657;--red:#ff7b72;--cyan:#39d3f2}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t1);min-height:100vh;overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 60% at 20% 0%,rgba(110,64,201,.15) 0%,transparent 60%),radial-gradient(ellipse 60% 50% at 80% 10%,rgba(31,111,235,.12) 0%,transparent 50%),radial-gradient(ellipse 50% 40% at 50% 100%,rgba(57,211,242,.06) 0%,transparent 50%);pointer-events:none;z-index:0}
+    nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:60px;background:rgba(3,7,18,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:700;font-size:1rem;letter-spacing:-.02em}
+    .dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));animation:pd 2s ease-in-out infinite}
+    @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(1.3)}}
+    .badge{font-size:.7rem;font-weight:600;padding:.25rem .6rem;border-radius:100px;background:rgba(88,166,255,.12);color:var(--blue);border:1px solid rgba(88,166,255,.25);letter-spacing:.04em;text-transform:uppercase}
+    main{position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:120px 2rem 6rem}
+    .hero{text-align:center;margin-bottom:5rem}
+    .eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin-bottom:1.5rem;padding:.4rem 1rem;border:1px solid rgba(88,166,255,.2);border-radius:100px;background:rgba(88,166,255,.06)}
+    h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:900;letter-spacing:-.04em;line-height:1.05;margin-bottom:1.2rem;background:linear-gradient(135deg,#f0f6fc 0%,#8b949e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    h1 span{background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{font-size:1.15rem;color:var(--t2);max-width:640px;margin:0 auto 3rem;line-height:1.7}
+    .mstrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--bdr);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;margin-bottom:5rem}
+    .mc{background:var(--bg2);padding:1.5rem 1rem;text-align:center;transition:background .2s}
+    .mc:hover{background:var(--cardh)}
+    .mv{font-size:1.8rem;font-weight:800;letter-spacing:-.03em;font-family:'JetBrains Mono',monospace;margin-bottom:.3rem}
+    .ml{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--tm)}
+    .mc.b .mv{color:var(--blue)}.mc.g .mv{color:var(--green)}.mc.p .mv{color:var(--purple)}.mc.o .mv{color:var(--orange)}.mc.c .mv{color:var(--cyan)}.mc.r .mv{color:var(--red)}
+    .sh{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem}
+    .sh h2{font-size:1.8rem;font-weight:800;letter-spacing:-.03em}
+    .stag{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.3rem .7rem;border-radius:6px;background:rgba(88,166,255,.1);color:var(--blue);border:1px solid rgba(88,166,255,.2)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:1.5rem;margin-bottom:5rem}
+    .card{background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:border-color .3s,transform .3s,box-shadow .3s}
+    .card:hover{border-color:var(--bdrh);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+    .ph{padding:1.5rem 1.5rem 1rem;border-bottom:1px solid var(--bdr)}
+    .pn{font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;color:var(--tm);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.6rem}
+    .pt{font-size:.95rem;font-weight:700;line-height:1.4;margin-bottom:.5rem}
+    .pm{font-size:.75rem;color:var(--tm);font-family:'JetBrains Mono',monospace}
+    .pb{display:inline-block;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:.2rem .5rem;border-radius:4px;margin-top:.6rem}
+    .a1{border-top:3px solid var(--blue)}.a2{border-top:3px solid var(--green)}.a3{border-top:3px solid var(--purple)}.a4{border-top:3px solid var(--orange)}.a5{border-top:3px solid var(--cyan)}.a6{border-top:3px solid var(--red)}
+    .a1 .pb{background:rgba(88,166,255,.15);color:var(--blue)}.a2 .pb{background:rgba(63,185,80,.15);color:var(--green)}.a3 .pb{background:rgba(188,140,255,.15);color:var(--purple)}.a4 .pb{background:rgba(255,166,87,.15);color:var(--orange)}.a5 .pb{background:rgba(57,211,242,.15);color:var(--cyan)}.a6 .pb{background:rgba(255,123,114,.15);color:var(--red)}
+    .tabs{display:flex;border-bottom:1px solid var(--bdr)}
+    .tb{flex:1;padding:.7rem 1rem;font-size:.78rem;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--tm);transition:all .2s;letter-spacing:.03em;position:relative}
+    .tb.active{color:var(--t1)}.tb.active::after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:2px}
+    .a1 .tb.active{color:var(--blue)}.a1 .tb.active::after{background:var(--blue)}
+    .a2 .tb.active{color:var(--green)}.a2 .tb.active::after{background:var(--green)}
+    .a3 .tb.active{color:var(--purple)}.a3 .tb.active::after{background:var(--purple)}
+    .a4 .tb.active{color:var(--orange)}.a4 .tb.active::after{background:var(--orange)}
+    .a5 .tb.active{color:var(--cyan)}.a5 .tb.active::after{background:var(--cyan)}
+    .a6 .tb.active{color:var(--red)}.a6 .tb.active::after{background:var(--red)}
+    .tp{display:none;padding:1.25rem 1.5rem}.tp.active{display:block}
+    .il{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .il li{display:flex;gap:.6rem;font-size:.85rem;line-height:1.6;color:var(--t2)}
+    .il li::before{content:'▸';flex-shrink:0;font-size:.7rem;margin-top:.25rem}
+    .a1 .il li::before{color:var(--blue)}.a2 .il li::before{color:var(--green)}.a3 .il li::before{color:var(--purple)}.a4 .il li::before{color:var(--orange)}.a5 .il li::before{color:var(--cyan)}.a6 .il li::before{color:var(--red)}
+    .cf{padding:1rem 1.5rem;border-top:1px solid var(--bdr);background:rgba(0,0,0,.2)}
+    .ol{font-size:.78rem;font-style:italic;color:var(--t2);line-height:1.6}
+    .ol strong{font-style:normal;font-weight:600;color:var(--t1)}
+    .cmps{margin-bottom:5rem}
+    .tw{overflow-x:auto;border:1px solid var(--bdr);border-radius:16px;background:var(--bg2)}
+    table{width:100%;border-collapse:collapse;font-size:.85rem}
+    thead tr{background:rgba(255,255,255,.03);border-bottom:1px solid var(--bdr)}
+    th{padding:1rem 1.25rem;text-align:left;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:var(--tm);white-space:nowrap}
+    tbody tr{border-bottom:1px solid var(--bdr);transition:background .15s}
+    tbody tr:last-child{border-bottom:none}
+    tbody tr:hover{background:rgba(255,255,255,.025)}
+    td{padding:1rem 1.25rem;color:var(--t2);line-height:1.5;vertical-align:top}
+    td:first-child{color:var(--t1);font-weight:600;white-space:nowrap}
+    .chip{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:.2rem .55rem;border-radius:4px;margin-right:.3rem;margin-bottom:.2rem;background:rgba(63,185,80,.15);color:var(--green);border:1px solid rgba(63,185,80,.2)}
+    .ns{margin-bottom:5rem}
+    .ng{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+    .nc{border-radius:16px;padding:2rem;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
+    .nc:hover{transform:translateY(-4px);box-shadow:0 24px 64px rgba(0,0,0,.5)}
+    .nc1{background:linear-gradient(135deg,rgba(110,64,201,.08),rgba(31,111,235,.05));border:1px solid rgba(110,64,201,.25)}
+    .nc2{background:linear-gradient(135deg,rgba(63,185,80,.08),rgba(57,211,242,.05));border:1px solid rgba(63,185,80,.25)}
+    .nc3{background:linear-gradient(135deg,rgba(255,166,87,.08),rgba(255,123,114,.05));border:1px solid rgba(255,166,87,.25)}
+    .nn{font-family:'JetBrains Mono',monospace;font-size:4rem;font-weight:900;line-height:1;opacity:.12;position:absolute;top:1rem;right:1.5rem}
+    .nt{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;margin-bottom:.8rem}
+    .nc1 .nt{color:var(--purple)}.nc2 .nt{color:var(--green)}.nc3 .nt{color:var(--orange)}
+    .nti{font-size:1.15rem;font-weight:800;letter-spacing:-.02em;margin-bottom:.8rem;line-height:1.3}
+    .nd{font-size:.85rem;color:var(--t2);line-height:1.7;margin-bottom:1.2rem}
+    .nps{display:flex;flex-wrap:wrap;gap:.4rem}
+    .npt{font-size:.68rem;font-weight:600;padding:.25rem .6rem;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid var(--bdr);color:var(--tm)}
+    .claim{position:relative;border-radius:16px;padding:2.5rem 3rem;margin-bottom:5rem;background:linear-gradient(135deg,rgba(88,166,255,.05),rgba(188,140,255,.05));border:1px solid rgba(88,166,255,.15);overflow:hidden}
+    .claim::before{content:'"';position:absolute;top:-.5rem;left:2rem;font-size:8rem;line-height:1;color:rgba(88,166,255,.08);font-family:Georgia,serif}
+    .cl{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);margin-bottom:1rem}
+    .ct{font-size:1.25rem;font-weight:500;line-height:1.75;font-style:italic;position:relative;z-index:1}
+    .ct em{font-style:normal;font-weight:800;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .gs{margin-bottom:4rem}
+    .gg{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+    .gc{background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:1.75rem}
+    .gc h3{font-size:1rem;font-weight:700;margin-bottom:1.2rem}
+    .gst{display:flex;flex-direction:column;gap:.8rem}
+    .gstep{display:flex;gap:.8rem;align-items:flex-start}
+    .sn{flex-shrink:0;width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.05);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:700;color:var(--tm);margin-top:.1rem}
+    .st{font-size:.83rem;color:var(--t2);line-height:1.6}
+    .st strong{color:var(--t1);font-weight:600}
+    footer{text-align:center;padding:2rem;border-top:1px solid var(--bdr);color:var(--tm);font-size:.78rem;position:relative;z-index:1}
+    footer strong{color:var(--t2)}
+    .pb2{position:fixed;top:60px;left:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--purple));z-index:99;transition:width .1s}
+    .fi{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+    .fi.vis{opacity:1;transform:translateY(0)}
+    .mt{width:100%;border-collapse:collapse;font-size:.78rem}
+    .mt th{background:rgba(255,255,255,.04);padding:.5rem .75rem;font-weight:600;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--tm);border-bottom:1px solid var(--bdr);text-align:left}
+    .mt td{padding:.55rem .75rem;border-bottom:1px solid rgba(255,255,255,.04);color:var(--t2);vertical-align:top}
+    .mt td:first-child{font-weight:600;color:var(--tm);white-space:nowrap;font-size:.72rem}
+    .mt tr:last-child td{border-bottom:none}
+    .vs{color:var(--tm)!important}
+    .vu{color:var(--green)!important;font-weight:600!important}
+    @media(max-width:768px){.gg{grid-template-columns:1fr}.grid{grid-template-columns:1fr}main{padding-top:80px;padding-left:1rem;padding-right:1rem}.claim{padding:1.5rem}}
+  </style>
+</head>
+<body>
+<div class="pb2" id="pb"></div>
+<nav><div class="logo"><div class="dot"></div>AgentEdge</div><span class="badge">Related Work Analysis</span></nav>
+<main>
+  <section class="hero fi">
+    <div class="eyebrow">&#128225; Session A2ED2A27 &nbsp;&middot;&nbsp; IEEE Submission 2026 &nbsp;&middot;&nbsp; DSCE ECE Dept.</div>
+    <h1>What We Learned.<br><span>Where We Go Further.</span></h1>
+    <p>A structured analysis of 6 foundational papers &mdash; what each contributed to AgentEdge's design, and the precise gaps our three novel contributions fill that no prior work addresses.</p>
+  </section>
+
+  <section class="mstrip fi">
+    <div class="mc b"><div class="mv">2117ms</div><div class="ml">Avg Plan Latency</div></div>
+    <div class="mc g"><div class="mv">0</div><div class="ml">Parse Errors</div></div>
+    <div class="mc p"><div class="mv">972</div><div class="ml">Avg Tokens / Plan</div></div>
+    <div class="mc o"><div class="mv">71.6%</div><div class="ml">Peak RAM</div></div>
+    <div class="mc c"><div class="mv">4.83W</div><div class="ml">Avg Power Draw</div></div>
+    <div class="mc r"><div class="mv">50%</div><div class="ml">Recovery Rate</div></div>
+    <div class="mc b"><div class="mv">10</div><div class="ml">Verified Cycles</div></div>
+  </section>
+
+  <section class="fi">
+    <div class="sh"><h2>Paper-by-Paper Analysis</h2><span class="stag">6 References</span></div>
+    <div class="grid">
+
+      <div class="card a1">
+        <div class="ph"><div class="pn">01 / 06 &middot; ICLR 2024</div><div class="pt">AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation</div><div class="pm">Wu et al. &middot; ICLR Workshop on LLM Agents</div><span class="pb">Multi-Agent &middot; Cloud Framework</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'al')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'ad')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="al"><ul class="il"><li>Conversation programming paradigm &mdash; agents as stateful message-passing entities</li><li>Role separation: planner &ne; executor &ne; verifier inspires our 5-phase loop</li><li>Flexible interaction patterns gave us the Perceive&rarr;Plan&rarr;Execute&rarr;Verify&rarr;Recover blueprint</li><li>Unified infrastructure concept shaped our modular Python architecture</li></ul></div>
+        <div class="tp" id="ad"><table class="mt"><tr><th>Dimension</th><th>AutoGen</th><th>AgentEdge</th></tr><tr><td>Environment</td><td class="vs">Cloud / server, unlimited RAM</td><td class="vu">Offline RPi5, 8GB RAM</td></tr><tr><td>Sensors</td><td class="vs">None</td><td class="vu">5 real industrial sensors</td></tr><tr><td>Resource mgmt</td><td class="vs">None assumed</td><td class="vu">Live RAD algorithm (Novel #1)</td></tr><tr><td>Failure handling</td><td class="vs">Not addressed</td><td class="vu">4-type taxonomy (Novel #2)</td></tr></table></div>
+        <div class="cf"><p class="ol">AutoGen taught us <strong>how to structure agent conversations</strong> &mdash; AgentEdge applies this on constrained hardware with real sensor tool-use that AutoGen never addressed.</p></div>
+      </div>
+
+      <div class="card a2">
+        <div class="ph"><div class="pn">02 / 06 &middot; ICLR 2023</div><div class="pt">ReAct: Synergizing Reasoning and Acting in Language Models</div><div class="pm">Yao et al. &middot; Princeton / Google Brain</div><span class="pb">Agentic Loop &middot; Reasoning</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'rl')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'rd')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="rl"><ul class="il"><li>Thought&rarr;Action&rarr;Observation as atomic unit &mdash; sensors are our &ldquo;observation&rdquo;</li><li>Interleaved reasoning traces reduce hallucination &mdash; inspires our structured JSON plan format</li><li>Tool-use grounding: external feedback loops back into reasoning</li><li>Core justification for our Perceive&rarr;Plan&rarr;Execute loop design</li></ul></div>
+        <div class="tp" id="rd"><table class="mt"><tr><th>Dimension</th><th>ReAct</th><th>AgentEdge</th></tr><tr><td>Action space</td><td class="vs">Web search, text retrieval</td><td class="vu">GPIO relay, buzzer, LEDs, BLE</td></tr><tr><td>Observation</td><td class="vs">Web APIs, text DB</td><td class="vu">Real-time readings (g, &deg;C, A, cm, ppm)</td></tr><tr><td>Constraints</td><td class="vs">Cloud LLM, no budget</td><td class="vu">On-device SLM, RAM/CPU monitored</td></tr><tr><td>Benchmarks</td><td class="vs">HotpotQA, ALFWorld (text)</td><td class="vu">AgentEdge-Bench (embedded)</td></tr></table></div>
+        <div class="cf"><p class="ol">ReAct gave us the <strong>Thought-Action-Observation loop</strong> &mdash; we applied it to physical embedded control with real sensor grounding in a domain ReAct never targeted.</p></div>
+      </div>
+
+      <div class="card a3">
+        <div class="ph"><div class="pn">03 / 06 &middot; arXiv 2025</div><div class="pt">Toward a Modular Architecture for Embedded AI Agent Systems at the Edge</div><div class="pm">R&uuml;b &amp; Gerhards &middot; arXiv:2606.02862</div><span class="pb">Architecture &middot; Edge Systems</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'rbl')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'rbd')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="rbl"><ul class="il"><li>Tiered design: on-device compressed models + cloud-augmented gateways</li><li>Module taxonomy: perception, memory, planning, reasoning, action, tool registry</li><li>Governance layer &rarr; shaped our resource monitor + recovery protocol</li><li>Trade-offs: latency vs. energy vs. reliability on constrained hardware</li></ul></div>
+        <div class="tp" id="rbd"><table class="mt"><tr><th>Dimension</th><th>R&uuml;b &amp; Gerhards</th><th>AgentEdge</th></tr><tr><td>Type</td><td class="vs">Conceptual &mdash; no implementation</td><td class="vu">Running system + measured results</td></tr><tr><td>Evaluation</td><td class="vs">No benchmarks at all</td><td class="vu">10-cycle verified + 20-task benchmark</td></tr><tr><td>Recovery</td><td class="vs">Not addressed</td><td class="vu">4-type sensor taxonomy (Novel #2)</td></tr><tr><td>Resource mgmt</td><td class="vs">Mentions trade-offs only</td><td class="vu">Live RAD step-splitting (Novel #1)</td></tr></table></div>
+        <div class="cf"><p class="ol">R&uuml;b &amp; Gerhards describe <strong>what an embedded agent should look like</strong> &mdash; AgentEdge builds it, runs it, measures it, and extends it with two novel algorithms they did not implement.</p></div>
+      </div>
+
+      <div class="card a4">
+        <div class="ph"><div class="pn">04 / 06 &middot; AAAI 2025</div><div class="pt">ATLASv2: LLM-Guided Adaptive Landmark Acquisition and Navigation on the Edge</div><div class="pm">Walczak et al. &middot; AAAI Symp. Series, Vol. 5, pp. 196&ndash;203</div><span class="pb">Edge SLM &middot; Robot Navigation</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'atl')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'atd')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="atl"><ul class="il"><li>Quantized TinyLLaMA (Q5_K_M via llama.cpp) viable on Jetson Nano &mdash; validates Phase 2</li><li>NL &rarr; structured action achievable with SLMs on edge hardware</li><li>YOLOv5n + LLM pipeline inspired our sensor &rarr; LLM planning pipeline</li><li>Task success with low power &mdash; motivated our 4.83W target</li></ul></div>
+        <div class="tp" id="atd"><table class="mt"><tr><th>Dimension</th><th>ATLASv2</th><th>AgentEdge</th></tr><tr><td>Domain</td><td class="vs">Robot navigation + manipulation</td><td class="vu">Industrial machine fault management</td></tr><tr><td>Sensors</td><td class="vs">Camera / vision (YOLOv5n)</td><td class="vu">5 heterogeneous: IMU, temp, current, ultrasonic, gas</td></tr><tr><td>Failure recovery</td><td class="vs">Not addressed</td><td class="vu">4-type recovery matrix (Novel #2)</td></tr><tr><td>Resource adapt.</td><td class="vs">Static deployment</td><td class="vu">Dynamic step-splitting (Novel #1)</td></tr></table></div>
+        <div class="cf"><p class="ol">ATLASv2 proves <strong>SLMs work for edge planning</strong> &mdash; AgentEdge applies this to industrial fault management and adds sensor failure recovery + resource adaptation that ATLASv2 lacks.</p></div>
+      </div>
+
+      <div class="card a5">
+        <div class="ph"><div class="pn">05 / 06 &middot; arXiv 2025</div><div class="pt">Small Language Models are the Future of Agentic AI</div><div class="pm">Belcak et al. &middot; NVIDIA Research &middot; arXiv:2506.02153</div><span class="pb">Position Paper &middot; SLM Advocacy</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'bl')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'bd')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="bl"><ul class="il"><li>SLMs (3&ndash;10B params) outperform LLMs for narrow, repeated agentic tasks &mdash; economically and practically</li><li>Heterogeneous systems: LLM for complex reasoning, SLM for routine tasks &mdash; validates Phase 1&rarr;2 strategy</li><li>LLM-to-SLM conversion mindset &rarr; designed for Ollama/TinyLlama from day one</li><li>Latency, energy, privacy benefits align with our offline embedded design</li></ul></div>
+        <div class="tp" id="bd"><table class="mt"><tr><th>Dimension</th><th>Belcak et al.</th><th>AgentEdge</th></tr><tr><td>Type</td><td class="vs">Position paper &mdash; arguments only</td><td class="vu">Working system with measured results</td></tr><tr><td>Evidence</td><td class="vs">Theoretical framework</td><td class="vu">2117ms latency, 4.83W, 0 parse errors</td></tr><tr><td>Sensors</td><td class="vs">Not addressed</td><td class="vu">5 real industrial sensors + failure detection</td></tr><tr><td>Benchmark</td><td class="vs">No benchmark proposed</td><td class="vu">AgentEdge-Bench: 20-task standard (Novel #3)</td></tr></table></div>
+        <div class="cf"><p class="ol">Belcak et al. <strong>argue theoretically</strong> that SLMs are ideal &mdash; AgentEdge proves it empirically with real measured data and adds the sensor + recovery layer that makes it deployable.</p></div>
+      </div>
+
+      <div class="card a6">
+        <div class="ph"><div class="pn">06 / 06 &middot; ACM TODAES 2024</div><div class="pt">Empirical Guidelines for Deploying LLMs onto Resource-Constrained Edge Devices</div><div class="pm">Qin et al. &middot; ACM Trans. Design Autom. Electron. Syst., Vol. 30 &middot; Editor's Pick</div><span class="pb">Edge Deployment &middot; Quantization</span></div>
+        <div class="tabs"><button class="tb active" onclick="sw(this,'ql')">&#128218; What We Learned</button><button class="tb" onclick="sw(this,'qd')">&#9889; How We Differ</button></div>
+        <div class="tp active" id="ql"><ul class="il"><li>Compressed models can outperform uncompressed on constrained hardware &mdash; informs TinyLlama quantization</li><li>Fine-tuning time &ne; better performance &mdash; confirms our prompt-engineering-first approach</li><li>Trade-off matrix (model size &times; compression &times; task difficulty) justifies Gemini&rarr;TinyLlama switch</li><li>Sensor prompting as domain RAG &mdash; real readings ground the LLM each cycle</li></ul></div>
+        <div class="tp" id="qd"><table class="mt"><tr><th>Dimension</th><th>Qin et al.</th><th>AgentEdge</th></tr><tr><td>Type</td><td class="vs">Offline deployment guidelines</td><td class="vu">Live closed-loop runtime system</td></tr><tr><td>Sensors</td><td class="vs">Text/NLP tasks only</td><td class="vu">5 industrial sensors + 4-type failure taxonomy</td></tr><tr><td>Feedback loop</td><td class="vs">Offline analysis</td><td class="vu">Sense&rarr;Plan&rarr;Act&rarr;Verify live loop</td></tr><tr><td>Resource mgmt</td><td class="vs">Static guidelines</td><td class="vu">Runtime RAD step-splitting (Novel #1)</td></tr></table></div>
+        <div class="cf"><p class="ol">Qin et al. tell you <strong>how to deploy LLMs</strong> on edge hardware &mdash; AgentEdge is the complete running system with live resource adaptation and physical failure recovery their guidelines never cover.</p></div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cmps fi">
+    <div class="sh"><h2>Gap Analysis Summary</h2><span class="stag">6 Papers vs AgentEdge</span></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Paper</th><th>Their Gap</th><th>AgentEdge's Answer</th></tr></thead>
+        <tbody>
+          <tr><td>AutoGen (Wu, 2024)</td><td>Cloud-only, no sensors, no resource limits, no failure handling</td><td><span class="chip">Novel #1</span><span class="chip">Novel #2</span> Offline, real sensors, RAD algorithm</td></tr>
+          <tr><td>ReAct (Yao, 2023)</td><td>Virtual text environments &mdash; no physical actuators or real sensors</td><td><span class="chip">Novel #2</span><span class="chip">Novel #3</span> Physical GPIO control + real sensor grounding</td></tr>
+          <tr><td>R&uuml;b &amp; Gerhards (2025)</td><td>Architecture on paper only &mdash; no implementation, no empirical evaluation</td><td><span class="chip">Novel #1</span><span class="chip">Novel #2</span><span class="chip">Novel #3</span> Running system + 20-task benchmark</td></tr>
+          <tr><td>ATLASv2 (Walczak, 2025)</td><td>Navigation only, no sensor failure recovery, no resource monitoring</td><td><span class="chip">Novel #1</span><span class="chip">Novel #2</span> Industrial fault management + adaptive execution</td></tr>
+          <tr><td>Belcak et al. (2025)</td><td>Theoretical position &mdash; no implementation, no empirical data, no benchmark</td><td><span class="chip">Novel #3</span> Real measured results on AgentEdge-Bench</td></tr>
+          <tr><td>Qin et al. (2024)</td><td>Offline deployment guidelines &mdash; no closed-loop, no failure recovery</td><td><span class="chip">Novel #1</span><span class="chip">Novel #2</span> Live adaptive loop with sensor + actuator feedback</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="ns fi">
+    <div class="sh"><h2>Three Novel Contributions</h2><span class="stag">Filling the Gap</span></div>
+    <div class="ng">
+      <div class="nc nc1"><div class="nn">1</div><div class="nt">Novel Contribution #1</div><div class="nti">Resource-Adaptive Task Decomposition (RAD)</div><div class="nd">Monitors live RAM and CPU before every plan step. When resource state reaches CRITICAL, automatically splits agent plan steps into sub-tasks at runtime &mdash; preventing OOM failures on embedded hardware. No existing paper implements this.</div><div class="nps"><span class="npt">Fills gap in AutoGen</span><span class="npt">Extends R&uuml;b &amp; Gerhards</span><span class="npt">Beyond ATLASv2</span><span class="npt">Operationalizes Qin et al.</span></div></div>
+      <div class="nc nc2"><div class="nn">2</div><div class="nt">Novel Contribution #2</div><div class="nti">Embedded Sensor Failure Recovery Protocol</div><div class="nd">Formal 4-type failure taxonomy: TIMEOUT, BAD_DATA, DISCONNECT, BUS_ERROR. Criticality-based recovery matrix: RETRY / SUBSTITUTE / SKIP / ABORT. Verified in session A2ED2A27: 50% success rate (1 RETRY&rarr;SUCCESS, 1 SKIP&rarr;PARTIAL).</div><div class="nps"><span class="npt">Fills gap in AutoGen</span><span class="npt">Extends ReAct tool-use</span><span class="npt">Missing from ATLASv2</span><span class="npt">Not in Qin et al.</span></div></div>
+      <div class="nc nc3"><div class="nn">3</div><div class="nt">Novel Contribution #3</div><div class="nti">AgentEdge-Bench: 20-Task Embedded Benchmark</div><div class="nd">First standardized benchmark for evaluating agentic AI on embedded hardware with physical sensor tool-use. 20 tasks across 4 categories: Normal, Single Fault, Multi-Fault, Recovery. All existing benchmarks (HotpotQA, ALFWorld) are text/virtual only.</div><div class="nps"><span class="npt">Fills gap in Belcak et al.</span><span class="npt">No equivalent in R&uuml;b</span><span class="npt">Extends ReAct benchmarks</span><span class="npt">First embedded standard</span></div></div>
+    </div>
+  </section>
+
+  <div class="claim fi">
+    <div class="cl">&#128226; One-Line Claim &mdash; For IEEE Paper Related Work Section</div>
+    <p class="ct">&ldquo;None of the above works address the combination of: <em>(a) real sensor tool-use</em>, <em>(b) runtime resource adaptation via RAD</em>, <em>(c) formal sensor failure recovery with a 4-type taxonomy</em>, and <em>(d) a standardized embedded agentic benchmark</em> &mdash; which is exactly the gap AgentEdge fills.&rdquo;</p>
+  </div>
+
+  <section class="gs fi">
+    <div class="sh"><h2>How to Present This</h2><span class="stag">Viva + IEEE Paper</span></div>
+    <div class="gg">
+      <div class="gc"><h3>&#128187; Viva / Slides Structure</h3><div class="gst"><div class="gstep"><div class="sn">1</div><div class="st"><strong>Slide 1:</strong> Show all 6 papers in a table &mdash; &ldquo;Existing Work&rdquo;</div></div><div class="gstep"><div class="sn">2</div><div class="st"><strong>Slide 2:</strong> For each: 1 line &ldquo;What they did&rdquo; + 1 line &ldquo;What they missed&rdquo;</div></div><div class="gstep"><div class="sn">3</div><div class="st"><strong>Slide 3:</strong> Show the Gap Analysis Summary table from this page</div></div><div class="gstep"><div class="sn">4</div><div class="st"><strong>Slide 4:</strong> Our 3 Novel Contributions as the direct answer to the combined gap</div></div><div class="gstep"><div class="sn">5</div><div class="st"><strong>Slide 5:</strong> Back up with real Session A2ED2A27 metrics &mdash; 2117ms, 4.83W, 0 parse errors, 50% recovery</div></div></div></div>
+      <div class="gc"><h3>&#128196; IEEE Paper &mdash; Related Work Order</h3><div class="gst"><div class="gstep"><div class="sn">1</div><div class="st"><strong>Group 1 &mdash; Agentic AI Frameworks:</strong> AutoGen + ReAct &rarr; motivate our 5-phase loop design</div></div><div class="gstep"><div class="sn">2</div><div class="st"><strong>Group 2 &mdash; Edge AI Architecture:</strong> R&uuml;b &amp; Gerhards &rarr; motivate our modular embedded design</div></div><div class="gstep"><div class="sn">3</div><div class="st"><strong>Group 3 &mdash; Edge SLM Deployment:</strong> ATLASv2 + Belcak + Qin &rarr; motivate SLM choice + quantization</div></div><div class="gstep"><div class="sn">4</div><div class="st"><strong>Closing sentence:</strong> State the combined gap all 6 fail to address and AgentEdge fills</div></div><div class="gstep"><div class="sn">5</div><div class="st"><strong>Tip:</strong> Cite each paper exactly once in its group &mdash; avoid scattering citations</div></div></div></div>
+    </div>
+  </section>
+</main>
+<footer><strong>AgentEdge</strong> &middot; Agentic AI Planning on Resource-Constrained Embedded Systems &middot; Department of Electronics &amp; Communication Engineering, DSCE, Bengaluru &middot; IEEE Submission 2026</footer>
+<script>
+function sw(btn,id){const c=btn.closest('.card');c.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));c.querySelectorAll('.tp').forEach(p=>p.classList.remove('active'));btn.classList.add('active');document.getElementById(id).classList.add('active');}
+window.addEventListener('scroll',()=>{const p=(window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100;document.getElementById('pb').style.width=p+'%';});
+const obs=new IntersectionObserver((es)=>{es.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('vis'),i*80);obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.fi').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

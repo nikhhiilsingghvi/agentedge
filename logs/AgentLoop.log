@@ -1,0 +1,1049 @@
+2026-09-07 00:18:59,218 | AgentLoop | INFO | ============================================================
+2026-09-07 00:18:59,220 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 9DC16497
+2026-09-07 00:18:59,222 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-07 00:18:59,223 | AgentLoop | INFO | ============================================================
+2026-09-07 00:18:59,261 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-07 00:18:59,263 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=3
+2026-09-07 00:18:59,272 | AgentLoop | INFO | 
+2026-09-07 00:18:59,275 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:18:59,277 | AgentLoop | INFO |   CYCLE 0001  |  Session 9DC16497
+2026-09-07 00:18:59,278 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:18:59,280 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-07 00:19:09,175 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 9894 ms
+2026-09-07 00:19:09,524 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 347 ms
+2026-09-07 00:19:09,525 | AgentLoop | INFO | [agent] VERIFY dht22: 27.700 → 27.300 (Δ-0.400)
+2026-09-07 00:19:09,527 | AgentLoop | INFO | [agent] VERIFY ina219: 0.804 → 0.771 (Δ-0.033)
+2026-09-07 00:19:09,530 | AgentLoop | INFO | [agent] VERIFY hcsr04: 35.380 → 36.600 (Δ1.220)
+2026-09-07 00:19:09,532 | AgentLoop | INFO | [agent] VERIFY mq135: 113.000 → 120.200 (Δ7.200)
+2026-09-07 00:19:09,535 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 10262 ms | RAM peak: 46.3% | Energy: 48455.3 mJ | Machine: NORMAL
+2026-09-07 00:19:09,538 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:19:12,544 | AgentLoop | INFO | 
+2026-09-07 00:19:12,546 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:19:12,547 | AgentLoop | INFO |   CYCLE 0002  |  Session 9DC16497
+2026-09-07 00:19:12,549 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:19:12,554 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 2 ms
+2026-09-07 00:19:12,556 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-07 00:19:12,567 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-07 00:19:22,438 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 9869 ms
+2026-09-07 00:19:22,798 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 359 ms
+2026-09-07 00:19:22,800 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.177 → 0.320 (Δ0.143)
+2026-09-07 00:19:22,802 | AgentLoop | INFO | [agent] VERIFY dht22: 27.990 → 28.140 (Δ0.150)
+2026-09-07 00:19:22,804 | AgentLoop | INFO | [agent] VERIFY ina219: 0.775 → 0.823 (Δ0.047)
+2026-09-07 00:19:22,806 | AgentLoop | INFO | [agent] VERIFY hcsr04: 32.850 → 23.140 (Δ-9.710)
+2026-09-07 00:19:22,809 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 10265 ms | RAM peak: 46.3% | Energy: 48696.8 mJ | Machine: NORMAL
+2026-09-07 00:19:22,848 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:19:25,857 | AgentLoop | INFO | 
+2026-09-07 00:19:25,860 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:19:25,861 | AgentLoop | INFO |   CYCLE 0003  |  Session 9DC16497
+2026-09-07 00:19:25,862 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:19:25,864 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:19:34,271 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 8406 ms
+2026-09-07 00:19:34,619 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 347 ms
+2026-09-07 00:19:34,622 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.475 → 0.157 (Δ-0.318)
+2026-09-07 00:19:34,623 | AgentLoop | INFO | [agent] VERIFY dht22: 28.230 → 27.130 (Δ-1.100)
+2026-09-07 00:19:34,625 | AgentLoop | INFO | [agent] VERIFY ina219: 0.714 → 0.787 (Δ0.073)
+2026-09-07 00:19:34,629 | AgentLoop | INFO | [agent] VERIFY hcsr04: 30.780 → 25.530 (Δ-5.250)
+2026-09-07 00:19:34,631 | AgentLoop | INFO | [agent] VERIFY mq135: 105.400 → 167.600 (Δ62.200)
+2026-09-07 00:19:34,634 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 8775 ms | RAM peak: 46.3% | Energy: 41858.3 mJ | Machine: DEGRADING
+2026-09-07 00:19:34,636 | AgentLoop | INFO | [agent] Reached max_cycles=3 — stopping
+2026-09-07 00:19:34,639 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_9DC16497_report.json
+2026-09-07 00:27:03,461 | AgentLoop | INFO | ============================================================
+2026-09-07 00:27:03,463 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session A43BB179
+2026-09-07 00:27:03,465 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-07 00:27:03,465 | AgentLoop | INFO | ============================================================
+2026-09-07 00:27:03,495 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-07 00:27:03,496 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=3
+2026-09-07 00:27:03,497 | AgentLoop | INFO | 
+2026-09-07 00:27:03,498 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:03,499 | AgentLoop | INFO |   CYCLE 0001  |  Session A43BB179
+2026-09-07 00:27:03,500 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:03,501 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:27:11,178 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 7675 ms
+2026-09-07 00:27:11,639 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 460 ms
+2026-09-07 00:27:11,640 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.361 → 0.210 (Δ-0.151)
+2026-09-07 00:27:11,642 | AgentLoop | INFO | [agent] VERIFY dht22: 27.980 → 28.000 (Δ0.020)
+2026-09-07 00:27:11,643 | AgentLoop | INFO | [agent] VERIFY hcsr04: 32.340 → 33.100 (Δ0.760)
+2026-09-07 00:27:11,645 | AgentLoop | INFO | [agent] VERIFY mq135: 107.300 → 114.600 (Δ7.300)
+2026-09-07 00:27:11,647 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 8149 ms | RAM peak: 47.1% | Energy: 41266.8 mJ | Machine: NORMAL
+2026-09-07 00:27:11,648 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:27:14,657 | AgentLoop | INFO | 
+2026-09-07 00:27:14,658 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:14,659 | AgentLoop | INFO |   CYCLE 0002  |  Session A43BB179
+2026-09-07 00:27:14,660 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:14,661 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:27:21,339 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6677 ms
+2026-09-07 00:27:21,796 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 455 ms
+2026-09-07 00:27:21,820 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.526 → 0.226 (Δ-0.301)
+2026-09-07 00:27:21,822 | AgentLoop | INFO | [agent] VERIFY ina219: 0.811 → 0.853 (Δ0.043)
+2026-09-07 00:27:21,823 | AgentLoop | INFO | [agent] VERIFY hcsr04: 23.030 → 22.840 (Δ-0.190)
+2026-09-07 00:27:21,824 | AgentLoop | INFO | [agent] VERIFY mq135: 99.100 → 137.700 (Δ38.600)
+2026-09-07 00:27:21,826 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 7168 ms | RAM peak: 47.1% | Energy: 34944.7 mJ | Machine: NORMAL
+2026-09-07 00:27:21,827 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:27:24,840 | AgentLoop | INFO | 
+2026-09-07 00:27:24,841 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:24,842 | AgentLoop | INFO |   CYCLE 0003  |  Session A43BB179
+2026-09-07 00:27:24,843 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:27:24,844 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:27:32,329 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 4 | 7484 ms
+2026-09-07 00:27:32,963 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 633 ms
+2026-09-07 00:27:32,965 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.614 → 0.133 (Δ-0.481)
+2026-09-07 00:27:32,967 | AgentLoop | INFO | [agent] VERIFY dht22: 27.530 → 28.880 (Δ1.350)
+2026-09-07 00:27:32,968 | AgentLoop | INFO | [agent] VERIFY ina219: 0.850 → 0.766 (Δ-0.085)
+2026-09-07 00:27:32,969 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.950 → 37.240 (Δ12.290)
+2026-09-07 00:27:32,970 | AgentLoop | INFO | [agent] VERIFY mq135: 124.200 → 85.300 (Δ-38.900)
+2026-09-07 00:27:32,972 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 8131 ms | RAM peak: 47.1% | Energy: 39083.4 mJ | Machine: DEGRADING
+2026-09-07 00:27:32,973 | AgentLoop | INFO | [agent] Reached max_cycles=3 — stopping
+2026-09-07 00:27:32,975 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_A43BB179_report.json
+2026-09-07 00:30:42,419 | AgentLoop | INFO | ============================================================
+2026-09-07 00:30:42,420 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session AF050663
+2026-09-07 00:30:42,421 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-07 00:30:42,422 | AgentLoop | INFO | ============================================================
+2026-09-07 00:30:42,443 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-07 00:30:42,444 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=10
+2026-09-07 00:30:42,445 | AgentLoop | INFO | 
+2026-09-07 00:30:42,446 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:30:42,447 | AgentLoop | INFO |   CYCLE 0001  |  Session AF050663
+2026-09-07 00:30:42,448 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:30:42,449 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:30:49,518 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 7068 ms
+2026-09-07 00:30:50,000 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 481 ms
+2026-09-07 00:30:50,001 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.387 → 0.372 (Δ-0.014)
+2026-09-07 00:30:50,002 | AgentLoop | INFO | [agent] VERIFY dht22: 27.290 → 28.990 (Δ1.700)
+2026-09-07 00:30:50,004 | AgentLoop | INFO | [agent] VERIFY ina219: 0.798 → 0.760 (Δ-0.039)
+2026-09-07 00:30:50,005 | AgentLoop | INFO | [agent] VERIFY hcsr04: 25.930 → 35.090 (Δ9.160)
+2026-09-07 00:30:50,006 | AgentLoop | INFO | [agent] VERIFY mq135: 87.000 → 133.100 (Δ46.100)
+2026-09-07 00:30:50,008 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 7562 ms | RAM peak: 65.1% | Energy: 35120.2 mJ | Machine: NORMAL
+2026-09-07 00:30:50,010 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:30:53,019 | AgentLoop | INFO | 
+2026-09-07 00:30:53,020 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:30:53,021 | AgentLoop | INFO |   CYCLE 0002  |  Session AF050663
+2026-09-07 00:30:53,022 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:30:53,023 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:31:02,375 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 4 | 9351 ms
+2026-09-07 00:31:02,998 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 623 ms
+2026-09-07 00:31:02,999 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.551 → 0.660 (Δ0.109)
+2026-09-07 00:31:02,999 | AgentLoop | INFO | [agent] VERIFY dht22: 28.480 → 28.290 (Δ-0.190)
+2026-09-07 00:31:03,000 | AgentLoop | INFO | [agent] VERIFY ina219: 0.865 → 0.818 (Δ-0.047)
+2026-09-07 00:31:03,001 | AgentLoop | INFO | [agent] VERIFY hcsr04: 27.190 → 31.490 (Δ4.300)
+2026-09-07 00:31:03,003 | AgentLoop | INFO | [agent] VERIFY mq135: 125.500 → 146.400 (Δ20.900)
+2026-09-07 00:31:03,004 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 9985 ms | RAM peak: 65.1% | Energy: 46211.5 mJ | Machine: NORMAL
+2026-09-07 00:31:03,005 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:31:06,008 | AgentLoop | INFO | 
+2026-09-07 00:31:06,009 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:06,010 | AgentLoop | INFO |   CYCLE 0003  |  Session AF050663
+2026-09-07 00:31:06,011 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:06,012 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:31:12,911 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 4 | 6898 ms
+2026-09-07 00:31:13,549 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 637 ms
+2026-09-07 00:31:13,551 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.397 → 0.579 (Δ0.182)
+2026-09-07 00:31:13,551 | AgentLoop | INFO | [agent] VERIFY dht22: 27.500 → 27.450 (Δ-0.050)
+2026-09-07 00:31:13,552 | AgentLoop | INFO | [agent] VERIFY ina219: 0.746 → 0.823 (Δ0.077)
+2026-09-07 00:31:13,556 | AgentLoop | INFO | [agent] VERIFY mq135: 106.000 → 140.800 (Δ34.800)
+2026-09-07 00:31:13,559 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 7550 ms | RAM peak: 65.1% | Energy: 35000.8 mJ | Machine: NORMAL
+2026-09-07 00:31:13,561 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:31:16,570 | AgentLoop | INFO | 
+2026-09-07 00:31:16,572 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:16,573 | AgentLoop | INFO |   CYCLE 0004  |  Session AF050663
+2026-09-07 00:31:16,573 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:16,575 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-07 00:31:27,131 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 4 | 10555 ms
+2026-09-07 00:31:27,762 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 630 ms
+2026-09-07 00:31:27,764 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.575 → 3.513 (Δ2.938)
+2026-09-07 00:31:27,765 | AgentLoop | INFO | [agent] VERIFY dht22: 26.800 → 66.540 (Δ39.740)
+2026-09-07 00:31:27,766 | AgentLoop | INFO | [agent] VERIFY ina219: 0.803 → 2.366 (Δ1.563)
+2026-09-07 00:31:27,767 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.590 → 7.610 (Δ-16.980)
+2026-09-07 00:31:27,768 | AgentLoop | INFO | [agent] VERIFY mq135: 133.500 → 496.500 (Δ363.000)
+2026-09-07 00:31:27,770 | AgentLoop | INFO | [agent] ⏱️  Cycle 0004 complete | Total: 11198 ms | RAM peak: 65.1% | Energy: 51904.4 mJ | Machine: FAULT
+2026-09-07 00:31:27,770 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:31:30,772 | AgentLoop | INFO | 
+2026-09-07 00:31:30,773 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:30,774 | AgentLoop | INFO |   CYCLE 0005  |  Session AF050663
+2026-09-07 00:31:30,775 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:30,776 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:31:40,872 | AgentLoop | INFO | [agent] PLAN complete | Severity: FAULT | Steps: 4 | 10094 ms
+2026-09-07 00:31:41,564 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 691 ms
+2026-09-07 00:31:41,565 | AgentLoop | INFO | [agent] VERIFY mpu6050: 4.059 → 0.306 (Δ-3.753)
+2026-09-07 00:31:41,567 | AgentLoop | INFO | [agent] VERIFY dht22: 66.060 → 27.960 (Δ-38.100)
+2026-09-07 00:31:41,567 | AgentLoop | INFO | [agent] VERIFY ina219: 2.653 → 0.830 (Δ-1.823)
+2026-09-07 00:31:41,569 | AgentLoop | INFO | [agent] VERIFY hcsr04: 6.540 → 37.220 (Δ30.680)
+2026-09-07 00:31:41,570 | AgentLoop | INFO | [agent] VERIFY mq135: 471.300 → 128.900 (Δ-342.400)
+2026-09-07 00:31:41,571 | AgentLoop | INFO | [agent] ⏱️  Cycle 0005 complete | Total: 10799 ms | RAM peak: 65.1% | Energy: 50019.7 mJ | Machine: NORMAL
+2026-09-07 00:31:41,572 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:31:44,579 | AgentLoop | INFO | 
+2026-09-07 00:31:44,580 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:44,581 | AgentLoop | INFO |   CYCLE 0006  |  Session AF050663
+2026-09-07 00:31:44,582 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:44,584 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-07 00:31:44,585 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-07 00:31:44,591 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-07 00:31:53,700 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 3 | 9108 ms
+2026-09-07 00:31:54,153 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 452 ms
+2026-09-07 00:31:54,154 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.429 → 0.695 (Δ0.266)
+2026-09-07 00:31:54,155 | AgentLoop | INFO | [agent] VERIFY dht22: 28.160 → 28.440 (Δ0.280)
+2026-09-07 00:31:54,156 | AgentLoop | INFO | [agent] VERIFY ina219: 0.895 → 0.865 (Δ-0.031)
+2026-09-07 00:31:54,157 | AgentLoop | INFO | [agent] VERIFY hcsr04: 22.040 → 33.670 (Δ11.630)
+2026-09-07 00:31:54,159 | AgentLoop | INFO | [agent] ⏱️  Cycle 0006 complete | Total: 9579 ms | RAM peak: 65.1% | Energy: 44388.7 mJ | Machine: NORMAL
+2026-09-07 00:31:54,160 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:31:57,169 | AgentLoop | INFO | 
+2026-09-07 00:31:57,170 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:57,171 | AgentLoop | INFO |   CYCLE 0007  |  Session AF050663
+2026-09-07 00:31:57,172 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:31:57,173 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:32:03,593 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6419 ms
+2026-09-07 00:32:04,050 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 454 ms
+2026-09-07 00:32:04,052 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.488 → 0.508 (Δ0.020)
+2026-09-07 00:32:04,053 | AgentLoop | INFO | [agent] VERIFY dht22: 27.620 → 27.920 (Δ0.300)
+2026-09-07 00:32:04,054 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.400 → 24.700 (Δ0.300)
+2026-09-07 00:32:04,056 | AgentLoop | INFO | [agent] VERIFY mq135: 116.300 → 122.000 (Δ5.700)
+2026-09-07 00:32:04,057 | AgentLoop | INFO | [agent] ⏱️  Cycle 0007 complete | Total: 6888 ms | RAM peak: 65.1% | Energy: 31890.2 mJ | Machine: NORMAL
+2026-09-07 00:32:04,059 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:32:07,071 | AgentLoop | INFO | 
+2026-09-07 00:32:07,073 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:07,074 | AgentLoop | INFO |   CYCLE 0008  |  Session AF050663
+2026-09-07 00:32:07,075 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:07,076 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:32:14,283 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 7206 ms
+2026-09-07 00:32:14,735 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 451 ms
+2026-09-07 00:32:14,737 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.432 → 0.684 (Δ0.252)
+2026-09-07 00:32:14,738 | AgentLoop | INFO | [agent] VERIFY dht22: 27.980 → 26.210 (Δ-1.770)
+2026-09-07 00:32:14,739 | AgentLoop | INFO | [agent] VERIFY ina219: 0.809 → 0.939 (Δ0.130)
+2026-09-07 00:32:14,740 | AgentLoop | INFO | [agent] VERIFY hcsr04: 28.650 → 23.160 (Δ-5.490)
+2026-09-07 00:32:14,742 | AgentLoop | INFO | [agent] VERIFY mq135: 114.800 → 108.400 (Δ-6.400)
+2026-09-07 00:32:14,743 | AgentLoop | INFO | [agent] ⏱️  Cycle 0008 complete | Total: 7671 ms | RAM peak: 65.1% | Energy: 35637.9 mJ | Machine: DEGRADING
+2026-09-07 00:32:14,745 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:32:17,759 | AgentLoop | INFO | 
+2026-09-07 00:32:17,761 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:17,761 | AgentLoop | INFO |   CYCLE 0009  |  Session AF050663
+2026-09-07 00:32:17,762 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:17,764 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-07 00:32:28,980 | AgentLoop | INFO | [agent] PLAN complete | Severity: FAULT | Steps: 4 | 11215 ms
+2026-09-07 00:32:29,663 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 682 ms
+2026-09-07 00:32:29,664 | AgentLoop | INFO | [agent] VERIFY mpu6050: 3.601 → 0.644 (Δ-2.956)
+2026-09-07 00:32:29,665 | AgentLoop | INFO | [agent] VERIFY dht22: 64.370 → 27.720 (Δ-36.650)
+2026-09-07 00:32:29,666 | AgentLoop | INFO | [agent] VERIFY ina219: 2.529 → 0.754 (Δ-1.775)
+2026-09-07 00:32:29,668 | AgentLoop | INFO | [agent] VERIFY hcsr04: 5.200 → 27.110 (Δ21.910)
+2026-09-07 00:32:29,670 | AgentLoop | INFO | [agent] VERIFY mq135: 432.600 → 120.200 (Δ-312.400)
+2026-09-07 00:32:29,672 | AgentLoop | INFO | [agent] ⏱️  Cycle 0009 complete | Total: 11912 ms | RAM peak: 65.1% | Energy: 55319.6 mJ | Machine: NORMAL
+2026-09-07 00:32:29,673 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:32:32,686 | AgentLoop | INFO | 
+2026-09-07 00:32:32,687 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:32,688 | AgentLoop | INFO |   CYCLE 0010  |  Session AF050663
+2026-09-07 00:32:32,689 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:32:32,690 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:32:39,172 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6481 ms
+2026-09-07 00:32:39,629 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 456 ms
+2026-09-07 00:32:39,630 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.378 → 0.398 (Δ0.020)
+2026-09-07 00:32:39,631 | AgentLoop | INFO | [agent] VERIFY dht22: 27.540 → 28.340 (Δ0.800)
+2026-09-07 00:32:39,631 | AgentLoop | INFO | [agent] VERIFY ina219: 0.760 → 0.838 (Δ0.078)
+2026-09-07 00:32:39,634 | AgentLoop | INFO | [agent] VERIFY hcsr04: 29.300 → 34.280 (Δ4.980)
+2026-09-07 00:32:39,635 | AgentLoop | INFO | [agent] VERIFY mq135: 121.400 → 96.600 (Δ-24.800)
+2026-09-07 00:32:39,637 | AgentLoop | INFO | [agent] ⏱️  Cycle 0010 complete | Total: 6950 ms | RAM peak: 65.1% | Energy: 32315.7 mJ | Machine: NORMAL
+2026-09-07 00:32:39,638 | AgentLoop | INFO | [agent] Reached max_cycles=10 — stopping
+2026-09-07 00:32:39,640 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_AF050663_report.json
+2026-09-07 00:36:08,424 | AgentLoop | INFO | ============================================================
+2026-09-07 00:36:08,425 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 0734C7D9
+2026-09-07 00:36:08,425 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-07 00:36:08,427 | AgentLoop | INFO | ============================================================
+2026-09-07 00:36:08,446 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-07 00:36:08,447 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=10
+2026-09-07 00:36:08,448 | AgentLoop | INFO | 
+2026-09-07 00:36:08,449 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:08,450 | AgentLoop | INFO |   CYCLE 0001  |  Session 0734C7D9
+2026-09-07 00:36:08,452 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:08,453 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:36:15,346 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6892 ms
+2026-09-07 00:36:15,804 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 456 ms
+2026-09-07 00:36:15,809 | AgentLoop | INFO | [agent] VERIFY dht22: 28.140 → 27.670 (Δ-0.470)
+2026-09-07 00:36:15,811 | AgentLoop | INFO | [agent] VERIFY hcsr04: 30.550 → 22.460 (Δ-8.090)
+2026-09-07 00:36:15,813 | AgentLoop | INFO | [agent] VERIFY mq135: 116.000 → 129.100 (Δ13.100)
+2026-09-07 00:36:15,816 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 7367 ms | RAM peak: 62.6% | Energy: 34278.7 mJ | Machine: NORMAL
+2026-09-07 00:36:15,819 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:36:18,827 | AgentLoop | INFO | 
+2026-09-07 00:36:18,828 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:18,829 | AgentLoop | INFO |   CYCLE 0002  |  Session 0734C7D9
+2026-09-07 00:36:18,830 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:18,832 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-07 00:36:18,832 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-07 00:36:18,838 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-07 00:36:28,627 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 4 | 9788 ms
+2026-09-07 00:36:29,265 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 637 ms
+2026-09-07 00:36:29,267 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.357 → 0.513 (Δ0.157)
+2026-09-07 00:36:29,268 | AgentLoop | INFO | [agent] VERIFY dht22: 28.590 → 27.880 (Δ-0.710)
+2026-09-07 00:36:29,269 | AgentLoop | INFO | [agent] VERIFY ina219: 0.863 → 0.734 (Δ-0.129)
+2026-09-07 00:36:29,270 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 10443 ms | RAM peak: 62.6% | Energy: 48318.8 mJ | Machine: NORMAL
+2026-09-07 00:36:29,271 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:36:32,287 | AgentLoop | INFO | 
+2026-09-07 00:36:32,288 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:32,290 | AgentLoop | INFO |   CYCLE 0003  |  Session 0734C7D9
+2026-09-07 00:36:32,290 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:32,291 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:36:39,320 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 7027 ms
+2026-09-07 00:36:39,775 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 454 ms
+2026-09-07 00:36:39,778 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.404 → 0.182 (Δ-0.222)
+2026-09-07 00:36:39,780 | AgentLoop | INFO | [agent] VERIFY dht22: 28.460 → 28.180 (Δ-0.280)
+2026-09-07 00:36:39,781 | AgentLoop | INFO | [agent] VERIFY ina219: 0.897 → 0.823 (Δ-0.075)
+2026-09-07 00:36:39,782 | AgentLoop | INFO | [agent] VERIFY hcsr04: 35.280 → 35.250 (Δ-0.030)
+2026-09-07 00:36:39,783 | AgentLoop | INFO | [agent] VERIFY mq135: 111.500 → 156.100 (Δ44.600)
+2026-09-07 00:36:39,785 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 7498 ms | RAM peak: 62.6% | Energy: 34789.4 mJ | Machine: DEGRADING
+2026-09-07 00:36:39,787 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:36:42,793 | AgentLoop | INFO | 
+2026-09-07 00:36:42,794 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:42,795 | AgentLoop | INFO |   CYCLE 0004  |  Session 0734C7D9
+2026-09-07 00:36:42,796 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:42,797 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:36:53,674 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 4 | 10877 ms
+2026-09-07 00:36:54,314 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 638 ms
+2026-09-07 00:36:54,316 | AgentLoop | INFO | [agent] VERIFY mpu6050: 1.181 → 3.970 (Δ2.790)
+2026-09-07 00:36:54,317 | AgentLoop | INFO | [agent] VERIFY dht22: 49.170 → 64.170 (Δ15.000)
+2026-09-07 00:36:54,318 | AgentLoop | INFO | [agent] VERIFY ina219: 1.600 → 2.385 (Δ0.785)
+2026-09-07 00:36:54,319 | AgentLoop | INFO | [agent] VERIFY hcsr04: 23.830 → 9.300 (Δ-14.530)
+2026-09-07 00:36:54,320 | AgentLoop | INFO | [agent] VERIFY mq135: 297.700 → 439.800 (Δ142.100)
+2026-09-07 00:36:54,322 | AgentLoop | INFO | [agent] ⏱️  Cycle 0004 complete | Total: 11528 ms | RAM peak: 62.6% | Energy: 53454.9 mJ | Machine: FAULT
+2026-09-07 00:36:54,323 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:36:57,336 | AgentLoop | INFO | 
+2026-09-07 00:36:57,337 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:57,339 | AgentLoop | INFO |   CYCLE 0005  |  Session 0734C7D9
+2026-09-07 00:36:57,339 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:36:57,342 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-07 00:36:57,343 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: dht22 — initiating recovery
+2026-09-07 00:36:57,348 | AgentLoop | INFO | [agent] ✅ Sensor dht22 recovered: 49.170
+2026-09-07 00:37:06,641 | AgentLoop | INFO | [agent] PLAN complete | Severity: FAULT | Steps: 4 | 9292 ms
+2026-09-07 00:37:07,332 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 689 ms
+2026-09-07 00:37:07,334 | AgentLoop | INFO | [agent] VERIFY mpu6050: 3.564 → 0.213 (Δ-3.351)
+2026-09-07 00:37:07,335 | AgentLoop | INFO | [agent] VERIFY dht22: 49.170 → 28.020 (Δ-21.150)
+2026-09-07 00:37:07,336 | AgentLoop | INFO | [agent] VERIFY hcsr04: 8.660 → 33.990 (Δ25.330)
+2026-09-07 00:37:07,337 | AgentLoop | INFO | [agent] VERIFY mq135: 433.800 → 115.700 (Δ-318.100)
+2026-09-07 00:37:07,338 | AgentLoop | INFO | [agent] ⏱️  Cycle 0005 complete | Total: 10002 ms | RAM peak: 62.6% | Energy: 46378.6 mJ | Machine: NORMAL
+2026-09-07 00:37:07,340 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:37:10,352 | AgentLoop | INFO | 
+2026-09-07 00:37:10,353 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:10,354 | AgentLoop | INFO |   CYCLE 0006  |  Session 0734C7D9
+2026-09-07 00:37:10,355 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:10,356 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:37:17,703 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 4 | 7346 ms
+2026-09-07 00:37:18,333 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 629 ms
+2026-09-07 00:37:18,334 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.313 → 0.337 (Δ0.023)
+2026-09-07 00:37:18,336 | AgentLoop | INFO | [agent] VERIFY ina219: 0.758 → 0.807 (Δ0.049)
+2026-09-07 00:37:18,337 | AgentLoop | INFO | [agent] VERIFY hcsr04: 36.270 → 35.280 (Δ-0.990)
+2026-09-07 00:37:18,338 | AgentLoop | INFO | [agent] VERIFY mq135: 108.600 → 127.400 (Δ18.800)
+2026-09-07 00:37:18,340 | AgentLoop | INFO | [agent] ⏱️  Cycle 0006 complete | Total: 7988 ms | RAM peak: 62.6% | Energy: 37135.6 mJ | Machine: NORMAL
+2026-09-07 00:37:18,342 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:37:21,348 | AgentLoop | INFO | 
+2026-09-07 00:37:21,349 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:21,350 | AgentLoop | INFO |   CYCLE 0007  |  Session 0734C7D9
+2026-09-07 00:37:21,351 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:21,352 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:37:29,808 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 8455 ms
+2026-09-07 00:37:30,264 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 456 ms
+2026-09-07 00:37:30,265 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.377 → 0.632 (Δ0.255)
+2026-09-07 00:37:30,266 | AgentLoop | INFO | [agent] VERIFY dht22: 28.230 → 28.410 (Δ0.180)
+2026-09-07 00:37:30,267 | AgentLoop | INFO | [agent] VERIFY ina219: 0.876 → 0.851 (Δ-0.025)
+2026-09-07 00:37:30,268 | AgentLoop | INFO | [agent] VERIFY hcsr04: 23.100 → 32.520 (Δ9.420)
+2026-09-07 00:37:30,269 | AgentLoop | INFO | [agent] VERIFY mq135: 121.100 → 122.400 (Δ1.300)
+2026-09-07 00:37:30,271 | AgentLoop | INFO | [agent] ⏱️  Cycle 0007 complete | Total: 8921 ms | RAM peak: 62.6% | Energy: 41476.1 mJ | Machine: NORMAL
+2026-09-07 00:37:30,272 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:37:33,287 | AgentLoop | INFO | 
+2026-09-07 00:37:33,288 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:33,289 | AgentLoop | INFO |   CYCLE 0008  |  Session 0734C7D9
+2026-09-07 00:37:33,290 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:33,291 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-07 00:37:39,988 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6696 ms
+2026-09-07 00:37:40,444 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 455 ms
+2026-09-07 00:37:40,445 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.281 → 0.465 (Δ0.183)
+2026-09-07 00:37:40,446 | AgentLoop | INFO | [agent] VERIFY dht22: 27.430 → 28.370 (Δ0.940)
+2026-09-07 00:37:40,447 | AgentLoop | INFO | [agent] VERIFY ina219: 0.820 → 0.789 (Δ-0.032)
+2026-09-07 00:37:40,448 | AgentLoop | INFO | [agent] VERIFY hcsr04: 22.880 → 33.300 (Δ10.420)
+2026-09-07 00:37:40,449 | AgentLoop | INFO | [agent] VERIFY mq135: 121.100 → 111.700 (Δ-9.400)
+2026-09-07 00:37:40,450 | AgentLoop | INFO | [agent] ⏱️  Cycle 0008 complete | Total: 7164 ms | RAM peak: 62.6% | Energy: 33339.3 mJ | Machine: NORMAL
+2026-09-07 00:37:40,453 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:37:43,468 | AgentLoop | INFO | 
+2026-09-07 00:37:43,469 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:43,470 | AgentLoop | INFO |   CYCLE 0009  |  Session 0734C7D9
+2026-09-07 00:37:43,471 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:43,472 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:37:50,528 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 7054 ms
+2026-09-07 00:37:50,987 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 458 ms
+2026-09-07 00:37:50,990 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.439 → 0.738 (Δ0.299)
+2026-09-07 00:37:50,991 | AgentLoop | INFO | [agent] VERIFY dht22: 28.320 → 28.130 (Δ-0.190)
+2026-09-07 00:37:50,993 | AgentLoop | INFO | [agent] VERIFY ina219: 0.704 → 0.836 (Δ0.132)
+2026-09-07 00:37:50,994 | AgentLoop | INFO | [agent] VERIFY hcsr04: 31.300 → 35.040 (Δ3.740)
+2026-09-07 00:37:50,995 | AgentLoop | INFO | [agent] VERIFY mq135: 130.300 → 125.300 (Δ-5.000)
+2026-09-07 00:37:50,997 | AgentLoop | INFO | [agent] ⏱️  Cycle 0009 complete | Total: 7528 ms | RAM peak: 62.6% | Energy: 35041.4 mJ | Machine: DEGRADING
+2026-09-07 00:37:50,998 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-07 00:37:54,011 | AgentLoop | INFO | 
+2026-09-07 00:37:54,012 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:54,013 | AgentLoop | INFO |   CYCLE 0010  |  Session 0734C7D9
+2026-09-07 00:37:54,014 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-07 00:37:54,015 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-07 00:38:04,140 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 4 | 10123 ms
+2026-09-07 00:38:04,763 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 621 ms
+2026-09-07 00:38:04,765 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.584 → 3.768 (Δ3.184)
+2026-09-07 00:38:04,765 | AgentLoop | INFO | [agent] VERIFY dht22: 45.230 → 65.920 (Δ20.690)
+2026-09-07 00:38:04,766 | AgentLoop | INFO | [agent] VERIFY ina219: 1.517 → 2.323 (Δ0.806)
+2026-09-07 00:38:04,767 | AgentLoop | INFO | [agent] VERIFY hcsr04: 23.910 → 6.410 (Δ-17.500)
+2026-09-07 00:38:04,768 | AgentLoop | INFO | [agent] VERIFY mq135: 279.000 → 462.500 (Δ183.500)
+2026-09-07 00:38:04,770 | AgentLoop | INFO | [agent] ⏱️  Cycle 0010 complete | Total: 10758 ms | RAM peak: 62.6% | Energy: 50001.1 mJ | Machine: FAULT
+2026-09-07 00:38:04,771 | AgentLoop | INFO | [agent] Reached max_cycles=10 — stopping
+2026-09-07 00:38:04,774 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_0734C7D9_report.json
+2026-09-08 10:51:22,862 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:22,864 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 6CC19CB7
+2026-09-08 10:51:22,866 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:22,867 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:23,305 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:23,306 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 8AC418E1
+2026-09-08 10:51:23,308 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:23,309 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:23,400 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:23,401 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 978FB86E
+2026-09-08 10:51:23,402 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:23,404 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:49,226 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:49,229 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 6381E827
+2026-09-08 10:51:49,230 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:49,231 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:49,297 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-08 10:51:49,299 | AgentLoop | INFO | 
+2026-09-08 10:51:49,299 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:49,301 | AgentLoop | INFO |   CYCLE 0001  |  Session 6381E827
+2026-09-08 10:51:49,302 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:49,304 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-08 10:51:49,306 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-08 10:51:49,313 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-08 10:51:49,378 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 63 ms
+2026-09-08 10:51:49,737 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 357 ms
+2026-09-08 10:51:49,738 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.529 → 0.263 (Δ-0.266)
+2026-09-08 10:51:49,751 | AgentLoop | INFO | [agent] VERIFY dht22: 28.030 → 27.290 (Δ-0.740)
+2026-09-08 10:51:49,753 | AgentLoop | INFO | [agent] VERIFY ina219: 0.851 → 0.802 (Δ-0.049)
+2026-09-08 10:51:49,754 | AgentLoop | INFO | [agent] VERIFY hcsr04: 26.840 → 25.720 (Δ-1.120)
+2026-09-08 10:51:49,756 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 457 ms | RAM peak: 89.5% | Energy: 2145.6 mJ | Machine: NORMAL
+2026-09-08 10:51:49,759 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:49,761 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 16F4D980
+2026-09-08 10:51:49,762 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:49,764 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:49,777 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-08 10:51:49,779 | AgentLoop | INFO | 
+2026-09-08 10:51:49,782 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:49,784 | AgentLoop | INFO |   CYCLE 0001  |  Session 16F4D980
+2026-09-08 10:51:49,786 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:49,790 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 3 ms
+2026-09-08 10:51:49,791 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mpu6050 — initiating recovery
+2026-09-08 10:51:50,810 | AgentLoop | INFO | [agent] ✅ Sensor mpu6050 recovered: 0.502
+2026-09-08 10:51:50,819 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 8 ms
+2026-09-08 10:51:51,171 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 350 ms
+2026-09-08 10:51:51,172 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.502 → 0.351 (Δ-0.151)
+2026-09-08 10:51:51,173 | AgentLoop | INFO | [agent] VERIFY dht22: 28.240 → 27.500 (Δ-0.740)
+2026-09-08 10:51:51,175 | AgentLoop | INFO | [agent] VERIFY ina219: 0.807 → 0.792 (Δ-0.015)
+2026-09-08 10:51:51,176 | AgentLoop | INFO | [agent] VERIFY hcsr04: 34.980 → 36.650 (Δ1.670)
+2026-09-08 10:51:51,178 | AgentLoop | INFO | [agent] VERIFY mq135: 124.800 → 123.100 (Δ-1.700)
+2026-09-08 10:51:51,180 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 1400 ms | RAM peak: 89.5% | Energy: 6742.1 mJ | Machine: NORMAL
+2026-09-08 10:51:51,182 | AgentLoop | INFO | 
+2026-09-08 10:51:51,183 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:51,184 | AgentLoop | INFO |   CYCLE 0002  |  Session 16F4D980
+2026-09-08 10:51:51,185 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:51,187 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-08 10:51:51,194 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 5 ms
+2026-09-08 10:51:51,546 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 350 ms
+2026-09-08 10:51:51,548 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.567 → 0.550 (Δ-0.017)
+2026-09-08 10:51:51,549 | AgentLoop | INFO | [agent] VERIFY dht22: 27.720 → 28.720 (Δ1.000)
+2026-09-08 10:51:51,551 | AgentLoop | INFO | [agent] VERIFY ina219: 0.933 → 0.820 (Δ-0.113)
+2026-09-08 10:51:51,553 | AgentLoop | INFO | [agent] VERIFY mq135: 125.300 → 117.500 (Δ-7.800)
+2026-09-08 10:51:51,554 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 371 ms | RAM peak: 89.6% | Energy: 1843.7 mJ | Machine: NORMAL
+2026-09-08 10:51:51,559 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:51,560 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 847AD4F1
+2026-09-08 10:51:51,562 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 10:51:51,563 | AgentLoop | INFO | ============================================================
+2026-09-08 10:51:51,575 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-08 10:51:51,577 | AgentLoop | INFO | 
+2026-09-08 10:51:51,578 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:51,580 | AgentLoop | INFO |   CYCLE 0001  |  Session 847AD4F1
+2026-09-08 10:51:51,581 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 10:51:51,583 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-08 10:51:51,591 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 7 ms
+2026-09-08 10:51:51,945 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 351 ms
+2026-09-08 10:51:51,947 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.346 → 0.644 (Δ0.298)
+2026-09-08 10:51:51,948 | AgentLoop | INFO | [agent] VERIFY dht22: 27.780 → 28.530 (Δ0.750)
+2026-09-08 10:51:51,950 | AgentLoop | INFO | [agent] VERIFY ina219: 0.756 → 0.741 (Δ-0.015)
+2026-09-08 10:51:51,951 | AgentLoop | INFO | [agent] VERIFY hcsr04: 34.570 → 25.240 (Δ-9.330)
+2026-09-08 10:51:51,953 | AgentLoop | INFO | [agent] VERIFY mq135: 117.500 → 120.300 (Δ2.800)
+2026-09-08 10:51:51,956 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 378 ms | RAM peak: 89.6% | Energy: 1863.2 mJ | Machine: NORMAL
+2026-09-08 10:51:51,959 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_847AD4F1_report.json
+2026-09-08 11:07:48,767 | AgentLoop | INFO | ============================================================
+2026-09-08 11:07:48,769 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session F45C96BB
+2026-09-08 11:07:48,772 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 11:07:48,775 | AgentLoop | INFO | ============================================================
+2026-09-08 11:07:48,797 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-08 11:07:48,800 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=3
+2026-09-08 11:07:48,803 | AgentLoop | INFO | 
+2026-09-08 11:07:48,806 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:48,808 | AgentLoop | INFO |   CYCLE 0001  |  Session F45C96BB
+2026-09-08 11:07:48,810 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:48,813 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-08 11:07:49,181 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 366 ms
+2026-09-08 11:07:49,542 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 359 ms
+2026-09-08 11:07:49,545 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.386 → 0.369 (Δ-0.017)
+2026-09-08 11:07:49,548 | AgentLoop | INFO | [agent] VERIFY dht22: 27.470 → 27.720 (Δ0.250)
+2026-09-08 11:07:49,551 | AgentLoop | INFO | [agent] VERIFY ina219: 0.841 → 0.812 (Δ-0.029)
+2026-09-08 11:07:49,553 | AgentLoop | INFO | [agent] VERIFY hcsr04: 33.310 → 26.140 (Δ-7.170)
+2026-09-08 11:07:49,555 | AgentLoop | INFO | [agent] VERIFY mq135: 118.000 → 143.900 (Δ25.900)
+2026-09-08 11:07:49,559 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 754 ms | RAM peak: 83.2% | Energy: 3602.2 mJ | Machine: NORMAL
+2026-09-08 11:07:49,563 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-08 11:07:52,575 | AgentLoop | INFO | 
+2026-09-08 11:07:52,578 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:52,580 | AgentLoop | INFO |   CYCLE 0002  |  Session F45C96BB
+2026-09-08 11:07:52,582 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:52,586 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 3 ms
+2026-09-08 11:07:52,588 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: dht22 — initiating recovery
+2026-09-08 11:07:52,600 | AgentLoop | INFO | [agent] ✅ Sensor dht22 recovered: 27.470
+2026-09-08 11:07:52,791 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 189 ms
+2026-09-08 11:07:53,143 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 350 ms
+2026-09-08 11:07:53,145 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.341 → 0.248 (Δ-0.093)
+2026-09-08 11:07:53,147 | AgentLoop | INFO | [agent] VERIFY dht22: 27.470 → 28.280 (Δ0.810)
+2026-09-08 11:07:53,149 | AgentLoop | INFO | [agent] VERIFY ina219: 0.847 → 0.829 (Δ-0.018)
+2026-09-08 11:07:53,152 | AgentLoop | INFO | [agent] VERIFY hcsr04: 25.450 → 34.040 (Δ8.590)
+2026-09-08 11:07:53,153 | AgentLoop | INFO | [agent] VERIFY mq135: 137.400 → 149.500 (Δ12.100)
+2026-09-08 11:07:53,156 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 580 ms | RAM peak: 83.4% | Energy: 2868.7 mJ | Machine: NORMAL
+2026-09-08 11:07:53,159 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-08 11:07:56,170 | AgentLoop | INFO | 
+2026-09-08 11:07:56,171 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:56,175 | AgentLoop | INFO |   CYCLE 0003  |  Session F45C96BB
+2026-09-08 11:07:56,176 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:07:56,181 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 2 ms
+2026-09-08 11:07:56,185 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: hcsr04 — initiating recovery
+2026-09-08 11:07:56,205 | AgentLoop | WARNING | [agent] ⚡ Sensor hcsr04 not recovered — proceeding without it
+2026-09-08 11:07:57,174 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 966 ms
+2026-09-08 11:07:57,595 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 420 ms
+2026-09-08 11:07:57,600 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.410 → 0.292 (Δ-0.118)
+2026-09-08 11:07:57,602 | AgentLoop | INFO | [agent] VERIFY dht22: 26.850 → 27.700 (Δ0.850)
+2026-09-08 11:07:57,605 | AgentLoop | INFO | [agent] VERIFY ina219: 0.822 → 0.805 (Δ-0.016)
+2026-09-08 11:07:57,609 | AgentLoop | INFO | [agent] VERIFY mq135: 114.000 → 114.500 (Δ0.500)
+2026-09-08 11:07:57,611 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 1440 ms | RAM peak: 83.4% | Energy: 7036.4 mJ | Machine: NORMAL
+2026-09-08 11:07:57,614 | AgentLoop | INFO | [agent] Reached max_cycles=3 — stopping
+2026-09-08 11:07:57,621 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_F45C96BB_report.json
+2026-09-08 11:29:09,720 | AgentLoop | INFO | ============================================================
+2026-09-08 11:29:09,862 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session A841CAD9
+2026-09-08 11:29:09,867 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 11:29:09,869 | AgentLoop | INFO | ============================================================
+2026-09-08 11:30:39,025 | AgentLoop | INFO | ============================================================
+2026-09-08 11:30:39,113 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 5EA92AAD
+2026-09-08 11:30:39,115 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 11:30:39,117 | AgentLoop | INFO | ============================================================
+2026-09-08 11:31:47,387 | AgentLoop | INFO | ============================================================
+2026-09-08 11:31:47,481 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session A6B83B21
+2026-09-08 11:31:47,484 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 11:31:47,486 | AgentLoop | INFO | ============================================================
+2026-09-08 11:35:57,775 | AgentLoop | INFO | ============================================================
+2026-09-08 11:35:57,871 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 0584B385
+2026-09-08 11:35:57,875 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-08 11:35:57,877 | AgentLoop | INFO | ============================================================
+2026-09-08 11:35:58,176 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-08 11:35:58,179 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=3
+2026-09-08 11:35:58,183 | AgentLoop | INFO | 
+2026-09-08 11:35:58,185 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:35:58,187 | AgentLoop | INFO |   CYCLE 0001  |  Session 0584B385
+2026-09-08 11:35:58,189 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:35:58,194 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 2 ms
+2026-09-08 11:35:58,197 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: dht22 — initiating recovery
+2026-09-08 11:35:58,207 | AgentLoop | WARNING | [agent] ⚡ Sensor dht22 not recovered — proceeding without it
+2026-09-08 11:35:59,877 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 2 | 1639 ms
+2026-09-08 11:36:00,241 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 361 ms
+2026-09-08 11:36:00,244 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.433 → 0.534 (Δ0.101)
+2026-09-08 11:36:00,246 | AgentLoop | INFO | [agent] VERIFY ina219: 0.769 → 0.805 (Δ0.035)
+2026-09-08 11:36:00,248 | AgentLoop | INFO | [agent] VERIFY hcsr04: 26.340 → 30.070 (Δ3.730)
+2026-09-08 11:36:00,251 | AgentLoop | INFO | [agent] VERIFY mq135: 136.900 → 153.800 (Δ16.900)
+2026-09-08 11:36:00,257 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 2073 ms | RAM peak: 83.0% | Energy: 9993.6 mJ | Machine: NORMAL
+2026-09-08 11:36:00,261 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-08 11:36:03,265 | AgentLoop | INFO | 
+2026-09-08 11:36:03,267 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:36:03,269 | AgentLoop | INFO |   CYCLE 0002  |  Session 0584B385
+2026-09-08 11:36:03,272 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:36:03,275 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-08 11:36:05,309 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2031 ms
+2026-09-08 11:36:05,836 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 525 ms
+2026-09-08 11:36:05,839 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.455 → 0.303 (Δ-0.152)
+2026-09-08 11:36:05,854 | AgentLoop | INFO | [agent] VERIFY dht22: 28.660 → 29.550 (Δ0.890)
+2026-09-08 11:36:05,856 | AgentLoop | INFO | [agent] VERIFY ina219: 0.808 → 0.770 (Δ-0.038)
+2026-09-08 11:36:05,862 | AgentLoop | INFO | [agent] VERIFY hcsr04: 23.090 → 32.850 (Δ9.760)
+2026-09-08 11:36:05,865 | AgentLoop | INFO | [agent] VERIFY mq135: 115.900 → 117.600 (Δ1.700)
+2026-09-08 11:36:05,870 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 2604 ms | RAM peak: 83.2% | Energy: 12684.2 mJ | Machine: NORMAL
+2026-09-08 11:36:05,873 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-08 11:36:08,877 | AgentLoop | INFO | 
+2026-09-08 11:36:08,879 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:36:08,882 | AgentLoop | INFO |   CYCLE 0003  |  Session 0584B385
+2026-09-08 11:36:08,884 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-08 11:36:08,886 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-08 11:36:10,222 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 2 | 1334 ms
+2026-09-08 11:36:10,578 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 352 ms
+2026-09-08 11:36:10,580 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.509 → 0.372 (Δ-0.137)
+2026-09-08 11:36:10,582 | AgentLoop | INFO | [agent] VERIFY dht22: 27.270 → 28.110 (Δ0.840)
+2026-09-08 11:36:10,584 | AgentLoop | INFO | [agent] VERIFY ina219: 0.868 → 0.810 (Δ-0.057)
+2026-09-08 11:36:10,586 | AgentLoop | INFO | [agent] VERIFY hcsr04: 36.800 → 37.820 (Δ1.020)
+2026-09-08 11:36:10,588 | AgentLoop | INFO | [agent] VERIFY mq135: 115.200 → 97.600 (Δ-17.600)
+2026-09-08 11:36:10,591 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 1712 ms | RAM peak: 83.2% | Energy: 8371.9 mJ | Machine: NORMAL
+2026-09-08 11:36:10,593 | AgentLoop | INFO | [agent] Reached max_cycles=3 — stopping
+2026-09-08 11:36:10,597 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_0584B385_report.json
+2026-09-11 09:55:24,635 | AgentLoop | INFO | ============================================================
+2026-09-11 09:55:24,636 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 97E0CF30
+2026-09-11 09:55:24,638 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:55:24,639 | AgentLoop | INFO | ============================================================
+2026-09-11 09:55:25,194 | AgentLoop | INFO | ============================================================
+2026-09-11 09:55:25,196 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 07A1CA32
+2026-09-11 09:55:25,196 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:55:25,198 | AgentLoop | INFO | ============================================================
+2026-09-11 09:55:25,249 | AgentLoop | INFO | ============================================================
+2026-09-11 09:55:25,250 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session F1A5B08F
+2026-09-11 09:55:25,250 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:55:25,251 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:29,595 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:29,596 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 860B81DD
+2026-09-11 09:57:29,598 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:57:29,599 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:29,713 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-11 09:57:29,715 | AgentLoop | INFO | 
+2026-09-11 09:57:29,715 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:29,716 | AgentLoop | INFO |   CYCLE 0001  |  Session 860B81DD
+2026-09-11 09:57:29,717 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:29,718 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 2 ms
+2026-09-11 09:57:32,811 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 3093 ms
+2026-09-11 09:57:33,329 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 516 ms
+2026-09-11 09:57:33,330 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.343 → 0.376 (Δ0.033)
+2026-09-11 09:57:33,331 | AgentLoop | INFO | [agent] VERIFY dht22: 28.440 → 27.910 (Δ-0.530)
+2026-09-11 09:57:33,333 | AgentLoop | INFO | [agent] VERIFY ina219: 0.766 → 0.711 (Δ-0.055)
+2026-09-11 09:57:33,333 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.120 → 23.780 (Δ-0.340)
+2026-09-11 09:57:33,334 | AgentLoop | INFO | [agent] VERIFY mq135: 127.300 → 135.100 (Δ7.800)
+2026-09-11 09:57:33,336 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 3620 ms | RAM peak: 76.8% | Energy: 17239.3 mJ | Machine: NORMAL
+2026-09-11 09:57:33,342 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:33,343 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session E2DEF5C0
+2026-09-11 09:57:33,344 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:57:33,345 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:33,375 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-11 09:57:33,377 | AgentLoop | INFO | 
+2026-09-11 09:57:33,378 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:33,379 | AgentLoop | INFO |   CYCLE 0001  |  Session E2DEF5C0
+2026-09-11 09:57:33,380 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:33,381 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 09:57:39,826 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 6444 ms
+2026-09-11 09:57:40,344 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 516 ms
+2026-09-11 09:57:40,345 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.500 → 0.582 (Δ0.082)
+2026-09-11 09:57:40,346 | AgentLoop | INFO | [agent] VERIFY dht22: 28.230 → 27.980 (Δ-0.250)
+2026-09-11 09:57:40,347 | AgentLoop | INFO | [agent] VERIFY ina219: 0.790 → 0.711 (Δ-0.079)
+2026-09-11 09:57:40,348 | AgentLoop | INFO | [agent] VERIFY hcsr04: 31.890 → 35.560 (Δ3.670)
+2026-09-11 09:57:40,349 | AgentLoop | INFO | [agent] VERIFY mq135: 130.900 → 99.200 (Δ-31.700)
+2026-09-11 09:57:40,351 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 6974 ms | RAM peak: 76.7% | Energy: 32622.1 mJ | Machine: NORMAL
+2026-09-11 09:57:40,353 | AgentLoop | INFO | 
+2026-09-11 09:57:40,355 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:40,356 | AgentLoop | INFO |   CYCLE 0002  |  Session E2DEF5C0
+2026-09-11 09:57:40,356 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:40,357 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 09:57:43,876 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 3518 ms
+2026-09-11 09:57:44,401 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 524 ms
+2026-09-11 09:57:44,403 | AgentLoop | INFO | [agent] VERIFY dht22: 28.080 → 27.120 (Δ-0.960)
+2026-09-11 09:57:44,404 | AgentLoop | INFO | [agent] VERIFY ina219: 0.830 → 0.860 (Δ0.030)
+2026-09-11 09:57:44,405 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.580 → 24.820 (Δ0.240)
+2026-09-11 09:57:44,406 | AgentLoop | INFO | [agent] VERIFY mq135: 109.400 → 131.800 (Δ22.400)
+2026-09-11 09:57:44,407 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 4053 ms | RAM peak: 76.7% | Energy: 18960.1 mJ | Machine: NORMAL
+2026-09-11 09:57:44,412 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:44,413 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session F83B35CF
+2026-09-11 09:57:44,414 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 09:57:44,415 | AgentLoop | INFO | ============================================================
+2026-09-11 09:57:44,451 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-11 09:57:44,452 | AgentLoop | INFO | 
+2026-09-11 09:57:44,453 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:44,455 | AgentLoop | INFO |   CYCLE 0001  |  Session F83B35CF
+2026-09-11 09:57:44,456 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 09:57:44,457 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-11 09:57:44,459 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-11 09:57:44,465 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-11 09:57:46,401 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 3 | 1936 ms
+2026-09-11 09:57:46,931 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 530 ms
+2026-09-11 09:57:46,932 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.408 → 0.443 (Δ0.035)
+2026-09-11 09:57:46,933 | AgentLoop | INFO | [agent] VERIFY dht22: 28.220 → 29.070 (Δ0.850)
+2026-09-11 09:57:46,934 | AgentLoop | INFO | [agent] VERIFY ina219: 0.722 → 0.790 (Δ0.069)
+2026-09-11 09:57:46,935 | AgentLoop | INFO | [agent] VERIFY hcsr04: 32.450 → 22.720 (Δ-9.730)
+2026-09-11 09:57:46,936 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 2483 ms | RAM peak: 76.7% | Energy: 11637.7 mJ | Machine: NORMAL
+2026-09-11 09:57:46,939 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_F83B35CF_report.json
+2026-09-11 10:13:24,770 | AgentLoop | INFO | ============================================================
+2026-09-11 10:13:24,845 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 7DA50D3C
+2026-09-11 10:13:24,846 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 10:13:24,848 | AgentLoop | INFO | ============================================================
+2026-09-11 10:13:44,355 | AgentLoop | INFO | ============================================================
+2026-09-11 10:13:44,428 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session A2ED2A27
+2026-09-11 10:13:44,430 | AgentLoop | INFO |   Mode: SIMULATION
+2026-09-11 10:13:44,431 | AgentLoop | INFO | ============================================================
+2026-09-11 10:13:44,599 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-09-11 10:13:44,600 | AgentLoop | INFO | [agent] 🚀 Starting agent loop | max_cycles=10
+2026-09-11 10:13:44,602 | AgentLoop | INFO | 
+2026-09-11 10:13:44,605 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:44,605 | AgentLoop | INFO |   CYCLE 0001  |  Session A2ED2A27
+2026-09-11 10:13:44,606 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:44,607 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:13:47,211 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2602 ms
+2026-09-11 10:13:47,733 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 521 ms
+2026-09-11 10:13:47,735 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.585 → 0.354 (Δ-0.231)
+2026-09-11 10:13:47,736 | AgentLoop | INFO | [agent] VERIFY dht22: 27.890 → 27.560 (Δ-0.330)
+2026-09-11 10:13:47,736 | AgentLoop | INFO | [agent] VERIFY ina219: 0.845 → 0.786 (Δ-0.059)
+2026-09-11 10:13:47,738 | AgentLoop | INFO | [agent] VERIFY hcsr04: 30.290 → 30.220 (Δ-0.070)
+2026-09-11 10:13:47,740 | AgentLoop | INFO | [agent] VERIFY mq135: 112.300 → 114.300 (Δ2.000)
+2026-09-11 10:13:47,742 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 3138 ms | RAM peak: 71.3% | Energy: 14863.6 mJ | Machine: NORMAL
+2026-09-11 10:13:47,743 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:13:50,748 | AgentLoop | INFO | 
+2026-09-11 10:13:50,749 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:50,750 | AgentLoop | INFO |   CYCLE 0002  |  Session A2ED2A27
+2026-09-11 10:13:50,751 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:50,752 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:13:52,854 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2100 ms
+2026-09-11 10:13:53,369 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 515 ms
+2026-09-11 10:13:53,370 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.396 → 0.303 (Δ-0.093)
+2026-09-11 10:13:53,371 | AgentLoop | INFO | [agent] VERIFY dht22: 28.220 → 28.670 (Δ0.450)
+2026-09-11 10:13:53,373 | AgentLoop | INFO | [agent] VERIFY ina219: 0.811 → 0.757 (Δ-0.054)
+2026-09-11 10:13:53,373 | AgentLoop | INFO | [agent] VERIFY hcsr04: 31.470 → 23.980 (Δ-7.490)
+2026-09-11 10:13:53,375 | AgentLoop | INFO | [agent] VERIFY mq135: 117.300 → 114.800 (Δ-2.500)
+2026-09-11 10:13:53,376 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 2628 ms | RAM peak: 71.4% | Energy: 12650.9 mJ | Machine: NORMAL
+2026-09-11 10:13:53,378 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:13:56,390 | AgentLoop | INFO | 
+2026-09-11 10:13:56,391 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:56,392 | AgentLoop | INFO |   CYCLE 0003  |  Session A2ED2A27
+2026-09-11 10:13:56,393 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:13:56,394 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:13:58,576 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2180 ms
+2026-09-11 10:13:59,100 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 523 ms
+2026-09-11 10:13:59,101 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.434 → 0.459 (Δ0.025)
+2026-09-11 10:13:59,103 | AgentLoop | INFO | [agent] VERIFY dht22: 28.160 → 28.300 (Δ0.140)
+2026-09-11 10:13:59,104 | AgentLoop | INFO | [agent] VERIFY ina219: 0.818 → 0.800 (Δ-0.018)
+2026-09-11 10:13:59,105 | AgentLoop | INFO | [agent] VERIFY hcsr04: 30.580 → 24.930 (Δ-5.650)
+2026-09-11 10:13:59,106 | AgentLoop | INFO | [agent] VERIFY mq135: 157.500 → 119.700 (Δ-37.800)
+2026-09-11 10:13:59,108 | AgentLoop | INFO | [agent] ⏱️  Cycle 0003 complete | Total: 2718 ms | RAM peak: 71.4% | Energy: 12969.3 mJ | Machine: NORMAL
+2026-09-11 10:13:59,110 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:02,112 | AgentLoop | INFO | 
+2026-09-11 10:14:02,114 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:02,114 | AgentLoop | INFO |   CYCLE 0004  |  Session A2ED2A27
+2026-09-11 10:14:02,115 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:02,116 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:14:03,815 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 1697 ms
+2026-09-11 10:14:04,336 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 520 ms
+2026-09-11 10:14:04,336 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.362 → 0.549 (Δ0.187)
+2026-09-11 10:14:04,338 | AgentLoop | INFO | [agent] VERIFY dht22: 27.990 → 28.380 (Δ0.390)
+2026-09-11 10:14:04,339 | AgentLoop | INFO | [agent] VERIFY ina219: 0.787 → 0.807 (Δ0.020)
+2026-09-11 10:14:04,340 | AgentLoop | INFO | [agent] VERIFY hcsr04: 27.730 → 35.350 (Δ7.620)
+2026-09-11 10:14:04,342 | AgentLoop | INFO | [agent] VERIFY mq135: 127.500 → 112.800 (Δ-14.700)
+2026-09-11 10:14:04,343 | AgentLoop | INFO | [agent] ⏱️  Cycle 0004 complete | Total: 2231 ms | RAM peak: 71.4% | Energy: 10588.4 mJ | Machine: NORMAL
+2026-09-11 10:14:04,345 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:07,349 | AgentLoop | INFO | 
+2026-09-11 10:14:07,350 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:07,351 | AgentLoop | INFO |   CYCLE 0005  |  Session A2ED2A27
+2026-09-11 10:14:07,352 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:07,354 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 1 ms
+2026-09-11 10:14:09,072 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 2 | 1716 ms
+2026-09-11 10:14:09,428 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 355 ms
+2026-09-11 10:14:09,429 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.597 → 1.127 (Δ0.530)
+2026-09-11 10:14:09,430 | AgentLoop | INFO | [agent] VERIFY dht22: 28.420 → 50.720 (Δ22.300)
+2026-09-11 10:14:09,431 | AgentLoop | INFO | [agent] VERIFY ina219: 0.753 → 1.654 (Δ0.901)
+2026-09-11 10:14:09,433 | AgentLoop | INFO | [agent] VERIFY hcsr04: 24.010 → 37.860 (Δ13.850)
+2026-09-11 10:14:09,434 | AgentLoop | INFO | [agent] VERIFY mq135: 116.400 → 280.000 (Δ163.600)
+2026-09-11 10:14:09,436 | AgentLoop | INFO | [agent] ⏱️  Cycle 0005 complete | Total: 2087 ms | RAM peak: 71.6% | Energy: 9945.3 mJ | Machine: DEGRADING
+2026-09-11 10:14:09,438 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:12,441 | AgentLoop | INFO | 
+2026-09-11 10:14:12,442 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:12,443 | AgentLoop | INFO |   CYCLE 0006  |  Session A2ED2A27
+2026-09-11 10:14:12,444 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:12,446 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 1 ms
+2026-09-11 10:14:12,447 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mpu6050 — initiating recovery
+2026-09-11 10:14:13,462 | AgentLoop | INFO | [agent] ✅ Sensor mpu6050 recovered: 3.421
+2026-09-11 10:14:16,669 | AgentLoop | INFO | [agent] PLAN complete | Severity: FAULT | Steps: 4 | 3205 ms
+2026-09-11 10:14:17,387 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 715 ms
+2026-09-11 10:14:17,389 | AgentLoop | INFO | [agent] VERIFY mpu6050: 3.421 → 0.350 (Δ-3.071)
+2026-09-11 10:14:17,390 | AgentLoop | INFO | [agent] VERIFY dht22: 61.550 → 27.900 (Δ-33.650)
+2026-09-11 10:14:17,393 | AgentLoop | INFO | [agent] VERIFY ina219: 2.198 → 0.765 (Δ-1.434)
+2026-09-11 10:14:17,395 | AgentLoop | INFO | [agent] VERIFY hcsr04: 22.540 → 28.850 (Δ6.310)
+2026-09-11 10:14:17,398 | AgentLoop | INFO | [agent] VERIFY mq135: 431.200 → 126.600 (Δ-304.600)
+2026-09-11 10:14:17,401 | AgentLoop | INFO | [agent] ⏱️  Cycle 0006 complete | Total: 4959 ms | RAM peak: 71.6% | Energy: 23858.3 mJ | Machine: NORMAL
+2026-09-11 10:14:17,404 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:20,410 | AgentLoop | INFO | 
+2026-09-11 10:14:20,412 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:20,414 | AgentLoop | INFO |   CYCLE 0007  |  Session A2ED2A27
+2026-09-11 10:14:20,416 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:20,418 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:14:21,961 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 1541 ms
+2026-09-11 10:14:22,487 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 524 ms
+2026-09-11 10:14:22,489 | AgentLoop | INFO | [agent] VERIFY dht22: 28.680 → 27.750 (Δ-0.930)
+2026-09-11 10:14:22,493 | AgentLoop | INFO | [agent] VERIFY ina219: 0.814 → 0.789 (Δ-0.024)
+2026-09-11 10:14:22,495 | AgentLoop | INFO | [agent] VERIFY hcsr04: 29.820 → 28.790 (Δ-1.030)
+2026-09-11 10:14:22,497 | AgentLoop | INFO | [agent] VERIFY mq135: 101.400 → 125.000 (Δ23.600)
+2026-09-11 10:14:22,500 | AgentLoop | INFO | [agent] ⏱️  Cycle 0007 complete | Total: 2089 ms | RAM peak: 71.6% | Energy: 10073.2 mJ | Machine: NORMAL
+2026-09-11 10:14:22,502 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:25,509 | AgentLoop | INFO | 
+2026-09-11 10:14:25,511 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:25,513 | AgentLoop | INFO |   CYCLE 0008  |  Session A2ED2A27
+2026-09-11 10:14:25,515 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:25,519 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 3 ms
+2026-09-11 10:14:25,521 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: mq135 — initiating recovery
+2026-09-11 10:14:25,534 | AgentLoop | WARNING | [agent] ⚡ Sensor mq135 not recovered — proceeding without it
+2026-09-11 10:14:27,288 | AgentLoop | INFO | [agent] PLAN complete | Severity: WARNING | Steps: 3 | 1752 ms
+2026-09-11 10:14:27,814 | AgentLoop | INFO | [agent] EXECUTE complete | Success: False | 523 ms
+2026-09-11 10:14:27,816 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.416 → 0.179 (Δ-0.237)
+2026-09-11 10:14:27,819 | AgentLoop | INFO | [agent] VERIFY dht22: 28.620 → 28.700 (Δ0.080)
+2026-09-11 10:14:27,822 | AgentLoop | INFO | [agent] VERIFY ina219: 0.750 → 0.816 (Δ0.066)
+2026-09-11 10:14:27,825 | AgentLoop | INFO | [agent] VERIFY hcsr04: 36.330 → 23.120 (Δ-13.210)
+2026-09-11 10:14:27,828 | AgentLoop | INFO | [agent] ⏱️  Cycle 0008 complete | Total: 2318 ms | RAM peak: 71.6% | Energy: 11162.5 mJ | Machine: NORMAL
+2026-09-11 10:14:27,831 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:30,841 | AgentLoop | INFO | 
+2026-09-11 10:14:30,843 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:30,846 | AgentLoop | INFO |   CYCLE 0009  |  Session A2ED2A27
+2026-09-11 10:14:30,848 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:30,850 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:14:32,823 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 1971 ms
+2026-09-11 10:14:33,355 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 531 ms
+2026-09-11 10:14:33,361 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.504 → 0.337 (Δ-0.167)
+2026-09-11 10:14:33,363 | AgentLoop | INFO | [agent] VERIFY ina219: 0.828 → 0.846 (Δ0.018)
+2026-09-11 10:14:33,365 | AgentLoop | INFO | [agent] VERIFY hcsr04: 36.820 → 35.830 (Δ-0.990)
+2026-09-11 10:14:33,369 | AgentLoop | INFO | [agent] VERIFY mq135: 104.800 → 118.100 (Δ13.300)
+2026-09-11 10:14:33,372 | AgentLoop | INFO | [agent] ⏱️  Cycle 0009 complete | Total: 2529 ms | RAM peak: 71.6% | Energy: 12252.5 mJ | Machine: NORMAL
+2026-09-11 10:14:33,374 | AgentLoop | DEBUG | [agent] Sleeping 3.0s until next cycle
+2026-09-11 10:14:36,390 | AgentLoop | INFO | 
+2026-09-11 10:14:36,391 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:36,392 | AgentLoop | INFO |   CYCLE 0010  |  Session A2ED2A27
+2026-09-11 10:14:36,393 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-09-11 10:14:36,394 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-09-11 10:14:38,889 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2493 ms
+2026-09-11 10:14:39,411 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 521 ms
+2026-09-11 10:14:39,412 | AgentLoop | INFO | [agent] VERIFY mpu6050: 0.512 → 0.199 (Δ-0.313)
+2026-09-11 10:14:39,413 | AgentLoop | INFO | [agent] VERIFY dht22: 28.010 → 27.680 (Δ-0.330)
+2026-09-11 10:14:39,415 | AgentLoop | INFO | [agent] VERIFY ina219: 0.774 → 0.756 (Δ-0.018)
+2026-09-11 10:14:39,416 | AgentLoop | INFO | [agent] VERIFY hcsr04: 34.710 → 34.210 (Δ-0.500)
+2026-09-11 10:14:39,417 | AgentLoop | INFO | [agent] VERIFY mq135: 118.700 → 94.400 (Δ-24.300)
+2026-09-11 10:14:39,419 | AgentLoop | INFO | [agent] ⏱️  Cycle 0010 complete | Total: 3028 ms | RAM peak: 71.6% | Energy: 14633.0 mJ | Machine: NORMAL
+2026-09-11 10:14:39,420 | AgentLoop | INFO | [agent] Reached max_cycles=10 — stopping
+2026-09-11 10:14:39,423 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_A2ED2A27_report.json
+2026-10-17 13:10:41,387 | AgentLoop | INFO | ============================================================
+2026-10-17 13:10:41,390 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session E16BE05B
+2026-10-17 13:10:41,393 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:10:41,395 | AgentLoop | INFO | ============================================================
+2026-10-17 13:10:42,244 | AgentLoop | INFO | ============================================================
+2026-10-17 13:10:42,246 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session DCAD6DFE
+2026-10-17 13:10:42,248 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:10:42,249 | AgentLoop | INFO | ============================================================
+2026-10-17 13:10:42,337 | AgentLoop | INFO | ============================================================
+2026-10-17 13:10:42,339 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 50326585
+2026-10-17 13:10:42,341 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:10:42,342 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,091 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,093 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 04EC3BBD
+2026-10-17 13:22:25,094 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:22:25,096 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,484 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,486 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 56789620
+2026-10-17 13:22:25,488 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:22:25,489 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,661 | AgentLoop | INFO | ============================================================
+2026-10-17 13:22:25,663 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 63343B8C
+2026-10-17 13:22:25,664 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:22:25,666 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:09,067 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:09,069 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 77FAFC16
+2026-10-17 13:23:09,071 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:23:09,073 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:09,821 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:09,823 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session E11D1567
+2026-10-17 13:23:09,826 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:23:09,828 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:10,028 | AgentLoop | INFO | ============================================================
+2026-10-17 13:23:10,031 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session AFB3076A
+2026-10-17 13:23:10,033 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 13:23:10,035 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,145 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,147 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 29E4B23A
+2026-10-17 14:19:54,148 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:19:54,150 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,770 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,772 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 11CB0BA6
+2026-10-17 14:19:54,774 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:19:54,775 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,854 | AgentLoop | INFO | ============================================================
+2026-10-17 14:19:54,856 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session CA118F86
+2026-10-17 14:19:54,858 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:19:54,859 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,188 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,189 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 0E5CA4F4
+2026-10-17 14:26:57,191 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:26:57,193 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,844 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,846 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 627DD958
+2026-10-17 14:26:57,848 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:26:57,849 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,925 | AgentLoop | INFO | ============================================================
+2026-10-17 14:26:57,926 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 5E9B4197
+2026-10-17 14:26:57,928 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 14:26:57,929 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:56,884 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:56,886 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session DCFC29BC
+2026-10-17 15:51:56,888 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:51:56,891 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:57,672 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:57,675 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session EFED6A17
+2026-10-17 15:51:57,678 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:51:57,680 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:57,840 | AgentLoop | INFO | ============================================================
+2026-10-17 15:51:57,842 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 7977D3B6
+2026-10-17 15:51:57,844 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:51:57,846 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:33,309 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:33,311 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 44742E0B
+2026-10-17 15:59:33,312 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:59:33,314 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:33,505 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 15:59:33,508 | AgentLoop | INFO | 
+2026-10-17 15:59:33,509 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:33,510 | AgentLoop | INFO |   CYCLE 0001  |  Session 44742E0B
+2026-10-17 15:59:33,511 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:33,514 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 1 failures | 2 ms
+2026-10-17 15:59:33,515 | AgentLoop | WARNING | [agent] 🔴 Sensor failure: ina219 — initiating recovery
+2026-10-17 15:59:33,522 | AgentLoop | WARNING | [agent] ⚡ Sensor ina219 not recovered — proceeding without it
+2026-10-17 15:59:33,524 | AgentLoop | ERROR | [agent] 🚨 ABORT path — using hardcoded safe-state plan
+2026-10-17 15:59:33,525 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 4 | 1 ms
+2026-10-17 15:59:34,213 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 687 ms
+2026-10-17 15:59:34,215 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=4 | failed=0 | 1 ms [SIMULATION]
+2026-10-17 15:59:34,218 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 709 ms | RAM peak: 74.2% | Energy: 3412.3 mJ | Machine: NORMAL
+2026-10-17 15:59:34,226 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:34,227 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 32F54F6E
+2026-10-17 15:59:34,229 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:59:34,231 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:34,280 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 15:59:34,281 | AgentLoop | INFO | 
+2026-10-17 15:59:34,282 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:34,283 | AgentLoop | INFO |   CYCLE 0001  |  Session 32F54F6E
+2026-10-17 15:59:34,284 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:34,287 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 15:59:39,110 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 4822 ms
+2026-10-17 15:59:39,621 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 509 ms
+2026-10-17 15:59:39,623 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 1 ms [SIMULATION]
+2026-10-17 15:59:39,625 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 5344 ms | RAM peak: 74.2% | Energy: 25382.4 mJ | Machine: NORMAL
+2026-10-17 15:59:39,628 | AgentLoop | INFO | 
+2026-10-17 15:59:39,629 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:39,630 | AgentLoop | INFO |   CYCLE 0002  |  Session 32F54F6E
+2026-10-17 15:59:39,631 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:39,633 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 15:59:42,573 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2939 ms
+2026-10-17 15:59:43,088 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 513 ms
+2026-10-17 15:59:43,091 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-17 15:59:43,093 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 3465 ms | RAM peak: 74.4% | Energy: 16581.2 mJ | Machine: NORMAL
+2026-10-17 15:59:43,102 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:43,104 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 5E906AFF
+2026-10-17 15:59:43,106 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 15:59:43,107 | AgentLoop | INFO | ============================================================
+2026-10-17 15:59:43,161 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 15:59:43,163 | AgentLoop | INFO | 
+2026-10-17 15:59:43,164 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:43,164 | AgentLoop | INFO |   CYCLE 0001  |  Session 5E906AFF
+2026-10-17 15:59:43,166 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 15:59:43,167 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 15:59:43,799 | AgentLoop | INFO | [agent] PLAN complete | Severity: CRITICAL | Steps: 2 | 631 ms
+2026-10-17 15:59:44,170 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 369 ms
+2026-10-17 15:59:44,175 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=2 | failed=0 | 4 ms [SIMULATION]
+2026-10-17 15:59:44,178 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 1014 ms | RAM peak: 74.5% | Energy: 5249.3 mJ | Machine: NORMAL
+2026-10-17 15:59:44,183 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_5E906AFF_report.json
+2026-10-17 16:00:24,582 | AgentLoop | INFO | ============================================================
+2026-10-17 16:00:24,584 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session A1F7CD05
+2026-10-17 16:00:24,586 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 16:00:24,587 | AgentLoop | INFO | ============================================================
+2026-10-17 16:00:24,746 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 16:00:24,748 | AgentLoop | INFO | 
+2026-10-17 16:00:24,749 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:00:24,750 | AgentLoop | INFO |   CYCLE 0001  |  Session A1F7CD05
+2026-10-17 16:00:24,752 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:00:24,753 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 16:00:56,482 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 31728 ms
+2026-10-17 16:00:56,997 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 514 ms
+2026-10-17 16:00:57,001 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 3 ms [SIMULATION]
+2026-10-17 16:00:57,004 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 32257 ms | RAM peak: 75.6% | Energy: 161671.3 mJ | Machine: NORMAL
+2026-10-17 16:00:57,012 | AgentLoop | INFO | ============================================================
+2026-10-17 16:00:57,014 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 8F5BDE48
+2026-10-17 16:00:57,016 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 16:00:57,018 | AgentLoop | INFO | ============================================================
+2026-10-17 16:00:57,068 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 16:00:57,070 | AgentLoop | INFO | 
+2026-10-17 16:00:57,071 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:00:57,072 | AgentLoop | INFO |   CYCLE 0001  |  Session 8F5BDE48
+2026-10-17 16:00:57,074 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:00:57,075 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 16:01:00,537 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 2 | 3461 ms
+2026-10-17 16:01:00,892 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 354 ms
+2026-10-17 16:01:00,896 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=2 | failed=0 | 1 ms [SIMULATION]
+2026-10-17 16:01:00,898 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 3827 ms | RAM peak: 75.7% | Energy: 18227.9 mJ | Machine: NORMAL
+2026-10-17 16:01:00,900 | AgentLoop | INFO | 
+2026-10-17 16:01:00,901 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:01:00,902 | AgentLoop | INFO |   CYCLE 0002  |  Session 8F5BDE48
+2026-10-17 16:01:00,903 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:01:00,905 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 16:01:03,728 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2822 ms
+2026-10-17 16:01:04,263 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 533 ms
+2026-10-17 16:01:04,267 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-17 16:01:04,270 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 3368 ms | RAM peak: 75.8% | Energy: 16276.1 mJ | Machine: NORMAL
+2026-10-17 16:01:04,278 | AgentLoop | INFO | ============================================================
+2026-10-17 16:01:04,280 | AgentLoop | INFO |   AgentEdge v1.0.0 — Session 181B68CB
+2026-10-17 16:01:04,282 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-17 16:01:04,283 | AgentLoop | INFO | ============================================================
+2026-10-17 16:01:04,339 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-17 16:01:04,340 | AgentLoop | INFO | 
+2026-10-17 16:01:04,343 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:01:04,344 | AgentLoop | INFO |   CYCLE 0001  |  Session 181B68CB
+2026-10-17 16:01:04,345 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-17 16:01:04,346 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-17 16:01:13,864 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 9517 ms
+2026-10-17 16:01:14,381 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 515 ms
+2026-10-17 16:01:14,384 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-17 16:01:14,386 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 10045 ms | RAM peak: 75.7% | Energy: 47842.2 mJ | Machine: NORMAL
+2026-10-17 16:01:14,390 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_181B68CB_report.json
+2026-10-19 11:58:38,066 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:38,069 | AgentLoop | INFO |   AgentEdge v1.1.0 — Session 277E92D5
+2026-10-19 11:58:38,071 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-19 11:58:38,072 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:38,081 | AgentLoop | INFO | [agent] SIMULATION mode — all sensors and actuators are software-only
+2026-10-19 11:58:38,297 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-19 11:58:38,299 | AgentLoop | INFO | 
+2026-10-19 11:58:38,300 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:38,302 | AgentLoop | INFO |   CYCLE 0001  |  Session 277E92D5
+2026-10-19 11:58:38,303 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:38,305 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-19 11:58:40,336 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2029 ms
+2026-10-19 11:58:40,861 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 525 ms
+2026-10-19 11:58:40,865 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 3 ms [SIMULATION]
+2026-10-19 11:58:40,868 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 2568 ms | RAM peak: 72.9% | Energy: 12534.9 mJ | Machine: NORMAL
+2026-10-19 11:58:40,872 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:40,875 | AgentLoop | INFO |   AgentEdge v1.1.0 — Session 69E51997
+2026-10-19 11:58:40,877 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-19 11:58:40,879 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:40,885 | AgentLoop | INFO | [agent] SIMULATION mode — all sensors and actuators are software-only
+2026-10-19 11:58:40,928 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-19 11:58:40,934 | AgentLoop | INFO | 
+2026-10-19 11:58:40,936 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:40,937 | AgentLoop | INFO |   CYCLE 0001  |  Session 69E51997
+2026-10-19 11:58:40,939 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:40,940 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-19 11:58:42,330 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 1388 ms
+2026-10-19 11:58:42,863 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 531 ms
+2026-10-19 11:58:42,867 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-19 11:58:42,870 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 1935 ms | RAM peak: 73.1% | Energy: 10518.0 mJ | Machine: NORMAL
+2026-10-19 11:58:42,872 | AgentLoop | INFO | 
+2026-10-19 11:58:42,874 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:42,875 | AgentLoop | INFO |   CYCLE 0002  |  Session 69E51997
+2026-10-19 11:58:42,876 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:42,878 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-19 11:58:44,628 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 1749 ms
+2026-10-19 11:58:45,154 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 525 ms
+2026-10-19 11:58:45,159 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-19 11:58:45,161 | AgentLoop | INFO | [agent] ⏱️  Cycle 0002 complete | Total: 2287 ms | RAM peak: 73.1% | Energy: 11899.2 mJ | Machine: NORMAL
+2026-10-19 11:58:45,166 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:45,168 | AgentLoop | INFO |   AgentEdge v1.1.0 — Session 6E54D49F
+2026-10-19 11:58:45,169 | AgentLoop | INFO |   Mode: SIMULATION
+2026-10-19 11:58:45,171 | AgentLoop | INFO | ============================================================
+2026-10-19 11:58:45,178 | AgentLoop | INFO | [agent] SIMULATION mode — all sensors and actuators are software-only
+2026-10-19 11:58:45,232 | AgentLoop | INFO | [agent] All components initialized — ready to run
+2026-10-19 11:58:45,236 | AgentLoop | INFO | 
+2026-10-19 11:58:45,237 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:45,239 | AgentLoop | INFO |   CYCLE 0001  |  Session 6E54D49F
+2026-10-19 11:58:45,240 | AgentLoop | INFO | ──────────────────────────────────────────────────
+2026-10-19 11:58:45,241 | AgentLoop | INFO | [agent] PERCEIVE complete | 5 sensors | 0 failures | 0 ms
+2026-10-19 11:58:47,581 | AgentLoop | INFO | [agent] PLAN complete | Severity: NORMAL | Steps: 3 | 2338 ms
+2026-10-19 11:58:48,106 | AgentLoop | INFO | [agent] EXECUTE complete | Success: True | 524 ms
+2026-10-19 11:58:48,110 | AgentLoop | INFO | [agent] VERIFY complete | success=True | checked=3 | failed=0 | 2 ms [SIMULATION]
+2026-10-19 11:58:48,115 | AgentLoop | INFO | [agent] ⏱️  Cycle 0001 complete | Total: 2878 ms | RAM peak: 73.2% | Energy: 14406.0 mJ | Machine: NORMAL
+2026-10-19 11:58:48,119 | AgentLoop | INFO | [agent] 📊 Session report saved: logs\session_6E54D49F_report.json

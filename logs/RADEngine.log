@@ -1,0 +1,256 @@
+2026-10-17 14:18:12,040 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:18:12,044 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:54,939 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,056 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 14:19:55,125 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,241 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:19:55,312 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,320 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,329 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,621 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,787 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,869 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,906 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:55,996 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,089 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,181 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,185 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 14:19:56,187 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,189 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 14:19:56,193 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,196 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 14:19:56,199 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,201 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:19:56,203 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:19:56,204 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:19:56,207 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,210 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,214 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,217 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,221 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,224 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:19:56,228 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,006 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,126 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 14:26:58,194 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,311 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:26:58,380 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,388 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,396 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,509 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,582 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,661 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,672 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,735 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,812 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,877 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,879 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 14:26:58,882 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,884 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 14:26:58,887 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,889 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 14:26:58,893 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,894 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:26:58,895 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:26:58,897 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 14:26:58,900 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,904 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,908 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,911 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,914 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,916 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 14:26:58,918 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:57,941 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,062 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 15:51:58,129 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,246 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:51:58,313 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,322 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,333 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,490 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,561 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,623 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,632 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,700 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,760 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,820 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,822 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 15:51:58,824 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,826 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:51:58,830 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,833 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 15:51:58,840 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,842 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:51:58,844 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:51:58,845 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:51:58,849 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,852 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,856 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,858 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,862 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,864 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:51:58,869 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,456 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,576 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 70.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:54:46,643 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,763 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:54:46,830 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,840 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,847 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:46,965 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,044 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,119 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,129 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,195 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,278 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,347 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,349 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 15:54:47,352 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,354 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:54:47,357 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,359 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 15:54:47,364 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,366 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:54:47,367 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:54:47,369 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:54:47,372 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,375 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,378 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,381 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,384 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,388 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:54:47,390 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:33,501 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:33,641 | RADEngine | DEBUG | [rad] Step SAFE_S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:33,809 | RADEngine | DEBUG | [rad] Step SAFE_S2: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:33,980 | RADEngine | DEBUG | [rad] Step SAFE_S3: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:34,149 | RADEngine | DEBUG | [rad] Step SAFE_S4: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:34,276 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:39,219 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 74.2%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:39,388 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 74.2%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:39,560 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 74.2%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:42,683 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 74.4%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:42,853 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 74.4%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:43,024 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 74.4%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:43,155 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:43,920 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 74.4%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:44,103 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 74.5%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:44,199 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:44,318 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 74.6%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:44,383 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:44,503 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:44,585 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:44,594 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:44,603 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,440 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,518 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,595 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,610 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,686 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,747 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,823 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,825 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 15:59:45,829 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,831 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 15:59:45,836 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,838 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 15:59:45,843 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,845 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:45,847 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:45,849 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 15:59:45,852 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,855 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,860 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,863 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,867 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,871 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 15:59:45,875 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:00:24,738 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:00:56,594 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.5%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:00:56,764 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 75.6%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:00:56,935 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 75.6%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:00:57,063 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:00,657 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.6%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:00,828 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 75.7%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:03,847 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.8%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:04,017 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 75.8%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:04,204 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 75.6%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:04,332 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:13,977 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.7%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:14,149 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 75.7%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:14,319 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 75.7%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:14,404 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,520 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.7%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:14,586 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,705 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 16:01:14,774 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,783 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,793 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,932 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:14,998 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,076 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,085 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,155 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,227 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,303 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,305 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-17 16:01:15,309 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,312 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-17 16:01:15,315 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,317 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-17 16:01:15,320 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,322 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 16:01:15,324 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 16:01:15,325 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-17 16:01:15,328 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,332 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,335 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,339 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,343 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,347 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-17 16:01:15,350 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:38,290 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:40,451 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 72.9%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:40,624 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 72.9%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:40,795 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 72.9%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:40,923 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:42,439 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 73.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:42,614 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 73.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:42,800 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 73.1%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:44,737 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 73.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:44,905 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 73.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:45,092 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 73.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:45,226 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:47,700 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 73.2%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:47,869 | RADEngine | INFO | [rad] Step S2: WARN resources (RAM 73.2%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:48,040 | RADEngine | INFO | [rad] Step S3: WARN resources (RAM 73.2%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:48,134 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,243 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 73.1%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:48,312 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,429 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-19 11:58:48,500 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,510 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,520 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,658 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,732 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,811 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,824 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,905 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:48,984 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,059 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,062 | RADEngine | DEBUG | [rad] Step S1: NORMAL resources → NORMAL_EXECUTION
+2026-10-19 11:58:49,066 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,069 | RADEngine | INFO | [rad] Step S1: WARN resources (RAM 75.0%) → SIMPLIFIED_PAYLOAD
+2026-10-19 11:58:49,072 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,075 | RADEngine | WARNING | [rad] Step S1: CRITICAL resources (RAM 92.0%) → DEFERRED_EXECUTION
+2026-10-19 11:58:49,079 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,082 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-19 11:58:49,085 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-19 11:58:49,087 | RADEngine | DEBUG | [rad] Step S1: can_split=False → NORMAL (safety lock)
+2026-10-19 11:58:49,091 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,097 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,102 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,105 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,109 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,113 | RADEngine | INFO | [rad] RADEngine initialized
+2026-10-19 11:58:49,118 | RADEngine | INFO | [rad] RADEngine initialized

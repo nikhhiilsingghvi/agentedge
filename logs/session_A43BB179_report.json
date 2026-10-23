@@ -1,0 +1,127 @@
+{
+  "session_id": "A43BB179",
+  "total_cycles": 3,
+  "planner_stats": {
+    "total_plans_generated": 3,
+    "avg_latency_ms": 7272.08,
+    "total_tokens_used": 3373,
+    "avg_tokens_per_plan": 1124.3,
+    "backend": "anthropic",
+    "model": "claude-sonnet-4-6"
+  },
+  "executor_stats": {
+    "total_steps_executed": 10,
+    "total_splits": 0,
+    "split_rate_pct": 0.0
+  },
+  "resource_stats": {
+    "total_samples": 10,
+    "ram_avg_percent": 46.92,
+    "ram_peak_percent": 47.1,
+    "cpu_avg_percent": 20.45,
+    "cpu_peak_percent": 42.6,
+    "critical_events": 0,
+    "warn_events": 0,
+    "estimated_avg_power_w": 4.807,
+    "estimated_total_energy_mj": 4806.75
+  },
+  "recovery_stats": {
+    "total_failures": 0
+  },
+  "event_summary": {
+    "session_id": "A43BB179",
+    "total_events": 3,
+    "avg_latency_ms": 7815.9,
+    "max_latency_ms": 8149.05,
+    "avg_ram_percent": 47.1,
+    "peak_ram_percent": 47.1,
+    "total_energy_mj": 115294.88,
+    "event_log_file": "logs\\session_A43BB179_20260907_002703.jsonl"
+  },
+  "cycle_records": [
+    {
+      "cycle_id": "C0001_A43BB179",
+      "cycle_number": 1,
+      "phase_latencies": {
+        "perceive_ms": 0.0,
+        "recover_ms": 0.0,
+        "plan_ms": 7675.28,
+        "execute_ms": 460.44,
+        "verify_ms": 6.01
+      },
+      "total_latency_ms": 8149.05,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "OK"
+      },
+      "plan_severity": "NORMAL",
+      "plan_steps": 3,
+      "execution_success": true,
+      "failures_detected": 0,
+      "recoveries_attempted": 0,
+      "peak_ram_percent": 47.1,
+      "avg_power_w": 5.064,
+      "total_energy_mj": 41266.8,
+      "timestamp": 1788721023.4976368
+    },
+    {
+      "cycle_id": "C0002_A43BB179",
+      "cycle_number": 2,
+      "phase_latencies": {
+        "perceive_ms": 0.0,
+        "recover_ms": 0.0,
+        "plan_ms": 6677.06,
+        "execute_ms": 455.28,
+        "verify_ms": 27.93
+      },
+      "total_latency_ms": 7168.14,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "OK"
+      },
+      "plan_severity": "NORMAL",
+      "plan_steps": 3,
+      "execution_success": true,
+      "failures_detected": 0,
+      "recoveries_attempted": 0,
+      "peak_ram_percent": 47.1,
+      "avg_power_w": 4.875,
+      "total_energy_mj": 34944.67,
+      "timestamp": 1788721034.6570177
+    },
+    {
+      "cycle_id": "C0003_A43BB179",
+      "cycle_number": 3,
+      "phase_latencies": {
+        "perceive_ms": 0.0,
+        "recover_ms": 0.0,
+        "plan_ms": 7483.99,
+        "execute_ms": 632.53,
+        "verify_ms": 7.0
+      },
+      "total_latency_ms": 8130.52,
+      "sensor_statuses": {
+        "mpu6050": "OK",
+        "dht22": "OK",
+        "ina219": "OK",
+        "hcsr04": "OK",
+        "mq135": "OK"
+      },
+      "plan_severity": "NORMAL",
+      "plan_steps": 4,
+      "execution_success": true,
+      "failures_detected": 0,
+      "recoveries_attempted": 0,
+      "peak_ram_percent": 47.1,
+      "avg_power_w": 4.807,
+      "total_energy_mj": 39083.41,
+      "timestamp": 1788721044.8404922
+    }
+  ]
+}
